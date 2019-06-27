@@ -1,0 +1,159 @@
+@import '../../../index';
+@import './common';
+
+//常用边框颜色
+$borderColor: #ececec;
+$borderColorLight: #e8e8e8;
+//常用边框阴影
+$boxShadow: 0 0 rem(12px) rgba(0, 0, 0, .15);
+
+//信息输入框
+.userInput {
+  width: rem(185px);
+  height: rem(30px);
+  line-height: rem(28px);
+  border-right: rem(1px) solid $borderColor;
+  border-bottom: rem(1px) solid $borderColor;
+}
+
+.root {
+  width: 100%;
+  height: 100%;
+  padding: 0 rem(12px) rem(10px);
+  //头部信息
+  .header {
+    font-weight: bold;
+    font-size: rem(18px);
+    line-height: rem(44px);
+    height: rem(44px);
+    text-align: center;
+    color: $font-com-color;
+  }
+  //概要信息
+  .summary {
+    :global {
+      //付费方式 按钮样式
+      .ant-btn-icon-only {
+        padding: 0 !important;
+        border: none;
+        height: auto;
+        margin-left: rem(8px);
+      }
+    }
+    > ul {
+      margin: 0;
+      border: rem(1px) solid $big-border-color;
+      border-radius: rem(4px);
+      line-height: rem(32px);
+      height: rem(34px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .oneInfo {
+      padding-left: rem(12px);
+      display: flex;
+      align-items: center;
+      border-left: rem(1px) solid $borderColorLight;
+      .oneSum {
+        margin: 0;
+        font-size: rem(12px);
+        color: $font-com-color;
+        position: relative;
+        font-weight: bold;
+        > span {
+          font-weight: normal;
+        }
+      }
+    }
+    .oneInfo:first-child {
+      border-left: none;
+      .oneSum {
+        margin-left: rem(6px);
+      }
+    }
+    .oneInfoPay {
+      min-width: rem(215px);
+    }
+    //一个信息里 弹出按钮样式
+    .operate {
+      white-space: nowrap;
+      position: absolute;
+      border-radius: rem(6px);
+      overflow: hidden;
+      box-shadow: $boxShadow;
+      padding: rem(5px) 0;
+      right: rem(-200px);
+      top: -100%;
+      background-color: #fff;
+      z-index: 1200;
+      font-weight: normal;
+      //一个按钮样式
+      .oneOpe {
+        color: $font-com-color;
+        line-height: rem(30px);
+        height: rem(30px);
+        padding: 0 rem(17px);
+      }
+      //鼠标移入一个按钮样式
+      .oneOpe:hover {
+        color: $font-com-color;
+        background-color: $medical-alter-bg;
+      }
+    }
+  }
+  //主要内容
+  .main {
+    margin-top: rem(8px);
+    height: calc(100% - 86px);
+    :global {
+      .ant-tabs {
+        width: 100%;
+        height: 100%;
+      }
+      .ant-tabs-bar {
+        border-bottom: rem(1px) solid $medical-border;
+        margin-bottom: rem(6px);
+      }
+      .ant-tabs.ant-tabs-card > .ant-tabs-bar .ant-tabs-nav-container {
+        height: rem(30px);
+      }
+      .ant-tabs-content {
+        height: calc(100% - 36px);
+      }
+      .ant-tabs-tabpane {
+        height: 100%;
+      }
+      .ant-tabs.ant-tabs-card > .ant-tabs-bar .ant-tabs-tab {
+        border-bottom: rem(1px) solid $medical-border;
+        background-color: #fff;
+        color: $font-com-color;
+        margin-right: rem(3px);
+        font-size: rem(14px);
+        line-height: rem(28px);
+        padding: 0 rem(18px);
+      }
+      .ant-tabs.ant-tabs-card > .ant-tabs-bar .ant-tabs-tab:hover {
+        color: $medical-border;
+      }
+      .ant-tabs.ant-tabs-card > .ant-tabs-bar .ant-tabs-tab-active {
+        border: rem(1px) solid $medical-border;
+        border-bottom: none;
+        color: $medical-border;
+        font-weight: bold;
+      }
+      .ant-tabs-extra-content {
+        position: absolute;
+        left: rem(400px);
+        z-index: 3;
+      }
+    }
+  }
+}
+
+.pointer {
+  pointer-events: none;
+}
+
+
+

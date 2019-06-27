@@ -1,0 +1,29 @@
+.pubBtn {
+  position: relative;
+}
+
+:global {
+  /**
+  徽章
+   */
+  .anticon {
+    vertical-align: middle !important;
+  }
+  .ant-badge {
+    color: inherit !important;
+    vertical-align: middle;
+  }
+  .ant-badge-count {
+    top: calc(-100% - 10px) !important;
+    right: calc(-100% - 10px) !important;
+  }
+  .ant-btn > .anticon {
+    vertical-align: middle !important;
+  }
+  /**dot*/
+  .ant-badge-dot {
+    top: - 100%;
+    right: calc(-100% + 6px);
+  }
+}
+

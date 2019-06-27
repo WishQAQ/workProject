@@ -1,0 +1,21 @@
+@import '../../../../../../index.scss';
+
+.table {
+  width: 100%;
+  height: 100%;
+}
+
+.visible {
+  overflow: visible !important;
+}
+
+.card {
+  > div:first-child {
+    height: rem(28px);
+    padding: rem(5px) rem(7px);
+    > p {
+      font-size: $font-com-size;
+      color: $font-com-color;
+    }
+  }
+}

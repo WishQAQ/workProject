@@ -1,0 +1,7 @@
+<view class="wit-cell-box {{classes}}">
+  <view class="wit-cell-title" a-if="title">{{title}}</view>
+  <view class="wit-cell">
+    <slot></slot>
+  </view>
+  <slot name="bottom"></slot>
+</view>

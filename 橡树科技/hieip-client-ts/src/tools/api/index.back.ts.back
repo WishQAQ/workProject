@@ -1,0 +1,157 @@
+import {config} from "tools/config";
+import {message} from "pkg/common/message";
+import {EventEmitter} from "events";
+import debug from "debug";
+
+const trace = debug("trace:框架:API");
+const debugData = debug("data:框架:API");
+
+interface HttpRequest {
+    method: string
+    url: string
+    body: string
+    id: number
+}
+
+interface JsonResult {
+    success: boolean
+    data?: any
+    msg?: string
+    net?: boolean
+    trace?: string
+    timestamp?: string
+    path?: string
+    exception?: string
+    status?: number
+    total?: number
+}
+
+interface HttpResult {
+    id: number
+    json: JsonResult
+}
+
+class BaseApi {
+    public autoReconnection = false;
+    public autoReconnectionCount = 5;
+    private reconnectionCount = 0;
+    private socket: WebSocket = null;
+    public online = false;
+    public error = null;
+    private connect = [];
+    private messagePool = {};
+    public apiEventEmitter = new EventEmitter();
+
+    constructor(host) {
+        trace("初始化 %s", host);
+        this.createSocket(host);
+    }
+
+    createSocket(host) {
+        this.socket = new WebSocket(host);
+        this.socket.onopen = () => {
+            trace("打开 %s, 在此之前收到请求 %d 个", host, this.connect.length);
+            this.online = true;
+            this.reconnectionCount = 0;
+            if (this.connect.length > 0) this.connect.forEach(({resolve}) => resolve());
+            this.connect = [];
+            if (this.error === true) this.error = false;
+            this.apiEventEmitter.emit("onOpen", this.online, this.error);
+            this.apiEventEmitter.emit("change", this.online, this.error);
+        };
+        this.socket.onerror = (err) => {
+            trace("连接 %s 被异常关闭, 在此之前还有 %d 个请求未处理:\n%s", host, this.connect.length, err);
+            this.error = true;
+            this.apiEventEmitter.emit("onError", this.online, this.error);
+            this.apiEventEmitter.emit("change", this.online, this.error);
+        };
+        this.socket.onclose = () => {
+            if (this.autoReconnection) {
+                trace("已开启自动重连");
+                this.apiEventEmitter.emit("onReconnect");
+                if (this.reconnectionCount >= this.autoReconnectionCount) {
+                    trace("重连次数超过限制");
+                } else {
+                    this.createSocket(host);
+                    this.reconnectionCount++;
+                    return;
+                }
+            }
+            trace("连接 %s 被关闭, 在此之前还有 %d 个请求未处理", host, this.connect.length);
+            this.online = false;
+            this.socket = null;
+            if (this.connect.length > 0) this.connect.forEach(({rejecte}) => rejecte({msg: "和服务器连接断开"}));
+            this.connect = [];
+            this.apiEventEmitter.emit("onClose", this.online, this.error);
+            this.apiEventEmitter.emit("change", this.online, this.error);
+        };
+        this.socket.onmessage = (e) => {
+            try {
+                const {id, json} = <HttpResult>JSON.parse(e.data);
+                trace("接收到消息 id => %d", id);
+                debugData("接收到的数据 %j", json);
+                if (id < 0) {
+                    this.apiEventEmitter.emit(json.msg);
+                    trace("触发接口事件：%s", json.msg);
+                } else {
+                    const {resolve, rejecte} = this.messagePool[id];
+                    if (json.success) {
+                        if (json.total) json.data.total = json.total;
+                        trace("消息结果正确");
+                        resolve(json.data);
+                    } else {
+                        // console.error(json);
+                        if (json.trace) {
+                            // console.error(json.trace);
+                        }
+                        rejecte(json);
+                    }
+                    delete this.messagePool[id];
+                    debugData("数据结果:\n %j", json);
+                }
+            } catch (e) {
+                message.normal("服务器错误", "服务器返回了一个无法解析的错误:" + e.data, "error");
+                trace("解析数据错误:\n%s", e.data);
+                // console.error(e);
+            }
+        }
+    }
+
+    connection<T>(method: string, baseUrl: string, url: string, body: any): Promise<T> {
+        return new Promise((resolve, rejecte) => {
+            if (this.online) {
+                resolve();
+            } else {
+                trace("连接未打开，等待[%s][%s %s]", method, baseUrl, url);
+                debugData("%j", body);
+                this.connect.push({resolve, rejecte});
+                const len = this.connect.length - 1;
+                setTimeout(() => {
+                    if (!this.online) {
+                        trace("连接超时[%s][%s %s]", method, baseUrl, url);
+                        rejecte({msg: "连接服务器超时！"});
+                        this.connect.splice(len, 1);
+                    }
+                }, 5000);
+            }
+        }).then(() => {
+            return new Promise<T>((resolve, rejecte) => {
+                const id = Date.now();
+                trace("发送数据[%d]", id);
+                const data = JSON.stringify(<HttpRequest>{method, url: baseUrl + url, body, id});
+                debugData("%j", data);
+                this.socket.send(data);
+                this.messagePool[id] = {resolve, rejecte};
+                setTimeout(() => {
+                    delete this.messagePool[id];
+                    rejecte({msg: "服务器返回数据超时"});
+                }, 5000)
+            });
+        })
+    }
+}
+
+export const apiUtil = new BaseApi(config.hieip_ws);
+export const medicalApi = new BaseApi(config.medical_ws);
+
+export default apiUtil;

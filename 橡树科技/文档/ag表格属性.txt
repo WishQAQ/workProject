@@ -1,0 +1,7 @@
+自定义api.api.stopEditing()  // 停止编辑
+ordersTableApi.api.setRowData(orderData)  // 刷新表格
+ordersTableApi.api.ensureIndexVisible(orderData.length - 1)  // 控制滚动条,每次添加一条数据自动显示在最末端
+ordersTableApi.api.startEditingCell({rowIndex: orderData.length - 1, colKey: 'orderText'})
+	// 控制滚动条同时自动加载inputTable
+
+cellEditorFramework: AgSelect,  // ag表格点击选项    cellEditorFramework: InputTable //ag表格中的inputTable

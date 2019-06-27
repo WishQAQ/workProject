@@ -1,0 +1,67 @@
+@import '../../../../../index';
+@import '../../index';
+
+$titleColor: #fff;
+$titleBg: #48b7e5; //页面框头部背景颜色
+
+//AG表格每行编辑时样式
+.agRowEdit {
+  padding: rem(4px);
+  box-shadow: none !important;
+  background-color: #fff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  > input {
+    border: rem(1px) solid #3db5e7;
+    border-radius: rem(4px);
+    text-align: center;
+    font-size: rem(12px);
+    padding: 0 rem(2px);
+  }
+}
+
+.myAgTable {
+  border: rem(1px) solid $big-border-color;
+  border-top: 0;
+  border-radius: 0 0 rem(4px) rem(4px);
+}
+
+.itemRoot {
+  height: 100%;
+  .title {
+    background-color: $titleBg;
+    color: $titleColor;
+    border-radius: rem(4px) rem(4px) 0 0;
+    display: flex;
+    align-items: center;
+    height: rem(30px);
+    padding: 0 rem(11px) 0 rem(11px);
+    .titleName {
+      font-size: rem(14px);
+      margin-right: rem(8px);
+      font-weight: bold;
+    }
+  }
+  .looked {
+    color: $font-main-color;
+    display: flex;
+    align-items: center;
+    padding: rem(5px);
+    font-size: rem(12px);
+    border-left: rem(1px) solid $big-border-color;
+    border-right: rem(1px) solid $big-border-color;
+    border-bottom: rem(1px) solid $list-split-color;
+    i {
+      font-style: normal;
+    }
+    .lookedLeft {
+      margin-right: rem(50px);
+    }
+  }
+  .mainTable {
+    height: calc(100% - 40px);
+    margin-bottom: rem(10px);
+  }
+}

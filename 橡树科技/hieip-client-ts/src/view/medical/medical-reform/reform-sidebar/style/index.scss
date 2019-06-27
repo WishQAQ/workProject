@@ -1,0 +1,11 @@
+@import '../../../../../index.scss';
+
+.sidebar {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: rem(185px);
+  height: calc(100% - 30px);
+  border:1px solid #cdcdcd;
+}

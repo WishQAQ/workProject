@@ -1,0 +1,493 @@
+@import '../../../../index';
+
+.applyList {
+  line-height: 1 !important;
+  > div:nth-child(1) {
+    height: rem(22px);
+    line-height: rem(22px);
+    padding: 0 rem(10px);
+    > p {
+      font-size: rem(12px) !important;
+    }
+  }
+  .table {
+    width: 100%;
+    height: calc(100% - 22px);
+  }
+}
+
+.LeftMain {
+  padding-right: rem(10px);
+  color: $font-main-color;
+  input {
+    font-size: $font-com-size !important;
+    padding: 0 rem(8px) !important;
+    color: $font-main-color !important;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    text-indent: 0 !important;
+  }
+}
+
+.leftChild {
+  height: calc(100% - 100px);
+  color: $font-main-color;
+}
+
+// ApplyTop********
+.applyTop {
+  border: rem(1px) solid $big-border-color;
+  border-radius: rem(4px);
+  box-sizing: border-box;
+  margin-bottom: rem(8px);
+  overflow: hidden;
+  > div:last-child {
+    border-bottom: 0 !important;
+  }
+}
+
+.applyLabel {
+  border: 0 !important;
+  border-bottom: rem(1px) solid $mid-split-color !important;
+  height: rem(30px) !important;
+  > div:nth-child(1) {
+    border-right: rem(1px) solid $mid-split-color;
+    max-width: rem(80px) !important;
+    min-width: rem(80px) !important;
+    width: rem(80px) !important;
+  }
+  > div:nth-child(2) {
+    > div {
+      display: flex;
+      align-items: center;
+      > label {
+        white-space: nowrap;
+        padding-left: rem(5px);
+        border-left: 1px solid $big-border-color;
+        height: 100%;
+        padding-top: rem(3px);
+      }
+    }
+  }
+  > div > div > span {
+    font-size: rem(12px) !important;
+    font-weight: bold;
+    padding: rem(5px) rem(10px) !important;
+    white-space: nowrap;
+  }
+  input {
+    height: 100%;
+    border: 0;
+    font-size: rem(14px);
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+// ApplyTop********
+
+// ApplyMiddle*******
+.applyMiddle {
+  height: 45%;
+}
+
+.middleContent {
+  > div:first-child {
+    height: rem(30px);
+    line-height: rem(30px);
+    padding: 0 rem(8px) !important;
+  }
+}
+
+.selectGroup {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+}
+
+.rounded {
+  height: rem(24px) !important;
+  margin-right: rem(10px);
+  border: none;
+  > span {
+    padding: 0 rem(6px) !important;
+    font-size: rem(12px) !important;
+    line-height: rem(24px) !important;
+  }
+}
+
+.roundedSelect {
+  > input {
+    height: 100%;
+    border: 0;
+  }
+}
+
+.labUl {
+  width: 100%;
+  height: calc(100% - 30px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  margin-bottom: 0 !important;
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: rem(1px);
+  > li {
+    width: 25%;
+    height: rem(25px);
+    line-height: rem(25px);
+    border-bottom: rem(1px) solid $list-split-color;
+    border-right: rem(1px) solid $list-split-color;
+    font-size: rem(12px);
+    padding: 0 rem(5px);
+    transition: all linear .1s;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    text-overflow: ellipsis;
+    > span:first-child {
+      color: $level1;
+    }
+    &:hover {
+      background-color: #d5f3ff;
+    }
+    &:active {
+      background-color: darken(#d5f3ff, 10%);
+    }
+  }
+}
+
+// ApplyMiddle*******
+
+// ApplyBottom********
+.applyBottom {
+  height: calc(55% - 8px);
+  margin-top: rem(8px);
+}
+
+.applyBottomMask {
+  > div:first-child {
+    height: rem(30px);
+    line-height: rem(30px);
+    padding: 0 rem(8px) !important;
+    > p {
+      font-size: rem(12px) !important;
+      margin-right: rem(25px) !important;
+    }
+  }
+}
+
+.bottomTitle {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.threeBtn {
+
+}
+
+.btn {
+  height: rem(24px);
+  line-height: rem(20px);
+  border-radius: $border-radius4;
+  font-size: $font-com-size;
+  border: rem(1px) solid $button-search-border;
+  margin-right: rem(6px);
+  i {
+    font-size: $font-com-size;
+  }
+}
+
+.blueBtn {
+  background-color: $button-add-background;
+  border-color: $button-add-border;
+  color: #fff;
+  &:hover {
+    background-color: $button-add-hover-background;
+    border-color: $button-add-hover-border;
+  }
+}
+
+.greenBtn {
+  background-color: $button-save-background;
+  border-color: $button-save-border;
+  color: #fff;
+  &:hover {
+    background-color: $button-save-hover-background;
+    border-color: $button-save-hover-border;
+  }
+}
+
+.redBtn {
+  background-color: $button-delete-background;
+  border-color: $button-delete-border;
+  color: $button-delete-color;
+  &:hover {
+    background-color: $button-delete-hover-background;
+    border-color: $button-delete-hover-border;
+    color: $button-delete-hover-color;
+  }
+}
+
+.disableBtn {
+  background-color: $button-search-background !important;
+  border-color: $button-search-border !important;
+  color: $button-search-color !important;
+  cursor: not-allowed;
+}
+
+.delBtn {
+  display: flex;
+  align-items: center;
+  .btn {
+    flex: 0 0 rem(56px);
+    margin-left: rem(6px);
+    margin-right: 0;
+  }
+}
+
+.itemName {
+  height: rem(24px) !important;
+  > span {
+    padding: 0 rem(6px) !important;
+    font-size: rem(12px) !important;
+    line-height: rem(24px) !important;
+  }
+}
+
+.itemSelect {
+  width: rem(150px);
+  div[class*='ant-select-selection--single'] {
+    height: rem(24px) !important;
+    :first-child {
+      line-height: rem(24px) !important;
+    }
+  }
+  div[class*='ant-select-selection'] {
+    border: 0 !important;
+    &:hover {
+      border-color: $big-border-color !important;
+    }
+    &:focus {
+      box-shadow: none !important;
+    }
+  }
+}
+
+.specialName {
+  input {
+    height: 100%;
+    border: 0;
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+// ApplyBottom********
+
+// 弹框*******
+.temPop {
+  > div[class*='ant-modal-header'] {
+    padding: rem(10px) rem(15px);
+  }
+  > div[class*='ant-modal-body'] {
+    padding: rem(10px) rem(15px);
+  }
+  > button {
+    > span {
+      width: rem(40px);
+      height: rem(40px);
+      line-height: rem(40px);
+    }
+  }
+  > div[class*='ant-modal-footer'] {
+    border: 0 !important;
+    padding: rem(8px) rem(15px);
+  }
+}
+
+.temInquires {
+  width: 100%;
+  height: rem(30px);
+  display: flex;
+  > button {
+    height: rem(24px) !important;
+    margin-left: rem(5px);
+    padding: 0 rem(8px) !important;
+    > i {
+      padding-right: rem(5px);
+    }
+  }
+}
+
+.temTables {
+  width: 100%;
+  height: rem(300px);
+  border: rem(1px) solid $big-border-color;
+  border-radius: rem(4px);
+  box-sizing: border-box;
+  > button {
+    height: rem(30px) !important;
+  }
+}
+
+.temRadios {
+  padding-left: rem(10px) !important;
+}
+
+.temInputs {
+  width: 30% !important;
+}
+
+.popover {
+  div[class*='ant-popover-inner-content'] {
+    padding: rem(5px) rem(15px) !important;
+    height: auto;
+    max-height: rem(200px);
+    overflow-y: scroll;
+  }
+}
+
+//检查报告弹框样式(左侧部分)
+.reportModal {
+  div[class*='ant-modal-content'] {
+    width: 100%;
+  }
+  div[class*='ant-modal-header'] {
+    padding: rem(10px) rem(0px) rem(10px) rem(15px);
+    > div {
+      font-size: rem(14px);
+      font-weight: bold;
+    }
+  }
+  span[class*='ant-modal-close-x'] {
+    width: rem(30px);
+    height: rem(40px);
+    line-height: rem(40px);
+  }
+  div[class*='ant-modal-body'] {
+    padding: rem(10px) rem(15px) rem(10px) rem(15px);
+    color: $font-main-color;
+  }
+  div[class*='ant-modal-footer'] {
+    display: none;
+  }
+}
+
+.specialWrap {
+  overflow: hidden !important;
+}
+
+.reportMain {
+  width: 100%;
+  height: 100%;
+  > :first-child {
+    width: 30%;
+    height: 100%;
+    float: left
+  }
+  > div:nth-child(2) {
+    margin-left: rem(10px);
+    width: calc(70% - 10px);
+    height: 100%;
+    float: left;
+  }
+}
+
+.reportTable {
+  width: 100%;
+  height: 65%;
+  div[class*='ag-header-viewport'] {
+    background-color: $table-title;
+    color: #fff;
+  }
+  div[class='ag-body-viewport'] {
+    border-left: 1px solid $big-border-color;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+}
+
+.laboratoryTable {
+  width: 100%;
+  height: 35%;
+  border: 1px solid $big-border-color;
+  box-sizing: border-box;
+  border-radius: $border-radius4;
+  overflow-x: hidden;
+  div[class*='ag-header-viewport'] {
+    background-color: #71a7be;
+    color: #fff;
+  }
+  div[class*='ag-cell'] {
+    border-bottom: 1px solid $mid-split-color !important;
+    border-right: 1px solid $mid-split-color !important;
+    border-top: 0 !important;
+  }
+}
+
+/*检验弹框报告（右侧）*/
+.rightStyle {
+  width: 100%;
+  height: calc(100% - 30px);
+  > div:first-child {
+    width: 100%;
+    height: 5%;
+  }
+  > div:nth-child(2) {
+    width: 100%;
+    height: auto;
+  }
+  > div:nth-child(3) {
+    width: 100%;
+    height: calc(95% - 81px);
+  }
+}
+
+.btnContent {
+  width: 100%;
+  height: rem(30px);
+  display: flex;
+  align-items: center;
+  margin-bottom: rem(10px);
+  > button {
+    height: rem(25px);
+    padding: 0 rem(5px);
+    font-size: rem(12px);
+    > i {
+      padding-left: rem(5px);
+      font-size: rem(12px);
+      font-weight: bold;
+    }
+  }
+  > button:first-child {
+    margin-right: rem(5px);
+  }
+}
+
+.infoGroup {
+  width: 100%;
+  height: 100%;
+  font-weight: bold;
+  border-radius: $border-radius4;
+}
+
+.details {
+  width: 100%;
+  height: 100%;
+  margin-top: rem(10px);
+  border:1px solid $big-border-color;
+  border-radius: $border-radius4;
+}
+
+.layoutStyle {
+  height: rem(30px) !important;
+  line-height: rem(30px) !important;
+}

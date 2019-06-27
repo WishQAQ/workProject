@@ -1,0 +1,257 @@
+<view>
+  <view class="block">
+    <view class="tit">图片上传</view>
+    <wit-upload onChange="onChange" value="{{uploadValue}}"/>
+  </view>
+  <view class="block">
+    <!-- https://daneden.github.io/animate.css/ -->
+    <view class="tit">star 动画效果参考animate.css</view>
+    <view>
+      <!-- https://i.loli.net/2017/08/21/599a521472424.jpg -->
+      <wit-praise
+        size="48px"
+        icon="icondafenxinghuang"
+        animate="animated bounceIn"
+        defaultColor="#333"
+        color="rgb(255, 161, 0)">
+      </wit-praise>
+      <wit-praise
+        icon="iconzantongfill"
+        animate="animated rotateIn"
+        color="rgb(152, 138, 222)">
+      </wit-praise>
+      <wit-praise
+        size="30px"
+        icon="iconxin"
+        animate="animated zoomInDown"
+        color="rgb(240, 86, 84);">
+      </wit-praise>
+      <wit-praise
+        size="30px"
+        icon="icondangfeijiaona_weixin"
+        animate="animated wobble"
+        color="#f56d19">
+      </wit-praise>
+      <wit-praise
+        src="https://i.loli.net/2017/08/21/599a521472424.jpg"
+        animate="animated wobble"
+        color="#f56d19">
+      </wit-praise>
+    </view>
+  </view>
+  <view class="block">
+    <view class="tit">按钮组件</view>
+    <view>
+      <view class="sub-title">按钮类型</view>
+      <wit-btn type="default" text="默认按钮" onClick="clickPraise"/>
+      <wit-btn type="primary" text="主要按钮" />
+      <wit-btn type="info" text="信息按钮" />
+      <wit-btn type="danger" text="危险按钮" />
+      <wit-btn type="warning" text="警告按钮" />
+      <wit-btn type="gray" text="灰色按钮" />
+      <wit-btn type="success" text="绿色按钮" />
+    </view>
+    <view>
+      <view class="sub-title">朴素按钮</view>
+      <wit-btn type="primary" plain text="朴素按钮" />
+      <wit-btn type="danger" plain round text="朴素按钮" />
+      <wit-btn type="gray" plain round text="朴素按钮" />
+    </view>
+    <view>
+      <view class="sub-title">禁用按钮</view>
+      <wit-btn type="primary" disabled text="禁用按钮" />
+      <wit-btn type="danger" disabled text="禁用按钮" />
+    </view>
+    <view>
+      <view class="sub-title">加载状态</view>
+      <wit-btn type="primary" loading text="加载状态" />
+      <wit-btn type="danger" loading text="加载状态" />
+    </view>
+    <view>
+      <view class="sub-title">按钮形状</view>
+      <wit-btn type="primary" square text="方形按钮" />
+      <wit-btn type="danger" round text="圆形按钮" />
+    </view>
+    <view>
+      <view class="sub-title">按钮尺寸</view>
+      <wit-btn size="large" text="大号按钮" type="primary" />
+      <wit-btn size="normal" text="普通按钮" />
+      <wit-btn size="small" loading type="info" text="123123123"/>
+      <wit-btn size="mini" text="迷你按钮" type="danger" />
+    </view>
+    <view>
+      <view class="sub-title">特殊处理style</view>
+      <wit-btn size="large" text="特殊处理style" style="background: red; color: #fff"/>
+    </view>
+  </view>
+
+  <view class="block">
+    <view class="tit">评分组件</view>
+    <wit-cell-item type="view">
+      <wit-rate value="3" slot="left" readonly/>
+      <view slot="right">静态展示</view>
+    </wit-cell-item>
+    <wit-cell-item type="view">
+      <wit-rate value="{{value}}" slot="left" readonly/>
+      <view slot="right">异步获取value{{value}}</view>
+    </wit-cell-item>
+    <wit-cell-item type="view">
+      <wit-rate value="4" count="8" slot="left"/>
+      <view slot="right">设置多个</view>
+    </wit-cell-item>
+    <wit-cell-item type="view">
+      <wit-rate value="4" slot="left" color="green" activeColor="red"/>
+      <view slot="right">自定义样式</view>
+    </wit-cell-item>
+    <wit-cell-item type="view">
+      <wit-rate value="4" slot="left" size="14px"/>
+      <view slot="right">自定义大小</view>
+    </wit-cell-item>
+    <wit-cell-item type="view">
+      <wit-rate value="4" slot="left" icon="icontuijiantimu"/>
+      <view slot="right">自定义图标</view>
+    </wit-cell-item>
+    <wit-cell-item type="view">
+      <wit-rate value="{{score}}" onRate="onRate" slot="left"/>
+      <view slot="right">打分</view>
+    </wit-cell-item>
+    <wit-cell-item type="view">
+      <wit-rate
+        value="4"
+        slot="left"
+        size="20px"
+        padding="5px"
+        tip="提示"/>
+      <view slot="right">提示文字</view>
+    </wit-cell-item>
+  </view>
+  <view class="block">
+    <view class="tit">头像组件</view>
+    <wit-avatar
+      name="123"
+      onClick="clickPraise"
+      size="25px">
+    </wit-avatar>
+    <wit-avatar
+      icon="icondangfeijiaona_weixin"
+      color="#ccc"
+      bgColor="#f56d19"
+      iconSize="32px"
+      iconColor="#fff"
+      size="60px">
+    </wit-avatar>
+    <wit-avatar src="https://i.loli.net/2017/08/21/599a521472424.jpg"/>
+    <wit-avatar name="程序员"/>
+    <wit-avatar name="哈哈哈" style="font-size: 12px"/>
+    <wit-avatar shape="square" name="哈哈哈" style="font-size: 12px"/>
+    <wit-avatar shape="square" name="wefbkjbew" style="font-size: 12px"/>
+  </view>
+
+  <view class="block">
+    <view class="tit">loading组件</view>
+    <wit-loading size="small"/>
+    <wit-loading/>
+    <wit-loading size="large"/>
+  </view>
+
+  <view class="block">
+    <wit-spin spinning="{{spinning}}">
+      <view class="tit">group+cell组件</view>
+      <wit-cell-group title="支付方式">
+        <wit-cell-item
+          type="radio"
+          icon="{{true}}"
+          active="{{true}}">
+          <image
+            src="{{'/assets/images/pay-wx.png'}}"
+            slot="icon"
+            style="width: 20px; height: 20px"
+          />
+          <view slot="left">
+            <view class="wit-cell-main">单选支付选中</view>
+            <view class="wit-cell-sub">单选安全支付选中</view>
+          </view>
+        </wit-cell-item>
+        <wit-cell-item
+          type="radio"
+          icon="{{true}}"
+          active="{{false}}">
+          <image
+            src="{{'/assets/images/pay-wx.png'}}"
+            slot="icon"
+            style="width: 20px; height: 20px"
+          />
+          <view slot="left">
+            <view class="wit-cell-main">微信支付未选中</view>
+            <view class="wit-cell-sub">微信安全支付未选中</view>
+          </view>
+        </wit-cell-item>
+        
+        <wit-cell-item type="checkbox" active="{{true}}">
+          <view slot="left">
+            <view class="wit-cell-main">多选选中</view>
+            <view class="wit-cell-sub">多选选中</view>
+          </view>
+        </wit-cell-item>
+        <wit-cell-item type="checkbox" active="{{false}}">
+          <view slot="left">
+            <view class="wit-cell-main">多选未选中</view>
+            <view class="wit-cell-sub">多选未选中</view>
+          </view>
+        </wit-cell-item>
+
+        <wit-cell-item type="view" arrow>
+          <view slot="left">
+            <view class="wit-cell-main">微信支付</view>
+            <view class="wit-cell-sub">微信安全支付</view>
+          </view>
+        </wit-cell-item>
+        <wit-cell-item type="view">
+          <view slot="left">
+            <view class="wit-cell-main">结合picker-item </view>
+            <view class="wit-cell-sub">微信安全支付</view>
+          </view>
+          <picker-item
+            slot="right"
+            data-field="bank"
+            value="{{bank}}"
+            onPickerTap="onSelect"
+          >
+            发卡银行
+          </picker-item>
+        </wit-cell-item>
+      </wit-cell-group>
+    </wit-spin>
+    <view>切换容器loading<switch onChange="switchChange"/></view>
+  </view>
+
+  <view class="block" style="padding: 0">
+    <view class="tit" style="padding-left: 15px">表单和List</view>
+    <list>
+      <view slot="header">
+        列表头部
+      </view>
+      <block a:for="{{items2}}">
+        <list-item
+          className="wit-am-list"
+          thumb="{{item.thumb}}"
+          arrow="{{item.arrow}}"
+          onClick="onItemClick"
+          index="items2-{{index}}"
+          key="items2-{{index}}"
+          last="{{index === (items2.length - 1)}}"
+        >
+        {{item.title}}
+          <view class="am-list-brief">{{item.brief}}</view>
+          <view a:if="{{item.extra}}" slot="extra">
+            {{item.extra}}
+          </view>
+        </list-item>
+      </block>
+      <view slot="footer">
+        列表尾部
+      </view>
+    </list>
+  </view>
+
+</view>

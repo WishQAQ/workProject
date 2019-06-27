@@ -1,0 +1,147 @@
+@import '../../../../../index.scss';
+
+.translate {
+  width: 100%;
+  height: 100%;
+  :global {
+    .ant-layout-header {
+      height: rem(30px) !important;
+      line-height: rem(30px) !important;
+    }
+  }
+}
+
+.sider_t {
+  flex: none !important;
+  width: rem(233px) !important;
+  max-width: none !important;
+  background: $white-default;
+  border-right: rem(1px) solid #eeeeee;
+  box-sizing: border-box;
+}
+
+.section {
+  :global {
+    .ant-tabs.ant-tabs-top.ant-tabs-card {
+      height: calc(100vh - 160px);
+    }
+    .ant-tabs-nav-container.ant-tabs-nav-container-scrolling {
+      margin: 0;
+      padding: 0;
+    }
+    .ant-tabs-bar {
+      margin: 0;
+    }
+    .ant-tabs-tab {
+      margin: 0 !important;
+      padding: 0 3.5px !important;
+      line-height: 20px !important;
+      border-radius: 0 !important;
+      border: 1px solid #e1e1e1 !important;
+      background: #e1e1e1 !important;
+    }
+    .ant-tabs-nav-container {
+      height: 21px !important;
+    }
+    .ant-tabs-tab-active.ant-tabs-tab {
+      background: $white-default !important;
+      border-bottom: 1px solid $white-default !important;
+    }
+    .ant-tabs-bar {
+      margin-bottom: rem(8px);
+    }
+  }
+}
+
+.smaitemp {
+  height: 100%;
+  :global {
+    .ant-tabs-tab {
+      margin: 0 !important;
+      padding: 0 3.5px !important;
+      line-height: 20px !important;
+      border-radius: 0 !important;
+      border: none !important;
+      background: transparent !important;
+    }
+    .ant-tabs-nav.ant-tabs-nav-animated {
+      display: flex;
+      justify-content: space-around
+    }
+    .ant-tabs-bar {
+      margin: 0 rem(10px);
+    }
+
+  }
+}
+
+.translateHeader {
+  :global {
+    .ant-btn {
+      border: none !important;
+      height: rem(30px) !important;
+      background: $white-default;
+      padding: 0 rem(8px);
+      &:hover {
+        color: #1890ff;
+      }
+      span {
+        font-size: rem(14px);
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.sider {
+  h5 {
+    text-align: left;
+    width: 100%;
+    background: #e1e1e1;
+    height: rem(21px);
+    line-height: rem(21px);
+    font-size: rem(14px);
+    font-weight: 600;
+    color: #555;
+    padding-left: rem(10px);
+  }
+}
+
+.meditInoftainer {
+  ul {
+    margin: 0;
+    padding: 5px;
+    font-size: 12px;
+    color: #555;
+    > li > span:last-child {
+      color: #1890ff;
+    }
+    li {
+      height: rem(22px);
+      letter-spacing: 1px
+    }
+  }
+}
+
+.datasetStyle {
+  height: 100%;
+  :global {
+    .ant-select.ant-select-enabled {
+      padding: 0 15px;
+    }
+    .ant-select-selection {
+      height: 24px;
+      > div {
+        line-height: initial;
+      }
+    }
+    .ant-input-suffix {
+      right: 25px !important;
+    }
+    .ant-input {
+      height: 24px;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}

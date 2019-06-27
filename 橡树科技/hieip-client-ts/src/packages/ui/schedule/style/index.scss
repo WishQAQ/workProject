@@ -1,0 +1,39 @@
+@import '../../../../index';
+// 周模块边线颜色
+$hoverBg: #13ccab;
+.shiftStyle {
+  width: 100%;
+  height: rem(20px);
+  line-height: rem(20px);
+  border-bottom: 1px solid $mid-split-color;
+  text-align: center;
+  overflow: hidden;
+  > div {
+    width: 100%;
+    > div {
+      height: rem(20px);
+      border: 0;
+      &:focus {
+        box-shadow: none;
+      }
+      > div {
+        height: rem(20px);
+        line-height: rem(20px);
+        > div {
+          float: none;
+          padding-right: 0;
+          font-size: $font-com-size;
+        }
+      }
+    }
+  }
+}
+
+.lightHeight {
+  > div {
+    > div {
+      color: $white-default;
+      background-color: $hoverBg;
+    }
+  }
+}

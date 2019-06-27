@@ -1,0 +1,121 @@
+@import '../../../../../../index.scss';
+.bloodTable {
+  width: 100%;
+  height: calc(100% - 331px);
+  .btn {
+    width: rem(56px);
+    height: rem(24px);
+    border-radius: $border-radius4;
+    font-size: $font-com-size;
+    border: rem(1px) solid $button-search-border;
+    margin-right: rem(6px);
+    i {
+      font-size: $font-com-size;
+    }
+  }
+  .blueBtn {
+    background-color: $button-add-background;
+    border-color: $button-add-border;
+    color: #fff;
+    &:hover {
+      background-color: $button-add-hover-background;
+      border-color: $button-add-hover-border;
+    }
+  }
+  .greenBtn {
+    background-color: $button-save-background;
+    border-color: $button-save-border;
+    color: #fff;
+    &:hover {
+      background-color: $button-save-hover-background;
+      border-color: $button-save-hover-border;
+    }
+  }
+  .redBtn {
+    background-color: $button-delete-background;
+    border-color: $button-delete-border;
+    color: $button-delete-color;
+    &:hover {
+      background-color: $button-delete-hover-background;
+      border-color: $button-delete-hover-border;
+      color: $button-delete-hover-color;
+    }
+  }
+  .disableBtn{
+    background-color: $button-search-background !important;
+    border-color: $button-search-border !important;
+    color: $button-search-color !important;
+  }
+  .bloodTableDisable{
+    pointer-events: none;
+  }
+  .cursorDisable{
+    cursor: not-allowed;
+  }
+}
+
+.btnGroup {
+  margin-bottom: rem(10px);
+}
+
+.icon {
+  margin-right: rem(3px);
+}
+
+.table {
+  width: 100%;
+  height: calc(100% - 34px);
+  margin-top: rem(10px);
+  border: rem(1px) solid $list-split-color;
+  border-radius: $border-radius4;
+  :global{
+    .ag-row{
+      background-color: $white-block;
+      color: $font-main-color;
+    }
+    .pt-input{
+      height: rem(28px) !important;
+      font-size: $font-com-size !important;
+      color: $font-main-color;
+    }
+    .pt-input::-webkit-input-placeholder{
+      font-size: $font-com-size;
+      color: $font-un-color;
+    }
+  }
+}
+
+.textCenter {
+  text-align: center;
+  line-height: 25px;
+  font-size: 12px;
+}
+
+.visible {
+  overflow: visible !important;
+}
+
+.timePicker {
+  width: 100%;
+  height: 100%;
+  color: $font-main-color;
+  > span {
+    width: 100%;
+    height: 100%;
+    > div {
+      width: 100%;
+      height: 100%;
+      > input {
+        width: 100%;
+        height: 100%;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.inputTable {
+  input {
+    text-align: center;
+  }
+}

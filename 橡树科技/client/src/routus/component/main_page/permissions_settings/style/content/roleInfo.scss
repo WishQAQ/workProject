@@ -1,0 +1,50 @@
+.roleInfo {
+  height: 100%;
+  .rowActive {
+    background: #E8F3FA;
+    td {
+      &:first-child {
+        box-shadow: 3px 0 0 #3C9AE4 inset;
+      }
+    }
+  }
+  .roleTable {
+    height: calc(100% - 30px)
+  }
+}
+
+.infoModal {
+  :global {
+    .ant-modal-body {
+      margin: 10px 14px;
+      border: 0;
+      border-bottom: 1px solid #CDCDCD;
+      position: relative;
+      overflow: visible;
+      &:before {
+        position: absolute;
+        content: '';
+        left: 0;
+        bottom: 0;
+        top: 30px;
+        background-color: #CDCDCD;
+        width: 1px;
+        z-index: 1;
+      }
+      &:after {
+        position: absolute;
+        content: '';
+        right: 0;
+        bottom: 0;
+        top: 30px;
+        background-color: #CDCDCD;
+        width: 1px;
+        z-index: 1;
+      }
+    }
+    .modal_bottomBtn {
+      bottom: -42px;
+    }
+
+  }
+}

@@ -1,0 +1,147 @@
+@import '../../../../../index';
+
+.inDeptModel {
+  div[class*='ant-modal-header'] {
+    padding: rem(8px) rem(15px);
+  }
+  div[class*='ant-modal-body'] {
+    padding: rem(8px) rem(15px);
+  }
+  span[class*='ant-modal-close-x'] {
+    width: rem(40px);
+    height: rem(40px);
+    line-height: rem(40px);
+  }
+}
+
+.intoHeader {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+  height: rem(30px);
+  :global {
+    .ant-btn {
+      height: 30px;
+    }
+    .ant-input-group-wrapper {
+      width: auto;
+      span[class*='ant-input-group-addon'] {
+        padding: 0 rem(5px);
+        font-size: rem(13px);
+      }
+    }
+  }
+
+  button {
+    padding: 0 rem(5px) !important;
+    font-size: rem(13px) !important;
+    > i {
+      padding-right: rem(5px);
+      font-size: $font-title-size;
+    }
+    background-color: $button-search-background;
+    border-color: $button-search-border;
+    color: $button-search-color;
+    &:hover {
+      background-color: $button-search-hover-background;
+      border-color: $button-search-hover-border;
+      color: $button-search-hover-color;
+    }
+  }
+
+  .searchInput {
+    width: 170px;
+    margin-right: 10px;
+    font-size: 12px;
+    height: rem(30px);
+  }
+}
+
+.intoTable {
+  width: 100%;
+  height: 400px;
+  border: 1px solid $list-split-color;
+  border-radius: $border-radius4;
+  margin-bottom: rem(10px);
+}
+
+.intoFooter {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  > div {
+    margin-right: rem(5px);
+  }
+}
+
+.intoBtn {
+  height: 30px;
+  font-size: rem(13px) !important;
+  > i {
+    padding-right: rem(5px);
+    font-size: $font-title-size;
+  }
+}
+
+.bunkNum {
+  width: 100%;
+  > span {
+    height: rem(30px);
+    white-space: nowrap;
+  }
+}
+
+.timeStyle {
+  height: rem(30px);
+  > span {
+    font-size: rem(13px);
+    padding: rem(1px) rem(4px);
+  }
+  input {
+    border: 1px solid transparent;
+    transition: border .2s linear;
+    height: rem(30px) !important;
+  }
+}
+
+.inDeptSelect {
+  > span {
+    font-size: rem(13px);
+    padding: rem(1px) rem(4px);
+  }
+  > div {
+    height: rem(30px);
+    > div {
+      height: 100% !important;
+    }
+  }
+  span[class*='ant-select-arrow'] {
+    right: 5px;
+  }
+}
+
+.bottomBtn {
+  margin-top: rem(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inDeptInputTable {
+  input {
+    height: 100%;
+    border: 1px solid transparent;
+    transition: border .2s linear;
+    &:hover {
+      border-color: $border-focus-color;
+    }
+  }
+}
+
+.roundedFont {
+  > span {
+    font-size: rem(13px);
+    padding: rem(4px) rem(5px);
+  }
+}

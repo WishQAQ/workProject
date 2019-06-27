@@ -1,0 +1,115 @@
+//  病案首页颜色 ************************************
+
+//边框颜色
+$medical-border: #3db5e7;
+//弹框背景颜色
+$medical-alter-bg: #bbe0ef;
+//常用边框颜色
+$borderColor: #ececec;
+$borderColorDark: #e1e1e1;
+//常用边框阴影
+$boxShadow: rgba(0, 0, 0, .15);
+//标题栏背景颜色
+$title-bg: #5591aa;
+
+//  按钮 ************************************
+
+//新增按钮
+$add-color: #fff; //字体颜色
+$add-color-hov: #f6f9fd; //鼠标移入时 字体颜色
+$add-bg: #4f98e4; //背景颜色
+$add-bg-hov: #5892da; //鼠标移入时 背景颜色
+$add-border: #2f6fce; //边框颜色
+$add-border-hov: #2c73ca; //鼠标移入时 边框颜色
+
+//修改按钮
+$alter-color: #fff; //字体颜色
+$alter-color-hov: #f6f9fd; //鼠标移入时 字体颜色
+$alter-bg: #3db5e7; //背景颜色
+$alter-bg-hov: #37a3d0; //鼠标移入时 背景颜色
+$alter-border: #2f9fce; //边框颜色
+$alter-border-hov: #3091b9; //鼠标移入时 边框颜色
+
+//删除按钮
+$delete-color: #ff375b; //字体颜色
+$delete-color-hov: #fff; //鼠标移入时 字体颜色
+$delete-bg: #fce9ed; //背景颜色
+$delete-bg-hov: #ff375b; //鼠标移入时 背景颜色
+$delete-border: #f3b8c3; //边框颜色
+$delete-border-hov: #ff375b; //鼠标移入时 边框颜色
+
+//查询按钮
+$search-color: #555555; //字体颜色
+$search-color-hov: #f6f9fd; //鼠标移入时 字体颜色
+$search-bg: #e5e5e5; //背景颜色
+$search-bg-hov: #37a3d0; //鼠标移入时 背景颜色
+$search-border: #c4c4c4; //边框颜色
+$search-border-hov: #3091b8; //鼠标移入时 边框颜色
+
+//其它按钮
+$other-color: #f6f9fd; //字体颜色
+$other-bg: #37a3d0; //背景颜色
+$other-border: #3091b9; //边框颜色
+$other-opacity-hover: .65; //鼠标移入时，透明度变化
+
+//btn按钮样式
+@mixin myBtn($color, $bgColor, $borderColor, $opacity:1, $padding: rem(5px) rem(7px) rem(5px) rem(8px), $height: rem(24px)) {
+  font-size: rem(12px) !important;
+  line-height: rem(12px) !important;
+  color: $color !important;
+  background-color: $bgColor !important;
+  border: rem(1px) solid $borderColor !important;
+  padding: $padding !important;
+  height: $height !important;
+  margin-left: rem(6px) !important;
+  opacity: $opacity;
+  > span {
+    margin-left: rem(3px) !important;
+  }
+  //图标
+  :global {
+    i[class*='anticon '] {
+      vertical-align: top !important;
+    }
+  }
+}
+
+.buttonAdd {
+  @include myBtn($add-color, $add-bg, $add-border);
+}
+
+.buttonAdd:hover {
+  @include myBtn($add-color-hov, $add-bg-hov, $add-border-hov);
+}
+
+.buttonAlter {
+  @include myBtn($alter-color, $alter-bg, $alter-border);
+}
+
+.buttonAlter:hover {
+  @include myBtn($alter-color-hov, $alter-bg-hov, $alter-border-hov);
+}
+
+.buttonDelete {
+  @include myBtn($delete-color, $delete-bg, $delete-border);
+}
+
+.buttonDelete:hover {
+  @include myBtn($delete-color-hov, $delete-bg-hov, $delete-border-hov);
+}
+
+.buttonSearch {
+  @include myBtn($search-color, $search-bg, $search-border);
+}
+
+.buttonSearch:hover {
+  @include myBtn($search-color-hov, $search-bg-hov, $search-border-hov);
+}
+
+.buttonOther {
+  @include myBtn($other-color, $other-bg, $other-border);
+}
+
+.buttonOther:hover {
+  @include myBtn($other-color, $other-bg, $other-border, $other-opacity-hover);
+}

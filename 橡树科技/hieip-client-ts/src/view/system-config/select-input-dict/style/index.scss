@@ -1,0 +1,229 @@
+@import '../../../../index';
+
+.fuzzy {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+//左侧区域class
+.left {
+  box-shadow: 0 0 8px rgba(0, 0, 0, .2);
+  :global {
+    .ag-fresh {
+      line-height: rem(28px);
+      .ag-header-cell-label {
+        padding: 0;
+      }
+      .ag-cell-not-inline-editing {
+        padding: 0;
+      }
+      .ag-react-container {
+        width: 100%;
+        height: 100%;
+      }
+      .ant-input {
+        height: 100%;
+        font-size: rem(12px);
+        border: none;
+        border-radius: 0;
+        background-color: transparent;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.left_title {
+  background-color: #478DAA;
+  padding: rem(3.56px) rem(8px);
+  font-size: $font-com-size;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left_btn {
+  &:first-child {
+    height: rem(20px);
+    width: rem(44px);
+    font-size: rem(12px);
+    padding: 0;
+    background-color: rgba(255, 255, 255, .1);
+    border-color: #71a7be;
+    color: #fff;
+    margin-right: rem(6px);
+    &:hover, &:focus {
+      color: #fff;
+      background-color: transparent;
+      border-color: #71a7be;
+    }
+  }
+  &:last-child {
+    height: rem(20px);
+    width: rem(44px);
+    font-size: rem(12px);
+    padding: 0;
+    background-color: rgba(255, 255, 255, .1);
+    border-color: #71a7be;
+    color: #064d6b;
+    &:hover, &:focus {
+      color: #064d6b;
+      background-color: transparent;
+      border-color: #71a7be;
+    }
+  }
+}
+
+.left_search {
+  margin: rem(8px);
+  :global {
+    .ant-input {
+      height: rem(26px);
+    }
+  }
+}
+
+//右侧区域class
+.right {
+  > div {
+    display: flex;
+    align-items: center;
+    margin-top: rem(3px);
+    margin-bottom: rem(8px);
+  }
+  > div:nth-child(2) {
+    width: 100%;
+    height: calc(100% - 35px);
+    display: block;
+  }
+  :global {
+    .ag-fresh {
+      line-height: rem(28px);
+      .ag-header-cell-label {
+        padding: 0;
+      }
+      .ag-cell-not-inline-editing {
+        padding: 0;
+      }
+      .ag-react-container {
+        width: 100%;
+        height: 100%;
+      }
+      .ant-select {
+        width: 100%;
+        height: 100%;
+        .ant-select-selection--single {
+          height: 100%;
+        }
+        .ant-select-selection {
+          border: none;
+          border-radius: 0;
+          background-color: transparent;
+        }
+        .ant-select-selection__rendered {
+          line-height: rem(28px);
+        }
+      }
+      .ant-radio-group {
+        margin-top: rem(2px);
+        .ant-radio-wrapper {
+          margin-right: rem(10px);
+        }
+        .ant-radio {
+          vertical-align: middle;
+        }
+        .ant-radio-inner {
+          width: rem(14px);
+          height: rem(14px);
+          &:after {
+            top: rem(2px);
+            left: rem(2px)
+          }
+        }
+        .ant-radio + * {
+          padding: 0 0 0 rem(5px);
+          vertical-align: middle;
+        }
+      }
+      .ant-input {
+        height: 100%;
+        font-size: rem(12px);
+        border: none;
+        border-radius: 0;
+        background-color: transparent;
+        text-align: center;
+      }
+      .ant-input-number-handler-wrap {
+        display: none;
+      }
+      .ant-input-number {
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-radius: 0;
+        background-color: transparent;
+      }
+      .ant-input-number-input {
+        height: 100%;
+        border-radius: 0;
+        background-color: transparent;
+        text-align: center;
+        border: none;
+        font-size: rem(12px);
+      }
+    }
+  }
+}
+
+.firstRight, .secondRigth {
+  width: 100%;
+  height: 50%;
+}
+
+.right_btn {
+  &:first-child {
+    background-color: #3db5e7;
+    border-color: #2f9fce;
+    margin-right: rem(6px);
+    height: rem(24px);
+    width: rem(50px);
+    font-size: rem(12px);
+    padding: 0;
+    color: #fff;
+    &:hover, &:focus {
+      color: #fff;
+      background-color: #3db5e7;
+      border-color: #2f9fce;
+    }
+  }
+  &:nth-child(2) {
+    background-color: #4f98e4;
+    border-color: #2f6fce;
+    height: rem(24px);
+    width: rem(50px);
+    font-size: rem(12px);
+    margin-right: rem(6px);
+    padding: 0;
+    color: #fff;
+    &:hover, &:focus {
+      color: #fff;
+      background-color: #4f98e4;
+      border-color: #2f6fce;
+    }
+  }
+  &:last-child {
+    background-color: $first;
+    border-color: darken($first, 10%);
+    height: rem(24px);
+    width: rem(50px);
+    font-size: rem(12px);
+    padding: 0;
+    color: #fff;
+    &:hover, &:focus {
+      color: #fff;
+      background-color: lighten($first, 10%);
+      border-color: darken($first, 5%);
+    }
+  }
+}

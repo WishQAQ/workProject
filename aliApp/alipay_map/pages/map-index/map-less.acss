@@ -1,0 +1,229 @@
+/* 地图 */
+.mapIndex{
+  position: relative;
+  .map-view{  
+    .com-flex{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #map{
+      width: 100%;
+      height: 100vh;
+      .amap-logo{
+       display: none;
+       opacity:0 !important;
+       }
+      .amap-copyright {
+        opacity:0;
+      }
+    }
+
+    /* 浮框 */
+    .map-search{
+      position: fixed;
+      top: 15rpx;
+      width: calc(100% - 4rpx);
+      margin: 0 15rpx;
+      background: transparent;
+      z-index: 999;
+      /* 搜索框 */
+      .search-box{
+        display: flex;
+        align-items: center;
+        height: 94rpx;
+        background:rgba(255,255,255,1);
+        box-shadow:0px 0px 4rpx 0px rgba(58,58,58,0.18);
+        border-radius:5rpx;
+        
+        /* 搜索按钮 */
+        .seach-button{
+          .com-flex;
+          background: transparent;
+          border: none;
+          background: url(../../assets/images/search.png) no-repeat center center;
+          background-size: 38rpx 41rpx;
+          object-fit: cover;
+          width: 95rpx;
+          height: 100%;
+        }
+        /* 搜索框 */
+        .seach-input{
+          font-size:30rpx;
+          /* font-family:PingFang-SC-Medium; */
+          font-weight:500;
+          color:rgba(87,87,87,1);
+          flex: 1;
+          padding-right: 30rpx;
+        }
+        .seach-input-class{
+           font-size:30rpx;
+           /* font-family:PingFang-SC-Medium; */
+           font-weight:500;
+           color:rgba(87,87,87,1);
+        }
+      }
+    }
+     /* 筛选器 */
+      .search-checkbox{
+        position: fixed;
+        top: 134rpx;
+        right: 15rpx;
+        width:88rpx;
+        height:322rpx;
+        background:rgba(255,255,255,1);
+        box-shadow:0px 0px 9rpx 0px rgba(58,58,58,0.18);
+        border-radius:10rpx;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        /* 多选按钮 */
+        .checkbox{
+          &:not(:last-child){
+            border-bottom: 1rpx solid rgba(237,237,237,1);
+            min-width: 62rpx;
+          };
+          /* .com-flex; */
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          flex: 1;
+          checkbox{
+            display: none;
+          }
+          /* 图片 */
+          .default-image{
+            width: 35rpx;
+            height: 35rpx;
+            /* object-fit: contain; */
+            margin: 20rpx auto 10rpx;
+          }
+
+          /* 多选按钮名称 */
+          .checkbox-text{
+            font-size:22rpx;
+            /* font-family:PingFang-SC-Medium; */
+            font-weight:500;
+            color:rgba(87,87,87,1);
+            width: 100%;
+            
+          }
+        }
+       
+      }
+  }
+
+
+  .map-message{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin: 0 auto;
+    height:333rpx;
+    background:rgba(255,255,255,1);
+    border-radius:20rpx 20rpx 0px 0px;
+    transition: 1s;
+    /* 基本信息 */
+    .message{
+      height: 208rpx;
+      padding: 30rpx 34rpx;
+      border-bottom: 1rpx solid rgba(226,226,226,1);
+      .title{
+        font-size:40rpx;
+        /* font-family:PingFang-SC-Bold; */
+        font-weight:bold;
+        color:rgba(16,16,16,1);
+      }
+      .address{
+        font-size:28rpx;
+        /* font-family:PingFang-SC-Medium; */
+        font-weight:500;
+        color:rgba(34,34,34,1);
+        margin-bottom: 10rpx;
+      }
+      .info{
+        display: flex;
+        flex-flow: nowrap;
+        align-items: center;
+        font-size:24rpx;
+        /* font-family:PingFang-SC-Medium; */
+        font-weight:500;
+        color:rgba(107,107,107,1);
+        >view{
+          &:not(:last-child){
+            margin-right: 30rpx;
+          }
+        }
+      }
+    }
+    /* 查看详情 */
+    .details{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 120rpx;
+      width: 100%;
+      padding: 0 35rpx;
+      /* 详情页按钮 */
+      .get-details{
+        border: none;
+        background: transparent;
+        font-size:28rpx;
+        /* font-family:PingFang-SC-Medium; */
+        font-weight:500;
+        color:rgba(34,34,34,1);
+        &::before{
+          content: '三';
+          margin-right: 10rpx;
+          display: inline-flex;
+        }
+      }
+      /* 导航按钮 */
+      .gps{
+        /* .com-flex; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 40rpx;
+        height: 70rpx;
+        font-size:26rpx;
+        /* font-family:PingFang-SC-Medium; */
+        font-weight:500;
+        color:rgba(34,34,34,1);
+        border-radius:38px;
+        border: 1rpx solid rgba(226,226,226,1);
+        >image{
+          width: 35rpx;
+          height: 35rpx;
+          margin-right: 10rpx;
+        }
+      }
+      .route{
+        /* .com-flex; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        padding: 0 50rpx;
+        height:70rpx;
+        background:rgba(255,108,0,1);
+        border-radius:38px;
+        font-size:32rpx;
+        /* font-family:PingFang-SC-Medium; */
+        font-weight:500;
+        color:rgba(255,255,255,1);
+         >image{
+          width: 35rpx;
+          height: 35rpx;
+          margin-right: 10rpx;
+        }
+      }
+    }
+  }
+
+
+}

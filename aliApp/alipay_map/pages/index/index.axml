@@ -1,0 +1,4 @@
+<view>
+  <button type="default" onTap="jump">组件页</button>
+  <!-- <wit-selector show="{{true}}"/> -->
+</view>

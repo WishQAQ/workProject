@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/logs/logs",
+    "pages/index/index",
+    "pages/recommend/recommend"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#58bcbb",
+    "navigationBarTextStyle": "#fff",
+    "navigationBarTitleText": "新E购商城",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "backgroundColor":"#fff",
+    "borderStyle":"white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "img/nav_index.png","selectedIconPath":"img/nav_index_active.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "产品",
+        "iconPath": "img/nav_2.png",
+        "selectedIconPath": "img/nav_2_active.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "付款码",
+        "iconPath": "img/nav_3.png",
+        "selectedIconPath": "img/nav_3_active.png"
+      },
+      {
+       "pagePath": "pages/index/index",
+        "text": "订单",
+       "iconPath": "img/nav_4.png",
+      "selectedIconPath": "img/nav_4_active.png"
+      },
+      {
+       "pagePath": "pages/index/index",
+        "text": "会员中心",
+      "iconPath": "img/nav_5.png",
+      "selectedIconPath": "img/nav_5_active.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}
+

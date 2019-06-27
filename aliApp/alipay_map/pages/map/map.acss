@@ -1,0 +1,131 @@
+.mapView {
+  position: relative;
+}
+.mapView .search {
+  width: 724rpx;
+  height: 96rpx;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  top: 14rpx;
+  left: 14rpx;
+  border-radius: 20rpx;
+}
+.mapView .search input {
+  border: 1px solid #000;
+  /* backface-visibility：hidden */
+}
+.mapView .details_right {
+  width: 90rpx;
+  background: #fff;
+  position: fixed;
+  right: 14rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 134rpx;
+  border-radius: 20rpx;
+  border: 1px solid #fff;
+  overflow: hidden;
+}
+.mapView .details_right .item {
+  font-size: 20rpx;
+  display: flex;
+  width: 70rpx;
+  flex-direction: column;
+  align-items: center;
+  padding: 22rpx 0;
+  border-bottom: 1rpx solid #ededed;
+}
+.mapView .controlView {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  border-radius: 30rpx 30rpx 0 0;
+  background: #fff;
+}
+.mapView .controlView .title {
+  font-weight: bold;
+  margin-top: 44rpx;
+  font-size: 40rpx;
+  padding-left: 34rpx;
+}
+.mapView .controlView .addr {
+  margin-top: 18rpx;
+  font-size: 28rx;
+  padding-left: 34rpx;
+}
+.mapView .controlView .details {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30rpx 0;
+}
+.mapView .controlView .details .item {
+  font-size: 24rpx;
+  width: 22%;
+  color: #6b6b6b;
+  text-align: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.mapView .controlView .details .item::after {
+  text-overflow: clip;
+}
+.mapView .controlView .controlBottom {
+  width: 100%;
+  display: flex;
+  border-top: 0.5px solid #e2e2e2;
+  flex-direction: row;
+  align-items: center;
+  font-size: 28rpx;
+  height: 124rpx;
+}
+.mapView .controlView .controlBottom .goDetail {
+  display: flex;
+  font-size: 28rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  flex-direction: row;
+  margin-left: 34rpx;
+}
+.mapView .controlView .controlBottom .guide {
+  width: 180rpx;
+  height: 76rpx;
+  display: flex;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 38rpx;
+  border: 1px solid #dddddd;
+  box-sizing: border-box;
+  margin-left: 72rpx;
+  overflow: hidden;
+}
+.mapView .controlView .controlBottom .route {
+  width: 240rpx;
+  height: 76rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  justify-content: center;
+  border-radius: 38rpx;
+  background: #ff6c00;
+  border: 1px solid #fff;
+  color: #fff;
+  box-sizing: border-box;
+  margin-left: 24rpx;
+  overflow: hidden;
+}

@@ -1,0 +1,147 @@
+@import '../../../../../index';
+
+.basicMain {
+  display: flex;
+  color: $font-com-color;
+}
+
+.basicInfo {
+  font-size: rem(12px);
+  width: 100%;
+  height: rem(30px);
+  border: rem(1px) solid $big-border-color;
+  border-top-left-radius: rem(4px);
+  border-bottom-left-radius: rem(4px);
+  box-sizing: border-box;
+  display: flex;
+}
+
+.patientIcon {
+  position: absolute;
+  right: 8px;
+  top: 1px;
+}
+
+.basicBlock {
+  width: 100%;
+  float: left;
+  border-right: rem(1px) solid $big-border-color;
+  padding: rem(8px) 0 rem(8px) rem(8px);
+  line-height: 1;
+  position: relative;
+}
+
+.fontStyle {
+  display: table;
+  font-weight: bold;
+  b {
+    vertical-align: baseline;
+    padding-left: rem(10px);
+    font-weight: normal;
+  }
+}
+
+.basicBtns {
+  float: left;
+  height: rem(30px);
+  width: rem(33px);
+  text-align: center;
+  line-height: rem(30px);
+  color: $white-default;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+// 特殊样式*******
+.special {
+  border-right: 0;
+}
+
+.specialBtn {
+  border-top-right-radius: rem(4px);
+  border-bottom-right-radius: rem(4px);
+}
+
+.accept {
+  background: #999;
+}
+
+.transfer {
+  background: #3DB5E7;
+}
+
+.red {
+  background: #ff375b;
+}
+
+.yellow {
+  background: #fa8630;
+}
+
+.green {
+  background: #01bf9d;
+}
+
+.stay {
+  background: #ffcc19;
+}
+
+.out {
+  background: #39a885;
+}
+
+/**
+转区样式
+ */
+.illness {
+  color: #353535;
+  border-radius: rem(4px);
+  height: rem(35px);
+  width: rem(416px);
+  border: solid rem(1px) #cdcdcd;
+  font-size: rem(12px);
+  margin-top: rem(15px);
+  position: relative;
+}
+
+.nursingGrade {
+  @extend .illness;
+  color: #555555;
+  height: rem(35x);
+}
+
+.Sel {
+  //border: none;
+  width: 100%;
+
+  line-height: rem(28px);
+  margin-bottom: rem(1px);
+  div[class*='ant-select-selection--single'] {
+    height: rem(28px);
+  }
+  > div {
+    border: 1px solid transparent;
+    border-radius: 0;
+  }
+}
+
+.textOne {
+  height: rem(28px) !important;
+  min-height: rem(28px) !important;
+  border-radius: 0;
+}
+
+.textA {
+  margin-top: rem(15px);
+
+    border: 1px solid transparent;
+    border-radius: 0;
+}
+.btn{
+  float: right;
+  margin-right: rem(8px);
+  margin-top: rem(12px);
+}
+.clear{
+  clear: both;
+}

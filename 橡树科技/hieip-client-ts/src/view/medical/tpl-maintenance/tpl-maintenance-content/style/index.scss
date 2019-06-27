@@ -1,0 +1,100 @@
+@import '../../../../../index';
+
+.tplMaintenanceContent {
+  width: calc(100% - 17%);
+  height: 100%;
+  padding: rem(10px) rem(12px);
+  box-sizing: content-box;
+  :global {
+    .ant-layout-content {
+      width: 100%;
+    }
+    .ant-input {
+      &::-webkit-input-placeholder {
+        font-size: $font-com-size;
+      }
+    }
+    .ant-btn {
+      width: rem(56px) !important;
+      height: rem(30px);
+      box-sizing: border-box;
+      font-size: $font-com-size;
+      padding: 0;
+      text-align: center;
+      margin-left: rem(6px);
+      span {
+        margin-left: rem(2px) !important;
+      }
+      .anticon {
+        vertical-align: inherit !important;
+      }
+    }
+    .ant-btn-primary {
+      background-color: #3db5e7;
+      border-color: #2f9fce;
+      &:hover {
+        background-color: #37a3d0;
+        border-color: #3091b9;
+      }
+    }
+    .ant-btn-danger {
+      background-color: #fce9ed;
+      border-color: #f3bbc3;
+      color: #ff375b;
+      &:hover {
+        background-color: #ff375b;
+        border-color: #ff375b;
+        color: #fff;
+      }
+    }
+    .ag-fresh {
+      color: $font-com-color;
+    }
+    .ag-fresh .ag-row-selected {
+      background-color: #bbe0ef !important;
+      color: $font-com-color;
+    }
+  }
+  .contentHead {
+    width: 100%;
+    height: rem(30px);
+    margin-bottom: rem(10px);
+  }
+
+  .searchInput {
+    width: rem(172px);
+    height: rem(30px);
+    &::-webkit-input-placeholder {
+      font-size: $font-com-size !important;
+      color: $font-un-color;
+    }
+    :global {
+      .ant-input {
+        height: rem(30px);
+        border-color: $big-border-color;
+        padding: 0 rem(36px) 0 rem(8px);
+        text-overflow: ellipsis;
+        color: $font-main-color;
+        &:focus {
+          border-color: $font-select-color;
+        }
+      }
+      .ant-btn {
+        width: 28px !important;
+        background-color: transparent;
+        border: none;
+        border-left: 1px solid $input-split-color;
+      }
+      .anticon-search {
+        font-size: rem(12px) !important;
+        color: $font-tip-color;
+      }
+    }
+  }
+  .tableWrap {
+    height: calc(100% - 60px);
+    width: 100%;
+    border: rem(1px) solid $big-border-color;
+    border-radius: rem(4px);
+  }
+}

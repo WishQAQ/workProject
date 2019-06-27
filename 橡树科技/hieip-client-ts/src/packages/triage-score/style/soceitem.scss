@@ -1,0 +1,338 @@
+@import '../../../index';
+
+.sideBar {
+  > div {
+    &:nth-of-type(1) {
+      padding: 0;
+    }
+  }
+}
+
+h3 {
+  background-color: #eee;
+  color: #888 !important;
+  font-weight: 400 !important;
+  padding-left: rem(8px);
+  border-radius: rem(4px);
+  margin: rem(8px) 0 !important;
+}
+
+.radio_contain {
+  h4 {
+    color: $font-main-color;
+    font-weight: bold;
+    margin: 0;
+  }
+  :global {
+    .ant-radio-group {
+      width: 100%;
+    }
+    .ant-radio-checked .ant-radio-inner {
+      border-color: $font-select-color;
+    }
+    .ant-radio-inner:after {
+      background-color: $font-select-color;
+    }
+    .ant-radio + span {
+      color: $font-main-color
+    }
+  }
+  > div[class=ant-radio-group] {
+    > label {
+      padding: 2px 0 0 0;
+    }
+    > label:hover {
+      background: #eee;
+    }
+  }
+}
+
+.socre_list {
+  // margin: 0 0 0 (20 / 16) + rem;
+  height: calc(100% - 100px);
+  overflow: auto;
+  margin: 0 0 0 10px !important;
+}
+
+.socre_list + div {
+  margin: 0 rem(20px);
+  color: $font-main-color;
+  font-weight: bold;
+  p {
+    margin: 0;
+    span {
+      &:nth-of-type(2) {
+        color: #fff;
+        padding: rem(3px) rem(6px);
+        border-radius: rem(2px);
+        font-size: rem(14px);
+        margin-right: rem(6px)
+      }
+      &:nth-of-type(3) {
+        color: $font-select-color
+      }
+    }
+  }
+}
+
+.score_trem {
+  width: 100%;
+  :global {
+    .ant-tabs-bar {
+      display: none;
+      height: 35px;
+      margin-bottom: 0;
+    }
+    .ant-tabs-tabpane {
+      height: 100%;
+    }
+    .ant-tabs-nav.ant-tabs-nav-animated {
+      display: flex;
+      height: calc(100% + 1px);
+      justify-content: space-around;
+    }
+    .ant-tabs-ink-bar {
+      background-color: $font-select-color;
+    }
+    .ant-tabs-tab:hover {
+      color: $font-select-color !important;
+    }
+    .ant-tabs-nav .ant-tabs-tab-active {
+      color: $font-select-color;
+      &:hover {
+        color: $font-select-color;
+      }
+    }
+    .term_footer {
+      width: 100%;
+      border-top: rem(1px) solid #ececec;
+      border-bottom: rem(1px) solid #ececec;
+      margin: 0;
+      padding: 0 rem(14px);
+    }
+  }
+}
+
+.score_trem {
+  width: 100%;
+  color: $font-main-color !important;
+  height: calc(100% - 42px);
+  position: absolute;
+  top: rem(32px);
+  background-color: #ffffff;
+  border: rem(1px) solid #e1e1e1;
+  border-radius: 0 0 rem(4px) rem(4px);
+  border-top: 0;
+  padding-top: rem(8px);
+  //修改radio-width
+  div[role='tabpanel'] {
+    &:nth-of-type(2) {
+      .socre_list {
+        margin: 0 rem(20px);
+        > div {
+          .radio_contain {
+            padding: 0 0 rem(5px) 0;
+            border-bottom: 1px solid #ececec;
+          }
+          &:first-child {
+            h3 {
+              display: none;
+            }
+            :global {
+              .ant-radio-wrapper {
+                width: 20% !important;
+                margin: 0;
+              }
+            }
+          }
+          &:last-child {
+            :global {
+              .ant-radio-wrapper {
+                width: 28% !important;
+                margin: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+    &:nth-of-type(1) {
+      div[role='tabpanel'] {
+        &:nth-of-type(2) {
+          :global {
+            .ant-radio-wrapper {
+              width: 100% !important;
+              margin: 0;
+            }
+          }
+        }
+      }
+
+    }
+
+    &:nth-of-type(3), &:nth-of-type(5) {
+      .socre_list {
+        margin: 0 rem(20px);
+        > div {
+          .radio_contain {
+            padding: 0 0 rem(5px) 0;
+            border-bottom: 1px solid #ececec;
+          }
+          &:first-child {
+            h3 {
+              display: none;
+            }
+            :global {
+              .ant-radio-wrapper {
+                width: 33% !important;
+                margin: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+    &:nth-of-type(6) {
+      .socre_list {
+        margin: 0 rem(20px);
+        > div {
+          .radio_contain {
+            padding: 0 0 rem(10px) 0;
+            border-bottom: 1px solid #ececec;
+          }
+          &:first-child {
+            h3 {
+              display: none;
+            }
+            :global {
+              .ant-radio-wrapper {
+                width: 20% !important;
+                margin: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+    &:nth-of-type(4) {
+      .socre_list {
+        margin: 0 rem(20px);
+        > div {
+          &:first-child {
+            .radio_contain {
+              padding: 0 0 rem(6px) 0;
+              border-bottom: 1px solid #ececec;
+              &:nth-of-type(2), &:nth-of-type(1) {
+                :global {
+                  .ant-radio-wrapper {
+                    &:not(:nth-of-type(3)) {
+                      width: 18% !important;
+                      margin: 0;
+                    }
+
+                  }
+                }
+              }
+              &:nth-of-type(3) {
+                :global {
+                  .ant-radio-wrapper {
+                    width: 25% !important;
+                    margin: 0;
+                  }
+                }
+              }
+            }
+          }
+          &:last-child {
+            .radio_contain {
+              padding: 0 0 rem(10px) 0;
+              border-bottom: 1px solid #ececec;
+              &:nth-of-type(1), &:nth-of-type(2) {
+                :global {
+                  .ant-radio-wrapper {
+                    width: 25% !important;
+                    margin: 0;
+                  }
+                }
+              }
+              &:nth-of-type(3), &:nth-of-type(4), &:nth-of-type(5) {
+                :global {
+                  .ant-radio-wrapper {
+                    width: 19% !important;
+                    margin: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.socre_btn {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: right;
+  padding: rem(5px);
+  &:before {
+    //position: absolute;
+    //top: 0;
+    //left: rem(20px);
+    //right: rem(20px);
+    //height: 1px;
+    //background-color: #ececec;
+    //content: '';
+  }
+  > button {
+    margin: 0 rem(6px) 0 0;
+    width: rem(56px);
+    height: rem(26px);
+    padding: 0;
+  }
+  :global {
+    .ant-btn-primary {
+      &:not(:disabled) {
+        background-color: #48b7e5;
+        border-color: #2f9fce;
+        &:hover {
+          background-color: #37a3d0;
+          border-color: #309eb9;
+        }
+      }
+
+    }
+  }
+}
+
+.sider_score {
+  width: 880px !important;
+}
+
+.term_footer {
+  margin: (20 / 16) + rem;
+}
+
+.notice {
+  color: $font-tip-color;
+  font-size: rem(14px);
+  line-height: rem(22px);
+  margin: rem(10px) rem(20px);
+  span {
+    color: $first;
+  }
+}
+
+.sore_zfx {
+  color: #3db5e7;
+  border: rem(1px) solid #3db5e7;
+  height: rem(16px);
+  line-height: rem(14px);
+  display: inline-block;
+  margin-left: rem(5px);
+  padding: 0 rem(5px);
+  font-weight: 600;
+  font-size: rem(12px);
+}

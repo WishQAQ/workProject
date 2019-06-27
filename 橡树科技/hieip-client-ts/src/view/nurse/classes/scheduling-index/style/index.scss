@@ -1,0 +1,344 @@
+@import '../../../../../index';
+// 分组块背景色
+$group-background-color: #ECECEC;
+// 周模块边线颜色
+$week-border-color: #13ccab;
+// 排班图标
+$apply-icon: #006d4f;
+
+.scheduleMain {
+  width: 100%;
+  height: 100%;
+  padding: rem(10px) rem(12px);
+}
+
+.searchTitle {
+  width: rem(800px);
+  height: rem(30px);
+  display: flex;
+  margin-bottom: rem(10px);
+  button {
+    height: rem(30px);
+    padding: 0 rem(8px);
+    font-size: $font-com-size;
+    margin-right: rem(24px);
+    border-color: $button-save-border;
+    > i {
+      padding-right: rem(4px);
+      font-size: $font-com-size;
+    }
+    &:hover {
+      background-color: $button-save-hover-background;
+      border-color: $button-save-hover-border;
+    }
+  }
+}
+
+.searchRounded {
+  height: rem(30px) !important;
+  margin-right: rem(5px);
+  > span {
+    font-size: rem(12px);
+    background-color: $white-block;
+    border-right-color: $input-split-color;
+  }
+  > div > div {
+    width: 100%;
+    div[class*='ant-select-selection'] {
+      border: 0;
+      &:hover {
+        border: 0;
+      }
+      &:focus {
+        box-shadow: none;
+      }
+    }
+    input {
+      height: 100%;
+      border: 0;
+      &:hover {
+        border: 0;
+      }
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+.searchTime {
+  height: rem(30px) !important;
+  margin-right: rem(5px);
+  > span {
+    font-size: rem(12px);
+    background-color: $white-block;
+    border-right-color: $input-split-color;
+  }
+  input {
+    border: 0;
+    box-shadow: none;
+    &:hover {
+      border: 0;
+    }
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+.schedule {
+  width: 100%;
+  height: calc(100% - 40px);
+  box-sizing: border-box;
+  border-radius: rem(4px);
+  border: 1px solid $big-border-color;
+}
+
+.personnel {
+  width: 100%;
+  height: rem(55px);
+}
+
+.piecePerson {
+  height: 100%;
+  width: 24%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid $big-split-color;
+  border-bottom: 1px solid $big-split-color;
+  font-size: $font-title-size;
+  font-weight: bold;
+  color: $font-main-color;
+  float: left;
+}
+
+.week {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  border-right: 1px solid $week-border-color;
+  background: $four;
+  color: $white-default;
+  position: relative;
+  font-size: $font-title-size;
+  > b {
+    > span {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      font-size: $font-com-size;
+    }
+  }
+}
+
+.totalPerson {
+  width: 6%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  border-bottom: 1px solid $big-split-color;
+  > b {
+    color: $font-main-color;
+    font-weight: normal;
+    text-align: center;
+    font-size: $font-title-size;
+    p {
+      margin-bottom: 0;
+      font-size: $font-com-size;
+    }
+  }
+}
+
+.groups {
+  width: 100%;
+  height: calc(100% - 55px);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+//
+.groupFirst {
+  width: 24%;
+  height: auto;
+  float: left;
+  border-right: 1px solid $big-split-color;
+}
+
+.groupWeek {
+  width: 70%;
+  height: auto;
+  float: left;
+  display: flex;
+}
+
+// 滚动条宽度******
+.specialGroup {
+  width: 70%;
+}
+
+.groupWeeks {
+  width: 100%;
+  height: 100%;
+  border-right: 1px solid $big-split-color;
+}
+
+.groupMain {
+  width: 100%;
+  //height: auto;
+  height: auto;
+  //border-bottom: 1px solid $big-split-color;
+}
+
+.groupTitle {
+  width: 100%;
+  height: 100%;
+  float: left;
+  overflow-y: hidden;
+  overflow-x: auto;
+  border-bottom: 1px solid $big-split-color;
+  > div:first-child {
+    width: rem(30px);
+    height: 100%;
+    background-color: $group-background-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    float: left;
+    border-right: 1px solid $group-background-color;
+    font-size: $font-title-size;
+    font-weight: bold;
+    color: $font-main-color
+  }
+}
+
+.groupItem {
+  width: 100%;
+  //height: auto;
+  height: 33.33%;
+  border-bottom: 1px solid $big-split-color;
+}
+
+.items {
+  width: rem(40px);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  float: left;
+  border-right: 1px solid $mid-split-color;
+  font-size: $font-title-size;
+  color: $font-main-color;
+}
+
+.personItem {
+  //width: rem(90px);
+  height: rem(20px);
+  line-height: rem(20px);
+  text-align: center;
+  border-bottom: 1px solid $mid-split-color;
+  //border-right: 1px solid $mid-split-color;
+  display: flex;
+  justify-content: center;
+  color: $font-main-color;
+  font-size: $font-com-size;
+}
+
+.specialTotal {
+  width: 6%;
+  display: inline-block;
+}
+
+//.shiftStyle {
+//  width: 100%;
+//  height: rem(20px);
+//  line-height: rem(20px);
+//  border-bottom: 1px solid $mid-split-color;
+//  text-align: center;
+//}
+
+.borderBottom {
+  border-bottom: 0;
+}
+
+// 申请换班***
+.applyPerson {
+  width: 100%;
+  height: rem(50px);
+  border: 1px solid $big-border-color;
+  border-radius: rem(4px);
+  margin-bottom: rem(5px);
+  > div:first-child {
+    border-bottom: 1px solid $big-border-color;
+  }
+  > div {
+    height: 50%;
+    display: flex;
+    font-size: rem(12px);
+    b {
+      padding-right: rem(10px);
+    }
+    > div {
+      height: 100%;
+      margin-left: rem(10px);
+      display: flex;
+      align-items: center;
+    }
+    > div:nth-child(1) {
+      width: 40%;
+      border-right: 1px solid $big-border-color;
+    }
+    > div:nth-child(2) {
+      width: 55%;
+    }
+  }
+}
+
+.applyDrag {
+  div[class*='ant-modal-footer'] {
+    border: 0;
+    button {
+      padding: 0 rem(5px);
+    }
+  }
+}
+
+.iconApply {
+  position: absolute;
+  right: rem(5px);
+  bottom: 0;
+  font-size: rem(14px) !important;
+  color: $apply-icon;
+  cursor: pointer;
+  transition: all .1s ease-in .1s;
+  &:hover {
+    color: $white-default;
+  }
+}
+
+.total {
+  width: 100%;
+  height: rem(20px);
+  line-height: rem(20px);
+  text-align: center;
+  border-bottom: 1px solid $mid-split-color;
+  font-size: $font-com-size;
+  color: $font-main-color
+}
+
+@media screen and (min-width: 768px) and (max-width: 1090px) {
+  .iconApply {
+    right: rem(2px);
+    font-size: rem(12px) !important;
+  }
+}
+
+/***排班分组样式***/
+

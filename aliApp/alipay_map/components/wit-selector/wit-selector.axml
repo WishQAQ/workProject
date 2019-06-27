@@ -1,0 +1,177 @@
+<view class="wit-selector" hidden="{{!show}}">
+  <header-bar
+    back="{{search.show}}"
+    toView="view{{step}}"
+    onBack="onSearchBack"
+    onFocus="onFocus"
+    onSubmit="onSubmit"
+    onCrumb="onCrumb"
+    routes="{{
+      step > -1 && !search.show && filter.identity === 'org'
+        ? history.slice(0, step + 1)
+        : []}}">
+  </header-bar>
+
+  <view class="wrapper">
+    <!-- 启动屏  -->
+    <template name="bootstrap">
+      <bootstrap
+        a:if="{{step === -1 && !search.show}}"
+        onChooseType="onChooseType"
+        orgname="{{orgname}}"
+        list="{{list}}">
+      </bootstrap>
+    </template>
+    <template is="bootstrap" data="{{...bootstrap, step, search}}"></template>
+
+    <!-- 组织架构选择 -->
+    <view
+      class="tree container"
+      a:if="{{
+        (filter.identity === 'org' || filter.identity === 'partyJob')
+        && step !== -1
+        && !search.show
+        && list.length
+      }}">
+      <scroll-view
+        class="scroll-view"
+        scroll-y="{{true}}"
+        onScrollToLower="lower"
+        enable-back-to-top="{{true}}"
+        scroll-with-animation="{{false}}">
+        <!-- 全选当前 -->
+        <item
+          a:for="{{step > -1 ? history.slice(0, step + 1) : []}}"
+          a:if="{{
+            step > -1
+              && !person
+              && list.length
+              && list.filter(item => item.is_leaf === 0).length
+              && (orgType === 0 ? true : list.filter(item => item.org_type === orgType).length === list.length)
+                ? index + 1 === history.slice(0, step + 1).length
+                : false
+          }}"
+          key="{{index}}"
+          info="{{...item, index}}"
+          onChooseAll="onChooseAll"/>
+        <!-- 列表单项选择 -->
+        <item
+          a:for="{{list}}"
+          last="{{index + 1 === list.length}}"
+          a:key="*this"
+          info="{{...item, index, source: 'list', orgType, org, person: person}}"
+          onChoose="onChoose"
+          onNext="onNext"/>
+        <!-- 数据加载完成 -->
+        <view class="data-done" a:if="{{done}}">没有更多数据了</view>
+      </scroll-view>
+    </view>
+
+    <!-- 搜索列表 -->
+    <template name="search">
+      <view class="search-list container" a:if="{{show}}">
+        <scroll-view
+         class="scroll-view"
+          scroll-y="{{true}}"
+          onScrollToLower="searchLower"
+          style="width: 100%">
+          <block a:if="{{list.length}}">
+            <item
+              a:for="{{list}}"
+              a:key="*this"
+              last="{{index + 1 === list.length}}"
+              onChoose="onChoose"
+              info="{{...item, index, source: 'search', orgType, org}}"/>
+          </block>
+          <view class="data-done" a:if="{{done && list.length}}">没有更多数据了</view>
+          <view class="search-list-empty" a:if="{{!list.length && done}}">
+            <text>找不到关于”{{filter.keyword}}“的{{optionTip || '人员'}}</text>
+          </view>
+        </scroll-view>
+      </view>
+    </template>
+    <template is="search" data="{{...search, orgType, org, optionTip}}"></template>
+
+    <!-- 条件选择 -->
+    <view
+      a:if="{{filter.identity === 'condition' && step !== -1}}"
+      class="condition container">
+      <filter/>
+    </view>
+
+    <!-- 党内职务选择 -->
+    <view class="tree container"
+      a:if="{{
+        filter.identity === 'partyJob'
+        && step === 0
+        && !search.show
+      }}">
+      <block a:if="{{jobs.length}}">
+        <list>
+          <list-item
+            a:for="{{jobs}}"
+            arrow="{{item.person_count}}"
+            className="{{item.person_count ? '' : 'disabled'}}"
+            index="{{index}}"
+            data-code="{{item.key}}"
+            onClick="onChooseJob"
+            key="items-{{index}}"
+            last="{{index === (jobs.length - 1)}}">
+            {{item.name}}
+            <text
+              a:if="{{!item.person_count}}"
+              class="count">
+              (暂无人员)
+            </text>
+            <text
+              a:else
+              class="count">
+              ({{item.person_count}}人)
+            </text>
+          </list-item>
+        </list>
+      </block>
+      <view class="data-done" a:if="{{done && jobs.length}}">没有更多数据了</view>
+      <view class="search-list-empty" a:if="{{!jobs.length && done}}">
+        <text>找不到关于”{{filter.keyword}}“的{{optionTip || '人员'}}</text>
+      </view>
+    </view>
+
+    <!-- 底部操作栏 -->
+    <view class="action-bar wit-1px-t">
+      <view class="option-tip" a:if="{{orgType}}">
+        <text>只支持选择{{optionTip}}级别</text>
+      </view>
+      <view class="wrap">
+        <view class="left" onTap="openPopup">
+          <view class="text text-clip">
+            已选择: <text a:if="{{selected.tip}}">{{selected.tip}}</text><text a:if="{{selected.desc}}">{{selected.desc}}</text>
+          </view>
+        </view>
+        <view class="right">
+          <wit-btn
+            a:if="{{!search.show}}"
+            onClick="back"
+            text="{{step > -1 ? '返回' : '退出'}}"
+            style="padding: 4px 20px; margin-right: 5px"/>
+          <wit-btn
+            onClick="onConfirm"
+            text="确定{{
+              max
+                ? `(${selected.total}/${max})`
+                : selected.total
+                  ? `(${selected.total})`
+                  : ''}}"
+            style="padding: 4px 20px; transition: all .3s"
+            type="primary"/>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 已选pop -->
+  <selected-pop
+    onColsePop="onColsePop"
+    onRemove="onRemove"
+    selected="{{selected}}"/>
+</view>

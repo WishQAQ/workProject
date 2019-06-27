@@ -1,0 +1,7 @@
+{
+  "name": "toolbar",
+  "version": "0.0.1",
+  "description": "页面顶部的工具栏，支持沉寂式",
+  "dependencies": {
+  }
+}

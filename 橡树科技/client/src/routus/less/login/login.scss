@@ -1,0 +1,225 @@
+//login样式表
+.login {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  .loginImg {
+    width: 100%;
+    height: 100%;
+    background: url("/public/images/login_bg2.png") no-repeat;
+    background-size: 100% 100%;
+    padding-top: 114px;
+    .loginMask {
+      .loginContent {
+        .titleLogin {
+          width: 338px;
+          margin: 0 580px 42px;
+          .loginLogo {
+            width: 260px;
+            height: 36px;
+            background: url("/public/images/logo2.png") no-repeat center center;
+            margin: 0 auto;
+          }
+        }
+        .content {
+          width: 338px;
+          height: 326px;
+          margin: 0 580px;
+          border-radius: 8px;
+          background-color: #469EE3;
+          position: relative;
+          padding: 40px 40px 0 40px;
+          .titleLogin2 {
+            .hospital {
+              position: relative;
+              margin-bottom: 14px;
+              i {
+                position: absolute;
+                top: calc(50% - 12px);
+                left: 8px;
+                color: #fff;
+              }
+              :global {
+                .ant-select-selection {
+                  background-color: transparent;
+                  border-color: #fff;
+                  height: 30px;
+                  border-radius: 15px;
+                  &[ aria-expanded = "true" ] {
+                    background-color: rgba(91,176,242,0.85);
+                  }
+                }
+                .ant-select-selection__rendered {
+                  margin-left: 32px;
+                  border-left: 1px solid #fff;
+                  line-height: 29px;
+                }
+                .ant-select-selection-selected-value, .ant-select-search--inline .ant-select-search__field {
+                  padding-left: 7px;
+                  color: #fff;
+                }
+                .ant-select-selection__placeholder {
+                  color: #fff;
+                  margin-left: 7px;
+                }
+                .ant-select-arrow {
+                  color: #fff;
+                }
+              }
+              .select {
+                width: 100%;
+              }
+            }
+            .input {
+              margin-bottom: 14px;
+              position: relative;
+              &:nth-of-type(2) {
+                margin-bottom: 0;
+              }
+              &:before {
+                position: absolute;
+                top: 0;
+                left: 32px;
+                bottom: 0;
+                right: 0;
+                content: '';
+                width: 1px;
+                height: 100%;
+                background-color: #fff;
+              }
+            }
+            :global {
+              .ant-input {
+                background-color: transparent;
+                border-color: #fff;
+                color: #fff;
+                height: 30px;
+                border-radius: 15px;
+                &:focus{
+                  background-color: rgba(91,176,242,0.85);
+                }
+                &::-webkit-input-placeholder {
+                  color: #fff;
+                }
+              }
+              .ant-input_placeholder {
+                color: #fff;
+              }
+              .ant-input-affix-wrapper .ant-input-prefix {
+                left: 8px;
+                color: #fff;
+              }
+              .ant-input-affix-wrapper .ant-input:not(:first-child) {
+                padding-left: 39px;
+              }
+            }
+            .role {
+              line-height: 12px;
+              color: #fff;
+              background: none;
+              text-align: right;
+              border: none;
+              outline: none;
+              :global {
+                .ant-select-selection {
+                  background: none;
+                  text-align: right;
+                  border: none;
+                  outline: none;
+                  box-shadow: none;
+                  .ant-select-arrow {
+                    color: #fff;
+                  }
+                }
+              }
+            }
+            .sub {
+              display: flex;
+              justify-content: space-between;
+              padding-top: 20px;
+              align-items: center;
+              :global {
+                .ant-btn {
+                  height: 34px;
+                  color: #fff;
+                  font-size: 14px;
+                }
+                .ant-checkbox-inner {
+                  background: transparent;
+                }
+                .ant-checkbox + span {
+                  color: #fff;
+                }
+                .ant-checkbox.ant-checkbox-checked {
+                  box-shadow: #5BB0F2;
+                }
+              }
+              //按钮
+              .btnStyle {
+                width: 138px;
+                border-radius: 20px !important;
+                box-sizing: border-box;
+                background-color: #1C81CF;
+                border-color: #1D74B8;
+                &:hover {
+                  border-color: #3F8BC8;
+                  background-color: #5BB0F2;
+                }
+              }
+              .right {
+                flex: 1;
+                text-align: center;
+              }
+            }
+          }
+          //版权所有
+          .copyright {
+            position: absolute;
+            bottom: 24px;
+            width: 100%;
+            left: 0;
+            right: 0;
+            text-align: center;
+            span {
+              color: #cdf0ff;
+              font-size: 10px;
+              position: relative;
+              //提示信息
+              .tips {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                left: 0;
+                right: 0;
+                span {
+                  display: block;
+                  background-color: #FCE9ED;
+                  color: #FF375B;
+                  font-size: 12px;
+                  line-height: 30px;
+                  text-align: center;
+                  border: 1px solid #F3B8C3;
+                  border-radius: 4px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.dropSelect {
+  :global {
+    .ant-select-dropdown-menu-item {
+      color: #353535;
+      font-size: 12px;
+    }
+    .ant-select-dropdown-menu-item-active.ant-select-dropdown-menu-item {
+      background-color: #E9F4FC;
+      color: #3C9AE4;
+      font-weight: 600;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+<view class="bootstrap container">
+  <view class="home">
+    <view class="orgname">{{base_org_name}}</view>
+    <wit-cell-item
+      classes="item"
+      a:for="{{list}}"
+      item="{{item}}"
+      onClick="onChooseType"
+      type="view"
+      arrow>
+      <view slot="left" class="left">
+        <view class="wit-cell-main">
+          <view class="icon-wrap" style="background: {{item.icon.color}}">
+            <wit-icon icon="{{item.icon.font}} icon" color="#fff" size="20px"/>
+          </view>
+          <text class="text">{{item.name}}</text>
+        </view>
+      </view>
+    </wit-cell-item>
+  </view>
+</view>

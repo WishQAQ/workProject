@@ -1,0 +1,92 @@
+.infoTitle {
+  background-color: #7FADD2;
+  border-radius: 4px 4px 0 0;
+  height: 30px;
+  position: relative;
+  >p{
+    padding-left: 12px;
+    font-size: 14px;
+    color:#fff;
+    font-weight: bold;
+    line-height: 30px;
+  }
+  .btnGroup{
+    position: absolute;
+    top: 4px;
+    left: 80px;
+    height: 22px;
+    .flex {
+      margin-left: 6px;
+      display: inline-block;
+      :global {
+        .ant-input {
+          width: 94px;
+          height: 22px;
+          border-radius: 4px 0 0 4px;
+          background: transparent;
+          border-color: #fff;
+          border-right: 0;
+          vertical-align: middle;
+          color: #fff;
+          padding: 0 8px;
+          display: none;
+          transition: all .3s;
+        }
+      }
+      .show {
+        display: inline-block;
+      }
+      .ghost {
+        vertical-align: middle;
+      }
+      .radiusBtn {
+        border-radius: 0 4px 4px 0;
+      }
+    }
+    .margin0{
+      margin-left: 0;
+    }
+    :global{
+      //按钮组
+      .ant-btn-group {
+        vertical-align: middle;
+      }
+      .ant-btn {
+        height: 22px;
+        background: transparent;
+        border-color: #fff;
+        color: #fff;
+        padding:0 8px;
+        &:hover{
+          background-color: #F9F9F9;
+          color:#3C9AE4;
+        }
+        &:nth-of-type(3){
+          &:hover{
+            background-color: #F9F9F9;
+            color:#FF375B;
+          }
+        }
+      }
+      .ant-btn-clicked {
+        &:after {
+          display: none;
+        }
+      }
+      .icon {
+        font-size: 12px;
+        margin-right: 3px;
+      }
+    }
+    .ghost {
+      width: 22px;
+      padding: 0;
+      text-align: center;
+      &:hover {
+        background-color: #F9F9F9 !important;
+        border-color: #F9F9F9 !important;
+        color: #3C9AE4;
+      }
+    }
+  }
+}

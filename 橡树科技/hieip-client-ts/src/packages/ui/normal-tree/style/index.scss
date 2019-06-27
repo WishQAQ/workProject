@@ -1,0 +1,95 @@
+@import '../../../../index';
+
+$hover-color: #d5f3ff;
+//插入线条
+@mixin insertLine($top, $bottom, $left, $color:#cdcdcd, $width:1px, $height:100%) {
+  position: absolute;
+  content: '';
+  width: $width;
+  height: $height;
+  top: $top;
+  bottom: $bottom;
+  left: $left;
+  background-color: $color;
+  z-index: 1;
+}
+
+.treeMain {
+  width: 100%;
+  height: calc(100% - 13px);
+}
+
+.treeOne {
+  font-size: rem(13px);
+  > li {
+    margin-bottom: rem(6px);
+    transition: .1s linear .1s;
+    float: left;
+    width: 100%;
+    > span {
+      cursor: pointer;
+      color: $font-com-color;
+      padding-left: rem(5px);
+      display: inline-block;
+      height: rem(20px);
+      line-height: rem(20px);
+      width: 100%;
+      &:hover {
+        background-color: darken($hover-color, 5%);
+      }
+      > i {
+        font-size: rem(14px) !important;
+        padding-right: rem(5px);
+      }
+    }
+  }
+}
+
+.treeOneSelect {
+  background-color: $hover-color !important;
+}
+
+.treeSec {
+  color: $font-com-color;
+  padding-left: rem(15px);
+  padding-top: rem(5px);
+  position: relative;
+  > li {
+    height: auto;
+    width: 100%;
+    margin-bottom: rem(10px);
+  }
+  > li:last-child {
+    margin-bottom: 0;
+  }
+  animation: animations .5s ease-out forwards;
+  -webkit-animation: animations .5s ease-out forwards;
+}
+
+@-webkit-keyframes animations {
+  0% {
+    -webkit-transform: translate(0);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translate(30px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(35px);
+    opacity: 1;
+  }
+}
+
+.fontClass {
+  padding-right: rem(5px);
+  font-size: rem(14px) !important;
+}
+
+.fontStyle {
+  cursor: pointer;
+  padding: rem(3px) rem(5px);
+  &:hover {
+    background-color: darken($hover-color, 5%);
+  }
+}

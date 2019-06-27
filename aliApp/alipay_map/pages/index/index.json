@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "wit-btn": "/components/wit-btn/index",
+    "wit-loading": "/components/wit-loading/index",
+    "wit-cell-group": "/components/wit-cell-group/index",
+    "wit-cell-item": "/components/wit-cell-item/index",
+    "picker-item": "mini-antui/es/picker-item/index",
+    "wit-spin": "/components/wit-spin/index",
+    "wit-selector": "/components/wit-selector/wit-selector"
+  }
+}

@@ -1,0 +1,85 @@
+//默认公共样式
+$white-default: #f9f9f9; //默认白
+$white-block: #fcfdfd; //表格快
+
+//字体颜色
+$font-select-color: #3db5e7; //主色字体，选中色块状态
+$font-main-color: #353535; //重要的、选中状态
+$font-com-color: #555; //一般，未选中状态
+$font-tip-color: #888; //提示字体
+$font-un-color: #b2b2b2; //不可选
+
+//色块
+$first: #ff375b; //一级级别，特护理级别，文字提醒
+$second: #fa8630; //二级
+$three: #ffcc19; //三级
+$four: #01bf9d; //四级，生命体征
+$list: #bbe0ef; //列表，选择选中，触碰显示
+$select: #f6f6f6; //选项已选，列表头部灰底
+$radio: #bfbfbf; // radio未选中颜色
+//框线
+$big-border-color: #cdcdcd; //大列表外框线
+$big-split-color: #d9d9d9; //列表分割线、大模块
+$mid-split-color: #e1e1e1; //列表分割线、中模块
+$list-split-color: #e1e1e1; //列表分割线
+$input-split-color: #e5e5e5; //搜索框分割线
+$border-focus-color: #3db5e7; // 选中框线颜色
+
+//等级
+$level0: #000;
+$level1: #ff375b;
+$level2: #fa8630;
+$level3: #ffcc19;
+$level4: #01bf9d;
+
+// 分区
+$red-partition: #ff375b;
+$yellow-partition: #ffcc19;
+$green-partition: #01bf9d;
+
+// 标题颜色
+$public-title-color: #5591aa; // 小标题样式
+
+// 圆角
+$border-radius4: rem(4px);
+$border-radius5: rem(5px);
+$border-radius10: rem(10px);
+$border-radius-ver: rem(50%);
+
+// 阴影
+$box-shadow1: #aaa;
+$box-shadow2: #999;
+
+// menu:selected
+$menu-selected: #BBE0EF;
+
+// 按钮样式
+//save
+$button-save-background: #3DB5E7;
+$button-save-border: #2F9FCE;
+$button-save-hover-background: #37A3D0;
+$button-save-hover-border: #3091B9;
+// search
+$button-search-background: #E5E5E5;
+$button-search-border: #C4C4C4;
+$button-search-color: #555;
+$button-search-hover-background: #37A3D0;
+$button-search-hover-border: #3091B9;
+$button-search-hover-color: #FFF;
+// add
+$button-add-background: #4F98E4;
+$button-add-border: #2F6FCE;
+$button-add-hover-background: #5892DA;
+$button-add-hover-border: #2C73CA;
+// delete
+$button-delete-background: #FCE9ED;
+$button-delete-border: #F3B8C3;
+$button-delete-color: #FF375B;
+$button-delete-hover-background: #FF375B;
+$button-delete-hover-border: #FF375B;
+$button-delete-hover-color: #FFF;
+// extra
+$button-extra-background: #63BBC6;
+$button-extra-hover-background: #3DB5E7;
+//表格背景颜色
+$table-title: #5591aa;

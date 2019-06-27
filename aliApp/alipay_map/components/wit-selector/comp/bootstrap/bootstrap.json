@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "wit-icon": "/components/wit-icon/index",
+    "wit-cell-item": "/components/wit-cell-item/index"
+  }
+}

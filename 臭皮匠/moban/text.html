@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Generator" content="EditPlus®">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <title>Document</title>
+    <style>
+        *{margin:0;padding:0;}
+        body{background:#000;}
+        #show-text{width:150px;margin:20px auto;}
+        h1{text-align:center;color:white;}
+    </style>
+</head>
+<body>
+<h1>input your text</h1>
+<div id="show-text">
+    <p style="color:white;font-size:14px;font-family:'微软雅黑';">
+        <span id="bbb"></span>
+        <span id="gb">_</span>
+    </p>
+</div>
+
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+    var text="静坐长思往日回，岁月蹉跎徒伤悲。小荷才露尖尖角，初设江湖岁月催。壮志未酬心犹在，琐事绕身家待归。日月虽往随心欲，梦里千回展翅飞。"
+
+    function printer(text){
+        var l = text.length;
+        var t = 0;
+        var arr = [];
+        for(var i = 0; i < l; i++){
+            arr[i] = text.substr(i,1);
+        }
+        setInterval(function(){ $("#gb").fadeOut(100).fadeIn(100); },400);
+        var init = setInterval(function(){
+            if(t < l){
+                $("#bbb").append(arr[t]);
+                if((t!==(l-1))&&(t%8==7)){
+                    $("#bbb").append('<br/>');
+                }
+                t++;
+            }else{
+                clearInterval(init);
+            }
+        },500);
+
+    }
+
+    printer(text);
+</script>
+</body>
+</html>

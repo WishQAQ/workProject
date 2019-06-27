@@ -1,0 +1,448 @@
+@import '../../../../../index';
+@import '../../index';
+
+$titleColor: #fff;
+$titleBg: #5591aa; //页面框头部背景颜色
+$ag-table-width: rem(14px); //表格复选框大小
+
+//Search组件构建搜索框样式
+.mySearchBox {
+  margin-right: rem(18px);
+  display: flex;
+  align-items: center;
+  .mySearch {
+    height: rem(24px) !important;
+    width: rem(195px) !important;
+    > input {
+      font-size: rem(12px);
+      height: rem(24px) !important;
+      line-height: rem(24px) !important;
+      padding-left: rem(7px);
+      padding-right: rem(24px);
+      color: $font-un-color;
+      border-color: $big-border-color;
+    }
+    > span {
+      > button {
+        font-size: rem(12px) !important;
+        height: rem(22px) !important;
+        background-color: #fff !important;
+        color: $font-un-color !important;
+        border: 0 !important;
+        padding: 0 rem(8px) !important;
+        border-left: rem(1px) solid $list-split-color !important;
+        margin-right: rem(1px);
+        > i {
+          font-size: rem(12px) !important;
+        }
+      }
+    }
+  }
+  .mySingleRadio {
+    margin-right: rem(2px);
+    :global {
+      .ant-radio {
+        transform: scale(.85) !important;
+      }
+      .ant-radio-wrapper {
+        margin-right: 0;
+        span:last-child {
+          padding: 0 rem(9px) 0 rem(5px);
+          font-size: rem(12px) !important;
+        }
+      }
+    }
+  }
+}
+
+//多个操作组
+.myOperateGroup {
+  font-size: rem(12px);
+}
+
+//新增弹框里 labelbox样式,输入框，下拉框
+.myLabelBoxTotal {
+  font-size: rem(12px) !important;
+  height: rem(30px) !important;
+  line-height: rem(28px) !important;
+  border: 0 !important;
+  margin-top: rem(10px) !important;
+  :global {
+    //左外框
+    .ant-layout-sider {
+      width: auto !important;
+      min-width: auto !important;
+      flex: 0 0 auto !important;
+      color: $font-com-color !important;
+      background-color: #fff !important;
+    }
+    //左内框背景色
+    .ant-layout-sider-children > span {
+      text-align: center;
+      background-color: #fff !important;
+      border-top: rem(1px) solid $big-border-color;
+      border-bottom: rem(1px) solid $big-border-color;
+      border-left: rem(1px) solid $big-border-color;
+      border-radius: rem(4px) 0 0 rem(4px);
+      height: auto !important;
+      padding: 0 rem(8px) !important;
+      //星号颜色
+      > i {
+        padding-left: rem(1px) !important;
+        color: $first !important;
+        position: relative;
+        font-size: rem(14px);
+        top: rem(-1px);
+      }
+    }
+    //右边框
+    .ant-layout-content > div {
+      width: 100%;
+      height: 100%;
+    }
+    .ant-layout-content > div > div {
+      width: 100%;
+      height: 100%;
+    }
+    .pt-popover-target {
+      width: 100%;
+      height: 100%;
+    }
+    .pt-input {
+      border-radius: 0 rem(4px) rem(4px) 0 !important;
+      padding: 0 rem(7px) !important;
+      color: $font-main-color !important;
+    }
+    //右边输入框
+    .ant-input {
+      border-radius: 0 rem(4px) rem(4px) 0 !important;
+      height: 100% !important;
+      font-size: rem(12px) !important;
+      border-color: $big-border-color !important;
+      border-left-color: $input-split-color !important;
+      color: $font-main-color !important;
+    }
+    .ant-input:focus, .ant-input:hover {
+      border-color: $border-focus-color !important;
+      box-shadow: none !important;
+    }
+    //时间选择框
+    .pt-input {
+      height: 100% !important;
+      width: 100% !important;
+    }
+  }
+  //下拉框
+  .mySelect:after {
+    display: flex;
+    align-items: center;
+  }
+  .mySelect {
+    font-size: rem(12px) !important;
+    width: 100% !important;
+    > span > input {
+      border-radius: 0 rem(4px) rem(4px) 0 !important;
+      box-shadow: none !important;
+      border-color: $big-border-color !important;
+      border-left-color: $input-split-color !important;
+      padding: 0 rem(2px) !important;
+      color: $font-main-color !important;
+    }
+    > span > input:focus, > span > input:hover {
+      border-color: $border-focus-color !important;
+      box-shadow: none !important;
+    }
+    > span > i > i {
+      font-size: rem(16px) !important;
+      transform: scale(.8);
+    }
+    :global {
+      .ant-select-selection--single {
+        border-radius: 0 rem(4px) rem(4px) 0 !important;
+        height: 100% !important;
+      }
+      .ant-select-selection__rendered {
+        height: rem(28px) !important;
+        line-height: rem(28px) !important;
+      }
+      .ant-select-selection--single:hover, .ant-select-selection--single:focus {
+        border-color: $border-focus-color !important;
+        box-shadow: none !important;
+      }
+      .ant-select-arrow {
+        color: $font-un-color !important;
+      }
+    }
+  }
+  // input 只读框
+  .readOnly {
+    height: 100%;
+    width: 100%;
+    padding: 0 rem(7px);
+    border-radius: 0 rem(4px) rem(4px) 0 !important;
+    border: rem(1px) solid $big-border-color !important;
+    border-left-color: $input-split-color !important;
+    color: $font-un-color !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  // 单选按钮
+  .mySingleRadio {
+    margin-right: rem(2px);
+    border: rem(1px) solid $big-border-color !important;
+    border-left-color: $input-split-color !important;
+    border-radius: 0 rem(4px) rem(4px) 0 !important;
+    display: flex;
+    align-items: center;
+    padding-left: rem(8px) !important;
+    :global {
+      .ant-radio {
+        transform: scale(.85) !important;
+      }
+      .ant-radio-wrapper {
+        margin-right: 0;
+        span:last-child {
+          padding: 0 rem(9px) 0 rem(5px);
+          font-size: rem(12px) !important;
+        }
+      }
+    }
+  }
+}
+
+//表体复选框
+.agBodyTitle {
+  position: relative;
+  :global {
+    .ag-cell-wrapper {
+      position: absolute;
+      width: $ag-table-width;
+      height: $ag-table-width;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+    }
+    .ag-icon {
+      width: $ag-table-width;
+      height: $ag-table-width;
+    }
+    .ag-selection-checkbox {
+      display: block;
+      padding-right: 0 !important;
+    }
+  }
+}
+
+//表格相关样式
+.myAgTable {
+  border: rem(1px) solid $big-border-color;
+  border-top-color: $list-split-color;
+  border-radius: 0 0 rem(4px) rem(4px);
+}
+
+.myAgPage {
+  margin-top: rem(9px);
+  text-align: right;
+  padding: 0;
+}
+
+//表格外套div
+.mainTable {
+  height: calc(100% - 30px);
+  //表头复选框
+  :global {
+    .ag-cell-label-container {
+      height: 100%;
+    }
+    .ag-header-cell-resize {
+      display: none;
+    }
+    .ag-header-row {
+      .ag-header-cell:first-child {
+        position: relative;
+        .ag-header-select-all {
+          padding: 0;
+          position: absolute;
+          width: $ag-table-width;
+          height: $ag-table-width;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          margin: auto;
+        }
+        .ag-checkbox-unchecked {
+          width: $ag-table-width;
+          height: $ag-table-width;
+          display: block;
+          .ag-icon {
+            width: $ag-table-width;
+            height: $ag-table-width;
+          }
+        }
+        .ag-checkbox-checked {
+          .ag-icon {
+            width: $ag-table-width;
+            height: $ag-table-width;
+          }
+        }
+        .ag-checkbox-indeterminate {
+          .ag-icon {
+            width: $ag-table-width;
+            height: $ag-table-width;
+          }
+        }
+      }
+    }
+  }
+}
+
+.listRoot {
+  height: 100%;
+  .title {
+    background-color: $titleBg;
+    color: $titleColor;
+    border-radius: rem(4px) rem(4px) 0 0;
+    display: flex;
+    align-items: center;
+    height: rem(30px);
+    padding: 0 rem(11px) 0 rem(11px);
+    .titleName {
+      font-size: rem(14px);
+      margin-right: rem(8px);
+      font-weight: bold;
+    }
+  }
+  .main {
+    height: calc(100% - 38px);
+    .operating {
+      padding: rem(7px);
+      display: flex;
+      align-items: center;
+      border-left: rem(1px) solid $big-border-color;
+      border-right: rem(1px) solid $big-border-color;
+    }
+  }
+  //弹框样式
+  .showSave {
+    //特殊行
+    .alterSpecialRow {
+      > h2 {
+        font-size: rem(12px);
+        margin: rem(8px) 0 rem(7px) 0;
+      }
+      //多个单选
+      .specialRadioGroup {
+        font-size: rem(12px);
+        display: flex;
+        justify-content: space-around;
+      }
+    }
+    //特殊行
+    .specialTwoRadio {
+      display: flex;
+      align-items: center;
+      margin: rem(8px) 0 0 0;
+      > h2 {
+        font-size: rem(12px);
+        line-height: rem(12px);
+        margin-bottom: 0;
+      }
+      :global {
+        .ant-radio-wrapper {
+          font-size: rem(12px);
+          margin: 0;
+          span:last-child {
+            padding-left: rem(5px);
+          }
+        }
+      }
+    }
+    //特殊行中的单选 弹出的内容
+    .specialTwoLabelBox {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .specialMiddle {
+        display: block;
+        width: rem(8px);
+      }
+    }
+    //特殊行中的单选 弹出的内容
+    .specialOneLabelBox {
+      .testInput {
+        > div {
+          width: rem(385px) !important;
+        }
+        > input {
+          height: 100% !important;
+          border-radius: 0 rem(4px) rem(4px) 0 !important;
+        }
+        > input:focus, > input:hover {
+          border-color: #3db5e7 !important;
+          box-shadow: none !important;
+        }
+      }
+    }
+    //调整自定义common样式
+    :global {
+      .ant-modal {
+        width: rem(475px) !important;
+      }
+      .ant-modal-content {
+        border-radius: rem(6px);
+      }
+      .ant-modal-header {
+        padding: rem(12px) rem(13px);
+        border-bottom-color: $list-split-color;
+      }
+      .ant-modal-title {
+        font-size: rem(14px);
+        color: $font-main-color;
+        line-height: rem(14px);
+        height: rem(14px);
+        font-weight: bold;
+      }
+      .ant-modal-close-x {
+        height: rem(38px);
+        line-height: rem(38px);
+        font-size: rem(14px);
+        width: rem(38px);
+      }
+      .ant-modal-body {
+        padding: rem(2px) rem(14px) 0;
+      }
+      .ant-modal-footer {
+        border-top: 0;
+        padding: rem(8px) rem(14px) rem(8px) rem(14px);
+      }
+      .ant-btn {
+        height: rem(26px);
+        font-size: rem(12px);
+        padding: 0 rem(14px);
+        margin-left: rem(6px);
+        margin-right: 0;
+        color: $font-com-color;
+        background-color: $input-split-color;
+        border: rem(1px) solid #c4c4c4;
+      }
+      .ant-btn:hover, .ant-btn:focus, .ant-btn-primary:hover, .ant-btn-primary:focus {
+        color: #fefefe;
+        background-color: #37a3d0;
+        border-color: #3091b9;
+      }
+      .ant-btn-primary {
+        margin-left: rem(8px);
+        color: #fff;
+        background-color: #3db5e7;
+        border: rem(1px) solid #2f9fce;
+      }
+      .ant-radio {
+        transform: scale(.9) !important;
+      }
+    }
+  }
+}

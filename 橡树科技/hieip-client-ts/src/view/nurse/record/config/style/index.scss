@@ -1,0 +1,420 @@
+@import '../../../../../index';
+
+.recordConfig {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: $white-default;
+  padding: rem(10px) rem(12px);
+  :global {
+    .ant-modal-header {
+      background-color: $white-block;
+    }
+    .ant-modal-body {
+      height: calc(100% - 71px)
+    }
+    .ant-modal-footer {
+      padding-top: 0;
+      border-top: 0;
+      padding-bottom: rem(10px);
+    }
+  }
+}
+
+.recordConfigSearch {
+  font-size: $font-com-size;
+  color: $font-main-color;
+  height: rem(30px);
+  line-height: rem(30px);
+  margin-bottom: rem(10px);
+  display: flex;
+  align-items: center;
+  > div {
+    display: inline-block;
+    > span {
+      font-weight: bold;
+    }
+  }
+  :global {
+    .ant-radio-group {
+      margin: 0 rem(10px)
+    }
+    .ant-radio-inner {
+      width: rem(14px);
+      height: rem(14px);
+    }
+    .ant-radio-inner:after {
+      width: rem(6px);
+      height: rem(6px);
+    }
+    span.ant-radio + * {
+      padding-left: rem(5px);
+      padding-right: 0;
+      font-size: $font-com-size;
+      color: $font-main-color !important;
+      vertical-align: middle;
+    }
+  }
+  .recordConfigName {
+    background-color: $white-block;
+    margin-right: rem(10px);
+    display: flex;
+    align-items: center;
+    > span {
+      display: inline-block;
+      width: rem(30px);
+      height: rem(30px);
+      text-align: center;
+      line-height: rem(30px);
+      border: rem(1px) solid $big-border-color;
+      border-left: 0;
+      border-radius: 0 rem(4px) rem(4px) 0;
+      > i {
+        color: $font-com-color !important;
+        font-size: $font-title-size !important;
+      }
+    }
+    .recordConfigNameSelect {
+      width: rem(170px);
+      font-size: $font-com-size;
+      color: $font-main-color;
+      :global {
+        .ant-select-selection--single {
+          height: rem(30px);
+          border-radius: rem(4px) 0 0 rem(4px);
+          border-color: $big-border-color;
+          border-right-color: $input-split-color;
+        }
+        .ant-select-selection__rendered {
+          line-height: rem(28px);
+        }
+      }
+    }
+  }
+  > button {
+    margin-right: rem(6px);
+    width: rem(54px);
+    height: rem(30px);
+    padding: 0;
+    font-size: $font-com-size;
+    color: #fff;
+    > i {
+      font-size: $font-com-size;
+      margin-right: rem(3px);
+    }
+  }
+  .add {
+    background-color: $button-add-background;
+    border-color: $button-add-border;
+    &:hover, &:active, &:focus {
+      background-color: $button-add-hover-background;
+      border-color: $button-add-hover-border;
+      color: #fff !important;
+    }
+  }
+  .delete {
+    background-color: $button-delete-background;
+    border-color: $button-delete-border;
+    color: $button-delete-color;
+    &:hover, &:active, &:focus {
+      background-color: $button-delete-hover-background;
+      border-color: $button-delete-hover-border;
+      color: #fff !important;
+    }
+  }
+  .save {
+    background-color: $button-save-background;
+    border-color: $button-save-border;
+    &:hover, &:active, &:focus {
+      background-color: $button-save-hover-background;
+      border-color: $button-save-hover-border;
+      color: #fff !important;
+    }
+  }
+}
+
+.configTable {
+  width: 100%;
+  height: calc(100% - 40px);
+  overflow: hidden;
+  .myAgTable {
+    border: 1px solid #cdcdcd;
+    border-radius: rem(4px);
+    height: calc(100% - 34px) !important;
+    .cellOne {
+      text-align: center;
+      line-height: rem(28px);
+      :global {
+        .ant-radio-group {
+          margin: 0 rem(10px)
+        }
+        .ant-radio-inner {
+          width: rem(14px);
+          height: rem(14px);
+        }
+        .ant-radio-inner:after {
+          width: rem(6px);
+          height: rem(6px);
+        }
+        span.ant-radio + * {
+          padding-left: rem(5px);
+          padding-right: 0;
+          font-size: $font-com-size;
+          color: $font-main-color !important;
+          vertical-align: middle;
+        }
+      }
+    }
+    .visible {
+      overflow: visible !important;
+    }
+  }
+  .myAgPage {
+    padding: rem(10px) 0 0 0;
+  }
+}
+
+//表格复选框
+.agCheckbox {
+  height: 100%;
+  position: relative;
+  :global {
+    .ag-header-cell-resize {
+      display: none;
+    }
+    .ag-header-select-all {
+      padding: 0 !important;
+      position: absolute;
+      width: rem(14px);
+      height: rem(14px);
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+    }
+    .ag-checkbox-unchecked {
+      width: rem(14px);
+      height: rem(14px);
+      display: block;
+      .ag-icon {
+        width: rem(14px);
+        height: rem(14px);
+      }
+    }
+    .ag-checkbox-checked {
+      .ag-icon {
+        width: rem(14px);
+        height: rem(14px);
+      }
+    }
+    .ag-checkbox-indeterminate {
+      .ag-icon {
+        width: rem(14px);
+        height: rem(14px);
+      }
+    }
+  }
+}
+
+.agBodyCheckbox {
+  position: relative;
+  :global {
+    .ag-cell-wrapper {
+      position: absolute;
+      width: rem(14px);
+      height: rem(14px);
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+    }
+    .ag-icon {
+      width: rem(14px) !important;
+      height: rem(14px) !important;
+    }
+    .ag-selection-checkbox {
+      display: block;
+      padding-right: 0 !important;
+    }
+  }
+}
+
+// 明细弹框
+.dragConfig {
+  height: rem(564px);
+  background-color: $white-block;
+}
+
+.recordConfigDrag {
+  display: flex;
+  height: 100%;
+  .title {
+    margin: 0;
+    height: rem(30px);
+    line-height: rem(30px);
+    background-color: #5591AA;
+    color: #fff;
+    font-size: $font-title-size;
+    font-weight: bold;
+    position: relative;
+    > span {
+      padding: 0 rem(10px);
+    }
+
+  }
+  > div {
+    flex: 1;
+    .dragLeftContent {
+      border: rem(1px) solid #cdcdcd;
+      border-top: 0;
+      border-right: 0;
+    }
+    &:first-child {
+      .title {
+        border-radius: rem(4px) 0 0 0;
+      }
+    }
+    &:last-child {
+      border-left: 1px solid #e1e1e1;
+      .title {
+        border-radius: 0 rem(4px) 0 0;
+      }
+    }
+    button {
+      margin-right: rem(6px);
+      width: rem(56px);
+      height: rem(24px);
+      padding: 0;
+      font-size: $font-com-size;
+      color: #fff;
+      position: absolute;
+      top: rem(3px);
+      &:nth-of-type(2) {
+        left: rem(142px)
+      }
+      > i {
+        font-size: $font-com-size;
+        margin-right: rem(3px);
+      }
+    }
+    .add {
+      background-color: #6399AF;
+      border-color: #71A7BE;
+      &:hover, &:active, &:focus {
+        background-color: #6399AF;
+        border-color: #FFFFFF;
+        color: #fff !important;
+      }
+    }
+    .delete {
+      background-color: $button-delete-background;
+      border-color: $button-delete-border;
+      color: $button-delete-color;
+      &:hover, &:active, &:focus {
+        background-color: $button-delete-hover-background;
+        border-color: $button-delete-hover-border;
+        color: #fff !important;
+      }
+    }
+    .name {
+      margin: rem(10px) auto rem(10px) rem(10px);
+      width: rem(210px);
+      height: rem(26px);
+      i {
+        font-size: $font-title-size;
+      }
+      span {
+        background-color: $white-block;
+      }
+      :global {
+        .ant-input-sm {
+          height: rem(26px);
+          font-size: $font-com-size;
+        }
+        .ant-input-group-addon {
+          padding: 0 rem(8px)
+        }
+      }
+    }
+    .dragTable {
+      width: 100%;
+      height: calc(100% - 76px);
+      .myAgTable {
+        border-top: 1px solid #cdcdcd;
+      }
+      :global {
+        .ag-body {
+          top: 0 !important;
+          height: 100% !important;
+        }
+        .ag-row-even {
+          background-color: $white-block;
+        }
+      }
+    }
+    .rightDetail {
+      height: calc(100% - 30px);
+      padding: rem(10px) rem(16px) 0 rem(12px);
+      border-right: rem(1px) solid #cdcdcd;
+      border-bottom: rem(1px) solid #cdcdcd;
+    }
+    .dragRounded {
+      margin-bottom: rem(10px);
+      border: none !important;
+      border-radius: 0 !important;
+      > span {
+        border: rem(1px) solid $big-border-color;
+        border-bottom-left-radius: rem(4px);
+        border-top-left-radius: rem(4px);
+        border-right: none;
+        background-color: $white-block !important;
+        font-size: $font-com-size;
+        color: $font-main-color;
+        padding: 0 rem(8px);
+        line-height: rem(30px);
+      }
+      :global {
+        .ant-input-sm, .ant-input {
+          height: rem(30px);
+          border-radius: 0 rem(4px) rem(4px) 0;
+        }
+      }
+    }
+    .dragSelect {
+      font-size: $font-com-size !important;
+      width: 100%;
+      color: $font-main-color !important;
+      height: rem(30px);
+      :global {
+        .ant-select-selection {
+          border: rem(1px) solid $big-border-color;
+          border-bottom-left-radius: 0;
+          border-top-left-radius: 0;
+          border-left: rem(1px) solid $input-split-color;
+          height: rem(30px);
+          background-color: $white-block;
+          overflow: hidden;
+          &:hover {
+            border-color: $button-save-background;
+          }
+        }
+        .ant-select-focused .ant-select-selection {
+          border-color: $button-save-background !important;
+        }
+        .ant-select-selection__rendered {
+          margin: 0 rem(8px) !important;
+        }
+        .ant-select-arrow::before {
+          font-size: rem(10px);
+          color: $font-un-color;
+        }
+      }
+    }
+  }
+  .cellClass {
+    text-align: left !important;
+    text-indent: rem(8px);
+  }
+}

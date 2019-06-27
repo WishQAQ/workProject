@@ -1,0 +1,500 @@
+@import '../../../../../index';
+
+$start: #FF375B;
+.paragraphsMain {
+  width: 100%;
+  height: 100%;
+  font-size: rem(12px);
+  color: $font-main-color;
+  padding: rem(10px) rem(12px);
+  background-color: $white-default;
+  span[class*='ant-checkbox-inner'] { // checkbox选择框样式
+    width: rem(14px);
+    height: rem(14px);
+    border-color: $big-border-color;
+  }
+  label[class*='ant-checkbox-wrapper'] {
+    color: $font-main-color;
+  }
+  span[class*='ant-checkbox-inner']:after {
+    left: rem(3.571429px);
+  }
+  :global {
+    .ant-checkbox-checked > .ant-checkbox-inner {
+      border-color: $button-save-background !important;
+    }
+  }
+  span {
+    font-size: $font-com-size;
+  }
+  input[class*='ant-input'] {
+    height: rem(30px);
+    background-color: $white-block;
+    font-size: $font-com-size;
+    color: $font-main-color;
+    border: rem(1px) solid $big-border-color;
+    border-left-color: $input-split-color;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    padding: 0 rem(8px);
+    &:focus {
+      border-color: $button-save-background;
+    }
+  }
+  div[class*='ag-body'] {
+    background-color: $white-block;
+  }
+}
+
+.dropDownMenu {
+  background-color: $white-block;
+  li[class*='ant-select-dropdown-menu-item'] {
+    font-size: $font-com-size;
+    color: $font-main-color;
+    &:hover {
+      background-color: $menu-selected;
+    }
+  }
+  li[class*='ant-select-dropdown-menu-item-selected'] {
+    background-color: $menu-selected;
+  }
+}
+
+.paragraphsTitle {
+  width: 80%;
+  height: rem(30px);
+  margin-bottom: rem(10px);
+  display: flex;
+  align-items: center;
+  position: relative;
+  button {
+    height: rem(30px) !important;
+    padding: 0 rem(8px) !important;
+    > i {
+      padding-right: rem(2px) !important;
+      font-size: $font-com-size;
+    }
+  }
+}
+
+.gray {
+  border-color: $button-search-border;
+  background-color: $button-search-background;
+  color: $font-com-color;
+  &:focus {
+    border-color: $button-search-border !important;
+    background-color: $button-search-background !important;
+    color: $font-com-color !important;
+  }
+}
+
+.blue {
+  background-color: $button-save-background !important;
+  border-color: $button-save-border !important;
+  color: #fff !important;
+  margin: 0 rem(24px) 0 rem(6px);
+  &:hover {
+    background-color: $button-search-hover-background !important;
+    border-color: $button-search-hover-border !important;
+    color: $button-search-hover-color !important;
+  }
+}
+
+.deleteBtn {
+  background-color: $button-delete-background !important;
+  border-color: $button-delete-border !important;
+  color: $button-delete-color !important;
+  &:hover {
+    background-color: $button-delete-hover-background !important;
+    border-color: $button-delete-hover-border !important;
+    color: $button-delete-hover-color !important;
+  }
+}
+
+.addBtn {
+  background-color: $button-add-background !important;
+  border-color: $button-add-border !important;
+  color: #fff !important;
+  margin-right: rem(6px);
+  &:hover {
+    background-color: $button-add-hover-background !important;
+    border-color: $button-add-hover-border !important;
+  }
+}
+
+.rightTip {
+  position: absolute;
+  right: -25%;
+  color: $level1;
+  width: 20%;
+  text-align: right;
+}
+
+.collection {
+  height: 100% !important;
+  border: none !important;
+  border-radius: 0 !important;
+  > span {
+    border: rem(1px) solid $big-border-color;
+    border-bottom-left-radius: rem(4px);
+    border-top-left-radius: rem(4px);
+    border-right: none;
+  }
+  > span {
+    background-color: $white-block !important;
+  }
+}
+
+.collections {
+  height: rem(30px) !important;
+  input {
+    height: rem(29px) !important;
+    border: 0 !important;
+    &:focus {
+      box-shadow: none !important;
+    }
+  }
+  > span {
+    background-color: $white-block !important;
+  }
+}
+
+.smallCom {
+  display: flex;
+  align-items: center;
+  padding-left: rem(10px);
+  white-space: nowrap;
+  font-size: $font-com-size;
+  color: $font-main-color;
+  > b {
+    padding-right: rem(10px);
+  }
+  :global {
+    .ant-checkbox + span {
+      padding-left: rem(5px);
+      padding-right: rem(10px)
+    }
+  }
+}
+
+.radioGroupStyle {
+  :global {
+    .ant-radio-wrapper {
+      margin-right: rem(10px)
+    }
+    .ant-radio-inner {
+      height: rem(14px);
+      width: rem(14px);
+    }
+    .ant-radio-inner:after {
+      transform: scale(.875);
+      opacity: 1;
+      background-color: $radio;
+      width: rem(6px) !important;
+      height: rem(6px) !important;
+    }
+    .ant-radio-checked {
+      .ant-radio-inner:after {
+        background-color: $button-save-hover-background;
+      }
+    }
+    .ant-radio + * {
+      padding-left: rem(5px);
+      padding-right: 0
+    }
+  }
+  span {
+    font-size: $font-com-size;
+    color: $font-main-color;
+  }
+}
+
+.collectionSelect {
+  font-size: rem(12px) !important;
+  width: 100%;
+  color: $font-main-color !important;
+  height: rem(30px);
+  :global {
+    .ant-select-selection {
+      border: rem(1px) solid $big-border-color;
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+      border-left: rem(1px) solid $input-split-color;
+      height: rem(30px);
+      background-color: $white-block;
+      overflow: hidden;
+      &:hover {
+        border-color: $button-save-background;
+      }
+    }
+    .ant-select-focused .ant-select-selection {
+      border-color: $button-save-background !important;
+    }
+    .ant-select-selection__rendered {
+      margin: 0 rem(8px) !important;
+    }
+    .ant-select-arrow::before {
+      font-size: rem(10px);
+      color: $font-un-color;
+    }
+  }
+}
+
+.mainTable {
+  width: 100%;
+  height: calc(100% - 40px);
+  background-color: $white-block;
+  >div{
+    >div{
+      border: rem(1px) solid $big-border-color;
+      border-radius: $border-radius4;
+    }
+  }
+  :global {
+    .ag-header-row {
+      background-color: #ececec;
+    }
+    .ag-header-cell {
+      border-right-color: $mid-split-color !important;
+    }
+  }
+}
+
+.dragTitle {
+  font-size: rem(14px);
+  color: $font-main-color;
+  > span {
+    font-size: rem(12px);
+    padding-left: rem(5px);
+  }
+}
+
+.drag {
+  background-color: $white-block !important;
+  span[class*='ant-modal-close-x'] {
+    width: rem(40px);
+    color: $font-un-color;
+    font-size: $font-com-size;
+  }
+  div[class*='ant-modal-header'] {
+    padding: rem(12px) rem(14px);
+    background-color: $white-block;
+  }
+  div[class*='ant-modal-footer'] {
+    border: 0 !important;
+    padding: rem(10px) rem(14px);
+  }
+  div[class*='ant-modal-body'] {
+    padding: rem(10px) rem(14px) 0;
+    font-size: rem(12px);
+  }
+  :global {
+    .ant-btn {
+      height: rem(26px) !important;
+      width: rem(53px);
+      text-align: center;
+      padding: 0 rem(8px) !important;
+      > i {
+        padding-right: rem(2px) !important;
+        font-size: $font-com-size;
+      }
+      &:hover {
+        background-color: $button-search-hover-background;
+        border-color: $button-search-hover-border;
+        color: $button-search-hover-color;
+      }
+    }
+  }
+}
+
+.littleCon {
+  padding-left: rem(10px) !important;
+}
+
+.checkBoxGroup {
+  padding-left: rem(5px);
+  text-align: right;
+  display:inline-block;
+  :global {
+    .ant-checkbox + span {
+      padding-left: rem(4px);
+      padding-right: 0
+    }
+  }
+}
+
+.bottom {
+  margin-bottom: rem(10px);
+}
+
+.textBox {
+  height: rem(60px) !important;
+  > span {
+    background-color: $white-block;
+    line-height: rem(50px);
+  }
+}
+
+.timeGroup {
+  width: 100%;
+  > .inter {
+    display: inline-block;
+    width: rem(12px);
+    text-align: center;
+    font-size: $font-com-size;
+    color: $font-un-color;
+  }
+  .timeP {
+    width: calc(100% - 55px);
+    :global {
+      .ant-time-picker-input {
+        border-radius: 0 4px 4px 0;
+        border-left: 0;
+      }
+    }
+  }
+  input[class*='ant-time-picker-input'] {
+    height: rem(30px);
+    line-height: rem(30px);
+    font-size: $font-com-size;
+    color: $font-main-color;
+    padding: 0 rem(8px);
+    border-color: $big-border-color;
+  }
+  input[class*='ant-time-picker-input']::-webkit-input-placeholder {
+    font-size: $font-com-size;
+    color: $font-un-color;
+  }
+}
+
+.timeShow {
+  display: none;
+}
+
+//必填项的颜色
+.start {
+  color: $start;
+}
+
+//下拉框和时间选择
+.selectTime {
+  display: inline-block;
+  width: calc((100% - 12px) / 2);
+  :global {
+    .ant-select-selection {
+      border-color: $big-border-color;
+      &:hover {
+        border-color: $button-save-background;
+        box-shadow: none;
+      }
+    }
+    .ant-select-focused .ant-select-selection {
+      border-color: $button-save-background !important;
+      box-shadow: none;
+    }
+    .ant-select-selection--single {
+      height: rem(30px);
+      border-radius: 4px 0 0;
+    }
+    .ant-select-selection__rendered {
+      margin-left: rem(6px);
+      margin-right: rem(6px);
+      line-height: rem(28px);
+    }
+    .ant-select-selection-selected-value {
+      font-size: rem(12px);
+      padding-right: rem(8px);
+      color: $font-main-color
+    }
+    .ant-select-arrow {
+      right: rem(8px);
+      color: $font-un-color
+    }
+  }
+}
+
+.select {
+  width: rem(55px);
+}
+
+//input area
+.inputArea {
+  min-height: rem(30px) !important;
+  border-color: $big-border-color !important;
+  background-color: $white-block !important;
+  font-size: $font-com-size !important;
+  color: $font-main-color !important;
+  margin-bottom: rem(10px) !important;
+  &:hover, &:focus {
+    border-color: $button-save-background !important;
+    box-shadow: none !important;
+  }
+}
+
+//表头复选框
+.agCheckbox {
+  height: 100%;
+  position: relative;
+  :global {
+    .ag-header-cell-resize {
+      display: none;
+    }
+    .ag-header-select-all {
+      padding: 0 !important;
+      position: absolute;
+      width: rem(14px);
+      height: rem(14px);
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+    }
+    .ag-checkbox-unchecked {
+      width: rem(14px);
+      height: rem(14px);
+      display: block;
+      .ag-icon {
+        width: rem(14px);
+        height: rem(14px);
+      }
+    }
+    .ag-checkbox-checked {
+      .ag-icon {
+        width: rem(14px);
+        height: rem(14px);
+      }
+    }
+    .ag-checkbox-indeterminate {
+      .ag-icon {
+        width: rem(14px);
+        height: rem(14px);
+      }
+    }
+  }
+}
+
+//表身复选框
+.agBodyCheckbox {
+  position: relative;
+  :global {
+    .ag-cell-wrapper {
+      position: absolute;
+      width: rem(14px);
+      height: rem(14px);
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+    }
+    .ag-icon {
+      width: rem(14px) !important;
+      height: rem(14px) !important;
+    }
+    .ag-selection-checkbox {
+      display: block;
+      padding-right: 0 !important;
+    }
+  }
+}

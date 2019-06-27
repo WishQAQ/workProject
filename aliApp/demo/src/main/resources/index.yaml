@@ -1,0 +1,69 @@
+index :
+  #假设 IndexA 有2个分片，我们向 IndexA 中插入10条数据 (10个文档)，那么这10条数据会尽可能平均的分为5条存储在第一个分片，剩下的5条会存储在另一个分片中。
+  #分片的数量需要根据节点的个数来确定，至少应该大于等于节点的个数，默认为5
+  number_of_shards: 3
+  #设置默认索引副本个数，默认为0个副本（单节点也默认0个副本）；为了加速索引也可以设置为0
+  number_of_replicas: 0
+  #设置结果窗口大小
+  max_result_window: 100000000
+  analysis :
+    #分析器
+    analyzer :
+      ngram_2_2_analyzer :
+        tokenizer : ngram_2_2_tokenizer
+      ngram_2_3_analyzer:
+        tokenizer: ngram_2_3_tokenizer
+      edge_ngram_3_60_analyzer :
+        tokenizer : edge_ngram_3_60_tokenizer
+      edge_ngram_2_60_analyzer :
+        tokenizer : edge_ngram_2_60_tokenizer
+      edge_ngram_1_10_analyzer :
+        tokenizer : edge_ngram_1_10_tokenizer
+      edge_ngram_5_30_analyzer :
+        tokenizer : edge_ngram_5_30_tokenizer
+      #用于企业信用代码18位长度的，要求至少输入6位
+      edge_ngram_6_6_analyzer:
+        tokenizer: edge_ngram_6_6_tokenizer
+    #分词器
+    tokenizer :
+      edge_ngram_3_60_tokenizer :
+        type : edge_ngram
+        token_chars : ["digit","letter"]
+        #最小长度为3
+        min_gram: 3
+        #最大长度60
+        max_gram: 60
+      edge_ngram_2_60_tokenizer :
+        type : edge_ngram
+        token_chars : ["digit","letter"]
+        #最小长度为3
+        min_gram: 2
+        #最大长度60
+        max_gram: 60
+      edge_ngram_1_10_tokenizer :
+        type : edge_ngram
+        token_chars : ["digit","letter"]
+        #最小长度为3
+        min_gram: 1
+        #最大长度60
+        max_gram: 10
+      edge_ngram_5_30_tokenizer:
+        type: edge_ngram
+        token_chars: ["digit","letter"]
+        #最小长度为5
+        min_gram: 5
+        max_gram: 30
+      edge_ngram_6_6_tokenizer:
+        type: edge_ngram
+        token_chars: ["digit","letter"]
+        min_gram: 6
+        max_gram: 6
+      ngram_2_2_tokenizer :
+        type : ngram
+        token_chars : ["letter","digit","whitespace","punctuation","symbol"]
+        min_gram: 2
+      ngram_2_3_tokenizer:
+        type: ngram
+        token_chars: ["letter","digit","whitespace","punctuation","symbol"]
+        min_gram: 2
+        max_gram: 3

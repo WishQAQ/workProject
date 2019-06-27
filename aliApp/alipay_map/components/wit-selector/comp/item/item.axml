@@ -1,0 +1,116 @@
+
+<!-- org_type 1:党委 2:党总支 3:党支部 4:党小组 -->
+<view class="list-item-box">
+  <!-- 组织模板 -->
+  <view
+    class="list-item {{info.person_count === 0 ? 'disabled' : ''}}"
+    a:if="{{info.type === 'org' || info.type === 'group'}}"
+    onTap="onChoose">
+    <view class="left" a:if="{{!info.remove && !info.person}}">
+      <wit-icon
+        a:if="{{
+          !info.active &&
+          (!info.orgType || info.orgType === 0 ? true : info.orgType === info.org_type)
+        }}"
+        icon="iconquanweixuanzhong"
+        size="20px"
+        color="rgb(204, 204, 204)"/>
+      <wit-icon
+        a:if="{{info.active}}"
+        icon="icondui"
+        size="20px"
+        color="#ff7a02"/>
+    </view>
+    <view class="right {{last ? '' : 'wit-1px-b'}}">
+      <view class="txt">
+        {{info.org_name}}
+        <text
+          a:if="{{info.person_count === 0 && !info.all}}"
+          class="count">
+          (暂无人员)
+        </text>
+        <text
+          a:if="{{info.selectedCount && info.person_count !== 0 && !info.all}}"
+          class="count selected">
+          ({{info.selectedCount}}/{{info.person_count}}{{info.selectedCount === info.person_count ? '' : '人'}})
+        </text>
+        <text
+          a:if="{{info.all || !info.selectedCount && info.person_count !== 0}}"
+          class="count">
+          ({{info.person_count}}人)
+        </text>
+      </view>
+      <!-- 如果选择了改组织下的所有就添加样式置灰 -->
+      <view
+        a:if="{{!info.remove && info.source !== 'search' && info.is_leaf === 0}}"
+        class="next {{info.disabled || info.person_count === 0 ? 'disabled' : ''}}"
+        catchTap="onNext">
+        <wit-icon icon="iconorg" size="18px" color="#ff7a02"/>
+        <text>下级</text>
+      </view>
+      <view
+        a:if="{{info.remove}}"
+        class="next remove"
+        catchTap="onRemove">
+        <text>移除</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 人员模板 -->
+  <view class="list-item" a:if="{{info.type === 'person'}}" onTap="onChoose">
+    <view class="left" a:if="{{!info.remove}}">
+      <wit-icon
+        a:if="{{!info.active}}"
+        icon="iconquanweixuanzhong"
+        size="20px"
+        color="rgb(204, 204, 204)"/>
+      <wit-icon
+        a:else
+        icon="icondui"
+        size="20px"
+        color="#ff7a02"/>
+    </view>
+    <view class="right {{last ? '' : 'wit-1px-b'}}">
+      <view class="txt text-clip">
+        <wit-avatar size="38px" name="{{info.mem_name}}" classes="ava" bgColor="#ff7a02"/>
+        <view class="desc">
+          <view>
+            <text class="name">{{info.mem_name}}</text>
+            <text class="sub">{{info.sex === 1 ? '男' : info.sex === 2 ? '女' : '未知'}}</text>
+            <text class="sub" a:if="{{info.party_job_list && info.party_job_list.length}}">
+              ,{{info.party_job_list.map(item => item.job_name).join(',')}}
+            </text>
+          </view>
+          <view class="sub" a:if="{{info.org_name}}">{{info.org_name}}</view>
+          <view class="sub" a:if="{{info.phone}}">{{info.phone}}</view>
+        </view>
+      </view>
+      <view
+        a:if="{{info.remove}}"
+        class="next remove"
+        catchTap="onRemove">
+        <text>移除</text>
+      </view>
+    </view>
+  </view>
+  
+  <!-- 全选 -->
+  <view class="list-item list-item-all" a:if="{{info.type === 'all'}}" onTap="onChooseAll">
+    <view class="left">
+      <wit-icon
+        a:if="{{!info.active}}"
+        icon="iconquanweixuanzhong"
+        size="20px"
+        color="rgb(204, 204, 204)"/>
+      <wit-icon
+        a:else
+        icon="icondui"
+        size="20px"
+        color="#ff7a02"/>
+    </view>
+    <view class="right">
+      <view class="txt">全选</view>
+    </view>
+  </view>
+</view>

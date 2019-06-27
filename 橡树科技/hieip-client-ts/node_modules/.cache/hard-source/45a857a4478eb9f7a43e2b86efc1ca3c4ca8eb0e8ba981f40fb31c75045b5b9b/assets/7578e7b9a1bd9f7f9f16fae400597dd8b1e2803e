@@ -1,0 +1,234 @@
+<style>
+    .scheduling {
+        width: 100%;
+        height: 100%;
+        margin: auto;
+    }
+
+    .scheduling_table {
+        width: 100%;
+        height: 100%;
+        border: 1px solid #000;
+        border-collapse: collapse;
+    }
+
+    td, th {
+        border: 1px solid #000;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    td {
+        min-width: 60px;
+        line-height: 20px;
+    }
+
+    th {
+        padding: 0;
+        margin: 0;
+        line-height: 20px;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .first {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .first > svg {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .textRight {
+        text-align: right;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    tfoot td {
+        text-align: left;
+        text-indent: 10px;
+    }
+
+    .fourWidth span {
+        margin: 0 1%;
+    }
+</style>
+<div class="scheduling">
+    <table class="scheduling_table">
+        <caption></caption>
+        <thead class="scheduling_tHead">
+        <tr class="first_head">
+            <th rowspan="4" colspan="3" class="em">
+                <div class="first not-marge">
+                </div>
+            </th>
+        </tr>
+        </thead>
+        <tbody class="scheduling_tBody" id="tableBody">
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="3"/>
+        </tr>
+        </tfoot>
+    </table>
+</div>
+<script>
+    let data = window.data.data
+    /**
+     * 渲染表格头部
+     * @param data   表格头部数据
+     */
+    document.querySelector('caption').innerHTML = data.hospitalCode + '病室交班报告' + '<p class="textRight">'+data.date+'</p>'
+    function renderHead(data) {
+        let firstHead = document.querySelector('.first_head')
+        let _th = '';
+        let _trArr = [];
+        let _td = '';
+        for (let i = 0; i < data.length; i++) {
+            const _class = data[i];  //班次
+            _th += '<th>' + _class.classesName + '</th>';
+            let arr = renderPeople(_class.statistics, i)   //每个班次下的项 二维数组
+            _td += '<td>报告人</td>'
+            _trArr.push(arr)
+        }
+        firstHead.innerHTML += _th;
+        document.querySelector('tfoot tr').innerHTML += _td
+        renderTh(_trArr)
+    }
+    function renderTh(data) {
+        let str = '', str1 = '', _tr = '';
+        for (let i = 0; i < data.length; i++) {
+            let _tr = data[i];
+            for (let j = 0; j < _tr.length; j++) {
+                let thData = _tr[j]
+                if (j % 2 === 0) {
+                    str += '<th class="fourWidth">';
+                    for (let k = 0; k < thData.length; k++) {
+                        str += '<span>' + thData[k].itemName + ':' + thData[k].counts + '</span>';
+                    }
+                    str += '</th>'
+                } else {
+                    str1 += '<th class="fourWidth">';
+                    for (let k = 0; k < thData.length; k++) {
+                        str1 += '<span>' + thData[k].itemName + ':' + thData[k].counts + '</span>';
+                    }
+                    str1 += '</th>'
+                }
+            }
+        }
+        _tr = '<tr>' + str + '</tr><tr>' + str1 + '</tr>'
+        document.querySelector('.scheduling_tHead').innerHTML += _tr
+    }
+    function renderPeople(data, i) {
+        let _thArr = [];  //每一个th 显示的数据
+        for (let i = 0, len = data.length; i < len; i += 4) {
+            _thArr.push(data.slice(i, i + 4));
+        }
+        return _thArr;
+    }
+    function renderBody(data) {
+        let tr = '';
+        for (let i = 0; i < data.length; i++) {
+            const _shift = data[i];
+            let _td = '';
+            _td += '<td>' + _shift.bedNo + '</td>'
+            _td += '<td>' + _shift.name + '</td>'
+            _td += '<td>' + _shift.diagnosis + '</td>'
+            for (let j = 0; j < _shift.shiftChangePatient.length; j++) {
+                const shiftContent = _shift.shiftChangePatient[j].classesName
+                _td += '<td>' + shiftContent + '</td>'
+            }
+            tr += '<tr>' + _td + '</tr>'
+        }
+        document.querySelector('.scheduling_tBody').innerHTML = tr
+    }
+    renderHead(data.title)
+    renderBody(data.ShiftData)
+    let emTableHead = document.querySelector('.em')   //找到斜线表头
+    setTimeout(() => emTableHead.height = emTableHead.offsetHeight, 100)//设置斜线表头的高度
+
+    const first = document.body.querySelector('.first')
+
+    function createSVG() {
+        const xmlns = "http://www.w3.org/2000/svg";
+        const boxWidth = '100%';
+        const boxHeight = '100%';
+
+        const svgElem = document.createElementNS(xmlns, "svg");
+        svgElem.setAttributeNS(null, "width", boxWidth);
+        svgElem.setAttributeNS(null, "height", boxHeight);
+
+        const widths = []
+        for (let i = 0, tdWidth = 0; i < 3; i++) {
+            tdWidth += document.querySelector(`.scheduling_tBody>tr>td:nth-child(` + (i + 1) + `)`).offsetWidth
+            widths.push(tdWidth)
+            const line1 = document.createElementNS(xmlns, "line");
+            line1.setAttributeNS(null, 'x1', 0);
+            line1.setAttributeNS(null, 'y1', 0);
+            line1.setAttributeNS(null, 'x2', tdWidth);
+            line1.setAttributeNS(null, 'y2', '100%');
+            line1.setAttributeNS(null, 'stroke', "#000000");
+            line1.setAttributeNS(null, 'stroke-width', 1);
+            svgElem.appendChild(line1);
+        }
+        const line1 = document.createElementNS(xmlns, "line");
+        line1.setAttributeNS(null, 'x1', 0);
+        line1.setAttributeNS(null, 'y1', 0);
+        line1.setAttributeNS(null, 'x2', '100%');
+        line1.setAttributeNS(null, 'y2',
+            document.querySelector(`.scheduling_tHead>tr:nth-child(2)>th`).offsetHeight);
+        line1.setAttributeNS(null, 'stroke', "#000000");
+        line1.setAttributeNS(null, 'stroke-width', 1);
+        svgElem.appendChild(line1);
+
+        const text1 = [
+            {x: 10, y: 50, text: '床'},
+            {x: 30, y: 90, text: '号'},
+            {x: 30, y: 55, text: '姓'},
+            {x: 60, y: 90, text: '名'},
+            {x: 45, y: 66, text: '诊'},
+            {x: 65, y: 90, text: '断'},
+        ]
+
+        const text2 = [
+            {x: 50, y: 46, text: '人'},
+            {x: 75, y: 65, text: '数'},
+            {x: 60, y: 16, text: '时'},
+            {x: 80, y: 20, text: '间'},
+        ]
+
+        for (let i = 0; i < text1.length; i++) {
+            const t = text1[i];
+            const text = document.createElementNS(xmlns, "text");
+            text.setAttributeNS(null, 'x', widths[(i / 2) | 0] / 100 * t.x);
+            text.setAttributeNS(null, 'y', t.y + '%');
+            text.innerHTML = t.text
+            svgElem.appendChild(text);
+        }
+
+        for (let i = 0; i < text2.length; i++) {
+            const t = text2[i];
+            const text = document.createElementNS(xmlns, "text");
+            text.setAttributeNS(null, 'x', t.x + '%');
+            text.setAttributeNS(null, 'y', t.y + '%');
+            text.innerHTML = t.text
+            svgElem.appendChild(text);
+        }
+
+        return svgElem
+    }
+
+    setTimeout(() => first.appendChild(createSVG()), 100)
+
+</script>

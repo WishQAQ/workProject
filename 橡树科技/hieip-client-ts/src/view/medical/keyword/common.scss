@@ -1,0 +1,23 @@
+@import '../../../index';
+
+//sort-list页面
+$list-box-shadow: 0 0 rem(12px) rgba(0, 0, 0, .15); //边框阴影
+$list-right-click-bg: #fff; //右键单击按钮背景颜色
+$list-right-click-bg-hover: #bbe0ef; //右键单击按钮鼠标移入时背景颜色
+$opacity: .65; //头部右侧文字透明度
+$header-h3: #fff; //头部h3颜色
+$header-bg: #5591aa; //头部背景颜色
+$header-border: #d2d2d2; //头部边框颜色
+$alter-color: #fff; //弹框里确认按钮和修改按钮字体颜色
+$alter-bg: #3db5e7; //弹框里确认按钮和修改按钮背景颜色
+$alter-border: #2f9fce; //弹框里确认按钮和修改按钮边框颜色
+//sort-detail页面
+$star-color: #ff385c; //红色星星
+$star-color-black: #000; //黑色星星
+$btn-search: #fff; //查询按钮字体颜色
+$btn-search-bg: #3db5e7; //查询按钮填充色
+$btn-search-border: #2f9fce; //查询按钮边框颜色
+$btn-add: #fff; //新增按钮字体颜色
+$btn-add-bg: #4f98e4; //新增按钮填充色
+$btn-add-border: #2f6fce; //新增按钮边框颜色
+$primary-color:#FF375B; //提示星星的颜色

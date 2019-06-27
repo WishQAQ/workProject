@@ -1,0 +1,732 @@
+@import '../../../../index.scss';
+
+$tabs-title-text: #ececec;
+$table-header-bg: #ececec;
+$outpatient-box-header-border: #ececec;
+$title-bg-color: #5591aa;
+$title-button-bg-color: #6399af;
+$title-button-border-color: #71a7be;
+
+ol, ul, dl {
+  margin-bottom: 0 !important;
+}
+
+// ***************************************按钮组
+.btnGroup {
+  .myButton {
+    font-size: rem(12px);
+    border-radius: rem(4px);
+    padding: 0 rem(7px);
+    height: rem(22px);
+    margin-right: rem(6px);
+  }
+  .myExtra {
+    border: 0;
+    color: #fff;
+    background-color: $button-extra-background;
+  }
+  .myExtra:hover {
+    color: #fff;
+    background-color: $button-extra-hover-background;
+  }
+  .myAdd {
+    border: rem(1px) solid $button-add-border;
+    color: #fff;
+    background-color: $button-add-background;
+  }
+  .myAdd:hover {
+    border-color: $button-add-hover-border;
+    color: #fff;
+    background-color: $button-add-hover-background;
+  }
+  .mySave {
+    border: rem(1px) solid $button-save-border;
+    color: #fff;
+    background-color: $button-save-background;
+  }
+  .mySave:hover {
+    border-color: $button-save-hover-border;
+    color: #fff;
+    background-color: $button-save-hover-background;
+  }
+  .myDelete {
+    border: rem(1px) solid $button-delete-border;
+    color: $button-delete-color;
+    background-color: $button-delete-background;
+  }
+  .myDelete:hover {
+    border-color: $button-delete-hover-border;
+    color: $button-delete-hover-color;
+    background-color: $button-delete-hover-background;
+  }
+  .mySearch {
+    border: rem(1px) solid $button-search-border;
+    color: $button-search-color;
+    background-color: $button-search-background;
+  }
+  .mySearch:hover {
+    border-color: $button-search-hover-border;
+    color: $button-search-hover-color;
+    background-color: $button-search-hover-background;
+  }
+  // 特别按钮
+  .myButtonMargin24 {
+    margin-right: rem(24px);
+  }
+  // 按钮图标设置
+  :global {
+    .iconfont {
+      font-size: rem(12px) !important;
+      padding-right: rem(4px);
+    }
+  }
+}
+
+// ***************************************Table重置
+.tableEc {
+  :global {
+    .ag-cell {
+      //color: $font-main-color;
+      border-right-color: $list-split-color !important;
+      border-bottom-color: $list-split-color !important;
+    }
+    .ag-header {
+      border-bottom-color: $list-split-color !important;
+    }
+    .ag-header-cell {
+      border-right-color: $list-split-color !important;
+    }
+    .ag-header-select-all {
+      padding: 0 !important;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .ag-checkbox-unchecked, .ag-checkbox-checked, .ag-checkbox-indeterminate {
+      // 2/2
+      padding-left: rem(1px);
+    }
+    .ag-header-cell-label {
+      padding: 0 !important;
+    }
+    .ag-header-cell-resize {
+      width: 0 !important;
+    }
+    .ag-header-row {
+      height: 100% !important;
+    }
+  }
+}
+
+// 背景颜色为ececec的表格表头
+.tableEc28 {
+  :global {
+    .ag-header {
+      color: $font-main-color !important;
+      background-color: $table-header-bg !important;
+      height: rem(28px) !important;
+      line-height: rem(27px) !important;
+    }
+    .ag-body {
+      top: rem(28px) !important;
+    }
+  }
+}
+
+.tableF629 {
+  :global {
+    .ag-header {
+      color: $font-main-color !important;
+      background-color: #f6f6f6 !important;
+      height: rem(29px) !important;
+      line-height: rem(28px) !important;
+    }
+    .ag-body {
+      top: rem(29px) !important;
+    }
+  }
+}
+
+.tableEc26 {
+  :global {
+    .ag-header {
+      color: $font-main-color !important;
+      background-color: $table-header-bg !important;
+      height: rem(26px) !important;
+      line-height: rem(25px) !important;
+    }
+    .ag-body {
+      top: rem(26px) !important;
+    }
+  }
+}
+
+.tableBe26 {
+  :global {
+    .ag-header {
+      color: #fff !important;
+      background: $title-button-border-color !important;
+      height: rem(26px) !important;
+      line-height: rem(25px) !important;
+    }
+    .ag-body {
+      top: rem(26px) !important;
+    }
+  }
+}
+
+.tableEc30 {
+  :global {
+    .ag-header {
+      color: $font-main-color !important;
+      background-color: $table-header-bg !important;
+      height: rem(30px) !important;
+      line-height: rem(29px) !important;
+    }
+    .ag-body {
+      top: rem(30px) !important;
+    }
+  }
+}
+
+// 设置某一列每行高度为28的表格
+.tableColumn24 {
+  height: rem(24px) !important;
+  line-height: rem(19px) !important;
+  border-left: none !important;
+}
+
+.tableColumn26 {
+  height: rem(26px) !important;
+  line-height: rem(21px) !important;
+  border-left: none !important;
+}
+
+.tableColumn28 {
+  height: rem(28px) !important;
+  line-height: rem(23px) !important;
+  border-left: none !important;
+}
+
+.tableColumn28Edit {
+  height: rem(28px) !important;
+  box-shadow: none !important;
+  border-left: none !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.agSelectC {
+  padding: rem(2px) rem(4px) !important;
+  > span {
+    > input {
+      padding-left: rem(8px);
+      text-indent: 0 !important;
+    }
+    > i {
+      transition: none !important;
+      right: rem(10px) !important;
+    }
+  }
+}
+
+.agSelectC:after {
+  position: absolute !important;
+  bottom: auto !important;
+  margin: 0 !important;
+  right: 11px !important;
+  height: auto !important;
+  line-height: rem(27px) !important;
+}
+
+// 全选框
+.tableSelectAll {
+  font-size: rem(12px);
+  display: flex !important;
+  align-items: center;
+  justify-content: space-around;
+  :global {
+    .ag-selection-checkbox {
+      padding-right: 0 !important;
+      display: block;
+    }
+  }
+}
+
+// ***************************************Rc labelBox
+.myRcLabelBox {
+  border: 0 !important;
+  border-right: rem(1px) solid $list-split-color !important;
+  border-bottom: rem(1px) solid $list-split-color !important;
+  height: rem(30px) !important;
+  // myRcLabelBoxText
+  :global {
+    .ant-layout-sider {
+      flex: 0 0 auto !important;
+      max-width: 100% !important;
+      min-width: auto !important;
+      width: auto !important;
+    }
+    .ant-layout-sider-children {
+      margin-top: 0 !important;
+      padding-top: 0 !important;
+    }
+  }
+}
+
+.myRcLabelBoxText {
+  font-size: rem(12px) !important;
+  display: flex !important;
+  align-items: center;
+  color: $font-main-color !important;
+  font-weight: bold;
+  border-right: rem(1px) solid $list-split-color !important;
+  background-color: $tabs-title-text !important;
+}
+
+.myRcLabelBoxText73And12 {
+  width: rem(73px) !important;
+  padding: 0 rem(12px) !important;
+}
+
+.myRcLabelBoxText67And7 {
+  width: rem(67px) !important;
+  padding: 0 rem(7px) !important;
+}
+
+.myRcLabelBoxText110And7 {
+  width: rem(110px) !important;
+  padding: 0 rem(7px) !important;
+}
+
+.myRcLabelBoxText86And10 {
+  width: rem(86px) !important;
+  padding: 0 rem(10px) !important;
+}
+
+.myRcLabelBoxText86And10R9 {
+  width: rem(86px) !important;
+  padding: 0 rem(9px) 0 rem(10px) !important;
+}
+
+.myRcLabelBoxText86And6 {
+  width: rem(86px) !important;
+  padding: 0 rem(6px) !important;
+}
+
+.myRcLabelBoxInput {
+  font-size: rem(12px);
+  border-radius: 0 !important;
+  height: 100% !important;
+  border: rem(1px) solid transparent !important;
+  padding-left: rem(14px) !important;
+  color: $font-main-color !important;
+}
+
+.myRcLabelBoxInput:focus {
+  border-color: $border-focus-color !important;
+  box-shadow: none !important;
+}
+
+.isBottom {
+  border-bottom-color: $big-border-color !important;
+}
+
+.isRight {
+  border-right-color: $big-border-color !important;
+}
+
+.isRightConnect {
+  border-right-color: transparent !important;
+}
+
+// ***********************************搜索框
+.mySearchBox {
+  display: flex;
+  align-items: center;
+  .mySearch {
+    height: 100% !important;
+    width: 100% !important;
+    > input {
+      font-size: rem(12px);
+      height: 100% !important;
+      line-height: 100% !important;
+      padding-left: rem(10px);
+      padding-right: rem(24px);
+      border-color: $big-border-color !important;
+    }
+    > input:focus {
+      box-shadow: none;
+      border-color: $border-focus-color !important;
+    }
+    > span {
+      > button {
+        font-size: rem(12px) !important;
+        height: 100% !important;
+        background: #fff !important;
+        border: 0 !important;
+        padding: 0 rem(8px) !important;
+        border-left: rem(1px) solid $list-split-color !important;
+        margin-right: rem(1px);
+        > i {
+          font-size: rem(14px) !important;
+          color: $font-main-color !important;
+        }
+      }
+    }
+    :global {
+      .ant-input-suffix {
+        height: calc(100% - 2px) !important;
+      }
+    }
+  }
+  .mySingleRadio {
+    margin-right: rem(2px);
+    display: flex;
+    :global {
+      .ant-radio {
+        transform: scale(.87) !important;
+      }
+      .ant-radio-wrapper {
+        margin-right: 0;
+        span:last-child {
+          padding: 0 rem(9px) 0 rem(5px);
+          font-size: rem(12px) !important;
+        }
+      }
+    }
+  }
+}
+
+// **************************************弹框重置
+.box {
+  :global {
+    .ant-modal {
+      padding-bottom: 0 !important;
+    }
+    .ant-modal-header {
+      padding: 0 !important;
+      border-bottom-color: $outpatient-box-header-border !important;
+    }
+    .ant-modal-body {
+      padding: 0 rem(14px) !important;
+    }
+    .ant-modal-body:before {
+      content: '';
+      display: table;
+    }
+    .ant-modal-footer {
+      border-top: 0 !important;
+      :global {
+        .ant-btn {
+          width: auto !important;
+          height: rem(26px) !important;
+          font-size: rem(12px) !important;
+          padding: 0 rem(14px) !important;
+          margin-left: rem(6px) !important;
+          margin-right: 0 !important;
+          color: $font-main-color !important;
+          background: $input-split-color !important;
+          border: rem(1px) solid $button-search-border !important;
+        }
+        .ant-btn:hover, .ant-btn:focus, .ant-btn-primary:hover, .ant-btn-primary:focus {
+          color: #fff !important;
+          background: $button-save-hover-background !important;
+          border: rem(1px) solid $button-save-hover-border !important;
+        }
+        .ant-btn-primary {
+          margin-left: rem(6px) !important;
+          color: #fff !important;
+          background: $button-extra-hover-background !important;
+          border: rem(1px) solid $button-save-border !important;
+        }
+        .ant-btn-danger {
+          margin-left: rem(6px) !important;
+          border: rem(1px) solid $button-delete-border !important;
+          color: $button-delete-color !important;
+          background-color: $button-delete-background !important;
+        }
+        .ant-btn-danger:hover, .ant-btn-danger:focus {
+          border-color: $button-delete-hover-border !important;
+          color: $button-delete-hover-color !important;
+          background-color: $button-delete-hover-background !important;
+        }
+        .ant-btn-add {
+          margin-left: rem(6px) !important;
+          border: rem(1px) solid $button-add-border !important;
+          color: #fff !important;
+          background-color: $button-add-background !important;
+        }
+        .ant-btn-add:hover, .ant-btn-add:focus {
+          border-color: $button-add-hover-border !important;
+          background-color: $button-add-hover-background !important;
+        }
+      }
+    }
+    .ant-modal-title {
+      padding: 0 rem(15px);
+      height: rem(37px) !important;
+      line-height: rem(37px) !important;
+      font-size: rem(14px) !important;
+      color: $font-main-color !important;
+      font-weight: bold !important;
+    }
+    .ant-modal-close-x {
+      height: rem(37px) !important;
+      line-height: rem(37px) !important;
+      width: rem(39px) !important;
+    }
+  }
+}
+
+// **********************************表单labelBox
+// 特殊行中的单选 弹出的内容 specialTwoLabelBox  myLabelBoxBox
+.myLabelBoxBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .specialMiddle {
+    display: block;
+    padding: 0 rem(3px);
+  }
+}
+
+// 新增弹框里 labelbox样式,输入框，下拉框，只读框，时间选择框, 单选按钮
+.myLabelBoxTotal {
+  font-size: rem(12px) !important;
+  height: rem(30px) !important;
+  line-height: rem(28px) !important;
+  border: 0 !important;
+  :global {
+    // 删除原始0.1px
+    .ant-layout-sider-children {
+      padding-top: 0 !important;
+      margin-top: 0 !important;
+    }
+    //左外框
+    .ant-layout-sider {
+      width: auto !important;
+      min-width: auto !important;
+      flex: 0 0 auto !important;
+      color: $font-main-color !important;
+      background-color: #fff !important;
+    }
+    //左内框背景色
+    .ant-layout-sider-children > span {
+      text-align: center;
+      background-color: #fff !important;
+      border-top: rem(1px) solid $big-border-color;
+      border-bottom: rem(1px) solid $big-border-color;
+      border-left: rem(1px) solid $big-border-color;
+      border-radius: rem(4px) 0 0 rem(4px);
+      display: flex;
+      align-items: center;
+      padding: 0 rem(8px) !important;
+      //星号颜色
+      > i {
+        padding-left: rem(1px) !important;
+        color: $first !important;
+        position: relative;
+        font-size: rem(14px);
+        top: rem(-1px);
+      }
+    }
+    //右边框
+    .ant-layout-content > div {
+      width: 100%;
+      height: 100%;
+    }
+    .ant-layout-content > div > div {
+      width: 100%;
+      height: 100%;
+    }
+    .pt-popover-target {
+      width: 100%;
+      height: 100%;
+    }
+    .pt-input {
+      border-radius: 0 rem(4px) rem(4px) 0 !important;
+      padding: 0 rem(7px) !important;
+      color: $font-main-color !important;
+    }
+    //右边输入框
+    .ant-input {
+      border-radius: 0 rem(4px) rem(4px) 0 !important;
+      height: 100% !important;
+      font-size: rem(12px) !important;
+      border-color: $big-border-color !important;
+      border-left-color: $input-split-color !important;
+      color: $font-main-color !important;
+    }
+    .ant-input:focus, .ant-input:hover {
+      border-color: $border-focus-color !important;
+      box-shadow: none !important;
+    }
+    //时间选择框
+    .pt-input {
+      height: 100% !important;
+      width: 100% !important;
+    }
+  }
+  //时间选择框
+  .myTime {
+    :global {
+      //右边输入框
+      .pt-input {
+        border-radius: 0 rem(4px) rem(4px) 0 !important;
+        height: 100% !important;
+        font-size: rem(12px) !important;
+        border: rem(1px) solid $big-border-color !important;
+        border-left-color: $input-split-color !important;
+        color: $font-main-color !important;
+        box-shadow: none !important;
+      }
+      .pt-input:focus, .pt-input:hover {
+        border-color: $border-focus-color !important;
+        box-shadow: none !important;
+      }
+    }
+  }
+  //下拉框
+  .mySelect {
+    font-size: rem(12px) !important;
+    width: 100% !important;
+    > span > input {
+      border-radius: 0 rem(4px) rem(4px) 0 !important;
+      box-shadow: none !important;
+      border-color: $big-border-color !important;
+      border-left-color: $input-split-color !important;
+      padding: 0 rem(2px) !important;
+      color: $font-main-color !important;
+    }
+    > span > input:focus, > span > input:hover {
+      border-color: $border-focus-color !important;
+      box-shadow: none !important;
+    }
+    > span > i > i {
+      font-size: rem(16px) !important;
+      transform: scale(.8);
+    }
+    :global {
+      .ant-select-selection--single {
+        border-radius: 0 rem(4px) rem(4px) 0 !important;
+        border-color: $big-border-color !important;
+        border-left-color: $input-split-color !important;
+        height: 100% !important;
+      }
+      .ant-select-selection__rendered {
+        height: rem(28px) !important;
+        line-height: rem(28px) !important;
+      }
+      .ant-select-selection--single:hover, .ant-select-selection--single:focus {
+        border-color: $border-focus-color !important;
+        box-shadow: none !important;
+      }
+      .ant-select-selection-selected-value {
+        color: $font-main-color;
+      }
+      .ant-select-arrow {
+        color: $font-un-color !important;
+      }
+    }
+  }
+  // input 只读框
+  .readOnly {
+    height: 100%;
+    width: 100%;
+    padding: 0 rem(7px);
+    border-radius: 0 rem(4px) rem(4px) 0 !important;
+    border: rem(1px) solid $big-border-color !important;
+    border-left-color: $input-split-color !important;
+    color: $font-un-color !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  // 单选按钮
+  .mySingleRadio {
+    margin-right: rem(2px);
+    border: rem(1px) solid $big-border-color !important;
+    border-left-color: $input-split-color !important;
+    border-radius: 0 rem(4px) rem(4px) 0 !important;
+    display: flex;
+    align-items: center;
+    padding-left: rem(8px) !important;
+    :global {
+      .ant-radio {
+        transform: scale(.85) !important;
+      }
+      .ant-radio-wrapper {
+        margin-right: 0;
+        span:last-child {
+          padding: 0 rem(9px) 0 rem(5px);
+          font-size: rem(12px) !important;
+        }
+      }
+    }
+  }
+}
+
+// **********************************Select下拉框
+.titleSelect {
+  height: rem(20px);
+  width: rem(79px);
+  font-size: rem(12px) !important;
+  position: absolute !important;
+  right: rem(3px);
+  :global {
+    .ant-dropdown-menu-item {
+      padding: 0 rem(50px) !important;
+    }
+    .ant-select-search__field, .ant-select-search__field__mirror {
+      font-size: rem(12px) !important;
+    }
+    .ant-select-selection__rendered {
+      height: 100% !important;
+      margin: 0 rem(20px) 0 rem(9px);
+    }
+    .ant-select-selection--single {
+      height: rem(20px) !important;
+      border: rem(1px) solid $title-button-border-color !important;
+      background-color: $title-bg-color !important;
+      color: #fff !important;
+    }
+    .ant-select-selection-selected-value {
+      height: rem(18px) !important;
+      line-height: rem(18px) !important;
+      font-size: rem(12px);
+      padding-right: 0;
+    }
+    .ant-select-selection__clear, .ant-select-arrow {
+      right: rem(5px);
+    }
+    .ant-select-selection__clear {
+      background-color: $title-button-bg-color;
+      display: none;
+    }
+    .ant-select-selection__clear:before {
+      opacity: rem(.65);
+    }
+    .ant-select-arrow:before {
+      color: #fff;
+      opacity: rem(.65);
+    }
+  }
+}
+
+.titleSelectDropDown {
+  width: rem(146px) !important;
+  left: rem(84px) !important;
+  :global {
+    .ant-select-dropdown-menu-item {
+      font-size: rem(12px);
+      color: $font-main-color;
+    }
+    .ant-select-dropdown-menu-item:hover, .ant-select-dropdown-menu-item-active {
+      background-color: $menu-selected;
+    }
+  }
+}

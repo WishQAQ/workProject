@@ -1,0 +1,65 @@
+@import '../../../../../index.scss';
+
+//常用边框颜色
+$borderColor: #ececec;
+$borderColorLight: #e8e8e8;
+//边框颜色
+$medical-border: #3db5e7;
+//弹框背景颜色
+$medical-alter-bg: #bbe0ef;
+//常用边框颜色
+$borderColor: #ececec;
+$borderColorDark: #e1e1e1;
+//常用边框阴影
+$boxShadow: rgba(0, 0, 0, .15);
+//标题栏背景颜色
+$title-bg: #5591aa;
+
+// 病人概要信息
+.summary {
+  padding:rem(10px) 0 rem(8px) 0;
+  > ul {
+    margin: 0;
+    border: rem(1px) solid $big-border-color;
+    border-radius: rem(4px);
+    height: rem(30px);
+    line-height: rem(28px);
+    display: flex;
+  }
+  .oneInfo {
+    padding-left: rem(12px);
+    display: flex;
+    align-items: center;
+    border-left: rem(1px) solid $borderColorLight;
+    .oneSum {
+      margin: 0;
+      font-size: rem(12px);
+      color: $font-com-color;
+      position: relative;
+      font-weight: bold;
+      > span {
+        font-weight: normal;
+      }
+    }
+  }
+  .oneInfo:first-child {
+    border-left: none;
+    .oneSum {
+      margin-left: rem(6px);
+    }
+  }
+  .Btn{
+    display: block;
+    height: rem(15px);
+    line-height: rem(15px);
+    margin-left: rem(6px);
+    color: #39a885;
+  }
+  .Btn:hover{
+    cursor:pointer;
+  }
+  .Icon{
+    width: rem(22px);
+    height:rem(22px);
+  }
+}

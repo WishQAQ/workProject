@@ -1,0 +1,100 @@
+@import '../../../../../index';
+
+.mainMenu {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, .3);
+}
+
+.topTitleArea {
+  padding: 0 10px;
+  width: 100%;
+  height: rem(30px);
+  background: $public-title-color;
+  display: flex;
+  align-items: center;
+}
+
+.areaPiece {
+  background: $white-default;
+  border-radius: rem(4px);
+  width: rem(75px);
+  height: rem(20px);
+  font-size: rem(12px);
+  display: flex;
+  align-items: center;
+  padding-left: rem(5px);
+  > i {
+    font-size: rem(19px);
+    padding-top: 1px;
+  }
+}
+
+.areaColor0 {
+  color: $first;
+}
+
+.areaColor1 {
+  color: $second;
+}
+
+.areaColor2 {
+  color: $four;
+}
+
+.patientSearch {
+  width: 100%;
+  height: rem(40px);
+  display: flex;
+  align-items: center;
+  padding: 0 rem(8px);
+  > div {
+    height: auto;
+  }
+  input {
+    height: rem(26px);
+  }
+}
+
+.patientTable {
+  width: 100%;
+  height: calc(100% - 120px);
+  overflow-y: scroll;
+}
+
+.areaChoose {
+  width: 100%;
+  height: rem(50px);
+  box-sizing: border-box;
+}
+
+.areaBottom {
+  height: rem(25px);
+  box-sizing: border-box;
+  border: rem(1px) solid $list-split-color;
+  background-color: $select;
+  margin-top: rem(-1px);
+  display: flex;
+  align-items: center;
+  font-size: rem(12px);
+  padding-left: rem(10px);
+  cursor: pointer;
+  transition: color .2s linear .1s;
+  > i {
+    font-size: rem(19px);
+    padding-top: 2px;
+  }
+}
+
+.areaBottomHover0 {
+  color: $first;
+}
+
+.areaBottomHover1 {
+  color: $second;
+}
+
+.areaBottomHover2 {
+  color: $four;
+}
+

@@ -1,0 +1,11 @@
+.root {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+:global {
+  .ant-modal-body {
+    padding: 15px;
+  }
+}

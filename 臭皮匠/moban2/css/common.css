@@ -1,0 +1,62 @@
+/*全局样式初始化*/
+html{margin: 0;padding: 0;}
+a{text-decoration: none;}
+ul,ol,li{list-style-type: none;}
+img{width: 100%;}
+p{word-wrap:break-word;word-break:break-all;}
+h1,h2,h3,h4,h5{text-align: center;}
+
+/*导航栏样式重写*/
+/*电脑端导航栏固定顶部*/
+@media (min-width: 768px) {
+    /*header{*/
+        /*margin-bottom: 56px;*/
+    /*}*/
+    nav{
+        height: 80px;
+        opacity: 0.8;
+    }
+}
+
+/*手机端导航栏取消固定顶部*/
+@media (max-width: 768px) {
+    nav{
+        position: relative !important;
+    }
+}
+
+/*标题*/
+.main-title{
+    margin: 50px;
+}
+
+.main-title span{
+    margin: 0 auto;
+    display: block;
+    background: #3384e9;
+    width: 180px;
+    height: 3px;
+    animation: main-title 3s;
+    -webkit-animation: main-title 3s; /* Safari 与 Chrome */
+
+}
+
+@keyframes main-title
+{
+    from {background: red;}
+    to {background: #3384e9;}
+    0%   {width: 0;}
+    100% {width: 180px;}
+}
+
+.about .about-box-r p{
+    text-indent: 2em;
+    text-align: justify;
+}
+
+
+
+
+
+
+

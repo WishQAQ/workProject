@@ -1,0 +1,71 @@
+@import '../../../../../index';
+
+.bunkWrapper {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: calc(100% - 72px - 10px);
+  padding: rem(5px);
+  overflow-y: auto;
+  > div {
+    border: 1px solid $list-split-color;
+  }
+}
+
+.bunkNumber {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  color: $font-tip-color;
+  font-size: $font-com-size;
+  line-height: 17px;
+  height: 100%;
+}
+
+.sickClass {
+  margin-top: 3px !important;
+}
+
+$sickClassColors: (
+    First: $first,
+    Second: $second,
+    Third: $three,
+    Fourth: $four,
+);
+
+@each $class in map-keys($sickClassColors) {
+  .sickClass#{$class} {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: rem(18px);
+    height: rem(18px);
+    border-radius: 50%;
+    background: map-get($sickClassColors, $class);
+    color: $white-default;
+  }
+}
+
+.doctorAdvice,
+.radiate,
+.examine,
+.ecg,
+.consutants,
+.vitalSigns,
+.shiftExChange {
+  color: #b2b2b2;
+}
+
+.adviceActive,
+.radiateActive,
+.examineActive,
+.ecgActive,
+.vitalSignsActive,
+.consutantsActive,
+.shiftExChangeActive {
+  color: #01bf9d;
+}

@@ -1,0 +1,26 @@
+@import '../../../../index.scss';
+
+.agTitleMenu {
+  width: rem(90px);
+  margin-bottom: 0;
+  :global {
+    .ant-checkbox-group-item {
+      width: 100%;
+      height: rem(30px);
+      line-height: rem(30px);
+      &:hover {
+        background-color: $list;
+      }
+    }
+    .ant-checkbox-inner {
+      width: rem(14px);
+      height: rem(14px);
+    }
+    .ant-checkbox-wrapper {
+      padding-left: rem(8px);
+    }
+    .ant-checkbox-wrapper > .ant-checkbox + span {
+      padding: 0 rem(4px);
+    }
+  }
+}

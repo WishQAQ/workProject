@@ -1,0 +1,46 @@
+@import url('config/style-less.acss');
+.filters{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  .item{
+    width: 20%;
+    text-align: center;
+    padding: 8px 12px;
+    font-size: 12px;
+    font-weight: bold;
+    color: @title;
+    &.active{
+      color: @primary;
+    }
+  }
+  .icon-filter{
+    margin-left: 2px;
+  }
+}
+
+.filter-age{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  .am-filter-default,
+  .am-filter-primary{
+    font-size: 16px;
+    height: 44px;
+  }
+  .title{
+    padding: 0 6px;
+  }
+  .am-filter-list{
+    min-height: auto;
+  }
+  .am-filter-primary{
+    background-color: @primary;
+    border-color: @primary;
+  }
+  .am-filter-click{
+    color: #fe5909;
+    background: #feeadf;
+  }
+}

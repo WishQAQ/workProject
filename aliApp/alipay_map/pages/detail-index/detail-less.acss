@@ -1,0 +1,64 @@
+.detailIndex{
+  background: #F2F2F2;
+  /* 轮播 */
+  .detail-swiper{
+    width: 100%;
+    height: 350rpx;
+    background: #fff;
+    >image{
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  /* 详情 */
+  .detail-info{
+    padding: 40rpx;
+    background: #fff;
+    .info-top{
+      padding-bottom: 30rpx;
+      border-bottom: 1px solid #E2E2E2;
+      .info-name{
+        font-size:40rpx;
+        /* font-family:PingFang-SC-Bold; */
+        font-weight:bold;
+        color:rgba(16,16,16,1);
+      }
+      .info-address{
+        font-size:28rpx;
+        /* font-family:PingFang-SC-Medium; */
+        font-weight:500;
+        color:rgba(34,34,34,1);
+      }
+    }
+    .info-bottom{
+      padding-top: 30rpx;
+      display: flex;
+      flex-wrap: wrap;
+      .bottom-item{
+        margin-right: 30rpx;
+        font-size:24rpx;
+        /* font-family:PingFang-SC-Medium; */
+        font-weight:500;
+        color:rgba(107,107,107,1);
+      }
+    }
+  }
+  /* 近期活动 */
+  .activity{
+    margin-top: 20rpx;
+    background: #fff;
+    .activity-title{
+      display: flex;
+      align-items: center;
+      height: 88rpx;
+      padding: 0 40rpx;
+      border-bottom: 1px solid #E2E2E2;
+      font-size:32rpx;
+      /* font-family:PingFang-SC-Bold; */
+      font-weight:bold;
+      color:rgba(51,51,51,1);
+    }
+  }
+
+}

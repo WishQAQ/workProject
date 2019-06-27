@@ -1,0 +1,60 @@
+@import './../../../../index.scss';
+
+.tab {
+  width: 100%;
+  height: 100%;
+  border: 1px solid $mid-split-color;
+  border-radius: $border-radius10; // overflow: hidden;
+  background: $white-block;
+  position: relative;
+}
+
+.header {
+  width: 100%;
+  height: rem(34px);
+  border-bottom: 1px solid $font-select-color;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: -1px;
+}
+
+.card {
+  height: rem(34px);
+  padding: 0 6px;
+  font-size: $font-title-size;
+  color: $font-main-color; // border-left: 1px solid $big-border-color;
+  border: 1px solid $big-border-color;
+  border-bottom: 1px solid $font-select-color;
+  background: $mid-split-color;
+  margin-left: rem(4px);
+  line-height: rem(34px);
+  transition: .15s;
+  letter-spacing: rem(1px);
+  cursor: pointer;
+  &:hover {
+    background: $white-block;
+    border-color: $font-select-color;
+    border-bottom: 1px solid $white-block;
+    color: $font-select-color;
+  }
+  &:first-child {
+    border-radius: 10px 0 0 0;
+    margin-left: rem(-1px);
+  }
+}
+
+.active {
+  background: $white-block !important;
+  border-color: $font-select-color !important;
+  border-bottom: 1px solid $white-block !important;
+  color: $font-select-color !important;
+  text-shadow: 1px 0 0 #3db5e7;
+}
+
+.content {
+  width: 100%;
+  height: calc(100% - 34px);
+  position: relative;
+  overflow: hidden;
+  border-radius: 0 0 rem(10px) rem(10px);
+}

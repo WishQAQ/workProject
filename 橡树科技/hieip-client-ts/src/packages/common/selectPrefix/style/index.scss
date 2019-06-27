@@ -1,0 +1,53 @@
+@import '../../../../index';
+
+.selectPrefix {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: rem(26px);
+  line-height: rem(26px);
+  font-size: $font-com-size;
+  color: $font-com-color;
+}
+
+.prefix {
+  position: relative;
+  width: auto;
+  box-sizing: border-box;
+  min-width: rem(40px);
+  height: rem(26px);
+  line-height: rem(26px);
+  padding: 0 rem(5px);
+  border: 1px solid $big-border-color;
+  border-right: none;
+  border-radius: 4px 0 0 4px;
+  text-align: center;
+  font-size: $font-title-size;
+  background: #fafafa;
+  color: $font-com-color;
+}
+
+.asterisk {
+  color: red;
+  padding-left: 2px;
+}
+
+.select {
+  box-sizing: border-box;
+  width: 100%;
+  height: rem(26px);
+  line-height: rem(26px);
+  :global {
+    .ant-select-selection {
+      height: rem(26px);
+      border-radius: 0 4px 4px 0;
+      font-size: $font-title-size;
+      color: $font-com-color;
+    }
+    .ant-select-selection__rendered {
+      line-height: rem(26px);
+    }
+  }
+}

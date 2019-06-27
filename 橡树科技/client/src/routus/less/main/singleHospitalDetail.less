@@ -1,0 +1,65 @@
+.single-hospital-detail{
+  width: 100%;
+  height: 100%;
+  .loading {
+    width: 140px;
+    padding: 10px;
+    margin-top: -50px;
+    top: 50%;
+    left: 50%;
+    margin-left: -70px;
+    background: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    z-index: 100;
+    text-align: center;
+    font-family: "microsoft yahei";
+    .ant-spin {
+    }
+  }
+  .card-text{
+    overflow: scroll;
+  }
+  .ant-table-small{
+    border: 0px;
+  }
+  .card-text::-webkit-scrollbar{width:0;}
+  .data-seach{
+    height:100px;
+  }
+  .data-content{
+    height: calc(~"100% - 100px");
+    display: flex;
+    overflow: scroll;
+    flex-direction: row;
+
+  }
+  .data-content::-webkit-scrollbar{width:0;}
+  .sum-data{
+    border: none;
+    display: flex;
+    .ant-card-body{
+      font-size:18px;
+    }
+    .ant-card-head{
+      background: inherit;
+      border-bottom: 1px solid #d9d9d9;
+      .ant-card-head-title{
+        color: #fff;
+      }
+    }
+  }
+  .mz-sum-data{
+    background-color: rgb(194, 53, 49);
+    color:#fff;
+    border-radius: 8px;
+  }
+  .zy-sum-data{
+     background-color: #61a0a8;
+     color:#fff;
+     border-radius: 8px;
+   }
+  .icon-qian:before{
+    font-size: 30px;
+    color: red;
+  }
+}

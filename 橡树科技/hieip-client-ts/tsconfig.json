@@ -1,0 +1,76 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "target": "es6",
+    "outDir": "./dist/ts/",
+    "noEmit": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "alwaysStrict": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "listEmittedFiles": true,
+    "sourceMap": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "baseUrl": "./",
+    "paths": {
+      "pkg/*": [
+        "src/packages/*"
+      ],
+      "service/*": [
+        "src/service/*"
+      ],
+      "view/*": [
+        "src/view/*"
+      ],
+      "tools/*": [
+        "src/tools/*"
+      ]
+    },
+    "types": [
+      "jest",
+      "node"
+    ],
+    "lib": [
+      "es2015",
+      "es6",
+      "es2017",
+      "dom"
+    ],
+    "noResolve": false
+  },
+  "include": [
+    "src",
+    "gulpClass"
+  ],
+  "files": [
+    "webpack.test.ts",
+    "webpack.dll.ts",
+    "webpack.config.ts",
+    "typings.d.ts",
+    "theme.ts",
+    "gulpfile.ts"
+  ],
+  "exclude": [
+    ".idea",
+    ".awcache",
+    ".vscode",
+    "dist",
+    "node_modules",
+    "src/packages/api",
+    "src/packages/entity",
+    "src/packages/server",
+    "src/packages/medical-server"
+  ],
+  "awesomeTypescriptLoaderOptions": {
+    "silent": true,
+    "useCache": true,
+    "transpileOnly": true,
+    "transpileModule": true,
+    "errorsAsWarnings": false,
+    "forceIsolatedModules": true,
+    "cacheDirectory": "node_modules/.awcache"
+  }
+}

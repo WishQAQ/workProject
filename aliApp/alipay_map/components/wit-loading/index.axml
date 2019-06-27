@@ -1,0 +1,12 @@
+<view
+  class="
+    wit-dot
+    wit-dot-spin
+    {{classes}}
+    {{size === 'small' ? 'wit-dot-sm' : ''}}
+    {{size === 'large' ? 'wit-dot-lg' : ''}}">
+  <text style="background-color: {{color}}"></text>
+  <text style="background-color: {{color}}"></text>
+  <text style="background-color: {{color}}"></text>
+  <text style="background-color: {{color}}"></text>
+</view>

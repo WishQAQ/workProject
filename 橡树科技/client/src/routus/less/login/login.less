@@ -1,0 +1,154 @@
+//login2样式表
+.login {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  .login_img {
+    width: 100%;
+    height: 100%;
+    background: url("/public/images/login_bg2.png") no-repeat;
+    background-size: 100% 100%;
+    padding-top: 114px;
+    .login_mask {
+      .login_content {
+        .title_login {
+          width: 338px;
+          margin: 0 580px 42px;
+          .login_logo {
+            width: 260px;
+            height: 36px;
+            background: url("/public/images/logo2.png") no-repeat center center;
+            margin: 0 auto;
+          }
+        }
+        .content {
+          width: 338px;
+          height: 326px;
+          margin: 0 580px;
+          border-radius: 8px;
+          background-color: #469EE3;
+          position: relative;
+          padding-top: 60px;
+          .title_login2 {
+            //文字间距
+            .form_input {
+              div[class*='ant-form-item-control-wrapper'] {
+                padding-left: 16px;
+                input[class*='ant-input-lg'] {
+                  width: 246px;
+                  height: 34px;
+                  border-radius: 20px;
+                  background-color: transparent;
+                  border-color: #fff;
+                  outline: none;
+                  box-shadow: none;
+                  color: #fff;
+                  &::-webkit-input-placeholder { /* WebKit browsers */
+                    color: #fff;
+                  }
+                  &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+                    color: #fff;
+                  }
+                  &::-moz-placeholder { /* Mozilla Firefox 19+ */
+                    color: #fff;
+                  }
+                  &:-ms-input-placeholder { /* Internet Explorer 10+ */
+                    color: #fff;
+                  }
+                }
+                div[calss*='ant-input-affix-wrapper'], div[class*='ant-input']:not(:first-child) {
+                  padding-left: 18px;
+                }
+              }
+              &:first-child {
+                position: relative;
+                .form_serlect {
+                  position: absolute;
+                  top: 40px;
+                  right: 50px;
+                  background: none;
+                  //下拉框
+                  div[class*='ant-select-selection'] {
+                    height: 12px;
+                    line-height: 12px;
+                    color: #fff;
+                    background: none;
+                    text-align: right;
+                    border: none;
+                    outline: none;
+                    div[class*='ant-select-selection-selected-value'] {
+                      float: none;
+                    }
+                    span[class*='ant-select-arrow'] {
+                      color: #fff;
+                    }
+                  }
+                }
+              }
+            }
+            label[class*='ant-checkbox-wrapper'] span:nth-of-type(2) {
+              color: #fff;
+            }
+            button[class*='ant-btn-primary'] {
+              background-color: #298DC8;
+              color: #fff;
+              border-color: #1c81cf;
+            }
+            .showTips {
+              display: none;
+            }
+            .font_range {
+              padding-left: 35px !important;
+            }
+            //字体图标
+            .i-style {
+              display: inline-block;
+              width: 24px;
+              height: 24px;
+              line-height: 24px;
+            }
+            .icon1 {
+              background: url("/public/images/user2.png") center center no-repeat;
+            }
+            .icon2 {
+              background: url("/public/images/password.png") center center no-repeat;
+            }
+            .sub {
+              display: flex;
+              justify-content: space-between;
+              margin: 0 50px;
+              padding-top: 40px;
+              span[class*='ant-checkbox-inner'] {
+                background: transparent;
+              }
+              span[class*='ant-checkbox-checked'], span[class*='ant-checkbox-inner']:after {
+                border-color: #fff;
+              }
+              //按钮
+              .btn-style {
+                width: 138px;
+                border-radius: 20px !important;
+                box-sizing: border-box;
+              }
+              .right {
+                flex: 1;
+                text-align: center;
+              }
+            }
+          }
+          //版权所有
+          .copyright {
+            position: absolute;
+            bottom: 24px;
+            width: 100%;
+            text-align: center;
+            span {
+              color: #fff;
+              font-size: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

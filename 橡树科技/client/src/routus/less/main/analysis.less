@@ -1,0 +1,197 @@
+.hospital-costs-analysis {
+  width: 100%;
+  height: 100%;
+
+  .loading {
+    width: 140px;
+    padding: 10px;
+    margin-top: -50px;
+    top: 50%;
+    left: 50%;
+    margin-left: -70px;
+    background: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    z-index: 100;
+    text-align: center;
+    font-family: "microsoft yahei";
+    .ant-spin {
+    }
+  }
+  .data-content {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .ant-table-wrapper {
+      height: 100%;
+      max-height: 100%;
+      width: 100%;
+
+      .ant-spin-nested-loading {
+        height: 100%;
+        max-height: 100%;
+        width: 100%;
+
+        .ant-spin-container {
+          height: 100%;
+          max-height: 100%;
+          width: 100%;
+
+          .ant-table-header {
+            border-left: 1px solid #E9E9E9;
+            border-right: 1px solid #E9E9E9;
+          }
+          .ant-table-fixed-header {
+            height: 100%;
+            max-height: 100%;
+            width: 100%;
+            /*border-bottom:none;*/
+
+            .ant-table-content {
+              height: 100%;
+              max-height: 100%;
+              width: 100%;
+              .ant-table-scroll {
+                height: 100%;
+                max-height: 100%;
+                width: 100%;
+                .ant-table-header {
+                  width: 100%;
+                }
+                .ant-table-body {
+                  width: 100%;
+                  max-height: calc(~"100% - 40px") !important;
+                  margin-top: -17px;
+                  border-left: 1px solid #E9E9E9;
+                  border-bottom: 1px solid #E9E9E9;
+                  border-right: 1px solid #E9E9E9;
+                }
+              }
+              .ant-table-fixed-left {
+                height: 100%;
+
+                .ant-table-body-outer {
+                  height: calc(~"100% - 40px");
+
+                  .ant-table-body-inner {
+                  }
+                }
+              }
+              .ant-table-fixed-right {
+                height: 100%;
+
+                .ant-table-body-outer {
+                  height: calc(~"100% - 40px");
+
+                  .ant-table-body-inner {
+                  }
+                }
+              }
+            }
+
+          }
+        }
+      }
+      .ant-table-small {
+        border-left: none;
+        border-bottom: none;
+        border-right: none;
+        .ant-table-header {
+          th {
+            // text-align: left !important;
+          }
+
+        }
+        .ant-table-header > table {
+          padding: 0;
+          border-bottom: none;
+        }
+        .ant-table-body > table {
+          padding: 0;
+        }
+        .ant-table-body > table > tr > td {
+          // text-align: left !important;
+        }
+        .ant-table-body {
+          table {
+            td {
+              //  text-align: left !important;
+            }
+          }
+        }
+
+      }
+
+    }
+    .ant-table-thead tr th span {
+      font-weight: 600;
+    }
+    .ant-form-item-label label {
+      font-weight: 600;
+      color: #3C3C3C;
+    }
+    .ant-table-tbody {
+      .ant-table-row.ant-table-row-active {
+        td {
+          background: #5FAFE4;
+          color: #FFF;
+        }
+      }
+      .ant-table-row-active:hover {
+        td {
+          background: #5FAFE4;
+          color: #FFF;
+        }
+      }
+      .ant-table-row {
+        td {
+          color: #3C3C3C;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+    }
+    .ant-table-header {
+      table {
+        width: 10px !important;
+        table-layout: fixed;
+      }
+    }
+    .ant-table-fixed {
+      width: 10px !important;
+      table-layout: fixed;
+    }
+    .ant-table-body {
+      table {
+        width: 10px !important;
+        table-layout: fixed;
+      }
+    }
+    .ant-table-small {
+      tr {
+        height: 31px;
+      }
+    }
+    .ant-table-scroll {
+      position: relative;
+
+      .ant-table-placeholder {
+        width: calc(~"100% - 18px");
+        position: absolute;
+        top: 40px;
+        left: 0;
+      }
+    }
+    .ant-table-fixed-right {
+      .ant-table-header {
+        overflow-y: scroll;
+      }
+    }
+  }
+}

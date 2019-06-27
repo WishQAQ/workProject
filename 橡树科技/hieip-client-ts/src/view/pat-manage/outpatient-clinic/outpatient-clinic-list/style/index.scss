@@ -1,0 +1,302 @@
+//门诊医生站
+@import '../../../../../index.scss';
+@import '../../style/common';
+
+$outpatient-box-shadow: 0 0 rem(12px) rgba(0, 0, 0, .15);
+$outpatient: #ffffff;
+$outpatient-table-list-bg: #ececec;
+$outpatient-table-list-bor: #dedede;
+$outpatient-table-detail-bg: #71a7be;
+$outpatient-box-header-border: #ececec;
+$title-bg-color: #5591aa;
+$title-button-bg-color: #6399af;
+$title-button-border-color: #71a7be;
+
+.root {
+  width: rem(230px);
+  height: 100%;
+  box-shadow: $outpatient-box-shadow;
+  font-size: rem(12px);
+}
+
+.header {
+  display: flex;
+  height: rem(26px);
+  align-items: center;
+  padding: 0 rem(9px);
+  font-weight: bold;
+  font-size: rem(14px);
+  background: $public-title-color;
+  color: $outpatient;
+}
+
+.myCheckBox {
+  :global {
+    .ant-checkbox-group {
+      height: rem(26px) !important;
+      display: flex;
+      align-items: center;
+      padding: 0 rem(7px) !important;
+    }
+    .ant-checkbox-group-item {
+      font-size: rem(12px) !important;
+      color: $font-main-color;
+    }
+    .ant-checkbox-input, .ant-checkbox-inner {
+      transform: scale(.8);
+    }
+    .ant-checkbox + span {
+      padding-right: rem(2px) !important;
+      padding-left: rem(4px) !important;
+    }
+  }
+}
+
+.turnBox {
+  :global {
+    .ant-modal {
+      width: rem(670px) !important;
+    }
+  }
+}
+
+.turnMiddle {
+  padding-top: rem(8px);
+}
+
+.patientBox {
+  :global {
+    .ant-modal {
+      width: rem(444px) !important;
+    }
+  }
+}
+
+.patientLabelBox {
+  margin-top: rem(10px);
+  > div:nth-child(2) {
+    margin-left: rem(6px);
+  }
+}
+
+// table外部
+.tableList {
+  font-size: rem(12px);
+  height: calc(100% - 275px) !important;
+  border-top: rem(1px) solid $outpatient-table-list-bor;
+  :global {
+    .ag-fresh .ag-root {
+      border-radius: 0 !important;
+    }
+  }
+}
+
+.oneLineOrange {
+  color: #ff5f18 !important;
+  background-color: #ffede0 !important;
+}
+
+// table外部
+.tableDetail {
+  font-size: rem(12px);
+  // 158 + 26
+  height: rem(184px) !important;
+  :global {
+    .ag-fresh .ag-root {
+      border-radius: 0 !important;
+    }
+  }
+}
+
+// 弹框table外部
+.turnTable {
+  margin-top: rem(8px);
+  height: rem(388px);
+  border: rem(1px) solid $big-border-color;
+  border-radius: rem(4px);
+}
+
+// 弹框table内部
+.tableTurn {
+  :global {
+    .ag-header {
+      color: $font-main-color !important;
+      background: $outpatient-table-list-bg !important;
+      height: rem(28px) !important;
+      line-height: rem(27px) !important;
+    }
+    .ag-body {
+      top: rem(28px) !important;
+    }
+    .ag-header-cell {
+      text-align: left;
+      padding-left: rem(11px) !important;
+    }
+    .ag-cell {
+      padding-left: rem(13px) !important;
+      text-align: left !important;
+      color: $font-main-color !important;
+    }
+  }
+}
+
+// 下拉输入列表框
+.outpatientSelect {
+  height: rem(20px);
+  width: rem(116px);
+  :global {
+    // 下拉输入框
+    .ant-select-selection--single {
+      height: 100% !important;
+      line-height: 1.5;
+    }
+    // 下拉输入框
+    .ant-select-selection__rendered {
+      height: 100% !important;
+      line-height: 1.5;
+    }
+    .ant-select-selection-selected-value {
+      line-height: rem(20px) !important;
+      font-weight: normal !important;
+      font-size: rem(12px) !important;
+      color: $font-main-color;
+    }
+    // 下拉输入框
+    .ant-select-selection {
+      border: 0 !important;
+      border-radius: rem(4px) 0 0 rem(4px) !important;
+    }
+  }
+}
+
+// 下拉输入列表框
+.filter {
+  width: rem(98px);
+  border-left: rem(1px) solid $input-split-color;
+  :global {
+    // 下拉输入框
+    .ant-select-selection {
+      border-radius: 0 rem(4px) rem(4px) 0 !important;
+    }
+  }
+}
+
+//Search组件构建搜索框样式
+.width217Search {
+  width: rem(217px);
+  height: rem(30px);
+}
+
+.padding8Search {
+  height: rem(26px);
+  margin-bottom: rem(6px);
+  padding: 0 rem(8px);
+}
+
+.patientListTitle {
+  background-color: $title-bg-color;
+  display: flex;
+  align-items: center;
+  height: rem(26px);
+  position: relative;
+  :global {
+    .ant-select-open {
+      :global {
+        .ant-select-selection__clear {
+          background-color: $title-button-bg-color;
+          display: block;
+        }
+        .ant-select-selection--single {
+          border-color: #fff !important;
+        }
+      }
+    }
+  }
+}
+
+.titleButton {
+  border: rem(1px) solid $title-button-border-color;
+  background-color: $title-button-bg-color;
+  font-size: rem(rem(12px));
+  color: #fff;
+  border-radius: rem(4px) rem(4px) 0 0;
+  padding: 0 rem(7px);
+  height: rem(22px);
+  margin-left: rem(3px);
+  margin-top: rem(4px);
+  line-height: rem(20px);
+  width: rem(62px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border-bottom-color: $title-button-bg-color;
+}
+
+.titleButtonActive {
+  width: auto;
+  overflow: visible;
+  text-overflow: clip;
+  white-space: normal;
+  color: $button-extra-hover-background;
+  background-color: #fff;
+  border-color: #fff;
+}
+
+.titleSelect {
+  height: rem(20px);
+  width: rem(79px);
+  font-size: rem(12px) !important;
+  position: absolute !important;
+  right: rem(3px);
+  :global {
+    .ant-dropdown-menu-item {
+      padding: 0 rem(50px) !important;
+    }
+    .ant-select-search__field, .ant-select-search__field__mirror {
+      font-size: rem(12px) !important;
+    }
+    .ant-select-selection__rendered {
+      height: 100% !important;
+      margin: 0 rem(20px) 0 rem(9px);
+    }
+    .ant-select-selection--single {
+      height: rem(20px) !important;
+      border: rem(1px) solid $title-button-border-color !important;
+      background-color: $title-bg-color !important;
+      color: #fff !important;
+    }
+    .ant-select-selection-selected-value {
+      height: rem(18px) !important;
+      line-height: rem(18px) !important;
+      font-size: rem(12px);
+      padding-right: 0;
+    }
+    .ant-select-selection__clear, .ant-select-arrow {
+      right: rem(5px);
+    }
+    .ant-select-selection__clear {
+      background-color: $title-button-bg-color;
+      display: none;
+    }
+    .ant-select-selection__clear:before {
+      opacity: rem(.65);
+    }
+    .ant-select-arrow:before {
+      color: #fff;
+      opacity: rem(.65);
+    }
+  }
+}
+
+.titleSelectDropDown {
+  :global {
+    .ant-select-dropdown-menu-item {
+      font-size: rem(12px);
+      color: $font-main-color;
+    }
+    .ant-select-dropdown-menu-item:hover, .ant-select-dropdown-menu-item-active {
+      background-color: $menu-selected;
+    }
+  }
+}
+

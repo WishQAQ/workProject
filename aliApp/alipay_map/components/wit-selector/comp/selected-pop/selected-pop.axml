@@ -1,0 +1,74 @@
+<template name="selected">
+  <popup
+    className="selected-pop"
+    disableScroll="{{false}}"
+    show="{{show}}"
+    position="bottom"
+    style="background-color: red"
+    zIndex="99">
+    <view class="selected-list">
+      <view class="navbar">
+        <view class="back" onTap="onColsePop">
+          <wit-icon icon="iconzuojiantou" color="#ff7a02"/>
+        </view>
+        <view class="title">已选择{{total}}人</view>
+        <view class="confirm" onTap="onColsePop">
+          <wit-btn text="确定" size="small" type="primary"/>
+        </view>
+      </view>
+      <scroll-view class="scroller" scroll-y="{{true}}" style="width: 100%">
+        <!-- 党委 -->
+        <view class="block" a:if="{{orgtype1.length}}">
+          <view class="title wit-1px-b">党委{{`(${orgtype1.length})`}}</view>
+          <item
+            a:for="{{orgtype1}}"
+            a:key="*this"
+            last="{{index + 1 === orgtype1.length}}"
+            info="{{...item, index, remove: true}}"
+            onRemove="onRemove"/>
+        </view>
+        <!-- 党总支 -->
+        <view class="block" a:if="{{orgtype2.length}}">
+          <view class="title wit-1px-b">党总支{{`(${orgtype2.length})`}}</view>
+          <item
+            a:for="{{orgtype2}}"
+            a:key="*this"
+            last="{{index + 1 === orgtype2.length}}"
+            info="{{...item, index, remove: true}}"
+            onRemove="onRemove"/>
+        </view>
+        <!-- 党支部 -->
+        <view class="block" a:if="{{orgtype3.length}}">
+          <view class="title wit-1px-b">党支部{{`(${orgtype3.length})`}}</view>
+          <item
+            a:for="{{orgtype3}}"
+            a:key="*this"
+            last="{{index + 1 === orgtype3.length}}"
+            info="{{...item, index, remove: true}}"
+            onRemove="onRemove"/>
+        </view>
+        <!-- 党小组 -->
+        <view class="block" a:if="{{orgtype4.length}}">
+          <view class="title wit-1px-b">党小组{{`(${orgtype4.length})`}}</view>
+          <item
+            a:for="{{orgtype4}}"
+            a:key="*this"
+            last="{{index + 1 === orgtype4.length}}"
+            info="{{...item, index, remove: true}}"
+            onRemove="onRemove"/>
+        </view>
+        <!-- 人员 -->
+        <view class="block" a:if="{{person.length}}">
+          <view class="title wit-1px-b">人员{{`(${person.length})`}}</view>
+          <item
+            a:for="{{person}}"
+            a:key="*this"
+            last="{{index + 1 === person.length}}"
+            info="{{...item, index, remove: true}}"
+            onRemove="onRemove"/>
+        </view>
+      </scroll-view>
+    </view>
+  </popup>
+</template>
+<template is="selected" data="{{...selected}}"></template>

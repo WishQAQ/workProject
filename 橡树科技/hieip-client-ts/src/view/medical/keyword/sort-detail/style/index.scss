@@ -1,0 +1,287 @@
+@import '../../../../../index';
+@import '../../common';
+
+//头部关键词下拉框
+.headerInput {
+  width: rem(140px) !important;
+  height: rem(30px) !important;
+  border-radius: 0 rem(4px) rem(4px) 0 !important;
+  font-size: rem(12px) !important;
+}
+
+.boxInput {
+  width: 100%;
+  height: rem(30px) !important;
+  border-radius: 0 rem(4px) rem(4px) 0 !important;
+  font-size: rem(12px) !important;
+}
+
+.middleInput {
+  width: rem(180px) !important;
+  height: rem(30px) !important;
+  border-radius: 0 rem(4px) rem(4px) 0 !important;
+  font-size: rem(12px) !important;
+}
+
+.boxSelectInput {
+  width: 100%;
+  height: rem(30px) !important;
+  border-radius: 0 rem(4px) rem(4px) 0 !important;
+  font-size: rem(12px) !important;
+}
+
+//单选按钮组件
+.myRadio {
+  display: flex;
+  align-items: center;
+  //左边文字
+  .myRadioName {
+    white-space: nowrap;
+    padding: 0 rem(10px);
+    font-weight: bold;
+    font-size: rem(12px) !important;
+    color: $font-main-color;
+    > span {
+      color: $primary-color;
+      padding: 0 rem(2px) 0 rem(4px);
+    }
+    .noLight {
+      color: $star-color-black;
+    }
+  }
+  //右边按钮组
+  .myRadioGroup {
+    display: flex;
+    align-items: center;
+    :global {
+      .ant-radio-wrapper {
+        font-size: rem(12px);
+        color: $font-main-color;
+        margin-right: rem(10px);
+      }
+      .ant-radio {
+        transform: scale(.85);
+      }
+      span.ant-radio + * {
+        padding-left: rem(4px);
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+//查询按钮
+.myBtn {
+  font-size: rem(12px) !important;
+  padding: rem(8px) rem(11.5px) rem(8px) rem(12.5px) !important;
+  line-height: rem(12px) !important;
+  height: rem(30px) !important;
+  margin-right: rem(24px) !important;
+  color: $btn-search !important;
+  background-color: $btn-search-bg !important;
+  border: rem(1px) solid $btn-search-border !important;
+  > span {
+    vertical-align: middle;
+  }
+}
+
+//新增按钮
+.addBtn {
+  color: $btn-add !important;
+  background-color: $btn-add-bg !important;
+  border: rem(1px) solid $btn-add-border !important;
+}
+
+//表格相关样式
+.myAgTable {
+  border: rem(1px) solid #cdcdcd !important;
+  border-top-color: $list-split-color !important;
+  border-radius: rem(4px) !important;
+  :global {
+    //表头字体颜色
+    .ag-header-cell-text {
+      color: $font-main-color !important;
+    }
+  }
+}
+
+.myAgPage {
+  margin-top: rem(9px) !important;
+  text-align: right !important;
+  padding: 0 !important;
+}
+
+//labelbox(关键词下拉框，新增弹框里的下拉框、文本框)
+.keyAll {
+  height: rem(30px) !important;
+  font-size: rem(12px) !important;
+  border: 0 !important;
+  background-color: #fff;
+  margin-right: rem(6px);
+}
+
+.keyComplete {
+  font-size: rem(12px) !important;
+  padding-top: rem(8px) !important;
+  padding-bottom: rem(8px) !important;
+  height: rem(30px) !important;
+  line-height: rem(12px) !important;
+  border-top: rem(1px) solid $big-border-color !important;
+  border-left: rem(1px) solid $big-border-color !important;
+  border-bottom: rem(1px) solid $big-border-color !important;
+  background-color: #fff !important;
+  border-radius: rem(4px) 0 0 rem(4px) !important;
+  color: $font-main-color !important;
+  i {
+    font-weight: bold !important;
+  }
+}
+
+.root {
+  padding: 0 rem(12px);
+  font-size: rem(12px);
+  :global {
+    .ant-select-selection--single {
+      font-size: rem(12px);
+      height: rem(30px);
+      line-height: rem(12px);
+      border-radius: 0 rem(4px) rem(4px) 0;
+    }
+    .ant-select-selection__rendered {
+      line-height: rem(28px) !important;
+    }
+    .ant-select-search__field {
+      border: 0 !important;
+    }
+  }
+  .header {
+    display: flex;
+    align-items: center;
+    font-size: rem(12px);
+    padding: rem(11px) 0;
+    :global {
+      .ant-layout {
+        flex: 0 0;
+      }
+      .ant-radio-group {
+        white-space: nowrap;
+      }
+      .ant-select-show-search {
+        width: rem(180px) !important;
+      }
+      .ant-select-search__field {
+        height: rem(30px) !important;
+        line-height: rem(28px);
+        border-top: rem(1px) solid $big-border-color;
+        border-bottom: rem(1px) solid $big-border-color;
+        border-right: rem(1px) solid $big-border-color;
+        border-left: rem(1px) solid $mid-split-color;
+        border-radius: 0 rem(4px) rem(4px) 0;
+        width: 100%;
+      }
+    }
+    //操作按钮
+    .operating {
+      display: flex;
+      align-items: center;
+    }
+  }
+  //ag表格
+  .mainTable {
+    height: calc(100% - 64px);
+    //修改表格右键样式
+    :global {
+      .ant-dropdown-menu-item {
+        padding: rem(8px) rem(27px) rem(10px) rem(22px) !important;
+        font-size: rem(12px) !important;
+        color: $font-com-color !important;
+        background-color: $list-right-click-bg !important;
+        height: rem(30px) !important;
+        line-height: rem(12px) !important;
+      }
+      .ant-dropdown-menu-item:hover {
+        background-color: $list-right-click-bg-hover !important;
+      }
+      .react-contextmenu {
+        z-index: 1 !important;
+      }
+    }
+  }
+  //新增弹框
+  .myAdd {
+    .myRadioName {
+      padding-left: 0 !important;
+    }
+    .keyAll:last-child {
+      margin-right: 0;
+    }
+    .addTitle {
+      font-size: rem(12px);
+      display: flex;
+      align-items: center;
+      padding: rem(8px) 0;
+      color: #555;
+      > h3 {
+        font-weight: bold;
+        font-size: rem(14px);
+        margin: 0 rem(6px) 0 0;
+      }
+      > span {
+        color: $star-color;
+        padding: 0 rem(2px) 0 rem(4px);
+        font-weight: bold;
+      }
+    }
+    .threeInput {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: rem(11px);
+      margin-top: rem(12px);
+    }
+    :global {
+      .ant-modal-close-x {
+        color: $font-un-color;
+        width: rem(38px);
+        height: rem(37px);
+        line-height: rem(37px);
+        font-size: rem(15px);
+      }
+      .ant-modal {
+        width: rem(730px) !important;
+      }
+      .ant-modal-header {
+        padding: 0 rem(14px) !important;
+      }
+      .ant-modal-title {
+        height: auto !important;
+        line-height: inherit !important;
+      }
+      .ant-modal-body {
+        padding: 0 rem(14px) !important;
+      }
+      .ant-modal-footer {
+        padding: rem(8px) rem(14px) !important;
+        border-top: 0;
+        :global {
+          .ant-btn-primary {
+            height: rem(28px);
+            padding: 0 rem(14px);
+            font-size: rem(12px);
+            color: $btn-search;
+            background-color: $btn-search-bg;
+            border: rem(1px) solid $btn-search-border;
+            margin-right: 0 !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+//按钮图标
+.keyWordIcon {
+  vertical-align: middle;
+  font-size: rem(12px);
+  margin-right: rem(3px);
+}

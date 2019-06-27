@@ -1,0 +1,82 @@
+@import '../../../../index';
+
+.patientModal {
+
+  :global {
+    .ant-modal-header {
+      padding: rem(12px) rem(14px);
+      border: none;
+    }
+    .ant-modal-title {
+      font-size: rem(14px);
+      line-height: rem(14px);
+      color: $font-com-color;
+    }
+    .ant-modal-close-x {
+      width: rem(12px);
+      height: rem(12px);
+      color: $font-tip-color;
+      line-height: rem(14px);
+      margin-right: rem(14px);
+      margin-top: rem(12px);
+      font-size: rem(14px);
+    }
+    .ant-modal-body {
+      padding: 0 rem(14px);
+    }
+  }
+}
+
+.patientModalBody {
+  width: 100%;
+  .patientModalBodyHeader {
+    height: rem(30px);
+    margin-bottom: rem(12px);
+    span {
+      float: left;
+      font-size: rem(12px);
+      line-height: rem(30px);
+      //color: $font-tip-color;
+      margin: 0 rem(6px);
+    }
+  }
+  :global {
+    .ant-btn {
+      width: rem(53px);
+      height: rem(30px);
+      border-radius: rem(4px);
+      text-align: center;
+      padding: 0 rem(5px) !important;
+      font-size: rem(13px) !important;
+      > i {
+        padding-right: rem(5px);
+        font-size: $font-title-size;
+      }
+      span {
+        margin: 0 auto !important;
+        font-size: rem(12px);
+        font-weight: bold;
+        letter-spacing: rem(-1px);
+        float: none;
+      }
+    }
+    .ant-btn-clicked:after {
+      border: 0 solid #c4c4c4;
+      animation: none;
+    }
+  }
+}
+
+.patientModalBodyDate {
+  float: left;
+  :global {
+    .pt-popover-target {
+      margin-left: 0 !important;
+      .pt-input {
+        width: rem(154px);
+        height: rem(30px);
+        outline: none !important;
+      }
+    }
+  }
+}

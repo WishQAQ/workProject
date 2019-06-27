@@ -1,0 +1,365 @@
+@import '../../../../../../index.scss';
+@import '../../../style/common';
+
+$prescription-left-bg: #48b7e5;
+$spend-span: #ff375b;
+$table-header-bg: #ececec;
+$outpatient-box-shadow: 0 0 rem(12px) rgba(0, 0, 0, .15);
+$valuation-title-bg-color: #71a7be;
+
+.root {
+  width: 100%;
+  height: 100%;
+}
+
+.prescriptionTemplate {
+  width: 100%;
+  height: calc((100% - 8px) / 2);
+  display: flex;
+  margin-bottom: rem(8px);
+  border: rem(1px) solid $big-border-color;
+  border-radius: 0 rem(4px) rem(4px) 0;
+  border-left: none;
+}
+
+.templateLeft {
+  width: rem(30px);
+  height: 100%;
+  background-color: $prescription-left-bg;
+  color: #fff;
+  border-radius: rem(4px) 0 0 rem(4px);
+  display: flex;
+  align-items: center;
+  > span {
+    display: inline-block;
+    width: rem(16px);
+    margin: 0 auto;
+  }
+}
+
+.templateRight {
+  width: calc(100% - 30px);
+  height: 100%;
+}
+
+.templateTable {
+  height: calc(100% - 30px);
+}
+
+.templateOperate {
+  height: rem(30px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: rem(1px) solid $list-split-color;
+  padding: 0 rem(2px) 0 rem(10px);
+}
+
+// 花费
+.spend {
+  font-size: rem(12px);
+  font-weight: bold;
+  display: flex;
+  color: $font-main-color;
+  .oneSpend {
+    margin-right: rem(26px);
+    .speSpan {
+      color: $spend-span;
+    }
+  }
+}
+
+// 按钮组
+.btnGroup {
+  .myButton {
+    font-size: rem(12px);
+    border-radius: rem(4px);
+    padding: 0 rem(7px);
+    height: rem(22px);
+    margin-right: rem(6px);
+  }
+  .myExtra {
+    border: 0;
+    color: #fff;
+    background-color: $button-extra-background;
+  }
+  .myExtra:hover {
+    background-color: $button-extra-hover-background;
+  }
+  .myAdd {
+    border: rem(1px) solid $button-add-border;
+    color: #fff;
+    background-color: $button-add-background;
+  }
+  .myAdd:hover {
+    border-color: $button-add-hover-border;
+    background-color: $button-add-hover-background;
+  }
+  .mySave {
+    border: rem(1px) solid $button-save-border;
+    color: #fff;
+    background-color: $button-save-background;
+  }
+  .mySave:hover {
+    border-color: $button-save-hover-border;
+    background-color: $button-save-hover-background;
+  }
+  .myDelete {
+    border: rem(1px) solid $button-delete-border;
+    color: $button-delete-color;
+    background-color: $button-delete-background;
+  }
+  .myDelete:hover {
+    border-color: $button-delete-hover-border;
+    color: $button-delete-hover-color;
+    background-color: $button-delete-hover-background;
+  }
+  .mySearch {
+    border: rem(1px) solid $button-search-border;
+    color: $button-search-color;
+    background-color: $button-search-background;
+  }
+  .mySearch:hover {
+    border-color: $button-search-hover-border;
+    color: $button-search-hover-color;
+    background-color: $button-search-hover-background;
+  }
+  // 特别按钮
+  .myButtonMargin24 {
+    margin-right: rem(24px);
+  }
+}
+
+// Table重置
+.tableEc {
+  :global {
+    .ag-cell {
+      color: $font-main-color !important;
+      border-right-color: $list-split-color !important;
+      border-bottom-color: $list-split-color !important;
+    }
+    .ag-header {
+      border-bottom-color: $list-split-color !important;
+    }
+    .ag-header-cell {
+      border-right-color: $list-split-color !important;
+    }
+    .ag-header-select-all {
+      padding: 0 !important;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+    .ag-checkbox-unchecked, .ag-checkbox-checked, .ag-checkbox-indeterminate {
+      margin: 0 auto;
+      // 2/2
+      padding-left: rem(1px);
+    }
+    .ag-header-cell-label {
+      padding: 0 !important;
+    }
+    .ag-header-cell-resize {
+      width: 0 !important;
+    }
+    .ag-header-row {
+      height: 100% !important;
+    }
+  }
+}
+
+// 背景颜色为ececec的表格
+.tableEc28 {
+  :global {
+    .ag-header {
+      color: $font-main-color !important;
+      background-color: $table-header-bg !important;
+      height: rem(28px) !important;
+      line-height: rem(27px) !important;
+    }
+    .ag-body {
+      top: rem(28px) !important;
+    }
+  }
+}
+
+// 设置某一列每行高度为28的表格
+.tableColumn28 {
+  height: rem(28px) !important;
+  line-height: rem(23px) !important;
+}
+
+// 全选框
+.tableSelectAll {
+  font-size: rem(12px);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  :global {
+    .ag-selection-checkbox {
+      padding-right: 0 !important;
+      display: block;
+    }
+  }
+}
+
+.valuationBox {
+  font-size: rem(12px);
+  > div > div > div:first-child {
+    background-color: transparent !important;
+  }
+  :global {
+    .ant-modal {
+      width: rem(498px) !important;
+    }
+    .ant-modal-header {
+      padding: 0;
+      height: rem(30px);
+    }
+    .ant-modal-body {
+      padding: 0;
+      height: rem(203px);
+    }
+    .ant-modal-footer {
+      padding: 0;
+    }
+    .ant-modal-header {
+      background-color: $valuation-title-bg-color;
+    }
+    .ant-modal-title {
+      color: #fff !important;
+    }
+    .ant-modal-close-x {
+      height: rem(29px) !important;
+      line-height: rem(29px) !important;
+      opacity: 0.85;
+    }
+    .ant-modal-close-x:before {
+      color: #fff !important;
+    }
+    .ant-modal-close-x:hover {
+      opacity: 1;
+    }
+  }
+  .valuationBoxTitle {
+    font-size: rem(12px);
+    height: rem(30px);
+    display: flex;
+    align-items: center;
+    > span {
+      margin: 0 rem(8px);
+    }
+    .titleBtn {
+      width: rem(14px);
+      height: rem(14px);
+      padding: 0;
+      border: 0;
+      border-radius: rem(7px);
+      transform: scale(.85);
+      margin-right: rem(7px);
+      opacity: 0.85;
+      span {
+        margin: 0 rem(8px);
+      }
+      :global {
+        .anticon {
+          transform: scale(.8);
+        }
+      }
+    }
+    .titleBtn:hover {
+      opacity: 1;
+    }
+  }
+  .valuationTable {
+    height: rem(203px);
+    border: rem(1px) solid $big-border-color;
+    border-top: 0;
+    border-radius: 0 0 rem(4px) rem(4px);
+  }
+}
+
+.DisposalHistoryBox {
+  :global {
+    .ant-modal {
+      width: rem(716px) !important;
+    }
+  }
+}
+
+.PrescriptionHistoryBox {
+  :global {
+    .ant-modal {
+      width: rem(1079px) !important;
+    }
+  }
+}
+
+// 弹框table外部
+.boxTable {
+  margin-top: rem(10px);
+  border: rem(1px) solid $big-border-color;
+  border-radius: rem(4px);
+  height: rem(437px);
+}
+
+.templateBox {
+  :global {
+    .ant-modal {
+      width: rem(802px) !important;
+    }
+  }
+  .templateBoxMain {
+    display: flex;
+    height: rem(447px);
+  }
+  .templateBoxLeft {
+    width: rem(261px);
+    margin-right: rem(10px);
+  }
+  .title {
+    width: 100%;
+    font-size: rem(14px);
+    color: #fff;
+    border-radius: rem(4px) rem(4px) 0 0;
+    height: rem(30px);
+    display: flex;
+    align-items: center;
+  }
+  .templateBoxLeftTitle {
+    padding-left: rem(10px);
+    background-color: $public-title-color;
+  }
+  .templateBoxLeftTable {
+    height: calc(100% - 30px);
+    border: rem(1px) solid $big-border-color;
+    border-top: 0;
+    border-radius: 0 0 rem(4px) rem(4px);
+  }
+  .templateBoxRightTitle {
+    padding-left: rem(10px);
+    background-color: #71a7be;
+  }
+  .templateBoxRight {
+    width: rem(503px);
+  }
+  .templateBoxRightTable {
+    height: calc(100% - 30px);
+    border: rem(1px) solid $big-border-color;
+    border-top: 0;
+    border-radius: 0 0 rem(4px) rem(4px);
+  }
+  .templateBoxSearchName {
+    white-space: nowrap;
+    font-size: rem(12px);
+    font-weight: bold;
+    color: $font-main-color;
+  }
+  .templateBoxSearchText {
+    width: rem(189px) !important;
+    height: rem(30px) !important;
+  }
+  .templateBoxSearch {
+    height: rem(46px);
+  }
+}

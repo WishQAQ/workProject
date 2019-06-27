@@ -1,0 +1,134 @@
+
+/*顶部*/
+.header{
+    background-color: #58bcbb;
+    height: .75rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 640px;
+    z-index: 999;
+}
+.header_left{
+    width: 20%;
+    font-size: .3rem;
+    color: #fff;
+    line-height: .75rem;
+}
+
+.header_center{
+    width: 55%;
+    position: relative;
+}
+.header_center span{
+    width: .3rem;
+    height: .3rem;
+    position: absolute;
+    left: .1rem;
+    top: 50%;
+    margin-top: -.15rem;
+}
+.header_center input{
+    border: .011rem solid #fff;
+    background-color: transparent;
+    border-radius: 1rem;
+    display: block;
+    width: 100%;
+    height: .4rem;
+    padding-left: .5rem;
+    color: #fff;
+}
+
+.header_right{
+    width: 20%;
+    padding-left: .2rem;
+}
+.header_right div{
+    width: .4rem;
+    height: .4rem;
+}
+
+
+
+
+/*主体内容*/
+.main_1{
+    padding-top: .3rem;
+    padding-bottom: .1rem;
+    background-color: #fff;
+}
+.main_1 .main_1_box{
+    width: 25%;
+    text-align: center;
+    font-size: .2rem;
+    color: #777;
+}
+.main_1 .main_1_box div{
+    width: 70%;
+    height: 1rem;
+    margin: 0 auto;
+}
+
+
+
+.main_2{
+    height: .55rem;
+    background-color: #fff;
+    margin: .1rem 0;
+    overflow: hidden;
+}
+.main_2>span{
+    display: inline-block;
+    width: .25rem;
+    height: .25rem;
+    margin-right: .05rem;
+}
+.main_2>p{
+    font-size: .2rem;
+    color: #333;
+}
+.main_2>.main_2_swiper{
+    width: 70%;
+    font-size: .2rem;
+    color: #999;
+    overflow: hidden;
+    height: .55rem;
+}
+.main_2>.main_2_swiper .swiper-slide{
+    justify-content: left;
+}
+.main_2>.main_2_swiper .swiper-slide a{
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.main_2_bottom{
+    margin: 0 .1rem;
+}
+
+
+
+
+
+.main_3_title{
+    background-color: #fff;
+    height: .7rem;
+    font-size: .25rem;
+    color: #58bcbb;
+    margin: .15rem 0;
+}
+.main_3_title span{
+    display: block;
+    background-color: #58bcbb;
+    height: .011rem;
+    width: .4rem;
+    margin: 0 .15rem;
+}
+
+
+
+
+
+

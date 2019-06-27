@@ -1,0 +1,129 @@
+@import '../../../../index.scss';
+
+$browser-default-font-size: 16px !default;
+$border: #cecece;
+@function pxTorem($px) {
+  @return $px / $browser-default-font-size * 1rem;
+}
+
+@function padding() {
+  @return pxTorem(7px) 0;
+}
+
+.scoreing {
+  width: 100%;
+  height: 100%;
+  background: $white-block;
+}
+
+.scoreBlock1 {
+  overflow-y: scroll;
+}
+
+.scoreBlock2 {
+  overflow-y: scroll;
+  // 滚动条样式
+  &::-webkit-scrollbar { // 滚动条整体样式
+    position: fixed;
+    right: 0;
+    width: 4px;
+    height: 4px;
+  }
+  &::-webkit-scrollbar-thumb { // 滚动条里面小方块
+    border-radius: rem(4px);
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, .2);
+    background: rgba(0, 0, 0, .2);
+  }
+  &::-webkit-scrollbar-track { // 滚动条里面轨道
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, .2);
+    border-radius: 0;
+    background: rgba(0, 0, 0, .1);
+  }
+}
+
+.scoreSpan {
+  display: flex;
+  font-size: $font-com-size;
+  line-height: normal;
+  border-bottom: 1px solid $border;
+  > span {
+    text-align: center;
+    position: relative;
+    padding: padding();
+    &:first-child {
+      width: 16%;
+      border-right: 1px solid $border;
+      > button {
+        cursor: auto;
+        border: 0;
+        color: white;
+        font-size: $font-com-size;
+        padding: pxTorem(7px) pxTorem(11px);
+        border-radius: rem(4px);
+      }
+    }
+    &:nth-child(2) {
+      width: 6%;
+      border-right: 1px solid $border;
+      > i {
+        width: pxTorem(18px);
+        height: pxTorem(18px);
+        color: white;
+        font-style: normal;
+        display: inline-block;
+        border-radius: 50%;
+        background: white;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        line-height: 19px;
+      }
+    }
+    &:nth-child(3) {
+      width: 72%;
+      border-right: 1px solid $border;
+      padding: padding();
+      text-align: left;
+      text-indent: pxTorem(10px);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      > p {
+        text-align: left;
+        text-indent: pxTorem(10px);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+    &:last-child {
+      width: 6%;
+      margin: auto 0;
+    }
+  }
+}
+
+.level0 {
+  background: $level0 !important;
+}
+
+.level1 {
+  background: $level1 !important;
+}
+
+.level2 {
+  background: $level2 !important;
+}
+
+.level3 {
+  background: $level3 !important;
+}
+
+.level4 {
+  background: $level4 !important;
+}

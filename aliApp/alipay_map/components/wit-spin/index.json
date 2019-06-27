@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "wit-loading": "/components/wit-loading/index"
+  }
+}

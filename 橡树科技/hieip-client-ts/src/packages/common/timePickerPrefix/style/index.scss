@@ -1,0 +1,55 @@
+@import './../../../../index';
+
+.timePickerPrefix {
+  display: flex;
+  box-sizing: border-box;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  width: auto;
+  height: rem(26px);
+  font-size: $font-title-size;
+  color: $font-com-color;
+}
+
+.prefixLabel {
+  box-sizing: border-box;
+  width: auto;
+  min-width: rem(40px);
+  height: rem(26px);
+  line-height: rem(26px);
+  padding: 0 3px;
+  border: 1px solid $big-border-color;
+  border-right: none;
+  border-radius: 4px 0 0 4px;
+  text-align: center;
+  font-size: $font-title-size;
+  color: $font-com-color;
+  position: relative;
+}
+
+.start {
+  color: red;
+  //position: absolute;
+  padding-left: 2px
+}
+
+.timePicker {
+  width: 100%;
+  :global {
+    .pt-input-group input {
+      width: 100%;
+      height: rem(26px);
+      line-height: rem(26px);
+      border: 1px solid $big-border-color;
+      outline: 0;
+      border-radius: 0 4px 4px 0;
+      font-size: $font-title-size;
+      color: $font-com-color;
+      &:hover,
+      &:focus {
+        border-color: #40a9ff;
+      }
+    }
+  }
+}

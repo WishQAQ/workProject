@@ -1,0 +1,97 @@
+@import '../../../../../../index.scss';
+.billModal{
+  width: rem(960px);
+  .header{
+    height: rem(30px);
+    margin-bottom: rem(10px);
+    display: flex;
+    .rounded{
+      flex: 0 0 rem(200px);
+      border-radius: 0;
+      border: 0;
+      >span{
+        background-color: $white-block;
+        padding: 0 rem(5px);
+        line-height: rem(30px);
+        border: 0;
+      }
+      span{
+        font-size: $font-com-size;
+      }
+      :global{
+        .ant-radio-wrapper{
+          margin-right: 0;
+          top: rem(-1px);
+          >span:last-child{
+            padding-left: rem(4px);
+          }
+        }
+        .ant-radio{
+          top: rem(-1px);
+        }
+        .ant-radio-inner{
+          width: rem(14px);
+          height: rem(14px);
+          border-color: $big-border-color;
+          &::after{
+            width: rem(6px);
+            height: rem(6px);
+            transform: scale(0.875);
+            opacity: 1;
+            background-color: $big-border-color;
+          }
+        }
+      }
+    }
+    .searchInput {
+      flex: 0 0 rem(207px);
+      height: rem(30px);
+      :global {
+        .ant-input {
+          height: rem(30px) !important;
+          border-color: $big-border-color;
+          font-size: $font-com-size;
+          color: $font-main-color;
+          &::-webkit-input-placeholder{
+            font-size: $font-com-size;
+          }
+          &:focus{
+            border-color: $border-focus-color;
+          }
+        }
+        .ant-btn {
+          height: rem(29px) !important;
+          padding: 0 rem(8px);
+          background-color: rgba(0, 0, 0, 0);
+          border-color: transparent;
+          border-left-color: $input-split-color;
+          color: $font-main-color;
+        }
+      }
+    }
+  }
+  .main{
+    display: flex;
+    height: rem(523px);
+    .mainLeft{
+      width: 40%;
+      height: 100%;
+      border: rem(1px) solid $big-border-color;
+      border-radius: $border-radius4;
+    }
+    .mainRight{
+      width: 60%;
+      height: 100%;
+      padding-left: rem(10px);
+      .rightTable{
+        height: 100%;
+        border: rem(1px) solid $big-border-color;
+        border-radius: $border-radius4;
+      }
+    }
+    .textCenter{
+      line-height: rem(24px);
+      text-align: center;
+    }
+  }
+}

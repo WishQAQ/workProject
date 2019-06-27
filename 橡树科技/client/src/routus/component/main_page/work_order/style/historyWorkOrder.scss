@@ -1,0 +1,30 @@
+.historyWorkOrder{
+  .historyWorkOrderTop{
+    margin-bottom: 15px;
+    .menuTop{
+      display: inline-block;
+      margin-right: 5px;
+    }
+    .btnLeft{
+      color: #000;
+      font-weight: bold;
+      width: 60px;
+      border-right: none;
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+    }
+    .btnRigth{
+      :global{
+        .ant-select-selection{
+          border-bottom-left-radius: 0;
+          border-top-left-radius: 0;
+        }
+      }
+    }
+  }
+
+  .table{
+
+  }
+
+}

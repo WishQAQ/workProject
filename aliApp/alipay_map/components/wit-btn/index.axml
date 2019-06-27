@@ -1,0 +1,28 @@
+<view
+  onTap="click"
+  style="{{style}}"
+  class="
+    wit-btn
+    {{classes}}
+    {{size === 'large' ? 'wit-btn-large' : ''}}
+    {{size === 'normal' ? 'wit-btn-normal' : ''}}
+    {{size === 'small' ? 'wit-btn-small' : ''}}
+    {{size === 'mini' ? 'wit-btn-mini' : ''}}
+    {{type === 'default' ? 'wit-btn-default' : ''}}
+    {{type === 'primary' ? 'wit-btn-primary' : ''}}
+    {{type === 'success' ? 'wit-btn-success' : ''}}
+    {{type === 'info' ? 'wit-btn-info' : ''}}
+    {{type === 'danger' ? 'wit-btn-danger' : ''}}
+    {{type === 'warning' ? 'wit-btn-warning' : ''}}
+    {{type === 'gray' ? 'wit-btn-gray' : ''}}
+    {{plain ? 'wit-btn-plain' : ''}}
+    {{disabled ? 'wit-btn-disabled' : ''}}
+    {{square ? 'wit-btn-square' : ''}}
+    {{round ? 'wit-btn-round' : ''}}
+  ">
+  <wit-loading
+    a:if="{{loading}}"
+    color="{{loadingColor}}"
+    size="{{loadingSize}}"/>
+  <text>{{ text }}</text>
+</view>

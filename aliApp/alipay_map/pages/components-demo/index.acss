@@ -1,0 +1,41 @@
+/** ------ 颜色配置 ------ **/
+/* 主题色 */
+/* white */
+/* black */
+/* 错误 */
+/* 微信 */
+/* warning */
+/* success */
+/* info */
+/* 一级文本 */
+/* 二级文本 */
+/* 三级文本 */
+/* 四级提示性文本，不可用状态 */
+/* 分割线,提醒灯 */
+/* 浅色分割线,提醒灯 */
+/* 底色层 */
+/* 点击交互颜色 */
+/* ------ 线性渐变函数 ------ */
+/* ------ 文字裁剪 ------ */
+page {
+  background: #f2f2f2;
+}
+.block {
+  padding: 0 16px 16px;
+  margin-bottom: 16px;
+  border-bottom: 1x solid #ccc;
+  background: #fff;
+}
+.tit {
+  padding: 16px 0;
+  font-size: 18px;
+}
+.sub-title {
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(69, 90, 100, 0.6);
+  padding: 15px 0;
+}
+.btn {
+  background: linear-gradient(left, #fd9d16, #f56d19);
+}

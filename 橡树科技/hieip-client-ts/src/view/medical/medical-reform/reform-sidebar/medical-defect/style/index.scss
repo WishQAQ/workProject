@@ -1,0 +1,127 @@
+@import '../../../../../../index.scss';
+
+.medicalDefects {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 50%;
+  border-top: 1px solid $big-border-color;
+  border-right: 1px solid $big-border-color;
+  background: #fff;
+}
+
+.defectsTitle {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  font-size: $font-com-size;
+  font-weight: bold;
+  color: inherit;
+  width: 100%;
+  height: rem(26px);
+  padding: 0 rem(10px);
+  background: #eee;
+  border-bottom: 1px solid $big-border-color;
+}
+
+.defectsPlus {
+  font-size: $font-big-size;
+  background: #fff;
+  cursor: pointer;
+  &:active {
+    color: $font-select-color;
+  }
+}
+
+.defectsList {
+  display:flex;
+  flex-flow: column nowrap;
+  list-style-type: none;
+  overflow: auto;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.defectsItem {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: rem(40px);
+  padding: 0 rem(5px);
+  border-bottom: 1px solid #ececec;
+  &:hover {
+    .deleteDefects {
+      display: flex;
+    }
+  }
+}
+
+.itemTitle {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: center;
+  width: 90%;
+}
+
+.itemMainTitle {
+  display: block;
+  width: 163px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-flow: column nowrap;
+  align-items: center;
+  font-size: $font-com-size;
+  color: $font-com-color;
+}
+
+.itemSubTitle {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: $font-special-size;
+  color: $font-un-color
+}
+
+.deleteDefects {
+  display: none;
+  width: rem(16px);
+  height: rem(16px);
+  cursor: pointer;
+  font-size: $font-big-size;
+  color: $font-un-color;
+  cursor: pointer;
+  &:active {
+    color: $font-select-color;
+  }
+}
+
+.defectsFooter {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  border-top: 1px solid #ddd;
+  padding: rem(15px) rem(5px);
+  height: 10%;
+}
+
+.defectsBtn {
+  font-size: $font-com-size !important;
+  width: rem(84px) !important;
+  height: rem(26px) !important;
+  :global {
+    span {
+      margin-left: 0 !important;
+    }
+  }
+}

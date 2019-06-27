@@ -1,0 +1,108 @@
+@import '../../../../index';
+
+.medicalSign {
+  height: 100%;
+  width: 100%;
+  padding: rem(10px);
+  background-color: $white-default;
+  :global {
+    .ant-layout {
+      background-color: transparent;
+    }
+    .ant-layout-header {
+      height: auto;
+      line-height: inherit;
+      background-color: transparent;
+      padding: 0;
+    }
+  }
+}
+
+.signHead {
+  overflow: hidden;
+  margin-bottom: rem(10px);
+  :global {
+    .gutter-box {
+      float: left;
+      margin-right: rem(6px);
+      .pt-input-group {
+        flex: inherit;
+        color: $font-main-color;
+      }
+      .ant-input {
+        height: rem(30px);
+      }
+    }
+    .ant-btn {
+      height: rem(30px) !important;
+      padding: 0 rem(8px);
+    }
+    .pt-input {
+      box-shadow: none;
+      border: rem(1px) solid $list-split-color;
+      &:focus {
+        box-shadow: none !important;
+      }
+    }
+  }
+}
+
+.qianshou {
+  line-height: rem(30px);
+  font-size: rem(12px);
+  :global {
+    .ant-radio-wrapper {
+      margin-right: rem(10px);
+      color: $font-main-color;
+      font-size: rem(12px);
+      > span:last-child {
+        padding: 0;
+        margin-left: rem(6px);
+      }
+    }
+  }
+}
+
+.bezhu {
+  font-size: rem(12px);
+  height: rem(14px);
+  line-height: rem(14px);
+  color: $font-main-color;
+  margin: rem(10px) 0 0;
+  font-weight: bold;
+}
+
+.green {
+  color: #1c9842;
+}
+
+.cse {
+  color: #fa8630;
+}
+
+.keshi {
+  width: rem(150px) !important;
+  :global {
+    .ant-select-selection {
+      border: none;
+      &:hover, &:focus {
+        border-color: transparent;
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+.patient_container {
+  height: calc(100% - 65px);
+  border: rem(1px) solid $list-split-color;
+}
+
+.onColorSetGreen {
+  color: #1c9842 !important;
+}
+
+.onColorSetCse {
+  color: #fa8630 !important;
+}
+

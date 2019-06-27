@@ -1,0 +1,138 @@
+@import '../../../../../index';
+
+.btn {
+  margin-top: rem(5px);
+  > button {
+    height: rem(24px);
+    line-height: rem(24px);
+    background-color: #3db5e7;
+    color: #fff;
+    margin: 0 rem(3px);
+    padding: 0 rem(5px);
+    &:hover {
+      background-color: #67cff5;
+      color: #fff;
+    }
+    &:active {
+      background-color: #67cff5;
+      color: #fff;
+    }
+    &:focus {
+      background-color: #67cff5;
+      color: #fff;
+    }
+  }
+}
+
+.content {
+  :global {
+    .ant-select-selection {
+      &:hover {
+        border: rem(1px) solid #e1e1e1 !important;
+        box-shadow: none !important;
+      }
+      &:focus {
+        border: rem(1px) solid #e1e1e1 !important;
+        box-shadow: none !important;
+      }
+      &:active {
+        border: rem(1px) solid #e1e1e1 !important;
+        box-shadow: none !important;
+      }
+    }
+  }
+}
+
+.left_body {
+  :global {
+    .wenshu {
+      border-radius: 0;
+      border-color: #e1e1e1;
+      border-right: none;
+      > div:first-child {
+        height: rem(26px);
+        line-height: rem(26px);
+        padding: 0 rem(10px);
+        color: #353535;
+        font-weight: 600;
+        background-color: #f6f6f6;
+        border-bottom: rem(1px) solid #e1e1e1;
+      }
+      li {
+        margin: 0 !important;
+        height: rem(24px);
+        line-height: rem(24px);
+        &:after {
+          border: none;
+        }
+      }
+      ul {
+        border-right: none;
+      }
+    }
+    .ag-fresh {
+      border: rem(1px) solid #e1e1e1;
+      border-right: none;
+    }
+    .ag-fresh .ag-header {
+      height: rem(27px) !important;
+    }
+    .ag-fresh .ag-root {
+      border-radius: 0;
+    }
+  }
+}
+
+.bl {
+  height: 100%;
+  border-left: rem(1px) solid #e1e1e1;
+  overflow-y: scroll;
+}
+
+.yizhu {
+  .ag-fresh .ag-root {
+    border: rem(1px) solid #e1e1e1;
+  }
+}
+
+.flmcgjz {
+  border-radius: 0 !important;
+  border-right: none !important;
+  > div:first-child {
+    height: rem(26px);
+    line-height: rem(26px);
+    padding: 0 rem(10px);
+    color: #353535;
+    font-weight: 600;
+  }
+  :global {
+    .ant-input {
+      height: rem(24px);
+    }
+    .ant-input-suffix {
+      top: rem(12px)
+    }
+    .ant-menu-item {
+      margin: 0 !important;
+      height: rem(24px);
+      line-height: rem(24px);
+      color: $font-main-color;
+      padding-left: rem(10px) !important;
+      &:after {
+        border: none;
+      }
+    }
+    .ant-menu-item.ant-menu-item-selected, .ant-menu-item.ant-menu-item-active {
+      background-color: $menu-selected !important;
+      color: $font-main-color;
+    }
+  }
+}
+
+.radio {
+  span:last-child {
+    padding-left: rem(5px);
+    padding-right: rem(10px);
+    color: $font-main-color;
+  }
+}

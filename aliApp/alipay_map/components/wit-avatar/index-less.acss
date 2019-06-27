@@ -1,0 +1,18 @@
+.wit-avatar{
+  display: inline-block;
+  text-align: center;
+  background: #ccc;
+  color: #fff;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  vertical-align: middle;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  font-size: 12px;
+  &-square{
+    border-radius: 4px;
+  }
+}

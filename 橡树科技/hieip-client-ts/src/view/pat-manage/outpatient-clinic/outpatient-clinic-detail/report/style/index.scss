@@ -1,0 +1,253 @@
+@import '../../../../../../index.scss';
+@import '../../../style/common';
+
+$tabs-btn-bg: #6399af;
+$tabs-btn-border: #71a7be;
+$tabs-list-a-hover: #1890ff;
+$tabs-title-text: #ececec;
+
+$outpatient: #ffffff;
+$outpatient-table-list-bg: #ececec;
+$outpatient-table-list-bor: #dedede;
+$outpatient-table-detail-bg: #71a7be;
+$outpatient-box-header-border: #ececec;
+
+.root {
+  width: 100%;
+  height: 100%;
+}
+
+.alterButton {
+  padding: 0 !important;
+  width: rem(18px);
+  height: rem(15px);
+  line-height: rem(13px);
+  border: none;
+  :global {
+    .iconfont {
+      padding: 0 !important;
+    }
+  }
+}
+
+.myInsideTabs {
+  :global {
+    .ant-tabs-content {
+      // 26
+      height: calc(100% - 26px);
+      padding-bottom: 0 !important;
+    }
+    .ag-fresh .ag-root {
+      border-radius: 0 !important;
+    }
+    .ant-tabs-bar {
+      border-radius: rem(4px) rem(4px) 0 0 !important;
+      background-color: $public-title-color !important;
+      height: rem(26px);
+      border-bottom: none;
+      margin-bottom: 0 !important;
+      width: rem(293px);
+      position: relative;
+      color: #fff !important;
+      padding: 0 rem(13px);
+    }
+    .ant-tabs-ink-bar {
+      background-color: #fff !important;
+      height: rem(3px) !important;
+      margin-bottom: rem(1px) !important;
+    }
+    .ant-tabs-tab {
+      padding: rem(5px) 0 rem(8px) 0 !important;
+      margin: 0 !important;
+      font-size: rem(12px);
+      margin-right: rem(20px) !important;
+      height: rem(26px);
+      display: flex;
+      align-items: center;
+    }
+    .ant-tabs-tab:hover {
+      color: #fff !important;
+    }
+    .ant-tabs-tab-active {
+      color: #fff;
+    }
+    .ant-tabs-nav {
+      display: flex;
+      align-items: center;
+    }
+    .ant-tabs-extra-content {
+      left: auto;
+      right: rem(8px);
+    }
+  }
+}
+
+.myButton {
+  padding: 0 rem(8px);
+  height: rem(20px);
+  border: rem(1px) solid $tabs-btn-border;
+  font-size: rem(12px);
+  margin-top: rem(3px);
+  background-color: $tabs-btn-bg;
+  color: #fff;
+}
+
+.myButton:hover, .myButton:focus {
+  background-color: $tabs-btn-bg;
+  color: #fff;
+  border-color: #fff;
+}
+
+.examTable {
+  width: rem(293px);
+  // 201 + 26
+  height: calc(100% - 227px);
+  border-left: rem(1px) solid $big-border-color !important;
+  border-right: rem(1px) solid $big-border-color !important;
+}
+
+.examUlTitle {
+  width: rem(293px);
+  display: flex;
+  align-items: center;
+  padding: 0 rem(9px);
+  height: rem(26px);
+  font-weight: bold;
+  font-size: rem(12px);
+  background-color: $tabs-btn-border !important;
+  color: #fff !important;
+  border-left: rem(1px) solid $big-border-color !important;
+  border-right: rem(1px) solid $big-border-color !important;
+}
+
+.examDetailMenu {
+  width: rem(292px);
+  height: rem(201px);
+  color: $font-main-color;
+  overflow: auto;
+  border-left: rem(1px) solid $big-border-color;
+  border-right: rem(1px) solid $big-border-color;
+  border-bottom: rem(1px) solid $big-border-color;
+  border-radius: 0 0 rem(4px) rem(4px);
+  :global {
+    .ant-menu-item-selected {
+      color: $font-main-color !important;
+      background-color: $menu-selected !important;
+    }
+    .ant-menu-item-selected:after {
+      display: none !important;
+    }
+    .ant-menu-item {
+      width: rem(290px) !important;
+      margin: 0 !important;
+      padding-left: rem(10px) !important;
+      padding-right: rem(10px) !important;
+      height: rem(23px) !important;
+      font-size: rem(12px) !important;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      border-bottom: rem(1px) solid $list-split-color;
+    }
+  }
+}
+
+.examFixed {
+  position: absolute;
+  height: 100%;
+  // 293 + 11
+  left: rem(304px);
+  // 304
+  width: calc(100% - 304px);
+  top: 0
+}
+
+.examTitle, .examBody {
+  border-top: rem(1px) solid $big-border-color !important;
+  border-left: rem(1px) solid $big-border-color !important;
+  border-radius: rem(4px) !important;
+}
+
+.examTitle {
+  margin-bottom: rem(8px);
+}
+
+.myRcLabelBoxColH {
+  // 61+8+1
+  height: calc((100% - 70px) / 5) !important;
+}
+
+.inspectTable {
+  width: rem(293px);
+  // 202 + 26
+  height: calc(100% - 228px);
+  border-left: rem(1px) solid $big-border-color !important;
+  border-right: rem(1px) solid $big-border-color !important;
+}
+
+.inspectDetail {
+  width: rem(293px);
+  // 202 + 26
+  height: rem(228px);
+  border-left: rem(1px) solid $big-border-color !important;
+  border-right: rem(1px) solid $big-border-color !important;
+  border-bottom: rem(1px) solid $big-border-color !important;
+  border-radius: 0 0 rem(4px) rem(4px);
+}
+
+.inspectContent {
+  // 61 + 8
+  height: calc(100% - 69px);
+  border: rem(1px) solid $big-border-color !important;
+  border-radius: rem(4px);
+}
+
+.inspectFixed {
+  position: absolute;
+  height: 100%;
+  left: rem(304px);
+  width: calc(100% - 304px);
+  top: 0
+}
+
+.maskLayer{
+  position: fixed;
+  z-index: 3;
+  top:0;
+  left:0;
+  height: 100%;
+  width:100%;
+}
+
+.trendBox {
+  position: fixed;
+  right: rem(22px);
+  z-index: 4;
+}
+.trendBoxDisplace{
+  // 30 + 4 + 289
+  transform: translateY(rem(-323px));
+}
+
+.trendEch {
+  width: rem(531px);
+  height: rem(289px);
+  background-color: #fff !important;
+  box-shadow: 0 0 rem(12px) rgba(0, 0, 0, .20);
+}
+
+.buttonTrend {
+  padding: 0;
+  height: rem(14px);
+  line-height: rem(14px);
+  margin-top: rem(3px);
+  border: 0;
+  color: #3DB5E7;
+}
+
+.buttonTrend:hover, .buttonTrend:focus {
+  color: #ff375b;
+}
+

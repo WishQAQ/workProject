@@ -1,0 +1,101 @@
+<!-- index -->
+
+<!-- 头部 -->
+<view class='header'>
+  <view class='header_left'><text>新E购</text></view>
+ <view class="header_center section">
+  <view><image src='/img/search.png'></image></view>
+  <input type='text'/>
+</view>
+  <view class='header_right'>
+    <button class='header_btn' type="primary" bindtap="scanCode"></button>
+  </view>
+</view>
+<!-- banner -->
+<view class='banner'>
+    <swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="355" height="150"/>
+    </swiper-item>
+  </block>
+</swiper>
+</view>
+<!-- 分类按钮 -->
+<view class='main_1'>
+   <navigator url='/recommend/recommend?title=recommend'>
+    <image src='/img/main_1_1.png'></image>
+    <text>经典产品</text>
+   </navigator>
+   <navigator>
+    <image src='/img/main_1_2.png'></image>
+    <text>卖家推荐 </text>
+   </navigator>
+   <navigator>
+    <image src='/img/main_1_3.png'></image>
+    <text>当月最优</text>
+   </navigator>
+   <navigator>
+    <image src='/img/main_1_4.png'></image>
+    <text>满减折</text>
+   </navigator>
+   <navigator>
+    <image src='/img/main_1_5.png'></image>
+    <text>了解e小店</text>
+   </navigator>
+</view>
+
+<!-- 滚动广告 -->
+<view class='main_2'>
+  <image src='/img/main_2_img.png'></image><text>最新优惠：</text>
+</view>
+
+<view class='main_2_bottom'>
+  <image src='/img/main_2.jpg'></image>
+</view>
+
+
+<!-- 商品列表 -->
+<view class='main_3'>
+  <view class='main_3_title'>—— 附近店铺 ——</view>
+  <view class='main_3_box'>
+    <!-- 商品 -->
+    <view class='main_3_box_list'>
+      <view class='main_3_box_list_top'>
+        <view class='main_3_box_list_left'>
+          <image src='/img/main_3.jpg'></image>
+        </view>
+        <view class='main_3_box_text'>
+          <text class='main_3_box_text_title'>重庆石油路店</text>
+          <view class='main_3_box_text_center'>
+            <view>
+              <image src='/img/main_3_2.png'></image>
+              <image src='/img/main_3_2.png'></image>
+              <image src='/img/main_3_2.png'></image>
+              <image src='/img/main_3_2.png'></image>
+              <image src='/img/main_3_2.png'></image>
+              <text>5.0</text>
+            </view>
+            <text>月售668</text>
+            <view><text>54分钟</text> | <text>230m</text></view>
+          </view>
+          <view class='main_3_box_text_bottom'>
+          <view><text>起送¥0</text> | <text>基础运费：¥4</text></view>
+          </view>
+      </view>
+   
+
+        <view class='main_3_box_list_bottom'>
+
+        </view>
+
+      </view>
+    </view>
+  
+  
+  </view>
+</view>
+
+
+<view class='page_bottom'>—到底啦—</view>

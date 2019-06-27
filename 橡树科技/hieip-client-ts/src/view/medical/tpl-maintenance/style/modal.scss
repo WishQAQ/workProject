@@ -1,0 +1,88 @@
+@import '../../../../index';
+//弹框遮罩层
+.modalWrap > div > div {
+  > div:nth-child(1) {
+    background: none !important;
+  }
+}
+
+//
+.tplMaintenanceModal {
+  .fixedValueClear:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  .smallTitle {
+    padding-left: rem(8px);
+  }
+  :global {
+    //下来箭头
+    .ant-select-dropdown-menu-item { //下拉菜单字体
+      font-size: $font-com-size;
+    }
+    .ant-input {
+      content: $font-tip-color;
+      &::-webkit-input-placeholder {
+        font-size: $font-com-size !important;
+      }
+    }
+    span {
+      font-size: $font-com-size;
+    }
+    .ant-modal-header {
+      background-color: #e5e5e5;
+      padding: 0 rem(15px);
+      height: rem(30px);
+      .ant-modal-title {
+        line-height: rem(30px);
+        font-size: $font-title-size;
+        color: $font-com-color;
+      }
+    }
+    .ant-modal-close {
+      display: none;
+    }
+    .ant-modal-body {
+      &:after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+      width: 100%;
+      padding: rem(13px) rem(15px) 0;
+      font-size: $font-com-size;
+      color: $font-main-color;
+    }
+    .ant-input {
+      border-radius: 0;
+    }
+    //footer
+    .ant-modal-footer {
+      height: rem(35px);
+      padding: 0 rem(15px);
+      border-top: none;
+      .ant-btn {
+        width: rem(53px);
+        height: rem(26px);
+        margin-left: rem(8px);
+        background-color: #e5e5e5;
+        border-color: #c4c4c4;
+        &:hover {
+          background-color: #37a3d0 !important;
+          border-color: #3091b9;
+          color: #fff;
+        }
+      }
+      .ant-btn-primary {
+        background-color: #3db5e7 !important;
+        border-color: #2f9fce;
+        &:hover {
+          background-color: #37a3d0 !important;
+          border-color: #3091b9;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

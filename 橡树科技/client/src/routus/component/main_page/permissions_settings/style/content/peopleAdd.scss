@@ -1,0 +1,32 @@
+
+
+.backgroundTitle{
+  background: #7FADD2;
+  color: #fff;
+  font-size: 14px;
+  height: 30px;
+  line-height: 30px;
+  display: inline-block;
+  width: 50%;
+  float: left;
+  margin-bottom: 10px !important;
+  .people8{
+    margin-bottom: 10px;
+  }
+  span{
+    padding: 0 10px;
+  }
+  button{
+    margin: 0 !important;
+    height: 22px !important;
+  }
+  table{
+    tr:hover{
+      border-left: 2px solid #3C9AE4 !important;
+    }
+  }
+}
+
+.centerLine{
+  border-left: 1px #CDCDCD solid;
+}

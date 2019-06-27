@@ -1,0 +1,23 @@
+@import '../../../../index.scss';
+
+.operation {
+  //padding: 12px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  > div:first-child {
+    width: 100%;
+    height: 100%;
+    > div:first-child {
+      width: 100%;
+    }
+    > div:last-child {
+      width: 100%;
+    }
+  }
+  > div:last-child {
+    margin-left: 12px;
+    flex: 240px 0 0;
+    height: 100%;
+  }
+}

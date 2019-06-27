@@ -1,0 +1,396 @@
+@import '../../../../index';
+
+.medical {
+  width: 100%;
+  height: 100%;
+  background-color: $white-default;
+  padding-top: rem(10px);
+  :global {
+    .ant-tabs-bar {
+      margin: 0 !important;
+      border-bottom-color: $font-select-color;
+      padding: 0 rem(10px);
+    }
+    .ant-tabs-nav-container {
+      height: auto !important;
+    }
+    .ant-tabs-tab {
+      height: rem(30px) !important;
+      margin-right: rem(5px) !important;
+      font-weight: bold;
+      font-size: rem(12px);
+      line-height: rem(30px) !important;
+    }
+    .ant-tabs-tab-active.ant-tabs-tab {
+      height: rem(32px) !important;
+      color: $font-select-color !important;
+      border-color: $font-select-color !important;
+      font-weight: bold;
+    }
+  }
+}
+
+.medicalMain {
+  height: calc(100vh - 50px);
+  padding: rem(10px);
+}
+
+.card_left {
+  > div {
+    background-color: $public-title-color;
+    padding: 0;
+
+    div {
+      color: $white-default;
+    }
+  }
+}
+
+.leftCard {
+  background: $white-block;
+  :global {
+    .ant-select {
+      .ant-select-selection {
+        background: transparent;
+        border: none;
+        font-size: rem(14px);
+        font-weight: 600;
+        color: $font-main-color;
+        &:focus {
+          border-color: transparent;
+          box-shadow: none;
+        }
+      }
+      .ant-select-arrow {
+        font-weight: 600;
+        color: $white-default;
+      }
+    }
+    .card-head {
+      padding: 0 rem(20px) !important;
+      line-height: rem(24px)
+    }
+
+    .ant-menu {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      background-color: $white-block !important;
+    }
+    .ant-menu-item {
+      margin: 0 !important;
+      height: rem(30px) !important;
+      line-height: rem(30px) !important;
+      padding: 0 rem(10px) !important;
+      color: $font-main-color;
+      font-size: rem(12px) !important;
+      &:after {
+        border-right: none !important;
+      }
+    }
+    .ant-menu-item.ant-menu-item-selected, .ant-menu-item.ant-menu-item-active {
+      background-color: $menu-selected !important;
+      color: $font-main-color;
+    }
+  }
+}
+
+.noanymedicla {
+
+  .leftCard {
+    border-radius: 0;
+    border: none;
+  }
+}
+
+.noanymoicalTop {
+  overflow: hidden;
+  overflow-y: auto;
+  :global {
+    .ant-list-item {
+      padding: rem(8px) !important;
+      &:hover {
+        background-color: $select;
+        cursor: pointer;
+      }
+    }
+    //.ant-list-empty-text:after{
+    //  content: '暂无数据';
+    //  display: block;
+    //  clear: both;
+    //  color: $font-tip-color;
+    //  font-size: rem(12px);
+    //  padding: rem(16px);
+    //  text-align: center;
+    //}
+  }
+}
+
+.writtenTable {
+  height: calc(100% - 34px);
+}
+
+.newFileContainer {
+  display: flex;
+  margin-bottom: rem(10px);
+  line-height: rem(30px);
+  :global {
+    .label-rounded {
+      width: rem(180px);
+      height: rem(30px);
+      line-height: 1;
+      margin-right: rem(5px);
+      .ant-select-selection {
+        border: none;
+        box-shadow: none;
+      }
+    }
+    .ant-radio-wrapper {
+      margin: 0 !important;
+      > span:last-child {
+        padding: 0 4px !important;
+      }
+    }
+    .ant-input {
+      border: none;
+      &:focus {
+        border: none;
+        box-shadow: none;
+      }
+    }
+    .label9a171startColor {
+      position: absolute;
+      left: rem(68px);
+    }
+  }
+}
+
+.patientModal_diao {
+  width: rem(800px);
+}
+
+.NewFileFooter {
+  margin-top: rem(10px);
+  display: flex;
+  width: 90%;
+  :global {
+    .label-rounded {
+      margin-right: rem(6px);
+    }
+    .ant-input {
+      border: none;
+      &:focus {
+        border: none;
+        box-shadow: none;
+      }
+    }
+    .ant-select-selection {
+      border: none;
+      box-shadow: none !important;
+    }
+    .pt-input {
+      border: none;
+      box-shadow: none;
+      &:focus {
+        border-color: transparent;
+        box-shadow: none !important;
+      }
+    }
+  }
+}
+
+.fileNameInput {
+  width: rem(200px) !important;
+  height: rem(30px) !important;
+  line-height: initial !important;
+}
+
+.modifyFile {
+  :global {
+    .ant-modal-body {
+      overflow: hidden;
+      padding: 5px 10px 10px;
+    }
+    .ant-modal-header {
+      padding: 5px 10px;
+    }
+    .ant-modal-close-x {
+      height: rem(32px);
+      width: rem(32px);
+      line-height: rem(32px);
+    }
+    .pt-input {
+      border: none;
+      box-shadow: none;
+      &:focus {
+        border-color: transparent;
+        box-shadow: none !important;
+      }
+    }
+  }
+}
+
+.medical_file {
+  height: calc(100vh - 40px);
+  :global {
+    .ant-layout-sider {
+      flex: none !important;
+      width: rem(30px) !important;
+      min-width: rem(30px) !important;
+      background: #ffffff !important;
+      border-right: rem(1px) solid #e1e1e1;
+    }
+    .ant-layout-header {
+      height: rem(32px);
+      line-height: rem(32px);
+      background: #ffffff;
+      padding: 0;
+    }
+  }
+}
+
+.left_btn {
+  display: flex;
+  flex-direction: column;
+  > div {
+    writing-mode: vertical-lr;
+    padding: rem(15px) rem(4px);
+    letter-spacing: rem(2px);
+    border-top: rem(1px) solid #e1e1e1;
+    cursor: pointer;
+    &:hover {
+      color: #277ee9;
+    }
+  }
+}
+
+.patientModal_sider {
+  width: 100%;
+}
+
+.medical_bottom {
+  height: rem(310px);
+  :global {
+    .ant-tabs-bar {
+      height: rem(25px);
+      background: rgba(98, 158, 232, 1);
+      .ant-tabs-nav-container {
+        height: 25px !important;
+        padding-left: 5px;
+      }
+      .ant-tabs-tab {
+        margin-top: rem(2px) !important;
+        height: rem(24px);
+        line-height: rem(24px) !important;
+        background-color: transparent !important;
+        border: none !important;
+        color: #ffffff;
+        &:hover {
+          color: $font-main-color !important;
+        }
+      }
+      .ant-tabs-tab-active.ant-tabs-tab {
+        background-color: #ffffff !important;
+        border-radius: 0;
+        color: $font-main-color !important;
+        &:hover {
+          color: #277ee9;
+        }
+      }
+    }
+  }
+}
+
+.table_checkbox {
+  text-align: center;
+}
+
+.title_close {
+  button {
+    height: rem(20px);
+    color: #ffffff;
+    background-color: transparent;
+    border: none;
+    &:hover {
+      background-color: transparent;
+      color: #ffffff;
+    }
+    &:focus {
+      background-color: transparent;
+      color: #ffffff;
+    }
+    &:active {
+      background-color: transparent;
+      color: #ffffff;
+    }
+  }
+  i {
+    color: #ffffff;
+    font-weight: 500;
+    margin: 0 rem(5px);
+    cursor: pointer;
+  }
+}
+
+.panel {
+  color: $font-main-color;
+  :global {
+    .ant-collapse-header {
+      padding: rem(4px) rem(10px) !important;
+      &:hover {
+        color: $font-select-color !important;
+      }
+    }
+    .arrow {
+      position: absolute;
+      left: auto !important;
+      right: rem(10px);
+      line-height: rem(30px) !important;
+    }
+    .ant-collapse-content {
+      padding: 0 rem(10px) !important;
+      &:hover {
+        background-color: $select !important;
+        cursor: pointer;
+      }
+    }
+    .ant-collapse-content-box {
+      padding-bottom: rem(10px) !important;
+    }
+  }
+}
+
+.pagintion {
+  > li {
+    border: 1px solid #cdcdcd !important;
+    margin-right: 5px !important;
+  }
+}
+
+.center {
+  > div:first-child {
+    padding: rem(5px) rem(10px);
+    p {
+      font-size: rem(14px);
+    }
+    span {
+      font-size: rem(12px);
+    }
+  }
+}
+
+.right {
+  > div:first-child {
+    padding: rem(4px) rem(10px);
+    p {
+      font-size: rem(12px);
+    }
+  }
+}
+
+.hxmedical {
+  margin-top: rem(2px) !important;
+  > span {
+    color: $font-main-color;
+  }
+}

@@ -1,0 +1,10 @@
+@import "infoAdd";
+
+.pointCheck {
+  :global{
+    .ant-checkbox-wrapper {
+      height: 0 !important;
+      line-height: 0 !important;
+    }
+  }
+}

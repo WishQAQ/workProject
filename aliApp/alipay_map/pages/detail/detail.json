@@ -1,0 +1,5 @@
+{
+  "usingComponents":{
+    "wit-btn":"/components/wit-btn/index"
+  }
+}

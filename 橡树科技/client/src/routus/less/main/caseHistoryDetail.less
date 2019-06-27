@@ -1,0 +1,840 @@
+/**
+ * Created by liulingli on 2017/6/19.
+ * desc : 病历详情样式
+ */
+.clearfix:after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+}
+
+.query-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: #FFF;
+  padding-bottom: 10px;
+  border: 1px solid #D9D9D9;
+  border-radius: 4px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, .2);
+  font-family: "microsoft yahei";
+  max-height: 270px;
+  min-width: 560px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  /*border-bottom:10px solid #ffffff;*/
+
+  .ant-form {
+    padding: 10px;
+    padding-bottom: 0;
+
+    .prompt {
+      font-size: 12px;
+      color: red;
+      padding-left: 5px;
+    }
+  }
+  .ant-select-selection-selected-value {
+    margin-left: 0;
+  }
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background: #CCC;
+    display: none;
+  }
+  &:hover::-webkit-scrollbar-thumb {
+    display: block;
+  }
+  .ant-form {
+    width: 100%;
+
+    .clear {
+      margin-left: 20px;
+      text-align: right;
+
+      .query {
+        margin-left: 10px;
+      }
+    }
+    .ant-form-item {
+      width: 47%;
+      display: inline-block;
+      margin-bottom: 4px;
+
+      &:nth-child(even) {
+        margin-right: 3%
+      }
+
+      .ant-form-item-label {
+        width: 75px;
+        font-size: 12px;
+
+        label {
+          color: #3C3C3C;
+          font-family: "microsoft yahei";
+        }
+      }
+      .ant-form-item-control-wrapper {
+        display: inline-block;
+        vertical-align: middle;
+        width: calc(~"100% - 75px");
+        color: #3C3C3C;
+      }
+    }
+  }
+}
+
+.case-history-detail {
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  font-family: "microsoft yahei";
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  .patient-info {
+    .info-list {
+      padding: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      li {
+        display: inline-block;
+        margin-right: 20px;
+        font-weight: 600;
+        font-size: 12px;
+        vertical-align: middle;
+
+        .sex-icon {
+          font-size: 24px;
+          font-weight: 700;
+          color: @primary-color;
+        }
+        span {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .case-history-content {
+    width: 100%;
+    height: calc(~"100% - 68px");
+
+    .search-content {
+      min-width: 260px;
+
+      .time-line {
+        width: 100%;
+        height: 100%;
+      }
+      .input-select {
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        .query-result-more {
+          //display: none;
+          position: absolute;
+          top: 28px;
+          left: 0;
+          width: 100%;
+          margin: 1px auto;
+          background: #FFF;
+          padding-bottom: 10px;
+          border: 1px solid #D9D9D9;
+          border-radius: 4px;
+          box-shadow: 0 1px 6px rgba(0, 0, 0, .2);
+          font-family: @font-family;
+          max-height: 250px;
+          overflow-y: auto;
+          overflow-x: hidden;
+          &::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+          }
+          &::-webkit-scrollbar-thumb {
+            border-radius: 2px;
+            background: #CCC;
+            display: none;
+          }
+          &:hover::-webkit-scrollbar-thumb {
+            display: block;
+          }
+          .prompt {
+            width: 90%;
+            margin: 0 auto;
+            font-size: 12px;
+            color: red;
+            text-indent: 8px;
+            line-height: 24px;
+          }
+          .result-list {
+            padding: 0;
+
+            li {
+              width: 90%;
+              margin: 0 auto;
+              line-height: 24px;
+              border-bottom: 1px solid @border-color;
+              cursor: pointer;
+              font-size: 12px;
+              text-indent: 8px;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+
+              &:hover {
+                color: @hover-color;
+                border-bottom: 1px solid @hover-color;
+              }
+            }
+          }
+        }
+        .query-result-alone {
+          width: 100%;
+          height: calc(~"100% - 35px");
+          background: #FFF;
+          font-family: "microsoft yahei";
+          overflow-y: auto;
+          overflow-x: hidden;
+          .no-info {
+            padding: 30px 0 0;
+            line-height: 60px;
+            text-align: center;
+            .icon-404 {
+              font-size: 60px;
+              vertical-align: middle;
+            }
+            span {
+              vertical-align: middle;
+              font-size: 12px;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.case-history {
+  // 时间轴样式
+  width: 100%;
+  height: calc(~"100% - 10px");
+  margin-top: 10px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: "microsoft yahei";
+  font-size: 12px;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background: #CCC;
+    display: none;
+  }
+  &:hover::-webkit-scrollbar-thumb {
+    display: block;
+  }
+  .history {
+    width: 65%;
+    margin-left: 30%;
+
+    p {
+      padding: 0;
+      margin: 0;
+      font-weight: 600;
+    }
+
+    .years {
+      animation: all 0.5s;
+      &.hide {
+        .icon-col {
+          transform: rotate(0deg);
+        }
+        .group {
+          display: none;
+        }
+      }
+    }
+    .hosp-list {
+      animation: all 0.5s;
+      &.hide {
+        .icon-col {
+          transform: rotate(0deg);
+        }
+        .type-list {
+          display: none;
+        }
+      }
+    }
+    .type {
+      animation: all 0.5s;
+      &.hide {
+        .icon-col {
+          transform: rotate(0deg);
+        }
+        .links {
+          /*height:0;*/
+          display: none;
+        }
+      }
+    }
+  }
+  .history .years {
+    width: 100%;
+    border-left: 3px solid #B7B7B7;
+    animation: all 0.5s;
+  }
+
+  .history .years p.show-year {
+    font-size: 20px;
+    font-weight: 600;
+    color: @primary-color;
+    text-align: left;
+    font-family: Georgia;
+    line-height: 24px;
+    position: relative;
+    cursor: pointer;
+    .icon-col {
+      border-left: 6px solid @primary-color;
+    }
+    .hospital {
+      color: @primary-color
+    }
+
+    &:hover {
+      color: @hover-color;
+      .icon-col {
+        border-left: 6px solid @hover-color;
+      }
+      .hospital {
+        color: @hover-color;
+      }
+    }
+  }
+  p.show-year .hospital {
+    color: #3C3C3C;
+    font-size: 14px;
+    font-family: "microsoft yahei";
+  }
+  p.show-year i.circle-icon {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border: 5px solid @primary-color;
+    background: @white;
+    margin-left: -7px;
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+  .date-group p.show-month {
+    width: 50px;
+    margin-left: -50px;
+    font-size: 13px;
+    font-weight: 600;
+    color: @font-color;
+    line-height: 24px;
+    position: relative;
+    /*font-family:Georgia;*/
+  }
+  .date-group p.show-month .point {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: @circle-color;
+    vertical-align: middle;
+    position: absolute;
+    right: -3px;
+    top: 8px;
+  }
+  .icon-col {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 5px solid @font-color;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    margin-left: 5px;
+    vertical-align: middle;
+    transform: rotate(90deg);
+  }
+  .date-group p.show-month .icon-col {
+    position: absolute;
+    right: -2.5px;
+    top: 10px;
+    transform: rotate(90deg);
+  }
+  .date-group p.show-month + * {
+    margin-top: -24px;
+    margin-left: 10px;
+  }
+  .hospital {
+    position: relative;
+    line-height: 24px;
+    cursor: pointer;
+    color: #3C3C3C;
+    font-size: 14px;
+    font-family: @font-family;
+    &:hover {
+      color: @hover-color;
+      .icon-col {
+        border-left: 6px solid @hover-color;
+      }
+    }
+  }
+  .type-list {
+    list-style: none;
+    padding-bottom: 10px;
+
+    li.type {
+      line-height: 18px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      font-size: 13px;
+      animation: all 0.5s;
+
+      .label {
+        font-size: 13px;
+        color: @gray-color;
+        margin-right: 4px;
+        vertical-align: middle;
+      }
+      p {
+        line-height: 24px;
+        cursor: pointer;
+        label {
+          vertical-align: middle;
+          font-size: 13px;
+        }
+        &:hover {
+          color: @hover-color;
+          label {
+            color: @hover-color;
+            cursor: pointer;
+          }
+          .icon-col {
+            border-left: 6px solid @hover-color;
+          }
+        }
+      }
+    }
+  }
+  .type-list li.type .icon-col {
+    margin-left: 5px;
+  }
+
+  .years .hosipal {
+    display: inline-block;
+    width: calc(100% - 70px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: middle;
+  }
+
+  .links {
+    height: auto;
+    transition: all 0.5s;
+    //padding-left:6px;
+    .link {
+      cursor: pointer;
+      line-height: 22px;
+      a {
+        height: 20px;
+        line-height: 20px;
+        float: left; //解决overflow:hidden撑高父元素的bug
+        display: inline-block;
+        width: 100%;
+        color: @primary-color;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        background: @border-color;
+        border-bottom: 2px solid @white;
+        text-indent: 6px;
+        &:hover {
+          border-bottom: 2px solid @hover-color;
+        }
+      }
+      .no-link {
+        display: inline-block;
+        width: 100%;
+        color: @font-color;
+        text-decoration: none;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        &:hover {
+          color: @hover-color;
+          .icon-col {
+            border-left: 6px solid @hover-color;
+          }
+        }
+      }
+      .no-link.hide {
+        .icon-col {
+          transform: rotate(0deg);
+        }
+      }
+      .clinic-list {
+        li {
+          text-indent: 6px;
+          line-height: 20px;
+          border-bottom: 2px solid @white;
+          &:hover {
+            border-bottom: 2px solid @hover-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.show-detail {
+  width: 100%;
+  height: 100%;
+  // overflow:auto;
+}
+
+/*table样式*/
+.query-table {
+  width: 100%;
+  height: calc(~"100% - 35px");
+
+  table {
+    table-layout: fixed;
+    th {
+      color: @font-color;
+      //text-align: center !important;
+      background: #F9F9F9 !important;
+      padding: 6px 8px !important;
+      font-weight: 600 !important;
+    }
+    td {
+      color: @font-color;
+      // text-align: center !important;
+      padding: 3px 8px !important;
+      label {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        cursor: pointer;
+      }
+    }
+  }
+  .ant-table-row:last-child td {
+    border-bottom: 1px solid @border-color !important;
+  }
+  .ant-table-wrapper {
+    height: 100%;
+    .ant-spin-nested-loading {
+      height: 100%;
+      .ant-spin-container {
+        height: 100%;
+        .ant-table {
+          height: 100%;
+          border: none;
+          .ant-table-content {
+            height: 100%;
+            .ant-table-scroll {
+              height: 100%;
+              overflow: hidden;
+              position: relative;
+              .ant-table-placeholder {
+                width: calc(~"100% - 18px");
+                height: calc(~"100% - 30px");
+                position: absolute;
+                top: 30px;
+                border: 1px solid @border-color;
+              }
+              .ant-table-header {
+                border: 1px solid @border-color;
+                border-bottom: none;
+              }
+              .ant-table-body {
+                border: 1px solid @border-color;
+                border-top: none;
+                height: calc(~"100% - 29px") !important;
+                max-height: calc(~"100% - 29px") !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/***提取公共样式***/
+.title-common {
+  font-size: 16px;
+  color: @font-color;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+/* 医嘱 样式*/
+.doctor-record {
+  width: 100%;
+  height: 100%;
+  .title p {
+    .title-common
+  }
+  .search-query {
+    margin-bottom: 10px;
+  }
+  .search-query {
+    & > span {
+      font-size: @font-size;
+      font-weight: 600;
+    }
+  }
+  .query-table {
+    height: calc(~"100% - 52px");
+  }
+}
+
+/* 病历查看样式 */
+.medical-record {
+  width: 100%;
+  height: 100%;
+
+  .title p {
+    .title-common
+  }
+
+  .medical-record-table {
+    table {
+      width: 100%;
+      min-width: 800px;
+      border-collapse: collapse;
+      td, th {
+        font-size: @font-size;
+        color: @font-color;
+        border: 1px solid @border-color;
+        padding: 6px 8px !important;
+      }
+      td {
+      }
+      th {
+        background: #F9F9F9 !important;
+        text-align: justify;
+        text-align-last: justify;
+      }
+    }
+  }
+}
+
+/* 处方查看样式*/
+.prescription {
+  width: 100%;
+  height: 100%;
+  .title p {
+    .title-common
+  }
+  .query-table {
+    height: calc(~"100% - 52px");
+  }
+}
+
+/* 处置查看样式*/
+.management-record {
+  width: 100%;
+  height: 100%;
+  .title p {
+    .title-common
+  }
+  .query-table {
+    height: calc(~"100% - 52px");
+  }
+}
+
+/* 处方记录样式 */
+.prescription-record {
+  width: 100%;
+  height: 100%;
+  .title p {
+    .title-common
+  }
+  .prescription-content {
+    width: 100%;
+    height: calc(~"100% - 60px");
+    /*border:1px solid @border-color;*/
+    border-top: none;
+  }
+  h3.title {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 30px;
+    /*border-top:1px solid @border-color;*/
+    text-indent: 8px;
+  }
+  .total-record, .child-record {
+    width: 100%;
+    height: calc(~"50% - 30px");
+    .query-table {
+      width: 100%;
+      height: 100%;
+      max-height: 100%;
+
+      .ant-table-body {
+        height: calc(~"100% - 29px");
+      }
+    }
+  }
+}
+
+/** 检查、检验样式 **/
+.examine-record {
+  width: 100%;
+  height: 100%;
+  min-width: 620px;
+  .title p {
+    .title-common
+  }
+  .exam-info {
+    padding-bottom: 10px;
+  }
+  .examine-content {
+    width: 100%;
+    height: calc(~"100% - 52px");
+
+    .query-table {
+      max-height: calc(~"100% - 46px");
+    }
+  }
+  .examine-table {
+    td {
+      font-size: 12px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      span {
+        font-weight: 600;
+      }
+    }
+  }
+  .ant-table-row.abnormal {
+    td {
+      color: red;
+    }
+  }
+}
+
+/* 检查样式 */
+.inspect-record {
+  width: 100%;
+  height: 100%;
+  min-width: 820px;
+  .title p {
+    .title-common
+  }
+  .inspect-info {
+    padding-bottom: 10px;
+  }
+  .inspect-table {
+    width: 100%;
+    td {
+      font-size: 12px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      span {
+        font-weight: 600;
+      }
+    }
+  }
+  .inspect-content {
+    width: 100%;
+    height: calc(~"100% - 52px");
+
+    .query-table {
+      width: 100%;
+      max-height: calc(~"100% - 46px");
+
+      .inspect-table-result {
+        width: 100%;
+        border-collapse: collapse;
+        th, td {
+          font-size: @font-size;
+          border: 1px solid @border-color;
+        }
+        th {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+.ant-table-row {
+  cursor: pointer;
+}
+
+.ant-table-row-active td {
+  background: @primary-3;
+  color: @white !important;
+}
+
+.ant-table-row-active:hover td {
+  background: @primary-3 !important;
+  color: @white !important;
+}
+
+.ant-table-filter-dropdown-link {
+  display: inline-block;
+}
+
+.no-info {
+  padding: 30px 0 0;
+  line-height: 60px;
+  text-align: center;
+  .icon-404 {
+    font-size: 60px;
+    vertical-align: middle;
+  }
+  span {
+    vertical-align: middle;
+    font-size: 12px;
+    font-weight: 700;
+    margin-left: 5px;
+  }
+}
+
+/* 患者近五年健康数据 样式*/
+.health-data {
+  width: 100%;
+  height: 100%;
+  h3.title {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  .health-echart {
+    width: 100%;
+    height: calc(~"100% - 30px");
+
+  }
+}

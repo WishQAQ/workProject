@@ -1,0 +1,7 @@
+{
+  "name": "logo",
+  "version": "0.0.1",
+  "main": "./index.tsx",
+  "description": "logo模块",
+  "dependencies": {}
+}

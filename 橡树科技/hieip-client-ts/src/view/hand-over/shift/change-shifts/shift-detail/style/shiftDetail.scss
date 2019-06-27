@@ -1,0 +1,551 @@
+@import '../../../../../../index';
+
+p, ul {
+  margin: 0;
+}
+
+$rem30: rem(30px);
+.shiftDetail {
+  margin-top: rem(10px);
+  width: 100%;
+  height: calc(80% - 50px);
+}
+
+.titleDropDownMenu {
+  font-size: $font-com-size;
+  background-color: $white-block;
+  :global {
+    .ant-select-dropdown-menu-item {
+      font-size: $font-com-size;
+      color: $font-main-color;
+      padding-top: 0;
+      padding-bottom: 0;
+      &:hover {
+        background-color: $menu-selected;
+      }
+    }
+    .ant-select-dropdown-menu-item-selected {
+      background-color: $menu-selected;
+    }
+  }
+}
+
+.title {
+  height: $rem30;
+  background-color: #5591aa;
+  display: flex;
+  align-items: center;
+  padding: 0 rem(6px);
+  border-radius: rem(4px) rem(4px) 0 0;
+  :global {
+    .ant-select-focused > .ant-select-selection {
+      border-color: #fff;
+    }
+  }
+  .coverHidden{
+    display: none;
+  }
+  .cover{
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    top: 0;
+    left: 0;
+    z-index: 5;
+  }
+  .shiftBtn {
+    position: relative;
+    height: rem(20px);
+    display: flex;
+    margin-right: rem(6px);
+    border: rem(1px) solid #71a7be;
+    color: #fff;
+    font-size: $font-com-size;
+    background: #6399af;
+    border-radius: $border-radius4;
+    cursor: pointer;
+    &:hover {
+      border-color: #fff;
+    }
+    > span {
+      line-height: rem(20px);
+      padding: 0 rem(8px);
+    }
+    .btnMenuHidden{
+      display: none;
+    }
+    .btnMenu {
+      position: absolute;
+      color: $font-main-color;
+      width: 100%;
+      background-color: $white-block;
+      display: block;
+      top: calc(100% + 5px);
+      z-index: 10;
+      border-radius: $border-radius4;
+      overflow: hidden;
+      .checkedRow{
+        position: relative;
+        //background-color: $menu-selected;
+      }
+      :global {
+        // checkBox
+        .ant-checkbox-group{
+          width: 100%;
+        }
+        .ant-checkbox-wrapper {
+          width: 100%;
+          height: rem(30px);
+          color: $font-main-color;
+          line-height: rem(30px);
+          font-size: $font-com-size;
+          margin: 0;
+          > span:last-child {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding-left: rem(25px);
+          }
+          .ant-checkbox-inner {
+            width: rem(14px);
+            height: rem(14px);
+            border-color: $big-border-color;
+            &::after {
+              left: rem(3.571429px);
+            }
+          }
+          .ant-checkbox{
+            top: rem(7px);
+            left: rem(8px);
+            z-index: 2;
+          }
+          .ant-checkbox-checked + span{
+            background-color: $menu-selected;
+          }
+          .ant-checkbox-checked > .ant-checkbox-inner {
+            border-color: $border-focus-color;
+          }
+        }
+      }
+    }
+  }
+  .shiftBtnFocus{
+    border-color: #fff;
+  }
+  .shiftBtnRight {
+    position: relative;
+    width: rem(24px);
+    border-left: rem(1px) solid #71a7be;
+    .arrow {
+      transform: rotate(-90deg);
+      width: 100%;
+      height: 100%;
+      .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        &:hover {
+          &::before{
+            color: #fff;
+          }
+        }
+
+      }
+    }
+    .arrowOpen {
+      transform: rotate(90deg) translateY(-6px) translateX(-1px);
+    }
+  }
+  .shiftBtnRightForbid{
+    pointer-events: none;
+  }
+}
+
+// 主要表格内容
+.shiftDetailMain {
+  width: 100%;
+  height: calc(100% - 30px);
+  :global {
+    .ag-root {
+      border: rem(1px) solid #cdcdcd;
+      border-top: 0;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      overflow: hidden;
+    }
+  }
+}
+
+// 交接班特殊表格样式
+.shiftTableWrap {
+  width: 100%;
+  height: 100%;
+  border: rem(1px) solid $big-border-color;
+  border-top: 0;
+  border-bottom-left-radius: $border-radius4;
+  border-bottom-right-radius: $border-radius4;
+  overflow: hidden;
+  .shiftTable {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+  }
+  .tableRow {
+    width: 100%;
+    height: rem(180px);
+    display: flex;
+    font-size: $font-com-size;
+    color: $font-main-color;
+    .rowTitle {
+      flex: 0 0 rem(30px);
+      height: 100%;
+      background-color: #48b7e5;
+      font-size: $font-com-size;
+      font-weight: bold;
+      color: #fff;
+      position: relative;
+      > span {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    .row {
+      flex: 1;
+      .colTitle {
+        width: 100%;
+        height: rem(26px);
+        background-color: #ececec;
+        border-bottom: rem(1px) solid $mid-split-color;
+        display: flex;
+        > div {
+          line-height: rem(25px);
+          text-align: center;
+          font-size: $font-com-size;
+          color: $font-main-color;
+          font-weight: bold;
+        }
+      }
+      .colTitle, .rowContentCol, .rowContent {
+        > div {
+          //flex: 1;
+          width: 50%;
+          border-right: rem(1px) solid $big-split-color;
+          &:first-child {
+            width: 30%;
+          }
+          &:last-child {
+            width: 20%;
+            min-width: rem(250px);
+            //flex: 0 0 rem(250px);
+            border-right: none;
+          }
+        }
+      }
+      .rowContentCol {
+        height: calc(100% - 26px);
+      }
+      .rowContent {
+        height: 100%;
+      }
+      .rowContentCol, .rowContent {
+        width: 100%;
+        border-bottom: rem(1px) solid $big-split-color;
+        display: flex;
+        .fireControl {
+          height: rem(26px);
+          border-bottom: rem(1px) solid $mid-split-color;
+          line-height: rem(25px);
+          font-weight: bold;
+          padding-left: rem(10px);
+        }
+        .peopleCol {
+          .groupWrap {
+            width: 100%;
+            height: calc(100% - 26px);
+          }
+          .groupCol {
+            width: 100%;
+            height: calc(100% - 26px);
+            display: flex;
+            text-align: center;
+            > div:first-child {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-right: rem(1px) solid $mid-split-color;
+              border-bottom: rem(1px) solid $mid-split-color;
+              flex: 0 0 rem(50px);
+            }
+          }
+          .people {
+            border-bottom: rem(1px) solid $mid-split-color;
+            flex: auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-start;
+            overflow: auto;
+            padding: rem(8px) rem(2px) rem(2px) rem(8px);
+            > span {
+              width: rem(50px);
+              height: rem(22px);
+              line-height: rem(22px);
+              background-color: #e8f4ff;
+              margin-right: rem(6px);
+              margin-bottom: rem(6px);
+              text-overflow: ellipsis;
+              overflow: hidden;
+              white-space: nowrap;
+            }
+          }
+        }
+        .innerRow {
+          overflow: auto;
+          border-bottom: rem(1px) solid $mid-split-color;
+          padding: rem(8px) rem(2px) rem(8px) rem(8px);
+          &:last-child {
+            border-bottom: 0;
+          }
+          // 检查检验
+          > div {
+            height: rem(20px);
+            line-height: rem(20px);
+            i {
+              margin-right: rem(8px);
+              &::before {
+                font-size: $font-com-size;
+                position: relative;
+                top: rem(-5px);
+              }
+            }
+            span {
+              display: inline-block;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              box-sizing: border-box;
+              &:last-child {
+                width: calc(100% - 180px);
+                padding-right: rem(6px);
+              }
+            }
+            div {
+              top: rem(-6px) !important;
+              margin: 0 rem(6px) !important;
+              background-color: #d9d9d9 !important;
+            }
+          }
+        }
+        .bedCol {
+          // 床位样式
+          button {
+            width: calc((100% - 72px) / 12);
+            height: rem(22px);
+            margin: 0 rem(6px) rem(6px) 0;
+            line-height: rem(22px);
+            padding: 0;
+            color: #fff;
+            border-radius: $border-radius4;
+          }
+          .greenBtn {
+            border: rem(1px) solid #39a885;
+            background-color: #01bf9d;
+          }
+          .yellowBtn {
+            border: rem(1px) solid #e3b512;
+            background-color: #ffcc19;
+          }
+          .orangeBtn {
+            border: rem(1px) solid #e0670e;
+            background-color: #fa8630;
+          }
+          .redBtn {
+            border: rem(1px) solid #e61515;
+            background-color: #ff375b;
+          }
+        }
+        // 检查检验
+        .bed {
+          width: rem(40px);
+        }
+        .name {
+          width: rem(48px);
+        }
+        .time {
+          width: rem(32px);
+        }
+      }
+    }
+  }
+  //.colTitle{
+  //  width: 100%;
+  //  height: rem(26px);
+  //  background: #ececec;
+  //  border-bottom: rem(1px) solid $mid-split-color;
+  //  display: flex;
+  //
+  //  //>div{
+  //  //  flex: 1;
+  //  //  line-height: rem(25px);
+  //  //  font-size: $font-com-size;
+  //  //  color: $font-com-size;
+  //  //  font-weight: bold;
+  //  //  text-align: center;
+  //  //  border-right: rem(1px) solid $mid-split-color;
+  //  //}
+  //  //>div:last-child{
+  //  //  flex: 0 0 rem(250px);
+  //  //  border-right: none;
+  //  //}
+  //}
+  //.tableContent{
+  //  width: 100%;
+  //  height: calc(100% - 26px);
+  //  .tableRow{
+  //    width: 100%;
+  //    display: flex;
+  //  }
+  //  .rowTitle{
+  //
+  //  }
+  //}
+}
+
+//.shiftTable {
+//  display: flex;
+//  flex-direction: column;
+//  border: rem(1px) solid #e1e1e1;
+//  height: 30%;
+//  font-size: $font-com-size;
+//  color: $font-com-color;
+//  overflow: hidden;
+//}
+
+//.shiftOne {
+//  flex: 1;
+//  display: flex;
+//  align-items: center;
+//}
+//
+//.shift {
+//  width: $rem30;
+//  text-align: center;
+//  padding: 0 rem(8px)
+//}
+//
+//.shiftContent {
+//  flex: 1;
+//  display: flex;
+//  border-left: rem(rem(1px)) solid #e1e1e1;
+//  > div {
+//    flex: 1;
+//  }
+//}
+
+//.people {
+//  height: 100%;
+//  > p {
+//    line-height: rem(26px);
+//    &:first-child {
+//      border-bottom: rem(rem(1px)) solid #e1e1e1;
+//    }
+//  }
+//}
+//
+//.group {
+//  display: flex;
+//  flex-direction: column;
+//  height: calc(100% - 52px);
+//  > div {
+//    flex: 1;
+//    overflow: hidden;
+//    height: 100%;
+//  }
+//}
+//
+//.groupOne {
+//  display: flex;
+//  align-items: center;
+//  border-top: rem(1px) solid #e1e1e1;
+//}
+//
+//.groupName {
+//  width: rem(58px);
+//  text-align: center;
+//}
+//
+//.peoples {
+//  flex: 1;
+//  overflow-y: scroll;
+//  height: 100%;
+//  display: flex;
+//  flex-wrap: wrap;
+//  padding-top: rem(4px);
+//  border-left: rem(1px) solid #e1e1e1;
+//  li {
+//    width: 12.5%;
+//    height: rem(25px);
+//    text-align: center;
+//    display: inline-block;
+//    padding: 0 rem(4px) rem(4px) 0;
+//    overflow: hidden; // 超出部分隐藏
+//    span {
+//      float: left;
+//      line-height: rem(23px);
+//      width: 100%;
+//      height: 100%;
+//      background-color: #e8f4ff;
+//      overflow: hidden; // 超出部分隐藏
+//      white-space: nowrap; // 不换行
+//      text-overflow: ellipsis; // 超出部分文字以...显示
+//    }
+//  }
+//}
+//
+////  床位
+//.bed {
+//  border-left: rem(1px) solid #e1e1e1;
+//  border-right: rem(1px) solid #e1e1e1;
+//  > p {
+//    line-height: rem(26px);
+//    border-bottom: rem(1px) solid #e1e1e1;
+//  }
+//}
+//
+//.bedGroup {
+//  height: calc(100% - 26px);
+//}
+//
+//.bedOne {
+//  height: calc(33% + 20px);
+//  overflow-y: scroll;
+//  display: flex;
+//  flex-wrap: wrap;
+//  padding-top: rem(4px);
+//  &:not(last-child) {
+//    border-bottom: rem(1px) solid #e1e1e1;
+//  }
+//  li {
+//    width: 12.5%;
+//    height: rem(25px);
+//    text-align: center;
+//    display: inline-block;
+//    padding: 0 rem(4px) rem(4px) 0;
+//    overflow: hidden; // 超出部分隐藏
+//    span {
+//      float: left;
+//      line-height: rem(23px);
+//      width: 100%;
+//      height: 100%;
+//      background-color: #e8f4ff;
+//      overflow: hidden; // 超出部分隐藏
+//      white-space: nowrap; // 不换行
+//      text-overflow: ellipsis; // 超出部分文字以...显示
+//    }
+//  }
+//}

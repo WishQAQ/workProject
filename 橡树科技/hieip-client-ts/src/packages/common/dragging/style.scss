@@ -1,0 +1,54 @@
+@import '../../../index';
+
+.deagging {
+  color: $font-main-color;
+  :global {
+    .ant-modal-header {
+      padding: rem(10px) rem(14px);
+      .ant-modal-title {
+        font-size: rem(14px);
+        font-weight: bold;
+        color: $font-main-color;
+        line-height: rem(14px);
+        height: rem(14px);
+      }
+    }
+    .ant-modal-body {
+      padding: rem(10px) rem(14px);
+    }
+    .ant-modal-footer {
+      padding: rem(8px) rem(14px);
+      button {
+        width: rem(53px);
+        height:rem(26px);
+        font-size: $font-com-size;
+        margin: 0;
+        margin-left: rem(6px);
+        background-color: $button-search-background;
+        border-color: $button-search-border;
+        color: $font-main-color;
+        &:hover{
+          background-color: $button-search-hover-background;
+          border-color: $button-search-hover-border;
+          color: #fff;
+        }
+      }
+      .ant-btn-primary{
+        background-color: $button-save-background;
+        border-color: $button-save-border;
+        color: #fff;
+      }
+    }
+    .ant-modal-close {
+      .ant-modal-close-x {
+        height: rem(35px);
+        line-height: rem(35px);
+        width: rem(40px);
+        &::before{
+          font-size: $font-com-size;
+          color: $font-un-color;
+        }
+      }
+    }
+  }
+}

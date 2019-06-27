@@ -1,0 +1,62 @@
+<view class="mapIndex">
+  <view class="map-view">
+    <map 
+      id="map" 
+      longitude="{{longitude}}" 
+      latitude="{{latitude}}" 
+      setting="{{setting}}"
+      onMarkerTap="markertap"
+      markers="{{markers}}"
+      onRegionChange="regionchange"
+      onTap="tap">
+    </map>
+
+    <view class="map-search">
+
+      <!-- 搜索框 -->
+      <view class="search-box">
+        <button class="seach-button"></button>
+        <input class="seach-input" placeholder-class="seach-input-class" placeholder="请输入关键字搜索" />
+      </view>
+    </view>
+    <!-- 筛选器 -->
+    <checkbox-group onChange="onChange" class="search-checkbox">
+      <label class="checkbox" a:for="{{items}}">
+        <checkbox value="{{item.name}}" checked="{{item.checked}}"/>
+        <image a:if="{{!item.checked}}" class="default-image" mode="scaleToFill" src="{{item.image}}"/>
+        <image a:else class="default-image checkedImage" mode="scaleToFill" src="{{item.checkedImage}}"/>
+        <text class="checkbox-text">{{item.value}}</text>
+      </label>
+    </checkbox-group>
+  </view>
+
+  <view animation="{{animationInfo}}" class="map-message">
+
+    <!-- 基本资料 -->
+    <navigator url="../detail-index/detail" class="message">
+      <view class="title">江苏省台办机关党委</view>
+      <view class="address">中山北路95江苏议事园大厦26层</view>
+      <view class="info">
+        <view>机关党委</view>
+        <view>组织书记 王荣平</view>
+        <view>党员 68人</view>
+        <view>创建时间 1988.06</view>
+      </view>
+    </navigator>
+
+    <!-- 查看详情 -->
+    <view class="details">
+      <navigator url="../detail-index/detail" class="get-details">查看详情</navigator>
+      <button class="gps">
+        <image mode="scaleToFill" src="../../assets/images/navigation.png"/>
+        导航
+      </button>
+      <button class="route">
+        <image mode="scaleToFill" src="../../assets/images/route.png"/>
+        路线
+      </button>
+    </view>
+
+  </view>
+
+</view>

@@ -1,0 +1,258 @@
+@import './../../../../../index.scss';
+
+.select {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  &:after {
+    position: absolute;
+    font-size: rem(12px);
+    height: rem(14px);
+    top: 1px;
+    bottom: 0;
+    margin: auto;
+    right: rem(13px);
+    display: block;
+    content: '▲' !important;
+    transform: rotateZ(180deg);
+    color: $font-main-color;
+    opacity: .5;
+    line-height: normal;
+  }
+  &:hover {
+    > span > i {
+      opacity: .4;
+    }
+    &:after {
+      opacity: 0;
+    }
+  }
+  > span {
+    > input {
+      width: 100%;
+      height: 100%;
+      border: rem(1px) solid $big-split-color;
+      border-radius: $border-radius4;
+      line-height: rem(27px);
+      font-size: rem(12px);
+      text-indent: rem(5px);
+      transition: all .3s cubic-bezier(.645, .045, .355, 1);
+      position: relative;
+      cursor: pointer;
+      color: $font-main-color;
+      text-align: left;
+      &:disabled {
+        background: white;
+      }
+      &:hover {
+        border-color: #40a9ff;
+      }
+      &:focus {
+        border-color: #40a9ff;
+        outline: 0;
+        box-shadow: 0 0 0 2px rgba(24, 144, 255, .2);
+      }
+    }
+    > i {
+      position: absolute;
+      right: 10px;
+      height: 100%;
+      opacity: 0;
+      transition: .1s;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      top: 0;
+      cursor: pointer;
+      > i {
+        font-size: 13px;
+      }
+      &:hover {
+        opacity: .75;
+      }
+    }
+  }
+}
+
+.box {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  box-shadow: 0 rem(2px) rem(8px) rgba(0, 0, 0, .5);
+  border-radius: $border-radius4;
+  outline: none;
+  overflow: hidden;
+  font-size: rem(12px);
+  animation: myfirst .25s;
+  animation-fill-mode: forwards;
+  position: fixed; // transform: translateY(-100%);
+  z-index: 9;
+  > div {
+    width: 100%;
+    height: rem(25px);
+    margin: rem(5px) 0;
+    text-align: center;
+    > input {
+      width: 98%;
+      height: 100%;
+      font-size: rem(12px);
+      text-align: center;
+      border: rem(1px) solid $big-split-color;
+      border-radius: $border-radius4;
+      color: $font-main-color;
+      &:hover {
+        border-color: #40a9ff !important;
+        outline: 0;
+      }
+      &:focus {
+        border-color: #40a9ff !important;
+        outline: 0;
+      }
+    }
+  }
+}
+
+.ul {
+  width: 100%;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, .65);
+  padding: 0;
+  list-style: none;
+  background-color: #fff;
+  outline: none;
+  overflow: auto;
+  font-size: rem(12px);
+  margin: 0;
+  > li {
+    position: relative;
+    display: block;
+    padding: rem(5px) rem(12px);
+    font-size: rem(12px);
+    line-height: rem(22px);
+    font-weight: normal;
+    color: rgba(0, 0, 0, .65);
+    white-space: nowrap;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: .3s ease;
+    text-align: center;
+    &:hover {
+      background: $list;
+    }
+  }
+}
+
+.active {
+  background: $list;
+}
+
+.keyActive {
+  box-shadow: 0 0 rem(5px) rem(1px) #40a9ff inset !important;
+}
+
+.mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 8;
+  background: transparent;
+}
+
+.noDrop {
+  cursor: no-drop !important;
+}
+
+.isReverse {
+  transform: translateY(-100%);
+}
+
+.pointer {
+  cursor: no-drop !important;
+}
+
+.checkbox {
+  float: left;
+  transform: scale(.9);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto !important;
+  left: rem(9px);
+  width: rem(14px);
+  height: rem(14px);
+}
+
+.multi {
+  width: 100%;
+  height: 100%;
+  padding: 3px 0;
+  background: white;
+  border: rem(1px) solid $big-split-color;
+  border-radius: $border-radius4;
+  cursor: pointer;
+  font-size: rem(12px);
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 9;
+  > span {
+    color: rgba(0, 0, 0, .65);
+    background-color: #fafafa;
+    border: 1px solid #e8e8e8;
+    border-radius: 2px;
+    cursor: default;
+    float: left;
+    margin-left: rem(4px);
+    padding: 0 15px 0 5px;
+    height: 100%;
+    line-height: normal;
+    max-width: rem(75px);
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: rem(5px);
+    > p {
+      width: 100%;
+      margin: 0;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      float: left;
+    }
+    > a {
+      position: absolute;
+      top: rem(-2px);
+      bottom: 0;
+      margin: auto;
+      right: rem(5px);
+      height: rem(18px);
+      font-size: rem(13px);
+      color: $font-tip-color;
+      &:hover {
+        color: $font-select-color;
+      }
+    }
+  }
+}
+
+.hide {
+  z-index: -1;
+  opacity: 0;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+}
+
+@keyframes myfirst {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,53 @@
+.banner{
+	background: url(../img/banner-by.png);
+}
+
+.box-new{
+	width: 100%;
+	height: 208px;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+.box-new a{
+	text-decoration: none;
+}
+.box-new:hover{
+	box-shadow: 0px 0px 10px #666;
+	 transition: all .2s; 
+}
+.box-new img{
+	float: left;
+	margin-right: 30px;
+}
+.box-new .box-new-top{
+	font-size:2.8rem ;
+	color: #3cbade;
+}
+.box-new .box-new-time{
+	font-size: 1.5rem;
+	color: #999;
+}
+.box-new .box-new-btm{
+	font-size: 1.8rem;
+	color: #666;
+}
+
+
+@media only screen and (max-width: 1200px) {
+	.conten-box-btm{
+		height: 300px;
+	}
+	.box-new{
+		height: 180px;
+		border-bottom: 1px #999 dashed ;
+	}
+	.box-new img{
+		display: none;
+	}
+	.box-new-top{
+		font-size: 2rem !important;
+	}
+	.box-new-btm{
+		font-size: 1.5rem !important;
+	}
+}

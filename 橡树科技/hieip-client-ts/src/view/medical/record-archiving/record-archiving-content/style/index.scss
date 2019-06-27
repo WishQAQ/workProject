@@ -1,0 +1,51 @@
+@import '../../../../../index';
+
+.recordArchivingContent {
+  width: 100%;
+  height: calc(100% - 64px);
+  :global {
+    .ag-root {
+      border: rem(1px) solid $big-border-color;
+    }
+    .ag-header-row {
+      background-color: #ececec;
+    }
+    .ag-header-cell {
+      border-right-color: $mid-split-color !important;
+    }
+    .ag-body {
+      background-color: $white-block !important;
+    }
+    .ag-row {
+      background-color: $white-block !important;
+    }
+    .ag-cell-wrapper {
+      position: relative;
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+    .ag-icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+    .ag-fresh .ag-row-selected {
+      background-color: $list !important;
+      color: $font-main-color;
+    }
+    .ag-header-cell-label {
+      padding-left: rem(13px) !important;
+    }
+    .ag-header-cell {
+      text-align: left;
+    }
+    .ag-cell-value {
+      text-align: left !important;
+      padding-left: rem(13px) !important;
+    }
+  }
+}

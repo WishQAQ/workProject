@@ -1,0 +1,18 @@
+@import './../../../../index.scss';
+
+.root {
+  :global {
+    .ant-select-selection__choice {
+      font-size: $font-com-size;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: rem(50px);
+    }
+    .ant-select-selection--multiple {
+      max-height: rem(28px);
+      width: rem(200px);
+      overflow: hidden;
+    }
+  }
+}

@@ -1,0 +1,330 @@
+@import '../../../../../index';
+
+// 医嘱特殊处理色
+$stop-order: #e50ee5;
+
+.ordersTopItem {
+  width: 100%;
+  height: rem(30px);
+  margin-bottom: rem(10px);
+  display: flex;
+  align-items: center;
+}
+
+.orderCate {
+  width: rem(150px);
+  > div {
+    height: rem(30px);
+    > div {
+      line-height: rem(28px);
+    }
+  }
+}
+
+.orderWhen {
+  margin-left: rem(10px);
+  font-size: $font-com-size;
+  color: $font-main-color;
+  display: flex;
+  align-items: center;
+  > b {
+    padding-right: rem(10px);
+  }
+}
+
+.orderTimeChoose {
+  > label {
+    font-size: rem(12px);
+  }
+}
+
+.orderCondition {
+  width: rem(175px) !important;
+  margin-right: rem(5px);
+  > span {
+    color: $font-main-color;
+    font-size: $font-com-size;
+  }
+  > div > div {
+    font-size: $font-com-size;
+    width: 100%;
+    > div {
+      height: rem(30px);
+      border: 0;
+      &:focus {
+        box-shadow: none;
+      }
+      > div {
+        line-height: rem(28px);
+      }
+    }
+  }
+}
+
+.publicButton {
+  height: rem(30px) !important;
+  padding: 0 rem(5px) !important;
+  font-size: rem(13px) !important;
+  > i {
+    padding-right: rem(5px);
+    font-size: $font-title-size;
+  }
+}
+
+.ordersBtnGroup {
+  height: rem(30px);
+  line-height: rem(30px);
+  display: flex;
+  align-items: center;
+  margin-left: rem(25px);
+  > button {
+    margin-right: rem(5px);
+  }
+}
+
+.delButton {
+  border-color: $button-delete-border !important;
+  background-color: $button-delete-background !important;
+  color: $button-delete-color !important;
+}
+
+.billing {
+  border-color: $button-search-border !important;
+  background-color: $button-search-background !important;
+  color: $button-search-color !important;
+}
+
+.billingAdd {
+  border-color: $button-add-border !important;
+  background-color: $button-add-background !important;
+  color: $white-default !important;
+}
+
+.orders {
+  width: 100%;
+  height: calc(100% - 40px);
+  border: 1px solid $mid-split-color;
+  border-radius: $border-radius4;
+  span[class*='ag-header-select-all'] {
+    padding: rem(7px) 0 0 rem(4px);
+  }
+}
+
+.agSelect {
+  width: 100%;
+  &:after {
+    display: none !important;
+  }
+  > span {
+    > input {
+      text-align: center !important;
+      text-indent: 0 !important;
+    }
+  }
+  > span > i {
+    display: none !important;
+  }
+  li {
+    padding: rem(5px) 0 !important;
+  }
+}
+
+.publicAgText {
+  text-align: center;
+  line-height: rem(25px);
+}
+
+.agInputTable {
+  input {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.agTimePicker {
+  height: 100%;
+  width: 100%;
+  color: $font-main-color;
+  > span {
+    width: 100%;
+    height: 100%;
+    > div {
+      width: 100%;
+      height: 100%;
+      > input {
+        width: 100%;
+        height: 100%;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.inputNumber {
+  height: rem(29px) !important;
+  padding: rem(5px) !important;
+}
+
+.empty {
+  width: 100%;
+  height: 100%;
+}
+
+.agHeaderCheckBox {
+  position: absolute;
+  top: 8px;
+  left: 19px;
+}
+
+.agStopEdit {
+  background: #adb1b3;
+  text-align: center;
+  line-height: rem(25px);
+  input {
+    width: 100%;
+  }
+}
+
+// 新开医嘱
+.newOrder {
+  color: $white-default;
+}
+
+// 执行医嘱
+.doOrder {
+  color: $font-main-color;
+}
+
+// 停止医嘱
+.stopOrder {
+  color: $stop-order;
+}
+
+// 作废医嘱
+.delOrder {
+  color: $first;
+}
+
+// 已提交医嘱
+.alreadyOrder {
+  background: $white-default;
+  color: $font-main-color;
+}
+
+/********医护一体版医嘱*********/
+.newOrders {
+  //height: rem(30px);
+  //line-height: rem(30px);
+  display: flex;
+  align-items: center;
+  margin-left: rem(25px);
+  > span {
+    font-size: $font-com-size;
+    margin-left: rem(5px);
+    padding: rem(3px) rem(15px);
+  }
+  > span:not(:first-child) {
+    background-color: $box-shadow1;
+    border-radius: $border-radius4;
+  }
+  > span:first-child {
+    border: 1px solid $list-split-color;
+    border-radius: $border-radius4;
+    color: $border-focus-color;
+  }
+  > span:nth-child(2) {
+    border: 1px solid $list-split-color;
+    border-radius: $border-radius4;
+    color: $font-com-color;
+    background-color: #fff;
+  }
+  > span:nth-child(3) {
+    color: $font-com-color;
+  }
+  > span:nth-child(4) {
+    color: #fff;
+  }
+  > span:nth-child(5) {
+    color: $first;
+  }
+  > span:nth-child(6) {
+    color: #e50ee5;
+  }
+}
+
+.newOrderTable {
+  width: 100%;
+  height: calc(100% - 40px - 175px);
+  border: 1px solid $mid-split-color;
+  border-radius: $border-radius4;
+  span[class*='ag-header-select-all'] {
+    padding: rem(7px) 0 0 rem(4px);
+  }
+}
+
+.newOrderOperation {
+  width: 100%;
+  height: rem(170px);
+  margin-top: rem(5px);
+  display: flex;
+  > div:first-child {
+    width: 70%;
+    height: 100%;
+  }
+  > div:nth-child(2) {
+    width: 30%;
+    height: 100%;
+    padding-left: rem(10px);
+  }
+}
+
+.newOrderButton {
+  > fieldset {
+    border: 1px solid $font-com-color;
+    border-radius: $border-radius4;
+    > legend {
+      font-size: $font-title-size;
+      width: auto;
+      margin: 0 0 0 rem(5px);
+      padding-right: rem(5px);
+    }
+  }
+  > fieldset:nth-child(2) {
+    width: 50%;
+    float: left;
+  }
+  > fieldset:nth-child(3) {
+    width: calc(50% - 5px);
+    float: left;
+    margin-left: 5px;
+  }
+}
+
+.newPublicButton {
+  height: rem(25px) !important;
+  padding: 0 rem(5px) !important;
+  font-size: rem(12px) !important;
+  margin: 0 0 rem(5px) rem(10px) !important;
+  > i {
+    padding-right: rem(5px);
+    font-size: $font-title-size;
+  }
+}
+
+/********医护一体版医嘱-计费*********/
+.newOrderCosts {
+  border: 1px solid $mid-split-color;
+  border-radius: $border-radius4;
+}
+
+.commonClass {
+  text-align: center;
+  line-height: rem(25px);
+  input {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/********医护一体版医嘱-计费*********/
+/********医护一体版医嘱*********/

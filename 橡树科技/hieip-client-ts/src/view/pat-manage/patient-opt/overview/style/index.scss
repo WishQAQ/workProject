@@ -1,0 +1,465 @@
+@import '../../../../../index';
+
+.summary {
+  width: 100%;
+  height: 100%;
+  white-space: nowrap;
+  color: $font-main-color;
+}
+
+.right {
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  border-radius: rem(4px);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, .2);
+}
+
+.rightOne {
+  flex: 1;
+  padding: rem(8px) 0 rem(10px) rem(8px);
+  height: 25%;
+  &:not(:last-child) {
+    position: relative;
+    &:after {
+      position: absolute;
+      content: '';
+      bottom: 0;
+      left: rem(12px);
+      right: rem(12px);
+      width: 100%;
+      height: 1px;
+      background-color: #ececec;
+    }
+  }
+  .title {
+    margin-bottom: 0;
+    background-color: #66c8d4;
+    line-height: rem(22px);
+    font-size: rem(12px);
+    color: #fff;
+    font-weight: bold;
+    width: rem(96px);
+    text-align: center;
+    border-radius: rem(11px);
+  }
+  ul {
+    margin-bottom: 0;
+    li {
+      white-space: nowrap;
+      font-size: rem(12px);
+      color: #555;
+      line-height: rem(24px);
+    }
+  }
+  .rightOneContent {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: rem(10px);
+    > div {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      background-color: #f6f6f6;
+      border-radius: rem(22px);
+      padding: rem(5px) rem(8px);
+      margin-right: rem(5px);
+      margin-bottom: rem(5px);
+      height: 33.3333%;
+      > p {
+        margin-bottom: 0;
+        font-size: rem(12px);
+        line-height: rem(12px);
+        margin-right: rem(11px);
+        > span {
+          display: block;
+          &:first-child {
+            color: #555;
+          }
+          &:last-child {
+            font-size: rem(10px);
+            color: #888;
+          }
+        }
+      }
+      > p, > span {
+        flex: 1;
+      }
+      > span {
+        color: #3db5e7;
+        font-size: rem(14px);
+        padding-left: rem(5px);
+      }
+    }
+  }
+  .rightLastContent {
+    margin-top: rem(10px);
+    .icon {
+      color: #fff;
+    }
+    > li {
+      display: flex;
+      align-items: center;
+      margin-top: rem(10px);
+      > span {
+        display: inline-block;
+        width: rem(24px);
+        height: rem(24px);
+        text-align: center;
+        line-height: rem(24px);
+        border-radius: rem(4px);
+        margin-right: rem(6px);
+      }
+      &:first-child {
+        span {
+          background-color: #8e68cc;
+        }
+
+      }
+      &:nth-of-type(2) {
+        span {
+          background-color: #ff5271;
+        }
+
+      }
+      &:last-child {
+        span {
+          background-color: #3c9ae4;
+        }
+      }
+    }
+  }
+}
+
+.ulOverflow {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.flexHeight {
+  height: calc(100% - 22px);
+}
+
+// main*******
+.main {
+  height: 100%;
+  width: 100%;
+  font-size: rem(12px);
+  line-height: 1;
+  padding-right: rem(7px);
+}
+
+.mainTitleInfo {
+  width: 100%;
+  height: auto;
+  border: rem(1px) solid $big-border-color;
+  box-sizing: border-box;
+  border-radius: rem(4px);
+}
+
+.titleContent1 {
+  display: flex;
+  border-bottom: rem(1px) solid $mid-split-color;
+  > span {
+    width: 100%;
+    border-right: rem(1px) solid $mid-split-color;
+    padding: rem(8px);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-weight: bold;
+    > b {
+      padding-left: rem(5px);
+      font-weight: normal;
+    }
+  }
+}
+
+.titleContent2 {
+  display: flex;
+  margin-top: rem(-1px);
+  > span {
+    width: 100%;
+    border-right: rem(1px) solid $mid-split-color;
+    padding: rem(8px);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-weight: bold;
+    > b {
+      padding-left: rem(5px);
+      font-weight: normal;
+    }
+  }
+}
+
+/**
+取消最后的边框
+ */
+.special {
+  border-right: 0 !important;
+}
+
+.mainContent {
+  width: 100%;
+  height: calc(100% - 60px);
+  > div {
+    height: 50%;
+    display: flex;
+    padding-top: rem(5px);
+  }
+}
+
+.recent {
+  width: 50%;
+  height: 100%;
+}
+
+.patientInfo {
+  width: 50%;
+  height: 100%;
+  padding-left: rem(5px);
+  > div:nth-child(1) {
+    height: 45%;
+    padding-bottom: rem(5px);
+  }
+  > div:nth-child(2) {
+    height: 55%;
+  }
+}
+
+.cardStyle {
+  border: 0 !important;
+  > div:nth-child(1) {
+    background: #48b7e5;
+    padding: 0 rem(8px);
+    height: rem(30px);
+    line-height: rem(30px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    > p {
+      color: $white-default;
+      font-size: rem(12px);
+    }
+  }
+  > div:nth-child(2) {
+    height: calc(100% - 30px) !important;
+    box-sizing: border-box;
+    border: 1px solid $big-border-color;
+    border-top: 0;
+    border-radius: rem(4px);
+  }
+}
+
+.infoEdit {
+  float: right;
+  cursor: pointer;
+  color: $four;
+  &:hover {
+    color: lighten($four, 5%);
+  }
+}
+
+// 弹框样式*****
+.infoModel {
+  > button > span {
+    width: rem(30px);
+    height: rem(40px);
+    line-height: rem(40px);
+  }
+  div[class*='ant-modal-body'] {
+    padding: 0 rem(15px);
+  }
+  div[class*='ant-modal-header'] {
+    padding: rem(10px) rem(15px);
+    border: 0;
+    > div {
+      font-weight: bold;
+    }
+  }
+  div[class*='ant-modal-footer'] {
+    border: 0;
+  }
+}
+
+.sexStyle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.sexLabel {
+  margin-right: rem(5px);
+  font-weight: bold;
+}
+
+.infoItems {
+  height: rem(30px) !important;
+  margin-bottom: rem(10px);
+  > span {
+    height: auto;
+  }
+}
+
+.infoInput {
+  height: rem(30px) !important;
+  border: 0 !important;
+  &:focus {
+    box-shadow: none !important;
+  }
+}
+
+.doubleInfoItem {
+  display: flex;
+  float: left;
+  width: 100%;
+  margin-bottom: rem(10px);
+  > div:nth-child(1) {
+    margin-right: rem(5px);
+  }
+  > div {
+    height: rem(30px);
+    > span {
+      height: auto;
+    }
+  }
+  div[class*='infoItems'] {
+    margin-bottom: 0;
+  }
+}
+
+.infoTime {
+  width: 100%;
+  span[class*='pt-popover-target'] {
+    width: 100%;
+  }
+  input[class*='pt-input'] {
+    height: rem(28px);
+    border: 0;
+    box-shadow: none;
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+.infoSelect {
+  width: 100%;
+  > div {
+    border: 0 !important;
+  }
+}
+
+.specialTime {
+  overflow: visible;
+}
+
+.allergyEdit {
+  float: right;
+}
+
+// 过敏史编辑***
+.allergyModel {
+  div[class*='ant-modal-header'] {
+    padding: rem(10px) rem(15px);
+    border: 0;
+    border-bottom:rem(1px) solid $list-split-color;
+  }
+  div[class*='ant-modal-footer'] {
+    width:100%;
+    height:rem(41px);
+    padding: rem(1px);
+    border: 0;
+    line-height:rem(41px);
+  }
+  div[class*='ant-modal-body'] {
+
+  }
+}
+
+.newTitle {
+  > b {
+    margin-right: rem(20px);
+  }
+  //:nth-child(4) {
+  //  background-color: #e5e5e5 !important;
+  //  border-color: #c4c4c4 !important;
+  //  color: $font-com-color;
+  //  &:hover {
+  //    color: $font-com-color;
+  //  }
+  //}
+}
+
+.allergyTable {
+  height: rem(250px);
+  border: rem(1px) solid $big-border-color;
+  box-sizing: border-box;
+  border-radius: rem(4px);
+}
+
+/*修改的过敏史编辑按钮*/
+.compileBtn{
+  float:right;
+  > button {
+    text-align:center;
+    width:rem(55px);
+    height: rem(30px) !important;
+    margin-left: rem(5px);
+    background-color: #48b7e5 !important;
+    border-color: #2f9fce !important;
+    margin-top:rem(10px);
+    >span{
+      margin-left:rem(-4px) !important;
+    }
+  }
+  >:nth-child(1){
+    font-weight:bold;
+    background-color:$button-add-background !important;
+    border-color: $button-add-border!important;
+    &:hover {
+          color: $button-add-hover-border;
+        }
+  }
+  >:nth-child(2){
+    background-color:$button-delete-background !important;
+    border-color: $button-delete-border !important;
+    color:$button-delete-color;
+    &:hover {
+      color: $button-delete-hover-color;
+    }
+  }
+  >button:nth-child(3){
+   background-color: $button-extra-background;
+    &:hover {
+      color: $button-extra-hover-background;
+    }
+  }
+}
+
+.rowClass {
+  text-align: center;
+  line-height: rem(25px);
+}
+
+.little {
+  padding-right: rem(5px);
+}
+
+.allergyBtn {
+  padding: 0 rem(5px) !important;
+  font-size: rem(13px) !important;
+  height: rem(22px) !important;
+  background-color: #37a3d0;
+  border-color: #3091b9;
+  color: $button-search-hover-color;
+  &:hover {
+    background-color: $button-add-hover-background;
+    border-color: $button-add-hover-border;
+    color: $button-search-hover-color;
+  }
+  > i {
+    padding-right: rem(5px);
+    font-size: $font-title-size;
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/map-index/map",
+    "pages/detail-index/detail",
+    "pages/map/map",
+    "pages/index/index",
+    "pages/components-demo/index",
+    "pages/detail/detail"
+  ],
+  "window": {
+    "defaultTitle": "党建地图",
+    "titleBarColor": "#0e77ca"
+  }
+}

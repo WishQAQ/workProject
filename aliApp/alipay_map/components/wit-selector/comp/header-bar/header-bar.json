@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "search-bar": "mini-antui/es/search-bar/index",
+    "item": "../item/item",
+    "wit-icon": "/components/wit-icon/index"
+  }
+}

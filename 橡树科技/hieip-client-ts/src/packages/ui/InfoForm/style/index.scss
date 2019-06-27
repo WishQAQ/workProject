@@ -1,0 +1,200 @@
+@import './../../../../index.scss';
+
+.cardHeader {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: rem(5px);
+  height: auto;
+  :global {
+    .ant-input-group-addon {
+      position: relative;
+      &:after {
+        content: '*';
+        position: absolute;
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        top: 2px;
+        right: 5px;
+        color: red;
+      }
+    }
+  }
+}
+
+.cardContent {
+  :global {
+    .ant-input {
+      height: rem(26px);
+      line-height: rem(26px);
+    }
+    .ant-input-group-wrapper {
+      top: 0;
+    }
+    .ant-form-item-label {
+      // padding-left: rem(10px);
+      padding-left: 0;
+      padding-right: 0;
+      font-size: $font-title-size;
+      font-weight: bold;
+    }
+  }
+}
+
+.patientId,
+.patientName {
+  position: relative;
+  &:after {
+    content: '*';
+    position: absolute;
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    top: 0;
+    left: 0;
+    color: red;
+  }
+}
+
+.sickPhoto {
+  position: relative;
+  display: flex;
+  flex-flow: nowrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: rem(-5px);
+  margin-bottom: rem(5px);
+  width: 100%;
+  height: rem(92px);
+  .sickImage {
+    width: rem(92px);
+    height: rem(92px);
+    svg{
+      width: rem(92px);
+      height: rem(92px);
+    }
+  }
+  .sickGender {
+    position: absolute;
+    width: rem(55px);
+    height: rem(20px);
+    vertical-align: middle;
+    line-height: rem(20px);
+    margin-left: rem(-26px);
+    left: 50%;
+    bottom: rem(-5px);
+    >div{
+      &:focus{
+        box-shadow: none;
+      }
+    }
+    :global {
+      .ant-select-selection--single {
+        height: rem(22px);
+        line-height: rem(22px);
+        font-size: $font-com-size;
+        border-radius: rem(30px);
+        border: 2px solid #fff;
+        background: #cecece;
+      }
+      .ant-select-selection__rendered {
+        line-height: rem(18px);
+        margin-left: rem(10px);
+      }
+      .ant-select-arrow {
+        right: rem(2px);
+      }
+      .ant-select-selection-selected-value {
+        padding-right: 0
+      }
+    }
+  }
+}
+
+.tagGroup {
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  color: #555;
+  :global {
+    .ant-tag {
+      display: inline-block;
+      margin: 0;
+      text-align: center;
+      cursor: pointer;
+      border: 1px solid #d9d9d9;
+      border-left-color: transparent;
+      border-radius: 0;
+      background: #fff;
+      padding: 0 10px;
+      &:hover,
+      &:active {
+        color: #555;
+      }
+      &:first-child {
+        border-left-color: #d9d9d9;
+        border-radius: rem(4px) 0 0 rem(4px);
+      }
+      &:last-child {
+        border-radius: 0 rem(4px) rem(4px) 0;
+      }
+    }
+    .ant-tag-checkable-checked {
+      background: #3db5e7;
+      color: #fff;
+    }
+  }
+}
+
+.commonPrefix {
+  background: #fafafa
+}
+
+.timepickerPrefix {
+  width: rem(100px);
+  background: #fafafa
+}
+
+.timepicker {
+  > div {
+    width: 100%;
+    input{
+      text-indent: rem(7px);
+      border: 0 !important;
+      box-shadow: 0 0 0 rem(1px) #cecece inset;
+    }
+  }
+  :global {
+    .pt-popover-target,
+    .pt-input-group {
+      width: 100%;
+    }
+  }
+}
+
+.inputTable{
+  >div{
+    background: $white-block;
+    >span{
+      background: #fff;
+    }
+  }
+}
+
+.nowrap {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.bulkinjuryNameDelete {
+
+  cursor: pointer;
+  color: #ff375b;
+  &:active {
+    color: #f00;
+  }
+}

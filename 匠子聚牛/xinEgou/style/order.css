@@ -1,0 +1,310 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: .75rem;
+    background-color: #58bcbb;
+}
+
+.header_center{
+    font-size: .3rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+
+.order_main_1{
+    background-color: #58bcbb;
+    color: #fff;
+}
+
+.order_main_1_top{
+    font-size: .25rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: .6rem;
+    padding-right: .3rem;
+    padding-top: .3rem;
+    padding-bottom: .3rem;
+}
+
+.order_dizhi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.order_main_1_top div:last-child{
+    width: .15rem;
+    transform: rotate(180deg);
+}
+
+.order_dizhi span{
+    display: block;
+    width: .25rem;
+    margin-right: .2rem;
+}
+
+.order_main_1_bottom{
+    font-size: .25rem;
+    padding-bottom: .2rem;
+}
+
+
+
+.order_main_1_bottom{
+    display: flex;
+    align-items: center;
+    padding-left: 1.05rem;
+}
+
+.order_main_1_bottom p:not(:last-child){
+    margin-right: .3rem;
+}
+
+
+
+.order_main_2{
+    background-color: #58bcbb;
+    height: 1rem;
+    margin-bottom: 1rem;
+}
+
+.order_main_2_box{
+    height: 1.7rem;
+    margin: 0 .2rem;
+    background-color: #fff;
+    border-radius: .1rem;
+    padding: .4rem;
+}
+
+.order_main_2_box_text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: .25rem;
+    font-weight: bold;
+}
+.order_main_2_box_text p:nth-child(1){
+    color: #333;
+}
+.order_main_2_box_text p:nth-child(2){
+    color: #58bcbb;
+}
+.order_main_2_box_bottom p:nth-child(2) span{
+    display: inline-block;
+    width: .1rem;
+    transform: rotate(180deg);
+}
+
+.order_main_2_box_text:nth-child(1){
+    margin-bottom: .3rem;
+}
+
+
+
+
+.order_main_3{
+    margin: 0 .2rem .2rem .2rem;
+    background-color: #fff;
+    padding: 0 .3rem .4rem .3rem;
+    border-radius: .1rem;
+}
+
+.order_main_3_title{
+    margin-bottom: .3rem;
+}
+.order_main_3_title a{
+    height: .9rem;
+    display: flex;
+    align-items: center;
+    font-size: .25rem;
+    color: #333;
+    border-bottom: .011rem solid #eee;
+}
+.order_main_3_title span{
+    display: inline-block;
+    width: .15rem;
+    transform: rotate(180deg);
+    margin-left: .2rem;
+}
+
+
+.order_main_3_box li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .25rem;
+}
+
+
+.order_main_3_box_list_left{
+    display: flex;
+    align-items: center;
+}
+.order_main_3_left_img{
+    width: .7rem;
+    height: .7rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: .011rem solid #eee;
+    margin-right: .2rem;
+}
+
+.order_main_3_left_text{
+    font-size: .24rem;
+    width: 3rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+.order_main_3_box_list_right{
+    width: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: .2rem;
+    color: #333;
+}
+.order_main_3_box_list_right span{
+    font-weight: bold;
+}
+
+
+
+.order_main_3_bottom{
+    border-top: .011rem solid #eee;
+    padding-top: .3rem;
+}
+.order_main_3_bottom>p{
+    text-align: right;
+    font-size: .24rem;
+    color: #666;
+    margin-bottom: .15rem;
+}
+.order_main_3_bottom div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.order_main_3_bottom div p:nth-child(1){
+    font-size: .24rem;
+    color: #999;
+}
+.order_main_3_bottom div p:nth-child(2){
+    font-size: .25rem;
+    color: #58bcbb;
+}
+.order_main_3_bottom div p:nth-child(2) span{
+    font-size: .3rem;
+    font-weight: bold;
+}
+
+
+
+
+.order_bottom{
+    position: fixed;
+    bottom: 0;
+    height: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 100%;
+    max-width: 640px;
+}
+.order_bottom .order_bottom_btm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5.2rem;
+    height: .6rem;
+    border-radius: .1rem;
+    background-color: #58bcbb;
+    color: #fff;
+    font-size: .25rem;
+}
+
+
+
+
+
+
+/*付款方式*/
+.order_box{
+    z-index: 999;
+    background-color: #fff;
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+    max-width: 640px;
+}
+.order_box_bg{
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.order_box_title{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .3rem;
+    color: #333;
+    height: 1.1rem;
+}
+.order_box_list_shut{
+    position: absolute;
+    left: .3rem;
+    width: .3rem;
+    height: .3rem;
+}
+
+
+.order_box_list{
+    font-size: .3rem;
+    color: #333;
+}
+.order_box_list div,
+.order_box_list a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 .2rem;
+    height: 1rem;
+    border-top: .011rem solid #eee;
+}
+.order_box_list a{
+    border-bottom: .011rem solid #eee;
+}
+.order_box_list div span,
+.order_box_list a span{
+    display: inline-block;
+    width: .4rem;
+    margin-right: .15rem;
+}
+
+.order_box_list div p:nth-child(1),
+.order_box_list a p:nth-child(1){
+    display: flex;
+    align-items: center;
+}
+
+.order_box_list div p:nth-child(2){
+    width: .35rem;
+}
+.order_box_list a p:nth-child(2){
+    width: .15rem;
+    transform: rotate(180deg);
+}

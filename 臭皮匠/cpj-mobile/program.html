@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+        <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
+        <title></title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/common.css">
+    </head>
+    <body>
+    <header>
+        <!--导航栏开始-->
+        <nav class="nav navbar-fixed-top">
+            <!--手机导航栏-->
+            <div id="mobile-menu" class="mobile-nav visible-xs visible-sm hide-nav">
+                <ul>
+                    <li><a href="index.html">首&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;页</a></li>
+                    <li><a href="rented.html">服务器租用</a></li>
+                    <li><a href="enterprise.html">企&nbsp;业&nbsp;租&nbsp;用</a></li>
+                    <li><a href="managed.html">服务器托管</a></li>
+                    <li><a href="program.html">专&nbsp;属&nbsp;方&nbsp;案</a></li>
+                    <li><a href="news.html">新&nbsp;闻&nbsp;动&nbsp;态</a></li>
+                    <li><a href="about.html">关&nbsp;于&nbsp;我&nbsp;们</a></li>
+                </ul>
+            </div>
+            <!--pc导航栏-->
+            <nav class="navbar-inverse visible-lg visible-md" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">臭皮匠</a>
+                    </div>
+                    <div>
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">首页</a></li>
+                            <li><a href="#">服务器租用</a></li>
+                            <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">服务器托管</a></li>
+                            <li><a href="#">专属方案</a></li>
+                            <li><a href="#">新闻动态</a></li>
+                            <li><a href="#">关于我们</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!--手机导航栏侧滑-->
+            <div class="nav-btn visible-xs visible-sm">
+                <a href="#" class="mobile-nav-taggle" id="mobile-nav-taggle">
+                    <span class="glyphicon glyphicon-align-justify"></span>
+                </a>
+            </div>
+        </nav>
+        <!--导航栏结束-->
+        <!--banner图开始-->
+        <div class="banner" id="banner">
+            <img src="img/tg-bg.png">
+        </div>
+        <!--banner图结束-->
+    </header>
+    <section>
+        <div class="fa-btm">
+            <a href=""><img src="img/fa-1.png"></a>
+            <a href=""><img src="img/fa-2.png"></a>
+            <a href=""><img src="img/fa-3.png"></a>
+            <a href=""><img src="img/fa-4.png"></a>
+        </div>
+
+        <!--小标题-->
+        <div class="title">
+            <h2>游戏解决方案</h2>
+            <p></p>
+        </div>
+        <div class="fa-main">
+            <img src="img/fa-5.png">
+        </div>
+        <div class="fa-main-txt">
+            <img src="img/fa-6.png">
+        </div>
+
+        <!--拨打客服-->
+        <div class="kefu">
+            <a href=""><img src="img/tg-phone.png"></a>
+        </div>
+
+
+        <!--底部图片-->
+        <footer class="footer">
+            <div>
+                <img src="img/tg-bg2.png">
+            </div>
+            <div class="nav-btm">
+                <a href="receipt.html"><button class="btn btn-default col-md-4 col-xs-4">收款信息</button></a>
+                <img class="btn-icon-1" src="img/btn-icon.png">
+                <a href="about.html"><button class="btn btn-default col-md-4 col-xs-4">关于我们</button></a>
+                <img class="btn-icon-2" src="img/btn-icon.png">
+                <a href="#banner"><button class="btn btn-default col-md-4 col-xs-4">返回顶部</button></a>
+                <img class="btn-icon-3" src="img/btn-icon.png">
+            </div>
+        </footer>
+    </section>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $("#mobile-nav-taggle").click(function () {
+            var mobileMenu = $("#mobile-menu");
+            if (mobileMenu.hasClass("show-nav")) {
+                setTimeout(function () {
+                    mobileMenu.addClass("hide-nav").removeClass("show-nav");
+                }, 100)
+            }
+            else {
+                setTimeout(function () {
+                    mobileMenu.addClass("show-nav").removeClass("hide-nav");
+                }, 100)
+            }
+        });
+    </script>
+
+    </body>
+</html>

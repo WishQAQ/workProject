@@ -1,0 +1,26 @@
+<view class="detailIndex">
+  <!-- 轮播 -->
+  <view class="detail-swiper">
+    <image mode="scaleToFill" src="../../assets/images/ccp-place.png"/>
+  </view>
+  <!-- 详情 -->
+  <view class="detail-info">
+    <view class="info-top">
+      <view class="info-name">江苏省台办机关党委</view>
+      <view class="info-address">中山北路95江苏议事园大厦26层</view>
+    </view>
+    <view class="info-bottom">
+      <view class="bottom-item" a:for="{{items}}">{{item.name}}</view>
+    </view>
+  </view>
+  <!-- 近期活动 -->
+  <view class="activity">
+    <view class="activity-title">近期活动</view>
+    <view class="activity-box">
+      <view class="box-title"></view>
+      <view class="box-image"></view>
+    </view>
+
+  </view>
+
+</view>

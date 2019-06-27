@@ -1,0 +1,11 @@
+@import '../../../../../../../index.scss';
+.root{
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  :global{
+    .ant-row-flex{
+      margin: 0 !important;
+    }
+  }
+}

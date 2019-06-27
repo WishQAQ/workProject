@@ -1,0 +1,185 @@
+// 门诊 患者病历
+@import '../../../../../../../index';
+@import '../../../../style/common';
+
+$outpatient: #ffffff;
+$outpatient-box-shadow: 0 0 rem(12px) rgba(0, 0, 0, .15);
+$outpatient-table-list-bg: #ececec;
+$outpatient-table-list-bor: #dedede;
+$outpatient-table-detail-bg: #71a7be;
+$outpatient-box-header-border: #ececec;
+
+.root {
+  width: rem(190px);
+}
+
+.deptList {
+  display: flex;
+  align-items: center;
+  background-color: $public-title-color;
+  padding: 0 rem(13px);
+  height: rem(26px);
+  color: #fff;
+  font-weight: bold;
+  border-radius: rem(4px) rem(4px) 0 0;
+  font-size: rem(12px);
+}
+
+.recordList {
+  border-radius: 0 !important;
+  background-color: $mid-split-color !important;
+  color: $font-main-color !important;
+  border-left: rem(1px) solid $big-border-color !important;
+  border-right: rem(1px) solid $big-border-color !important;
+  border-top: rem(1px) solid $big-border-color !important;
+}
+
+.emptyMenu {
+  width: 100%;
+  height: rem(143px);
+  border-left: rem(1px) solid $big-border-color;
+  border-right: rem(1px) solid $big-border-color;
+  position: relative;
+}
+
+.record {
+  height: calc(100% - 195px);
+  border-bottom: rem(1px) solid $big-border-color;
+  border-radius: 0 0 rem(4px) rem(4px);
+}
+
+.emptyMenuBox {
+  border: rem(1px) solid #ddd;
+  padding: rem(10px);
+  font-size: rem(12px);
+  border-radius: rem(10px);
+  position: absolute;
+  width: rem(70px);
+  height: rem(40px);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.deptMenu {
+  width: 100%;
+  height: rem(143px);
+  color: $font-main-color;
+  overflow: auto;
+  border-left: rem(1px) solid $big-border-color;
+  border-right: rem(1px) solid $big-border-color;
+  :global {
+    .ant-menu-item-selected {
+      color: $font-main-color !important;
+      background-color: $menu-selected !important;
+    }
+    .ant-menu-item-selected:after {
+      display: none !important;
+    }
+    .ant-menu-item {
+      width: rem(188px) !important;
+      margin: 0 !important;
+      padding-left: rem(13px) !important;
+      padding-right: rem(13px) !important;
+      height: rem(26px) !important;
+      font-size: rem(12px) !important;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}
+
+.recordMenu {
+  // 26 + 143 + 26
+  height: calc(100% - 195px);
+  margin-bottom: rem(10px);
+  overflow-y: auto;
+  border-bottom: rem(1px) solid $big-border-color;
+  border-radius: 0 0 rem(4px) rem(4px);
+  width: 100%;
+  color: $font-main-color;
+  overflow-x: hidden;
+  border-left: rem(1px) solid $big-border-color;
+  border-right: rem(1px) solid $big-border-color;
+  :global {
+    .ant-menu-submenu-arrow {
+      display: none;
+    }
+    .ant-menu-submenu-open:hover {
+      .ant-menu-submenu-title {
+        color: $font-main-color !important;
+      }
+    }
+    .ant-menu-submenu-open {
+      .ant-menu-submenu-title {
+        color: $font-main-color !important;
+        background-color: $menu-selected !important;
+      }
+    }
+    .ant-menu-item-selected:after {
+      display: none !important;
+    }
+    .ant-menu-submenu-title {
+      //width: rem(185px) !important;
+      margin: 0 !important;
+      padding-left: rem(13px) !important;
+      padding-right: rem(13px) !important;
+      height: rem(26px) !important;
+      font-size: rem(12px) !important;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .ant-menu-item {
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+    .ant-menu-submenu-title {
+      > div {
+        height: 100% !important;
+        display: flex;
+        align-items: center;
+        > i, > span {
+          height: 100% !important;
+          display: flex;
+          align-items: center;
+        }
+        > i:before {
+          height: 100% !important;
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+
+// table外部重置
+.tableListName {
+  :global {
+    .ag-header-cell {
+      border-right-color: $list-split-color !important;
+    }
+    .ag-cell {
+      color: $font-main-color !important;
+      border-right-color: $list-split-color !important;
+      border-bottom-color: $list-split-color !important;
+    }
+    .ag-header-cell-label {
+      padding: 0 !important;
+    }
+    .ag-header-cell-resize {
+      width: 0 !important;
+    }
+    .ag-header-row {
+      height: 100% !important;
+    }
+  }
+}

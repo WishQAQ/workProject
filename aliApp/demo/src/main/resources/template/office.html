@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+<head>
+    <title>#(title)</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+</head>
+<body style="height: 100%; margin: 0;">
+<div id="root" style="height: 100%"></div>
+<script type="text/javascript" src="/web-apps/apps/api/documents/api.js"></script>
+<script type="text/javascript">
+    window.docEditor = new DocsAPI.DocEditor("root",
+        {
+            "document": {
+                "fileType": "#(fileType)",
+                "key": "#(object)",
+                "title": "#(title)",
+                "url": "#(url)",
+                "permissions": {
+                    "comment":  true ,
+                    "download":  true ,
+                    "edit":  #(edit) ,
+        "print":  true ,
+        "review":  true
+    },
+    },
+    "customer": {
+        "address": "中国重庆",
+            "info": "13668082990",
+            "logo": "#",
+            "mail": "shinesec@hy12371.com",
+            "name": "文档编辑器",
+            "www": "www.hy12371.com"
+    },
+    "documentType": "#(documentType)",
+        "editorConfig": {
+        "callbackUrl": "#(host)/api/v1/file/save?bucket=#(bucket)&object=#(object)",
+            "user": {
+            "id": "#(user_id)",
+                "name": "#(user_name)"
+        },
+        "customization": {
+            "chat": true,
+                "commentAuthorOnly": false,
+                "compactToolbar": false,
+                "forcesave": true,
+                "goback": {
+                "text": "返回",
+                    "url": "#"
+            },
+            "showReviewChanges": false,
+                "zoom": 150,
+        },
+        "lang": "zh-CN",
+            "mode": "#(mode)"
+    },
+    "height": "100%",
+        "type": "desktop",
+        "width": "100%"
+    });
+</script>
+</body>
+</html>

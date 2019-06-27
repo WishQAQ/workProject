@@ -1,0 +1,136 @@
+/*通用标题*/
+.navtop{
+
+	z-index: 99999;
+}
+
+
+.biaoti{
+	text-align: center;
+	margin-bottom: 50px;
+	margin-top: 30px;
+}
+.biaoti h3{
+	font-size:2.5em;
+	color: #474747;
+	margin-bottom: 30px;
+	margin-top: 50px;
+	font-weight: 600;
+}
+.biaoti .line{
+	width: 2.5rem;
+    height: 2px;
+    background: #5fead8;
+    display: inline-block;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+@media only screen and (max-width:1200px ) {
+	.banner{
+		height: 300px !important;
+	}
+	.banner-text{
+		top: -160px !important;
+	}
+	.biaoti{
+	margin-top: 50px;
+	}
+	.biaoti .line{
+		margin-left: 5px;
+	    margin-right: 5px;
+	}
+	.conten-box-btm-bg img{
+		height: 250px !important;
+	}
+
+	.conten-box-btm-text p{
+		font-size: 1.5rem !important;
+		width: auto !important;
+		margin: 0 !important;
+	}
+	.banner-text{
+		left: 0 !important;
+	}
+	.banner-text h3{
+		font-size: 2.8rem !important;
+	}	
+	.banner-text span{
+		font-size: 2.5rem !important;
+	}
+
+}
+.biaoti p{
+	font-size: 1.5rem;
+}
+
+
+
+
+
+.banner{
+	height: 550px;
+	width: 100%;
+}
+.banner-text{
+	color: #fff;
+	position: relative;
+	top: -350px;
+	left: 0;
+	text-align: center;
+}
+.banner-text h3{
+
+	font-size: 7rem;
+}
+.banner-text span{
+	font-size: 4rem;
+}
+
+
+
+.kefu {
+	margin-top: 50px;
+	text-align: center;
+}
+.kefu img{
+	width: 100%;
+}
+
+.conten-box-btm{
+	height: 550px;
+}
+
+.conten-box-btm-text{
+	position: relative;	
+	color: #fff;
+	text-align: center;
+	top: 50px;
+}
+.conten-box-btm-text h2{
+	text-align: center;
+	font-size: 4rem;
+	margin-bottom: 20px;
+}
+.conten-box-btm-text span{
+	font-size: 2rem;
+}
+.conten-box-btm-text p{
+	font-size: 1.8rem;
+	margin-left: 30%;
+	width: 800px;
+}
+
+.conten-box-btm-bg{
+	position: absolute;
+	z-index: -1;
+	left: 0;
+	height: 500px;
+	width: 100%;
+}
+.conten-box-btm-bg img{
+	height: 500px;
+	width: 100%;
+	overflow: hidden;
+	
+}

@@ -1,0 +1,60 @@
+@import '../../../../../index.scss';
+
+.root {
+  width: 100%;
+  > div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  :global {
+    .ant-switch {
+      color: #48b7e5 !important;
+      background: #bee2f1;
+      &:after {
+        background: #48b7e5;
+      }
+    }
+    .ant-switch-checked {
+      color: #48b7e5 !important;
+      background: #bee2f1;
+      &:after {
+        background: #48b7e5;
+      }
+    }
+  }
+}
+
+.actionButtons {
+  display: flex;
+  width: auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.actionBtn {
+  height: rem(30px);
+  padding: 0 rem(5px) !important;
+  font-size: rem(13px) !important;
+  margin-right: rem(5px);
+  > i {
+    padding-right: rem(5px);
+    font-size: $font-title-size;
+  }
+}
+
+.rescueDetail {
+  font-size: $font-com-size;
+  font-weight: normal;
+  color: $font-com-color;
+  padding: rem(10px) 0;
+  border-bottom: 1px solid $big-border-color;
+  span {
+    margin-right: rem(20px);
+  }
+}
+
+.rescueNum {
+  font-size: $font-title-size;
+  font-weight: bold;
+}

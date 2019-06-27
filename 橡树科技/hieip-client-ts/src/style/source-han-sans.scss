@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'Source Han Sans';
+  src: url('./fonts/KaiGenGothicSC-Normal.ttf');
+}
+
+@media only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 192dpi) {
+  html, body, div, span, p, button, i, input, textarea, ::-webkit-input-placeholder {
+    font-family: 'Source Han Sans', sans-serif;
+  }
+}

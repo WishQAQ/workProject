@@ -1,0 +1,5 @@
+.wit-cell-title {
+  margin-bottom: 32rpx;
+  font-size: 28rpx;
+  color: #98989a;
+}

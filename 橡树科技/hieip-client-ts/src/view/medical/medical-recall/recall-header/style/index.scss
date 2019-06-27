@@ -1,0 +1,217 @@
+@import '../../../../../index.scss';
+
+.dropdownClassName {
+  :global {
+    .ant-select-dropdown {
+      background-color: $white-block;
+    }
+    .ant-select-dropdown-menu-item {
+      font-size: $font-com-size;
+      color: $font-main-color;
+      &:hover {
+        background-color: $list;
+      }
+    }
+    .ant-select-dropdown-menu-item-active {
+      background-color: $list;
+    }
+  }
+}
+
+.recallHeader {
+  width: 100%;
+  height: rem(30px);
+  :global {
+    .ant-input {
+      font-size: $font-com-size;
+      color: $font-main-color;
+      padding: 0 rem(8px);
+      border-color: $big-border-color;
+      &::-webkit-input-placeholder {
+        font-size: $font-com-size;
+        color: $font-un-color;
+      }
+    }
+  }
+  .numInput {
+    width: rem(184px);
+    height: rem(30px);
+    float: left;
+    margin-right: rem(6px);
+    .innerInput {
+      height: 100%;
+      background-color: $white-block;
+      &:focus {
+        border-color: #3db5e7;
+      }
+    }
+  }
+  .selItem {
+    width: rem(181px);
+    height: rem(30px);
+    margin: 0 rem(6px) 0 0;
+    background-color: $white-block;
+    display: flex;
+    .selLabel {
+      height: 100%;
+      border: rem(1px) solid $big-border-color;
+      border-right: none;
+      border-top-left-radius: rem(4px);
+      border-bottom-left-radius: rem(4px);
+      padding-right: 0;
+      > span {
+        padding: 0 rem(8px);
+        line-height: rem(28px);
+        color: $font-main-color;
+        font-size: $font-com-size;
+      }
+    }
+    .selItemSel {
+      flex: auto;
+      height: 100%;
+      :global {
+        .ant-select {
+          width: 100%;
+        }
+        .ant-select-selection {
+          height: rem(30px);
+          font-size: $font-com-size;
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+          border-color: $big-border-color;
+          border-left-color: $input-split-color;
+          background-color: $white-block;
+          color: $font-main-color;
+        }
+        .ant-select-focused > .ant-select-selection {
+          border-color: $font-select-color !important;
+        }
+        .ant-select-selection__rendered {
+          margin: 0 rem(8px);
+        }
+        .ant-select-arrow:before {
+          font-size: rem(8px);
+          color: $font-tip-color;
+        }
+      }
+    }
+  }
+  .timePicker {
+    width: rem(240px);
+    height: 100%;
+    float: left;
+    margin-right: rem(6px);
+    :global {
+      .pt-popover-open {
+        > .pt-control-group {
+          border-color: $font-select-color;
+          box-shadow: 0 0 0 2px rgba(24, 144, 255, .2);
+          &:after {
+            color: $font-select-color !important;
+          }
+        }
+      }
+      .pt-control-group {
+        width: 100%;
+        height: rem(30px);
+        border: rem(1px) solid $big-border-color;
+        border-radius: rem(4px);
+        overflow: hidden;
+        background-color: $white-block;
+        &:after {
+          content: '\E6BB';
+          font-family: 'anticon', sans-serif;
+          font-size: $font-com-size;
+          color: rgba(0, 0, 0, .25);
+          display: inline-block;
+          line-height: rem(28px);
+          position: absolute;
+          right: rem(8px);
+          z-index: 9;
+        }
+        .pt-input-group:nth-child(2) {
+          margin-left: rem(10px) !important;
+          &::before {
+            left: rem(-8px);
+            font-size: $font-com-size;
+            color: $font-un-color;
+            line-height: rem(30px);
+          }
+        }
+      }
+      .pt-input-group {
+        width: calc((100% - 38px) / 2);
+        &:after {
+          display: none;
+        }
+      }
+      .pt-input {
+        height: rem(28px) !important;
+        line-height: rem(28px);
+        border: none !important;
+        background-color: $white-block;
+        text-align: center;
+        color: $font-main-color;
+        font-size: $font-com-size;
+        &:focus {
+          box-shadow: none !important;
+        }
+        &::-webkit-input-placeholder {
+          color: $font-un-color;
+        }
+      }
+    }
+  }
+
+  //按钮样式
+  .btn {
+    width: rem(56px);
+    height: rem(30px);
+    padding: 0;
+    font-weight: normal;
+    font-size: $font-com-size;
+    border-color: #c4c4c4;
+    color: $font-com-color;
+    background-color: $input-split-color;
+    margin-right: rem(24px);
+    &:focus {
+      background-color: $input-split-color;
+      border-color: #c4c4c4;
+      color: $font-com-color;
+    }
+    &:hover {
+      border-color: #3091b9;
+      color: #fff;
+      background-color: #37a3d0;
+    }
+    :global {
+      .iconfont {
+        font-size: $font-com-size;
+      }
+    }
+    span {
+      margin-left: rem(2px) !important;
+    }
+    i {
+      vertical-align: initial !important;
+    }
+  }
+  .greenBtn {
+    background-color: #3db5e7;
+    border-color: #2f9fce;
+    color: #fff;
+    &:focus {
+      background-color: #3db5e7;
+      border-color: #2f9fce;
+      color: #fff;
+    }
+    &:hover {
+      border-color: #3091b9;
+      color: #fff;
+      background-color: #37a3d0;
+    }
+  }
+  .recallBtn {
+    width: rem(77px);
+  }
+}

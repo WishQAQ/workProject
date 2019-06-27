@@ -1,0 +1,119 @@
+/** ------ 颜色配置 ------ **/
+/* 主题色 */
+/* white */
+/* black */
+/* 错误 */
+/* 微信 */
+/* warning */
+/* success */
+/* info */
+/* 一级文本 */
+/* 二级文本 */
+/* 三级文本 */
+/* 四级提示性文本，不可用状态 */
+/* 分割线,提醒灯 */
+/* 浅色分割线,提醒灯 */
+/* 底色层 */
+/* 点击交互颜色 */
+.wit-btn {
+  position: relative;
+  display: inline-block;
+  border-radius: 2px;
+  text-align: center;
+  -webkit-appearance: none;
+}
+.wit-btn .wit-dot {
+  margin-right: 5px;
+  position: relative;
+  top: 1.5px;
+}
+.wit-btn:active {
+  opacity: .8;
+}
+.wit-btn-square {
+  border-radius: 0;
+}
+.wit-btn-round {
+  border-radius: 10em;
+}
+.wit-btn-large {
+  padding: 12px 24px;
+  width: 100%;
+  font-size: 16px;
+}
+.wit-btn-normal {
+  padding: 8px 18px;
+  font-size: 14px;
+}
+.wit-btn-small {
+  padding: 4px 8px;
+  min-width: 60px;
+  font-size: 12px;
+}
+.wit-btn-mini {
+  display: inline-block;
+  padding: 2px 4px;
+  font-size: 10px;
+}
+.wit-btn-default {
+  color: #323233;
+  background-color: #fff;
+  border: 1px solid #f0f0f0;
+}
+.wit-btn-gray {
+  color: #a6a7a8;
+  background-color: #f2f2f2;
+  border: 1px solid #f2f2f2;
+}
+.wit-btn-gray:active {
+  opacity: 1;
+}
+.wit-btn-primary {
+  color: #fff;
+  background-color: #f56d19;
+  border: 1px solid #f56d19;
+}
+.wit-btn-primary.wit-btn-plain {
+  color: #f56d19;
+}
+.wit-btn-success {
+  color: #fff;
+  background-color: #87d068;
+  border: 1px solid #87d068;
+}
+.wit-btn-success.wit-btn-plain {
+  color: #87d068;
+}
+.wit-btn-info {
+  color: #fff;
+  background-color: #1883fc;
+  border: 1px solid #1883fc;
+}
+.wit-btn-info.wit-btn-plain {
+  color: #1883fc;
+}
+.wit-btn-danger {
+  color: #fff;
+  background-color: #f44;
+  border: 1px solid #f44;
+}
+.wit-btn-danger.wit-btn-plain {
+  color: #f44;
+}
+.wit-btn-warning {
+  color: #fff;
+  background-color: #ff7a02;
+  border: 1px solid #ff7a02;
+}
+.wit-btn-warning.wit-btn-plain {
+  color: #ff7a02;
+}
+.wit-btn-disabled {
+  opacity: .5;
+}
+.wit-btn-disabled:active {
+  opacity: .5;
+}
+.wit-btn-plain {
+  background-color: #fff;
+}

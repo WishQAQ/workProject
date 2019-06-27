@@ -1,0 +1,15 @@
+{
+  "component": true,
+  "usingComponents": {
+    "wit-icon": "/components/wit-icon/index",
+    "wit-btn": "/components/wit-btn/index",
+    "wit-avatar": "/components/wit-avatar/index",
+    "header-bar": "./comp/header-bar/header-bar",
+    "bootstrap": "./comp/bootstrap/bootstrap",
+    "filter": "./comp/filter/filter",
+    "item": "./comp/item/item",
+    "selected-pop": "./comp/selected-pop/selected-pop",
+    "list": "mini-antui/es/list/index",
+    "list-item": "mini-antui/es/list/list-item/index"
+  }
+}

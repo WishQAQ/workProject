@@ -1,0 +1,42 @@
+@import '../../../../../../index.scss';
+
+.content {
+  height: calc(100% - 10px);
+  box-shadow: 0 0 8px rgba(0, 0, 0, .2);
+}
+
+.title {
+  margin: 0;
+  background-color: #5591AA;
+  line-height: rem(26px);
+  color: #fff;
+  font-weight: bold;
+  text-indent: rem(8px);
+}
+
+.hintInput {
+  margin: rem(10px) rem(8px);
+  width: calc(100% - 16px);
+  height: rem(26px);
+  i {
+    font-size: $font-title-size;
+  }
+  span {
+    background-color: $white-block;
+  }
+  :global {
+    .ant-input-sm {
+      height: rem(26px);
+      font-size: $font-com-size;
+    }
+    .ant-input-group-addon {
+      padding: 0 rem(8px)
+    }
+  }
+}
+
+.agTable {
+  width: 100%;
+  height: calc(100% - 68px);
+  border-top: 1px solid #cdcdcd;
+}

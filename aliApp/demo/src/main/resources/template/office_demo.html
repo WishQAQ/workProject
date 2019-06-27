@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+<head>
+    <title>test22.doc</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+</head>
+
+<body style="height: 100%; margin: 0;">
+<div id="placeholder" style="height: 100%"></div>
+<script type="text/javascript" src="https://office.ls123.site:449/web-apps/apps/api/documents/api.js"></script>
+
+<script type="text/javascript">
+    var onAppReady = function() {
+        console.log("ONLYOFFICE Document Editor is ready");
+    };
+    var onCollaborativeChanges = function () {
+        console.log("The document changed by collaborative user");
+    };
+    var onDocumentReady = function() {
+        console.log("Document is loaded");
+    };
+    var onDocumentStateChange = function (event) {
+        if (event.data) {
+            console.log("The document changed");
+        } else {
+            console.log("Changes are collected on document editing service");
+        }
+    };
+    var onDownloadAs = function (event) {
+        console.log("ONLYOFFICE Document Editor create file: " + event.data);
+    };
+    var onError = function (event) {
+        console.log("ONLYOFFICE Document Editor reports an error: code " + event.data.errorCode + ", description " + event.data.errorDescription);
+    };
+    var onOutdatedVersion = function () {
+        location.reload(true);
+    };
+    var onRequestEditRights = function () {
+
+        var he=location.href.replace("view","edit");
+        location.href=he;
+    };
+
+
+    var onRequestHistory = function() {
+        docEditor.refreshHistory({
+            "currentVersion":  10 ,
+            "history":[{"serverVersion":"5.1.2","changes":[{"created":"2018-06-26 02:55:03","user":{"id":"uid-1529981449822","name":"221.4.63.221"}}],"created":"2018-06-26T02:55:31.504Z","changesurl":"https://office.ls123.site/cache/files/1529980565915131100_3220/changes.zip/changes.zip?md5=6Wbc9hexq5Sj7hv0FRqz6A==\u0026expires=1529982663\u0026disposition=attachment\u0026ooname=output.zip","fileurl":"https://office.ls123.site/cache/files/1529980565915131100_3220/output.docx/output.docx?md5=faAJciw0tjqersoLMbXtNw==\u0026expires=1529982663\u0026disposition=attachment\u0026ooname=output.docx","key":"1529980565915131100","user":{"id":"0","name":""},"version":1},{"serverVersion":"5.1.2","changes":[{"created":"2018-06-26 02:57:23","user":{"id":"uid-1529981834903","name":"59.42.128.226"}}],"created":"2018-06-26T02:58:04.062Z","changesurl":"https://office.ls123.site/cache/files/1529981799763669800_1677/changes.zip/changes.zip?md5=jEuO0GlwpBa4Fsb6pezq-w==\u0026expires=1529982896\u0026disposition=attachment\u0026ooname=output.zip","fileurl":"https://office.ls123.site/cache/files/1529981799763669800_1677/output.docx/output.docx?md5=ne7Hk36wTqSiMme_jY61yw==\u0026expires=1529982896\u0026disposition=attachment\u0026ooname=output.docx","key":"1529981799763669800","user":{"id":"0","name":""},"version":2},{"serverVersion":"5.1.3","changes":[{"created":"2018-08-13 09:08:30","user":{"id":"uid-1534151294481","name":"117.28.62.109"}}],"created":"2018-08-13T09:08:36.314Z","changesurl":"http://39.104.112.149/ds-vpath/cache/files/1529981996255154900_9506/changes.zip/changes.zip?md5=g18FwDld7Nw9b52-z73qYw==\u0026expires=1534152229\u0026disposition=attachment\u0026ooname=output.zip","fileurl":"http://39.104.112.149/ds-vpath/cache/files/1529981996255154900_9506/output.docx/output.docx?md5=ugIFSIHaXbtLdECZ1HOwyQ==\u0026expires=1534152229\u0026disposition=attachment\u0026ooname=output.docx","key":"1529981996255154900","user":{"id":"0","name":""},"version":3},{"serverVersion":"5.1.3","changes":[{"created":"2018-08-15 16:37:39","user":{"id":"uid-1534351040439","name":"124.204.200.50"}}],"created":"2018-08-15T16:37:57.734Z","changesurl":"http://39.104.112.149/ds-vpath/cache/files/1534151328206518300_5751/changes.zip/changes.zip?md5=6wlei3FLQ2XQATLfwXBcTA==\u0026expires=1534352364\u0026disposition=attachment\u0026ooname=output.zip","fileurl":"http://39.104.112.149/ds-vpath/cache/files/1534151328206518300_5751/output.docx/output.docx?md5=pEKX5mir0v_kAc71xBDGFQ==\u0026expires=1534352364\u0026disposition=attachment\u0026ooname=output.docx","key":"1534151328206518300","user":{"id":"0","name":""},"version":4},{"serverVersion":"5.1.3","changes":[{"created":"2018-08-21 23:02:06","user":{"id":"uid-1534892437920","name":"123.170.93.17"}}],"created":"2018-08-21T23:02:06.476Z","changesurl":"http://39.104.112.149/ds-vpath/cache/files/1534351463696007100_3567/changes.zip/changes.zip?md5=3NtDlalO0KUJ-xTY75kB1Q==\u0026expires=1534893441\u0026disposition=attachment\u0026ooname=output.zip","fileurl":"http://39.104.112.149/ds-vpath/cache/files/1534351463696007100_3567/output.docx/output.docx?md5=FOLRjSL7m9E-MjmY5G_EFw==\u0026expires=1534893441\u0026disposition=attachment\u0026ooname=output.docx","key":"1534351463696007100","user":{"id":"0","name":""},"version":5},{"serverVersion":"5.1.3","changes":[{"created":"2018-08-29 14:01:51","user":{"id":"uid-1535551110408","name":"221.222.131.82"}}],"created":"2018-08-29T14:02:25.592Z","changesurl":"http://39.104.112.149/ds-vpath/cache/files/1534892540631576000_9983/changes.zip/changes.zip?md5=Tn3-Z_n9kuYce5GDmFtjaA==\u0026expires=1535552310\u0026disposition=attachment\u0026ooname=output.zip","fileurl":"http://39.104.112.149/ds-vpath/cache/files/1534892540631576000_9983/output.docx/output.docx?md5=_nLhaA_CSdhV3U3nkc5zrQ==\u0026expires=1535552310\u0026disposition=attachment\u0026ooname=output.docx","key":"1534892540631576000","user":{"id":"0","name":""},"version":6},{"serverVersion":"5.1.2","changes":[{"created":"2018-09-17 03:30:29","user":{"id":"uid-1537155005412","name":"113.87.131.213"}}],"created":"2018-09-17T03:31:21.827Z","changesurl":"https://office.ls123.site:449/cache/files/1535551409614127900_4359/changes.zip/changes.zip?md5=Fc62icRtSDVz3GTsJZWp1Q==\u0026expires=1537157498\u0026disposition=attachment\u0026ooname=output.zip","fileurl":"https://office.ls123.site:449/cache/files/1535551409614127900_4359/output.docx/output.docx?md5=AKc4Edr-fUYlNC-3r7PC6A==\u0026expires=1537157498\u0026disposition=attachment\u0026ooname=output.docx","key":"1535551409614127900","user":{"id":"0","name":""},"version":7},{"serverVersion":"5.1.2","changes":[{"created":"2018-09-27 02:58:14","user":{"id":"uid-1538017073238","name":"121.32.138.28"}}],"created":"2018-09-27T02:58:14.534Z","changesurl":"https://office.ls123.site:449/cache/files/1537156598896801100_2355/changes.zip/changes.zip?md5=x7vYvIXWgxYInyYNa8X71g==\u0026expires=1538021097\u0026disposition=attachment\u0026ooname=output.zip","fileurl":"https://office.ls123.site:449/cache/files/1537156598896801100_2355/output.docx/output.docx?md5=VUX33Q5YM-UNM2KsF3lu7w==\u0026expires=1538021097\u0026disposition=attachment\u0026ooname=output.docx","key":"1537156598896801100","user":{"id":"0","name":""},"version":8},{"serverVersion":"5.1.2","changes":[{"created":"2018-10-16 04:35:37","user":{"id":"uid-1539664488191","name":"117.136.46.108"}}],"created":"2018-10-16T04:35:58.395Z","changesurl":"https://office.ls123.site:449/cache/files/1538020205981777200_3357/changes.zip/changes.zip?md5=LVChbGzsxW4YSdmyQiuo2g==\u0026expires=1539665496\u0026disposition=attachment\u0026ooname=output.zip","fileurl":"https://office.ls123.site:449/cache/files/1538020205981777200_3357/output.docx/output.docx?md5=JJwdB9hsqg1DAFP6eR1Ceg==\u0026expires=1539665496\u0026disposition=attachment\u0026ooname=output.docx","key":"1538020205981777200","user":{"id":"0","name":""},"version":9},{"serverVersion":"5.1.2","changes":[{"created":"2018-10-19 02:55:04","user":{"id":"uid-1539917711669","name":"218.94.101.106"}}],"created":"2018-10-19T02:55:04.182Z","changesurl":"https://office.ls123.site:449/cache/files/1539664595742502400_5333/changes.zip/changes.zip?md5=vtVqflzZARTVSH8fZCYoJg==\u0026expires=1539918742\u0026disposition=attachment\u0026ooname=output.zip","fileurl":"https://office.ls123.site:449/cache/files/1539664595742502400_5333/output.docx/output.docx?md5=VnR-7ub1kjFWbx3646y6LQ==\u0026expires=1539918742\u0026disposition=attachment\u0026ooname=output.docx","key":"1539664595742502400","user":{"id":"0","name":""},"version":10}],
+        });
+    };
+
+    var onRequestHistoryClose = function() {
+        document.location.reload();
+    };
+
+    var onRequestHistoryData = function(event) {
+        var version = event.data;
+        var history=[{"serverVersion":"5.1.2","changes":[{"created":"2018-06-26 02:55:03","user":{"id":"uid-1529981449822","name":"221.4.63.221"}}],"created":"2018-06-26T02:55:31.504Z","changesurl":"https://office.ls123.site/cache/files/1529980565915131100_3220/changes.zip/changes.zip?md5=6Wbc9hexq5Sj7hv0FRqz6A==\u0026expires=1529982663\u0026disposition=attachment\u0026ooname=output.zip","fileurl":"https://office.ls123.site/cache/files/1529980565915131100_3220/output.docx/output.docx?md5=faAJciw0tjqersoLMbXtNw==\u0026expires=1529982663\u0026disposition=attachment\u0026ooname=output.docx","key":"1529980565915131100","user":{"id":"0","name":""},"version":1},{"serverVersion":"5.1.2","changes":[{"created":"2018-06-26 02:57:23","user":{"id":"uid-1529981834903","name":"59.42.128.226"}}],"created":"2018-06-26T02:58:04.062Z","changesurl":"https://office.ls123.site/cache/files/1529981799763669800_1677/changes.zip/changes.zip?md5=jEuO0GlwpBa4Fsb6pezq-w==\u0026expires=1529982896\u0026disposition=attachment\u0026ooname=output.zip","fileurl":"https://office.ls123.site/cache/files/1529981799763669800_1677/output.docx/output.docx?md5=ne7Hk36wTqSiMme_jY61yw==\u0026expires=1529982896\u0026disposition=attachment\u0026ooname=output.docx","key":"1529981799763669800","user":{"id":"0","name":""},"version":2},{"serverVersion":"5.1.3","changes":[{"created":"2018-08-13 09:08:30","user":{"id":"uid-1534151294481","name":"117.28.62.109"}}],"created":"2018-08-13T09:08:36.314Z","changesurl":"http://39.104.112.149/ds-vpath/cache/files/1529981996255154900_9506/changes.zip/changes.zip?md5=g18FwDld7Nw9b52-z73qYw==\u0026expires=1534152229\u0026disposition=attachment\u0026ooname=output.zip","fileurl":"http://39.104.112.149/ds-vpath/cache/files/1529981996255154900_9506/output.docx/output.docx?md5=ugIFSIHaXbtLdECZ1HOwyQ==\u0026expires=1534152229\u0026disposition=attachment\u0026ooname=output.docx","key":"1529981996255154900","user":{"id":"0","name":""},"version":3},{"serverVersion":"5.1.3","changes":[{"created":"2018-08-15 16:37:39","user":{"id":"uid-1534351040439","name":"124.204.200.50"}}],"created":"2018-08-15T16:37:57.734Z","changesurl":"http://39.104.112.149/ds-vpath/cache/files/1534151328206518300_5751/changes.zip/changes.zip?md5=6wlei3FLQ2XQATLfwXBcTA==\u0026expires=1534352364\u0026disposition=attachment\u0026ooname=output.zip","fileurl":"http://39.104.112.149/ds-vpath/cache/files/1534151328206518300_5751/output.docx/output.docx?md5=pEKX5mir0v_kAc71xBDGFQ==\u0026expires=1534352364\u0026disposition=attachment\u0026ooname=output.docx","key":"1534151328206518300","user":{"id":"0","name":""},"version":4},{"serverVersion":"5.1.3","changes":[{"created":"2018-08-21 23:02:06","user":{"id":"uid-1534892437920","name":"123.170.93.17"}}],"created":"2018-08-21T23:02:06.476Z","changesurl":"http://39.104.112.149/ds-vpath/cache/files/1534351463696007100_3567/changes.zip/changes.zip?md5=3NtDlalO0KUJ-xTY75kB1Q==\u0026expires=1534893441\u0026disposition=attachment\u0026ooname=output.zip","fileurl":"http://39.104.112.149/ds-vpath/cache/files/1534351463696007100_3567/output.docx/output.docx?md5=FOLRjSL7m9E-MjmY5G_EFw==\u0026expires=1534893441\u0026disposition=attachment\u0026ooname=output.docx","key":"1534351463696007100","user":{"id":"0","name":""},"version":5},{"serverVersion":"5.1.3","changes":[{"created":"2018-08-29 14:01:51","user":{"id":"uid-1535551110408","name":"221.222.131.82"}}],"created":"2018-08-29T14:02:25.592Z","changesurl":"http://39.104.112.149/ds-vpath/cache/files/1534892540631576000_9983/changes.zip/changes.zip?md5=Tn3-Z_n9kuYce5GDmFtjaA==\u0026expires=1535552310\u0026disposition=attachment\u0026ooname=output.zip","fileurl":"http://39.104.112.149/ds-vpath/cache/files/1534892540631576000_9983/output.docx/output.docx?md5=_nLhaA_CSdhV3U3nkc5zrQ==\u0026expires=1535552310\u0026disposition=attachment\u0026ooname=output.docx","key":"1534892540631576000","user":{"id":"0","name":""},"version":6},{"serverVersion":"5.1.2","changes":[{"created":"2018-09-17 03:30:29","user":{"id":"uid-1537155005412","name":"113.87.131.213"}}],"created":"2018-09-17T03:31:21.827Z","changesurl":"https://office.ls123.site:449/cache/files/1535551409614127900_4359/changes.zip/changes.zip?md5=Fc62icRtSDVz3GTsJZWp1Q==\u0026expires=1537157498\u0026disposition=attachment\u0026ooname=output.zip","fileurl":"https://office.ls123.site:449/cache/files/1535551409614127900_4359/output.docx/output.docx?md5=AKc4Edr-fUYlNC-3r7PC6A==\u0026expires=1537157498\u0026disposition=attachment\u0026ooname=output.docx","key":"1535551409614127900","user":{"id":"0","name":""},"version":7},{"serverVersion":"5.1.2","changes":[{"created":"2018-09-27 02:58:14","user":{"id":"uid-1538017073238","name":"121.32.138.28"}}],"created":"2018-09-27T02:58:14.534Z","changesurl":"https://office.ls123.site:449/cache/files/1537156598896801100_2355/changes.zip/changes.zip?md5=x7vYvIXWgxYInyYNa8X71g==\u0026expires=1538021097\u0026disposition=attachment\u0026ooname=output.zip","fileurl":"https://office.ls123.site:449/cache/files/1537156598896801100_2355/output.docx/output.docx?md5=VUX33Q5YM-UNM2KsF3lu7w==\u0026expires=1538021097\u0026disposition=attachment\u0026ooname=output.docx","key":"1537156598896801100","user":{"id":"0","name":""},"version":8},{"serverVersion":"5.1.2","changes":[{"created":"2018-10-16 04:35:37","user":{"id":"uid-1539664488191","name":"117.136.46.108"}}],"created":"2018-10-16T04:35:58.395Z","changesurl":"https://office.ls123.site:449/cache/files/1538020205981777200_3357/changes.zip/changes.zip?md5=LVChbGzsxW4YSdmyQiuo2g==\u0026expires=1539665496\u0026disposition=attachment\u0026ooname=output.zip","fileurl":"https://office.ls123.site:449/cache/files/1538020205981777200_3357/output.docx/output.docx?md5=JJwdB9hsqg1DAFP6eR1Ceg==\u0026expires=1539665496\u0026disposition=attachment\u0026ooname=output.docx","key":"1538020205981777200","user":{"id":"0","name":""},"version":9},{"serverVersion":"5.1.2","changes":[{"created":"2018-10-19 02:55:04","user":{"id":"uid-1539917711669","name":"218.94.101.106"}}],"created":"2018-10-19T02:55:04.182Z","changesurl":"https://office.ls123.site:449/cache/files/1539664595742502400_5333/changes.zip/changes.zip?md5=vtVqflzZARTVSH8fZCYoJg==\u0026expires=1539918742\u0026disposition=attachment\u0026ooname=output.zip","fileurl":"https://office.ls123.site:449/cache/files/1539664595742502400_5333/output.docx/output.docx?md5=VnR-7ub1kjFWbx3646y6LQ==\u0026expires=1539918742\u0026disposition=attachment\u0026ooname=output.docx","key":"1539664595742502400","user":{"id":"0","name":""},"version":10}];
+        var fileUrl="";
+        var changeUrl="";
+        var key="";
+        var previousKey="";
+        var previousUrl="";
+        for(var i=history.length-1;i>=0;i--){
+            if (version==history[i].version){
+                changeUrl=history[i].changesurl;
+                fileUrl=history[i].fileurl;
+                key=history[i].key;
+                if(i>0){
+                    previousKey=history[i-1].key;
+                    previousUrl=history[i-1].fileurl;
+                }else{
+                    previousKey=key;
+                    previousUrl=fileUrl;
+                }
+                break;
+            }
+        }
+        var changeUrl2=changeUrl.replace(/\u0026/,"&");
+
+        docEditor.setHistoryData({
+            "changesUrl":changeUrl2,
+            "key": key,
+            "previous": {
+                "key": previousKey,
+                "url": previousUrl
+            },
+            "url": fileUrl,
+            "version": version
+        })
+    };
+
+
+    window.docEditor = new DocsAPI.DocEditor("placeholder",
+        {
+            "events": {
+                "onAppReady": onAppReady,
+                "onCollaborativeChanges": onCollaborativeChanges,
+                "onDocumentReady": onDocumentReady,
+                "onDocumentStateChange": onDocumentStateChange,
+                "onDownloadAs": onDownloadAs,
+                "onError": onError,
+                "onRequestEditRights": onRequestEditRights,
+                "onRequestHistory": onRequestHistory,
+                "onRequestHistoryClose": onRequestHistoryClose,
+                "onRequestHistoryData": onRequestHistoryData
+            },
+
+            "document": {
+                "fileType": "doc",
+                "key": "1539917841870419100",
+                "title": "test22.doc",
+                "url": "https://zsj.itdos.com/attachment/onlyoffice/test22.doc?hotqinsessionid=",
+                "info": {
+                    "author": "John Smith",
+                    "created": "2010-07-07 3:46 PM",
+                    "folder": "Example Files",
+                    "sharingSettings": [
+                        {
+                            "permissions": "Full Access",
+                            "user": "John Smith"
+                        },
+                        {
+                            "permissions": "Read Only",
+                            "user": "Kate Cage"
+                        },
+                        {
+                            "permissions": "Deny Access",
+                            "user": "Albet Tlanp"
+                        },
+
+                    ]
+                },
+                "permissions": {
+                    "comment":  true ,
+                    "download":  true ,
+                    "edit":  true ,
+                    "print":  true ,
+                    "review":  true
+                },
+            },
+            "documentType": "text",
+            "editorConfig": {
+                "callbackUrl": "https://zsj.itdos.com/url-to-callback?id=9",
+                "createUrl": "https://example.com/url-to-create-document/",
+                "user": {
+                    "id":  0 ,
+                    "name": "223.104.25.85"
+                },
+
+                "customization": {
+                    "chat": true,
+                    "commentAuthorOnly": false,
+                    "compactToolbar": false,
+                    "customer": {
+                        "address": "116# Tianshou Road,Guangzhou China",
+                        "info": "QQ504284",
+                        "logo": "https://zsj.itdos.com/static/img/user.jpg",
+                        "mail": "xc-qin@163.com",
+                        "name": "Qin Xiao Chuan",
+                        "www": "github.com/3xxx"
+                    },
+                    "feedback": {
+                        "url": "https://zsj.itdos.com/onlyoffice",
+                        "visible": true
+                    },
+                    "forcesave": false,
+                    "goback": {
+                        "text": "Go to Documents",
+                        "url": "https://zsj.itdos.com/onlyoffice"
+                    },
+                    "logo": {
+                        "image": "https://zsj.itdos.com/static/img/oo.png",
+                        "imageEmbedded": "https://zsj.itdos.com/static/img/oo.png",
+                        "url": "https://zsj.itdos.com/onlyoffice"
+                    },
+                    "showReviewChanges": false,
+                    "zoom": 100,
+                },
+                "embedded": {
+                    "embedUrl": "https://example.com/embedded?doc=exampledocument1.docx",
+                    "fullscreenUrl": "https://example.com/embedded?doc=exampledocument1.docx#fullscreen",
+                    "saveUrl": "https://example.com/download?doc=exampledocument1.docx",
+                    "shareUrl": "https://example.com/view?doc=exampledocument1.docx",
+                    "toolbarDocked": "top"
+                },
+
+                "lang": "zh-CN",
+                "mode": "edit",
+                "recent": [
+                    {
+                        "folder": "Example Files",
+                        "title": "exampledocument1.docx",
+                        "url": "https://example.com/exampledocument1.docx"
+                    },
+                    {
+                        "folder": "Example Files",
+                        "title": "exampledocument2.docx",
+                        "url": "https://example.com/exampledocument2.docx"
+                    }
+                ]
+            },
+            "height": "100%",
+            "type": "desktop",
+            "width": "100%"
+        });
+
+</script>
+</body>
+</html>
+
+

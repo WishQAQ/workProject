@@ -1,0 +1,14 @@
+@import '../../../../../index';
+
+.hurtList {
+  width: 100%;
+  height: 100%;
+  padding: rem(10px) rem(15px);
+}
+
+.smallTip {
+  float: right;
+  color: $first;
+  font-size: rem(12px);
+  margin-top: rem(3px);
+}

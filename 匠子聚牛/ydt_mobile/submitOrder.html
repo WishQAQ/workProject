@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,
+                    initial-scale=1.0,
+                    minimum-scale=1.0,
+                    maximum-scale=1.0,
+                    user-scalable=no"
+    >
+    <title>提交订单</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <link rel="stylesheet" href="style/swiper.min.css">
+</head>
+<body>
+<header>
+    <!--导航栏 start-->
+    <!--顶部栏-->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!--主导航栏-->
+            <div class="top_nav">
+                <div class="top_nav_left">
+                    <a href="">
+                        <img src="img/nav_arrow_left.png">
+                    </a>
+                </div>
+                <div class="top_nav_right">提交订单</div>
+            </div>
+        </div>
+    </nav>
+    <!--导航栏 stop-->
+</header>
+<section class="section_top_13vw">
+    <div class="submitOrder">
+        <!--标题-->
+        <div class="title">
+            <span class="title_line"></span>
+            <div class="title_text">收货地址</div>
+        </div>
+        <div class="shippingAddress_box">
+            <div class="container">
+                <div class="shippingAddress_box_left">
+                    <a href="">
+                        <img src="img/position.png">
+                    </a>
+                </div>
+                <div class="shippingAddress_box_center">
+                    <div class="box_center_top">
+                        <p>收货人：小花</p>
+                        <p>18365654545</p>
+                    </div>
+                    <div class="box_center_bottom">收货地址：重庆市沙坪坝区联芳街道怡景</div>
+                </div>
+                <div class="shippingAddress_box_right">
+                    <a href="">
+                        <img src="img/edit.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="submitOrder">
+        <!--标题-->
+        <div class="title">
+            <span class="title_line"></span>
+            <div class="title_text">商品信息</div>
+        </div>
+        <div class="commodity_box">
+            <div class="container">
+                <div class="commodity_box_left">
+                    <a href="">
+                        <div class="commodity_box_left_img">
+                            <img src="img/product.jpg">
+                        </div>
+                        <div class="commodity_box_left_text">
+                            奕德堂高端品牌牙膏
+                        </div>
+                    </a>
+                </div>
+                <div class="commodity_box_right">
+                    <p>&yen;480</p>
+                    <p>520</p>
+                    <p>x1</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="submitOrder">
+        <!--标题-->
+        <div class="title">
+            <span class="title_line"></span>
+            <div class="title_text">配送方式</div>
+        </div>
+        <div class="distribution_box">
+            <div class="container">
+            <!-- 下拉框组 -->
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle"
+                        type="button"
+                        id="dropdownMenu1"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="true"
+                >
+                    请选择配送方式
+                    <span class="caret">
+                        <img src="img/dropdown_btn.png">
+                    </span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="#">配送方式1</a></li>
+                    <li><a href="#">配送方式2</a></li>
+                    <li><a href="#">配送方式3</a></li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="submitOrder">
+        <!--标题-->
+        <div class="title">
+            <span class="title_line"></span>
+            <div class="title_text">留言</div>
+        </div>
+        <div class="message_box">
+            <div class="container">
+                <div class="message_left">
+                    买家留言：
+                </div>
+                <div class="message_right">
+                    预留留言信息位置预留留言信息位置预留留言信息位置
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--底部栏-->
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+            <!--底部导航栏-->
+            <div class="submitOrder_nav_bottom">
+                <div class="bottom_nav_money">
+                    总价：&yen;<span>1999.00</span>
+                </div>
+                <div class="bottom_nav_btn">
+                    <a href="">
+                        提交订单
+                    </a>
+                </div>
+            </div>
+    </nav>
+
+</section>
+
+<!--引入Jquery以及bootstrap组件-->
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

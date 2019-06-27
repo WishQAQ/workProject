@@ -1,0 +1,24 @@
+@import url("assets/styles/mixin/index-less.acss");
+
+page {
+  background: #f2f2f2;
+}
+.block {
+  padding: 0 16px 16px;
+  margin-bottom: 16px;
+  border-bottom: 1x solid #ccc;
+  background: #fff;
+}
+.tit {
+  padding: 16px 0;
+  font-size: 18px;
+}
+.sub-title{
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(69,90,100,.6);
+  padding: 15px 0;
+}
+.btn {
+  background: linear-gradient(left, #fd9d16, #f56d19);
+}

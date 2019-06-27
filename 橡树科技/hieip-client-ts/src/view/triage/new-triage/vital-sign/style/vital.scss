@@ -1,0 +1,93 @@
+@import '../../../../../index';
+
+.vitalMain {
+  float: left;
+  width: 100%;
+  height: 100%;
+  padding-bottom: rem(12px);
+  >div{
+    background: $white-block;
+  }
+  input{
+    background: $white-block;
+  }
+}
+
+.elementP {
+  border-radius: rem(10px) !important;
+}
+
+.elementP > div > p {
+  padding-top: rem(1px);
+}
+
+// 生命体征监护仪select
+.instrument {
+  float: left;
+  margin-left: rem(20px) !important;
+  width: rem(148px) !important;
+  color: $first !important;
+  div[class*='ant-select-selection--single'] {
+    height: rem(26px) !important;
+  }
+  div[class*='ant-select-selection__rendered'] {
+    line-height: rem(23px) !important;
+  }
+}
+
+.needGetData {
+  // float: right;
+  margin-left: rem(6px);
+  cursor: pointer;
+  transition: all linear .1s;
+  span {
+    font-size: rem(12px);
+  }
+  &:hover {
+    color: $font-select-color;
+  }
+}
+
+.inputContainer {
+  width: 100%;
+  padding: rem(5px) 0 0 rem(12px);
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.inputBtn {
+  display: inline-block;
+  margin-right: 2%;
+  height: auto;
+  margin-bottom: rem(5px);
+}
+
+.vitalLabel {
+  padding: 0 !important;
+  display: block !important;
+  font-size: rem(12px);
+  font-weight: bold;
+  margin-bottom: rem(3px);
+  margin-left: rem(5px);
+}
+
+.getData {
+  width: 87px;
+  height: 26px !important;
+  margin-left: 4px !important;
+  padding: 0 !important;
+  background-color: #63bbc6 !important;
+  border: 0 !important;
+  color: white !important;
+  i {
+    margin-right: 3px;
+  }
+  &:focus {
+    background-color: #63bbc6 !important;
+    border: 0 !important;
+  }
+  &:hover {
+    background-color: $font-select-color !important;
+    border: 0 !important;
+  }
+}

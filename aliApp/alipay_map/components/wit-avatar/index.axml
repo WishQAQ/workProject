@@ -1,0 +1,16 @@
+<view
+  onTap="click"
+  class="wit-avatar {{shape == 'square' ? 'wit-avatar-square' : ''}} {{classes}}"
+  style="height: {{size}}; line-height: {{size}}; width: {{size}}; color: {{color}}; background: {{bgColor}}">
+  <text a:if="{{text}}">{{text}}</text>
+  <wit-icon
+    a:if="{{icon}}"
+    type="{{icon}}"
+    size="{{iconSize}}"
+    color="{{iconColor}}"/>
+  <image
+    a:if="{{src}}"
+    src="{{src}}"
+    style="width: {{size}}; height: {{size}}"
+    mode="scaleToFill"/>
+</view>

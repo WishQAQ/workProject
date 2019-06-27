@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,
+                    initial-scale=1.0,
+                    minimum-scale=1.0,
+                    maximum-scale=1.0,
+                    user-scalable=no"
+    >
+    <title>首页</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <link rel="stylesheet" href="style/swiper.min.css">
+</head>
+<body>
+<header>
+    <!--导航栏 start-->
+    <nav class="index_nav navbar navbar-default navbar-fixed-bottom">
+        <div class="container-fluid">
+            <!--主导航栏-->
+            <div>
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="index.html">
+                            <div class="nav_img">
+                                <img src="img/home_default.png">
+                            </div>
+                            首页
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="order.html">
+                            <div class="nav_img">
+                                <img src="img/product_default.png">
+                            </div>
+                            产品中心
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="nav_img">
+                                <img src="img/shoppingCart_default.png">
+                            </div>
+                            购物车
+                        </a>
+                    </li>
+                    <li>
+                        <a href="agencyCenter.html">
+                            <div class="nav_img">
+                                <img src="img/my_default.png">
+                            </div>
+                            代理中心
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--导航栏 stop-->
+</header>
+<section>
+    <!--轮播图 start-->
+    <div class="banner">
+        <div class="swiper-container_1 banner">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/banner_1.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/banner_1.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/banner_1.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/banner_1.jpg" />
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination_1"></div>
+        </div>
+    </div>
+    <!--轮播图 stop-->
+
+
+    <!--标题-->
+    <div class="title">
+        <span class="title_line"></span>
+        <div class="title_text">产品列表</div>
+    </div>
+    <!--主体内容 start-->
+    <div class="container">
+        <div class="index_main">
+
+            <div class="main_box col-xs-6">
+                <div class="main_box_img">
+                    <img src="img/product.jpg">
+                </div>
+                <div class="main_box_text">
+                    <p class="main_box_text_txt">奕德堂高端品牌牙膏</p>
+                    <div class="main_box_bottom">
+                        <div class="main_box_bottom_text">
+                            <p>&yen;480</p>
+                            <p>520</p>
+                        </div>
+
+                        <a href=""><img src="img/shoppingCart.png"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main_box col-xs-6">
+                <div class="main_box_img">
+                    <img src="img/product.jpg">
+                </div>
+                <div class="main_box_text">
+                    <p class="main_box_text_txt">奕德堂高端品牌牙膏</p>
+                    <div class="main_box_bottom">
+                        <div class="main_box_bottom_text">
+                            <p>&yen;480</p>
+                            <p>520</p>
+                        </div>
+
+                        <a href=""><img src="img/shoppingCart.png"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main_box col-xs-6">
+                <div class="main_box_img">
+                    <img src="img/product.jpg">
+                </div>
+                <div class="main_box_text">
+                    <p class="main_box_text_txt">奕德堂高端品牌牙膏</p>
+                    <div class="main_box_bottom">
+                        <div class="main_box_bottom_text">
+                            <p>&yen;480</p>
+                            <p>520</p>
+                        </div>
+
+                        <a href=""><img src="img/shoppingCart.png"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main_box col-xs-6">
+                <div class="main_box_img">
+                    <img src="img/product.jpg">
+                </div>
+                <div class="main_box_text">
+                    <p class="main_box_text_txt">奕德堂高端品牌牙膏</p>
+                    <div class="main_box_bottom">
+                        <div class="main_box_bottom_text">
+                            <p>&yen;480</p>
+                            <p>520</p>
+                        </div>
+
+                        <a href=""><img src="img/shoppingCart.png"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--主体内容 stop-->
+</section>
+
+<!--引入Jquery以及bootstrap组件-->
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+    var swiper = new Swiper('.swiper-container_1', {
+        pagination: {
+            el: '.swiper-pagination_1',
+        },
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        paginationClickable: true,
+        centeredSlides: true,
+        autoplay:true,
+        autoplayDisableOnInteraction: true
+    });
+</script>
+<div class="index_404" style="display: none">
+    <p style="text-align: center;font-size: 4vw; color: #999">请使用小于600像素的视口观看网页</p>
+</div>
+</body>
+</html>

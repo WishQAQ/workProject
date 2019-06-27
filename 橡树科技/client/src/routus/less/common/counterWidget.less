@@ -1,0 +1,59 @@
+/**
+ * Created by liulingli on 2017/6/23.
+ * desc : 数字图文显示部件样式
+ */
+.layout-row {
+  display: flex;
+  -webkit-box-orient: horizontal;
+  flex-direction: row;
+
+  .oak-counter-wedget {
+    flex: 1;
+    flex-wrap: wrap;
+    flex-direction: row;
+    -webkit-box-orient: horizontal;
+
+    &-card {
+      margin: 10px;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 2px 1px -1px rgba(0, 0, 0, .12);
+      border-radius: 3px;
+
+      &-content {
+        padding: 5px 10px;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+
+        .oak-icon {
+          display: inline-block;
+          width: auto;
+          margin: auto;
+          margin-left: 10px;
+          vertical-align: middle;
+        }
+        .layout-column {
+          display: inline-block;
+          margin-right: 10px;
+          vertical-align: baseline;
+          .count {
+            color: #FFF;
+            font-size: 46px;
+            letter-spacing: -.005em;
+            line-height: 46px;
+            font-weight: 600;
+            font-family: Georgia;
+            padding-bottom: 4px;
+            margin: 0;
+          }
+          .desc {
+            line-height: 30px;
+            font-size: 14px;
+            text-indent: 5px;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,116 @@
+.gradingScore {
+  position: relative;
+  /** 添加 */
+  .add {
+    position: absolute;
+    top: 0;
+    left: 96px;
+    height: 36px;
+    line-height: 36px;
+    cursor: pointer;
+    color: #fff;
+    .addIcon {
+      margin-right: 4px;
+    }
+    &:hover {
+      .addIcon {
+        color: #3C9AE4;
+      }
+    }
+  }
+  .addActive {
+    .addIcon {
+      color: #fff;
+    }
+  }
+  /** 分级原因 */
+  .reason {
+    position: absolute;
+    bottom: 0;
+    height: 200px;
+    width: 100%;
+    border-radius: 0 0 4px 4px;
+    margin-top: 10px;
+    border-top: 1px solid #E1E1E1;
+    > textarea {
+      color: #B2B2B2;
+      padding: 5px 10px;
+      width: 100%;
+      height: 100%;
+      outline: none;
+      border: none;
+      border-bottom: 4px;
+      border-radius: 0 12px;
+    }
+  }
+  /** 按钮 */
+  .btn {
+    padding: 10px 12px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #E1E1E1;
+    :global {
+      .ant-btn {
+        border: #13B5B3;
+        background-color: #13B5B3;
+        color: #fff;
+        margin-right: 10px;
+        height: 26px;
+        line-height: 1;
+        &:hover, &:focus {
+          color: #fff;
+          background-color: #3C9AE4;
+          border-color: #3C9AE4
+        }
+      }
+    }
+    .btnActive {
+      color: #fff;
+      background-color: #3C9AE4;
+      border-color: #3C9AE4
+    }
+  }
+
+  /** 分级评分选项卡 */
+  ul {
+    :global {
+      li {
+        font-weight: bold;
+        color: #000;
+        margin: 10px 10px;
+        :global {
+          input {
+            display: inline-block;
+            width: 300px;
+          }
+          .ant-btn {
+            border-color: #CDCDCD;
+          }
+        }
+      }
+    }
+
+  }
+}
+.btnTop{
+  button:focus{
+    background: #3C9AE4;
+    color: #fff;
+  }
+}
+
+.letOne{
+  background: #FF375B !important;
+  color: #fff !important;
+}
+.letTwo {
+  background: #FA8630 !important;
+  color: #fff !important;
+}
+.letThree {
+  background: #FFCC19 !important;
+  color: #fff !important;
+}
+.letFour {
+  background: #01BF9D !important;
+  color: #fff !important;
+}

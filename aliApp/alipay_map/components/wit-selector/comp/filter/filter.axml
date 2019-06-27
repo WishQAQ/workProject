@@ -1,0 +1,36 @@
+<view>
+  <view class="filters wit-1px-b">
+    <view class="item" onTap="chooseDate">
+      <view class="text text-clip">入党时间</view>
+    </view>
+    <view class="item {{filter.gender ? 'active' : null}}">
+      <picker
+        onChange="chooseGender"
+        range="{{dic.gender}}"
+        range-key="name">
+        <view class="text">性别</view>
+      </picker>
+    </view>
+    <view class="item {{filter.age ? 'active' : null}}" onTap="toggleAge">
+      <view class="text">年龄</view>
+    </view>
+    <view class="item {{filter.education ? 'active' : null}}">
+      <picker
+        onChange="chooseEducation"
+        value="{{filter.education}}"
+        range="{{dic.education}}"
+        range-key="name">
+        <view class="text">学历</view>
+      </picker>
+    </view>
+    <view class="item">
+      <view class="text">筛选<wit-icon icon="iconshaixuan1 icon-filter" size="10px"/></view>
+    </view>
+  </view>
+  <filter className="filter-age" show="{{show.age}}" max="{{6}}" onChange="chooseAge">
+    <view class="title">年龄阶段</view>
+    <block a:for="{{dic.ages}}">
+      <filter-item value="{{item.value}}" id="{{item.id}}" selected="{{item.selected}}"/>
+    </block>
+  </filter>
+</view>

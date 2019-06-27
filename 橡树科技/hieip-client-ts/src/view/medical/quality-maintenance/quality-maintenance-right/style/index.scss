@@ -1,0 +1,189 @@
+@import '../../../../../index';
+@import '../../style/common';
+
+.dropDownSel {
+  :global {
+    .ant-select-dropdown-menu-item {
+      font-size: $font-com-size;
+      color: $font-main-color;
+    }
+    .ant-select-dropdown-menu-item-active {
+      background-color: $list !important;
+    }
+    .ant-select-dropdown {
+      box-shadow: 0 0 8px rgba(0, 0, 0, .18) !important;
+    }
+  }
+}
+
+.qualityMaintenanceRight {
+  width: 100%;
+  height: 100%;
+  padding: rem(10px) rem(12px);
+  .basicInfo {
+    width: 100%;
+    height: rem(91px);
+    display: flex;
+    font-size: $font-com-size;
+  }
+  .basicInfoTitle {
+    width: rem(30px);
+    height: 100%;
+    background-color: #63bbc6;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    line-height: rem(14px);
+    padding: rem(15px) rem(5px);
+  }
+  .basicInfoForm {
+    width: calc(100% - 30px);
+    height: 100%;
+    border: rem(1px) solid $big-border-color;
+    border-left: none;
+    border-bottom-right-radius: rem(4px);
+    border-top-right-radius: rem(4px);
+    overflow: hidden;
+    :global {
+      .ant-input {
+        height: 29px;
+        border: transparent;
+        background: transparent;
+        border-radius: 0;
+        &:focus {
+          border: rem(1px) solid $font-select-color;
+        }
+      }
+    }
+    .labelStyle {
+      width: rem(93px);
+      height: 100%;
+      text-align: center;
+      line-height: 30px;
+      border-right: rem(1px) solid #ececec;
+      border-left: rem(1px) solid #ececec;
+      color: $font-main-color;
+    }
+    .bigLabelStyle {
+      width: rem(117px) !important;
+    }
+    .leftLabelStyle {
+      border-left: none;
+    }
+  }
+  .basicInfoFormRow {
+    width: calc(100% - 1px);
+    height: rem(30px);
+    display: flex;
+    border-bottom: rem(1px) solid #ececec;
+  }
+  .inputTable {
+    border: none;
+    > input {
+      border-color: #fff !important;
+      border-radius: 0;
+      &:focus, &:active {
+        border-color: #3db5e7 !important;
+      }
+    }
+  }
+  .basicInfoFormRowLast {
+    border-bottom: none;
+  }
+  .label {
+    height: rem(29px);
+    border: none;
+  }
+  .bigInput {
+    width: 40%;
+  }
+  .bigInput70 {
+    width: 70%;
+  }
+  .bigInput30 {
+    width: 30%;
+  }
+  .smallInput {
+    width: 30%;
+  }
+  // sselect
+  .sel {
+    width: 100%;
+    background-color: $white-block;
+    :global {
+      .ant-select-selection--single {
+        height: rem(29px);
+        border: transparent;
+        background: transparent;
+        border-radius: 0;
+        font-size: $font-com-size;
+        color: $font-main-color;
+        &:focus {
+          border: rem(1px) solid $font-select-color;
+        }
+      }
+      .ant-select-arrow {
+        font-size: rem(9px);
+        color: $font-un-color;
+      }
+    }
+  }
+
+  // 右边表格
+  .tableWrap {
+    width: 100%;
+    height: calc(100% - 101px);
+    margin-top: rem(10px);
+    border: rem(1px) solid #cdcdcd;
+    border-radius: rem(4px);
+  }
+  .tableHead {
+    background-color: #e1e1e1;
+    height: rem(29px);
+    line-height: rem(29px);
+    padding: 0 rem(9px);
+    border-bottom: rem(1px) solid $big-split-color;
+    .mainTitle {
+      color: $font-main-color;
+      font-weight: bold;
+      font-size: $font-com-size;
+      margin-right: rem(13px);
+    }
+    :global {
+      .ant-btn {
+        margin-right: rem(6px);
+      }
+    }
+  }
+  .tableContent {
+    width: 100%;
+    height: calc(100% - 29px);
+    :global {
+      .ag-cell {
+        .ag-react-container > div:after {
+          color: $font-un-color;
+          font-size: rem(9px);
+          top: rem(4px);
+        }
+        .ag-react-container ul {
+          margin-bottom: 0;
+          li {
+            color: $font-main-color;
+            &:hover {
+              background-color: $list;
+            }
+          }
+        }
+      }
+    }
+    .textCenter {
+      text-align: center;
+      height: 28px;
+      line-height: 25px;
+      font-size: 12px;
+    }
+    .visible {
+      overflow: visible !important;
+    }
+  }
+}

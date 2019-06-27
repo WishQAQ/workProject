@@ -1,0 +1,82 @@
+.wit-dot-spin {
+  transform: rotate(45deg);
+  animation: antRotate 1.2s infinite linear;
+}
+.wit-dot {
+  position: relative;
+  display: inline-block;
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+}
+.wit-dot text {
+  position: absolute;
+  display: block;
+  width: 9px;
+  height: 9px;
+  background-color: #f56d19;
+  border-radius: 100%;
+  transform: scale(0.75);
+  transform-origin: 50% 50%;
+  opacity: .3;
+  animation: antSpinMove 1s infinite linear alternate;
+}
+.wit-dot text:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+.wit-dot text:nth-child(2) {
+  top: 0;
+  right: 0;
+  animation-delay: .4s;
+}
+.wit-dot text:nth-child(3) {
+  right: 0;
+  bottom: 0;
+  animation-delay: .8s;
+}
+.wit-dot text:nth-child(4) {
+  bottom: 0;
+  left: 0;
+  animation-delay: 1.2s;
+}
+.wit-dot.wit-dot-sm text {
+  width: 6px;
+  height: 6px;
+}
+.wit-dot.wit-dot-lg text {
+  width: 14px;
+  height: 14px;
+}
+.wit-dot.wit-dot-white text {
+  background-color: #fff;
+}
+.wit-dot.wit-dot-sm {
+  font-size: 14px;
+  width: 14px;
+  height: 14px;
+}
+.wit-dot.wit-dot-sm text {
+  width: 6px;
+  height: 6px;
+}
+.wit-dot.wit-dot-lg {
+  font-size: 32px;
+  width: 32px;
+  height: 32px;
+}
+.wit-dot.wit-dot-lg text {
+  width: 14px;
+  height: 14px;
+}
+@keyframes antRotate {
+  to {
+    -webkit-transform: rotate(405deg);
+    transform: rotate(405deg);
+  }
+}
+@keyframes antSpinMove {
+  to {
+    opacity: 1;
+  }
+}

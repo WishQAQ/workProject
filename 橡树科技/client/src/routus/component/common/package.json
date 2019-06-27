@@ -1,0 +1,6 @@
+{
+  "name": "commom",
+  "version": "0.0.1",
+  "description": "公共模块",
+  "main": "./index.jsx"
+}

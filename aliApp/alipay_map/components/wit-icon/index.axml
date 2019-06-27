@@ -1,0 +1,5 @@
+<text
+  class="iconfont wit-iconfont {{type || icon}}"
+  style="color: {{color}}; font-size: {{size}}"
+  onTap="click">
+</text>

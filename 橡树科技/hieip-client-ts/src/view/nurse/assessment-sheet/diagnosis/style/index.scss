@@ -1,0 +1,127 @@
+@import '../../../../../index.scss';
+
+.diagnosis {
+  width: 100%;
+  height: calc(100% - 27px);
+  overflow: hidden;
+  display: flex;
+  padding-top: rem(10px);
+}
+
+.left, .right {
+  .myAgTable {
+    border: 1px solid $big-border-color;
+    border-radius: rem(4px);
+    height: calc(100% - 34px) !important;
+    :global {
+      .ag-header-row {
+        background-color: #ececec;
+      }
+      .ag-header-cell {
+        border-right-color: $mid-split-color !important;
+      }
+      .ag-row-odd, .ag-row-even {
+        background-color: $white-block;
+      }
+    }
+  }
+  .myAgPage {
+    padding: rem(10px) 0 0 0;
+  }
+  .hintInput {
+    margin: rem(10px) rem(8px);
+    width: calc(100% - 16px);
+    height: rem(26px);
+    i {
+      font-size: $font-title-size;
+    }
+    span {
+      background-color: $white-block;
+    }
+    :global {
+      .ant-input-sm {
+        height: rem(26px);
+        font-size: $font-com-size;
+      }
+      .ant-input-group-addon {
+        padding: 0 rem(8px)
+      }
+    }
+  }
+}
+
+.left {
+  flex: 3;
+  margin-right: rem(10px);
+}
+
+.right {
+  flex: 7;
+}
+
+//表格复选框
+.agCheckbox {
+  height: 100%;
+  position: relative;
+  :global {
+    .ag-header-cell-resize {
+      display: none;
+    }
+    .ag-header-select-all {
+      padding: 0 !important;
+      position: absolute;
+      width: rem(14px);
+      height: rem(14px);
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+    }
+    .ag-checkbox-unchecked {
+      width: rem(14px);
+      height: rem(14px);
+      display: block;
+      .ag-icon {
+        width: rem(14px);
+        height: rem(14px);
+      }
+    }
+    .ag-checkbox-checked {
+      .ag-icon {
+        width: rem(14px);
+        height: rem(14px);
+      }
+    }
+    .ag-checkbox-indeterminate {
+      .ag-icon {
+        width: rem(14px);
+        height: rem(14px);
+      }
+    }
+  }
+}
+
+.agBodyCheckbox {
+  position: relative;
+  :global {
+    .ag-cell-wrapper {
+      position: absolute;
+      width: rem(14px);
+      height: rem(14px);
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+    }
+    .ag-icon {
+      width: rem(14px) !important;
+      height: rem(14px) !important;
+    }
+    .ag-selection-checkbox {
+      display: block;
+      padding-right: 0 !important;
+    }
+  }
+}

@@ -1,0 +1,302 @@
+# 建议：官方文档对每个规则有简单易懂的例子说明，有时间的同学可以查阅一遍。
+# 官方文档 https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md
+# 默认配置 https://github.com/brigade/scss-lint/blob/master/config/default.yml
+
+# 版本：0.41.0
+# 以下是个人偏好配置
+
+scss_files: "**/*.scss"
+plugin_directories: ['release']
+
+
+linters:
+
+  # `!important`中感叹号两边是否需要空格
+  # 跟`ImportantRule`相近
+  BangFormat:
+    enabled: true
+    space_before_bang: true
+    space_after_bang: false
+
+  # BEM语法
+  # http://www.smashingmagazine.com/2012/04/a-new-front-end-methodology-bem/
+  BemDepth:
+    enabled: false
+    max_elements: 1
+
+  # 使用`border: 0|none`;
+  BorderZero:
+    enabled: true
+    convention: none 
+
+  # 不使用`color: green`，容易跟变量混淆
+  ColorKeyword:
+    enabled: true
+
+  # 只能使用`color: $maincolor`颜色变量
+  ColorVariable:
+    enabled: true
+
+  # 注释
+  # 使用// 不使用 /* ... */
+  Comment:
+    enabled: true
+
+  DebugStatement:
+    enabled: true
+
+  # 属性顺序
+  DeclarationOrder:
+    enabled: true
+
+  # 不使用Linter时需要注释
+  DisableLinterReason:
+    enabled: true
+
+  # 允许重复属性，如（margin: 10px; margin: 0px;）
+  DuplicateProperty:
+    enabled: true
+
+  # if中else和括号位置
+  ElsePlacement:
+    enabled: true
+    style: same_line # or 'new_line'
+
+  # 样式块之间使用空行分隔
+  EmptyLineBetweenBlocks:
+    enabled: true
+    # 忽略单行样式块
+    ignore_single_line_blocks: false
+
+  # 允许空属性，如`.cat {}`
+  EmptyRule:
+    enabled: false
+
+  ExtendDirective:
+    enabled: false
+
+  # EOL，文件结尾换行
+  # http://unix.stackexchange.com/a/18789
+  # https://robots.thoughtbot.com/no-newline-at-end-of-file
+  FinalNewline:
+    enabled: true
+    present: true
+
+  # 十六进制颜色使用缩写
+  # `color: #ff22ee;` => `color: #f2e`
+  HexLength:
+    enabled: true
+    style: short # or 'long'
+
+  # 十六进制颜色大小写限制
+  HexNotation:
+    enabled: true
+    style: lowercase # or 'uppercase'
+
+  # 十六进制有效校验
+  HexValidation:
+    enabled: true
+
+  # 不使用id选择器
+  # 理由http://screwlewse.com/2010/07/dont-use-id-selectors-in-css/
+  IdSelector:
+    enabled: true
+
+  # 不使用`!important`语句
+  # 理由https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity
+  ImportantRule:
+    enabled: false
+
+  ImportPath:
+    enabled: true
+    leading_underscore: false
+    filename_extension: false
+
+  # 缩进
+  Indentation:
+    enabled: true
+    allow_non_nested_indentation: false
+    character: space # or 'tab'
+    width: 2
+
+  # 不使用带零的小数值
+  LeadingZero:
+    enabled: true
+    style: exclude_zero # or 'include_zero'
+
+  # 不允许重复选择器
+  MergeableSelector:
+    enabled: true
+    # 使用合并选择器
+    force_nesting: true
+
+  # 变量函数的命名约定
+  NameFormat:
+    enabled: true
+    allow_leading_underscore: true
+    convention: hyphenated_lowercase # or 'camel_case', or 'snake_case', or a regex pattern
+
+  # 选择器嵌套深度
+  NestingDepth:
+    enabled: true
+    max_depth: 5
+    ignore_parent_selectors: false
+
+  # 在extend中使用placeholder
+  # http://8gramgorilla.com/mastering-sass-extends-and-placeholders/
+  PlaceholderInExtend:
+    enabled: false
+
+  # 属性数量限制
+  PropertyCount:
+    enabled: true
+    include_nested: false
+    max_properties: 10
+
+  # 属性顺序
+  PropertySortOrder:
+    enabled: false
+    ignore_unspecified: false
+    min_properties: 2
+    separate_groups: false
+
+  # 校验属性名拼写正确
+  PropertySpelling:
+    enabled: true
+    extra_properties: []
+
+  # 属性值单位限制
+  PropertyUnits:
+    enabled: false
+    global: [
+      'ch', 'em', 'ex', 'rem',                 # Font-relative lengths
+      'cm', 'in', 'mm', 'pc', 'pt', 'px', 'q', # Absolute lengths
+      'vh', 'vw', 'vmin', 'vmax',              # Viewport-percentage lengths
+      'deg', 'grad', 'rad', 'turn',            # Angle
+      'ms', 's',                               # Duration
+      'Hz', 'kHz',                             # Frequency
+      'dpi', 'dpcm', 'dppx',                   # Resolution
+      '%']                                     # Other
+    properties: {}
+
+  # 不允许单HTML标签选择器
+  QualifyingElement:
+    enabled: true
+    allow_element_with_attribute: false
+    allow_element_with_class: false
+    allow_element_with_id: false
+
+  # 选择器深度
+  # 跟`NestingDepth`相近
+  SelectorDepth:
+    enabled: true
+    max_depth: 5
+
+  # 选择器命名约定（类名命名约定）
+  # 跟`NameFormat`相近
+  SelectorFormat:
+    enabled: true
+    convention: hyphenated_lowercase # or 'strict_BEM', or 'hyphenated_BEM', or 'snake_case', or 'camel_case', or a regex pattern
+
+  # 使用属性值缩写，如`margin: 1px 1px 1px 1px => margin: 1px` 
+  Shorthand:
+    enabled: true
+
+  # 使用属性分行
+  SingleLinePerProperty:
+    enabled: true
+    allow_single_line_rule_sets: true
+
+  # 使用选择器分行
+  SingleLinePerSelector:
+    enabled: true
+
+  # 逗号后加空格
+  SpaceAfterComma:
+    enabled: true
+
+  # 属性分号后加空格
+  SpaceAfterPropertyColon:
+    enabled: true
+    style: one_space # or 'no_space', or 'at_least_one_space', or 'aligned'
+
+  # 属性分号前不加空格
+  SpaceAfterPropertyName:
+    enabled: true
+
+  # 变量分号后加空格
+  SpaceAfterVariableName:
+    enabled: true
+
+  # 运算符前后加空格
+  SpaceAroundOperator:
+    enabled: true
+    style: one_space # or 'no_space'
+
+  # 大括号前加空格
+  SpaceBeforeBrace:
+    enabled: true
+    style: space # or 'new_line'
+    allow_single_line_padding: false
+
+  # 括号边界不加空格
+  SpaceBetweenParens:
+    enabled: true
+    spaces: 0
+
+  # 引号
+  StringQuotes:
+    enabled: true
+    style: double_quotes # or double_quotes
+
+  # 使用分号结尾
+  TrailingSemicolon:
+    enabled: true
+
+  # 不允许行尾空格
+  TrailingWhitespace:
+    enabled: false
+
+  # 允许小数点后多余的零
+  TrailingZero:
+    enabled: false
+
+  # CSS3过渡使用`all`关键字
+  TransitionAll:
+    enabled: false
+
+  # 不允许小数点后多余的零
+  # 跟`TrailingZero`相近
+  UnnecessaryMantissa:
+    enabled: true
+
+  # 不允许不必要父选择器引用
+  UnnecessaryParentReference:
+    enabled: true
+
+  # 使用相对URL域名引用资源
+  UrlFormat:
+    enabled: true
+
+  # URL资源使用引号包裹
+  UrlQuotes:
+    enabled: true
+
+  # 属性值使用变量
+  VariableForProperty:
+    enabled: false
+    properties: []
+
+  # 不允许使用浏览器前缀
+  VendorPrefix:
+    enabled: true
+    identifier_list: base
+    additional_identifiers: []
+    excluded_identifiers: []
+
+  # 零值不允许单位值，如`margin: 0px; -> margin: 0;`
+  ZeroUnit:
+    enabled: true
+
+  Compass::*:
+    enabled: false

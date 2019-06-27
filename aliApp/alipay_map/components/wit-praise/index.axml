@@ -1,0 +1,14 @@
+<view class="wit-star {{classes}}" onTap="click"> 
+  <view class="wit-star-icon {{animateClass}}" onTap="toggle">
+    <text
+      a:if="{{icon}}"
+      class="iconfont {{active ? activeIcon || icon : icon}}"
+      style="color: {{active ? colorValue : defaultColor}}; font-size: {{size}}">
+    </text>
+    <image
+      a:if="{{src}}"
+      src="{{src}}"
+      mode="scaleToFill"
+      style="width: {{size}}; height: {{size}}"/>
+  </view>
+</view>

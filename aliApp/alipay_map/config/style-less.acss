@@ -1,0 +1,33 @@
+/** ------ 颜色配置 ------ **/
+/* 主题色 */
+@primary: #f56d19;
+/* white */
+@white: #fff;
+/* black */
+@black: #000;
+/* 错误 */
+@error: #fe0909;
+/* 微信 */
+@danger: #f44;
+/* warning */
+@warning: #ff7a02;
+/* success */
+@success: #87d068;
+/* info */
+@info: #1883fc;
+/* 一级文本 */
+@title: #333;
+/* 二级文本 */
+@sub-title: #626364;
+/* 三级文本 */
+@text: #a6a7a8;
+/* 四级提示性文本，不可用状态 */
+@tip: #ccc;
+/* 分割线,提醒灯 */
+@border: #e2e2e2;
+/* 浅色分割线,提醒灯 */
+@border: #f0f0f0;
+/* 底色层 */
+@bgColor: #f2f2f2;
+/* 点击交互颜色 */
+@active: #f8f8f8;

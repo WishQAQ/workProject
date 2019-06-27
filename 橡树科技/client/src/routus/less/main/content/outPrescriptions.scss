@@ -1,0 +1,523 @@
+//滚动条Style
+@mixin scrollBar($width:3px,$height:3px) {
+  &::-webkit-scrollbar {
+    width: $width;
+    height: $width;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: #ccc;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #49a9ee;
+  }
+  &::-webkit-scrollbar-thumb:active {
+    background-color: #49a9ee
+  }
+}
+
+.outPrescriptions {
+  width: 100%;
+  height: 100%;
+  > div[class*='ant-spin-nested-loading'], div[class*='ant-spin-container'] {
+    width: 100%;
+    height: 100%;
+  }
+  //总的agtable
+  .agTable {
+    position: absolute;
+    top: 41px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 1px solid #CDCDCD;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fcfdfd;
+    :global {
+      .ag-header.ag-pivot-off {
+        overflow: visible;
+      }
+      .whiteBg {
+        background-color: #fff;
+      }
+      .ag-body-viewport {
+        @include scrollBar(8px, 8px)
+      }
+      .ag-header-row {
+        &:first-child {
+          background-color: #7FADD2;
+          color: #fff;
+          .lastCol {
+            background-color: #7FADD2;
+          }
+        }
+        //第一行没有数据的空白
+        .ag-header-group-cell.ag-header-group-cell-no-group {
+          background-color: #fff;
+          border-right: 1px solid #CDCDCD;
+        }
+        //第一行数据的style
+        .ag-header-group-cell.ag-header-group-cell-with-group {
+          line-height: 28px;
+          text-align: center;
+          border-bottom: 1px solid #CDCDCD;
+          border-right: 1px solid #CDCDCD;
+        }
+        .ag-header-cell {
+          line-height: 28px;
+          border-right: 1px solid #CDCDCD;
+          font-weight: bold;
+          color: #353535;
+        }
+        .ag-header-group-text {
+          font-weight: bold;
+        }
+      }
+      .lastCol {
+        border-right: 0 !important;
+
+        &:first-child {
+          background-color: #7FADD2;
+        }
+      }
+      .bgEc {
+        background-color: #ececec;
+      }
+      .ag-body {
+        border-top: 1px solid #CDCDCD;
+      }
+      .customHeaderMenuButton {
+        position: absolute;
+        right: 5px;
+        &:nth-of-type(1), &:nth-of-type(2) {
+          top: -28px;
+        }
+      }
+      .sortSty {
+        position: absolute;
+        right: 5px;
+        top: 0;
+      }
+      .customSortDownLabel, .customSortUpLabel {
+        display: inline-block;
+      }
+      .customSortRemoveLabel {
+        float: left;
+        font-size: 12px;
+      }
+      .hidden {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: none;
+      }
+      .size{
+        font-size: 12px;
+      }
+      .show {
+        position: absolute;
+        top: 25px;
+        left: 3px;
+        width: 120px;
+        max-height: 200px;
+        overflow-y: scroll;
+        background-color: #fff;
+        display: block;
+        z-index: 10000;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+        border-radius: 6px;
+        @include scrollBar(0, 6px);
+        > label {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          width: 100%;
+          padding-left: 8px;
+          height: 30px;
+          input[type='checkbox'] {
+            outline: none;
+            display: none
+          }
+          input[type="checkbox"] + span {
+            width: 12px;
+            height: 12px;
+            display: inline-block;
+            border: 1px solid #CDCDCD;
+            border-radius: 2px;
+            position: relative;
+            margin-right: 5px;
+          }
+          &:hover {
+            background-color: #EBF5FC;
+            input[type="checkbox"] + span {
+              border-color: #3C9AE4;
+            }
+          }
+          input[type="checkbox"]:checked + span {
+            background-color: #3C9AE4;
+            border-color: #3C9AE4;
+            position: relative;
+            &:after {
+              opacity: 1;
+              content: '';
+              position: absolute;
+              width: 8px;
+              height: 5px;
+              background: transparent;
+              top: 2px;
+              left: 1px;
+              border: 2px solid #fff;
+              border-top: none;
+              border-right: none;
+              transform: rotate(-45deg);
+            }
+          }
+        }
+        .labelActive {
+          background-color: #EBF5FC;
+        }
+      }
+      .active {
+        color: cornflowerblue;
+      }
+      .ag-cell {
+        box-shadow: none;
+        outline: none;
+      }
+    }
+    //tbody 行
+    .row {
+      border-bottom: 1px solid #CDCDCD;
+      line-height: 28px;
+      text-align: center;
+      :global {
+        .ag-cell {
+          border-right: 1px solid #CDCDCD;
+        }
+        .lastCol {
+          border-right: 0 !important;
+        }
+      }
+    }
+    :global {
+      .ag-pinned-left-cols-container {
+        .ag-row-selected {
+          background-color: #EBF5FC;
+          box-shadow: 3px 0 0 #3C9AE4 inset;
+        }
+      }
+      .ag-body-container {
+        .ag-row-selected {
+          background-color: #EBF5FC;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+  .rowContent {
+    width: calc(100% + 6px);
+    height: 100%;
+    overflow-y: scroll;
+    padding-bottom: 40px;
+    //滚动条样式
+    /*定义滚动条轨道*/
+    &::-webkit-scrollbar-track {
+      background-color: #FFFFFF;
+    }
+    /*定义滚动条高宽及背景*/
+    &::-webkit-scrollbar {
+      width: 10px;
+      background-color: #FFFFFF;
+    }
+    /*定义滚动条*/
+    &::-webkit-scrollbar-thumb {
+      background-color: #cecece;
+      border-radius: 10px;
+    }
+  }
+  //图表
+  div[class*='ant-row'] {
+    width: 100%;
+    height: 100%;
+    margin: 0 !important;
+    padding: 3px 0 0 3px;
+    div[class*='ant-col-12'], div[class*='ant-col-24'] {
+      height: 390px;
+      display: flex;
+      flex-direction: column;
+      .ageNum {
+        margin-bottom: 10px;
+        width: 100%;
+        height: calc(100% - 52px);
+        flex: 1;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        padding: 0 25px;
+        position: relative;
+        overflow: hidden;
+        background-color: #fcfdfd;
+        //筛选排序
+        div[class*='customHeaderLabel'] {
+          background-color: #ececec;
+          border-bottom: 1px solid #ececec;
+          margin-top: -1px;
+        }
+        div[class*='customHeaderMenuButton'] {
+          position: absolute;
+          left: 60%;
+        }
+        div[class*='sortSty'] {
+          position: absolute;
+          right: 5px;
+          top: -1px;
+        }
+        div[class*='customSortDownLabel'] {
+          display: inline-block;
+        }
+        div[class*='customSortUpLabel'] {
+          display: inline-block;
+        }
+        div[class*='customSortRemoveLabel'] {
+          float: left;
+          font-size: 12px;
+        }
+        div[class*='active'] {
+          color: cornflowerblue;
+        }
+        div[class*='hidden'] {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          display: none;
+        }
+        div[class*='show'] {
+          position: absolute;
+          top: 25px;
+          left: 3px;
+          width: 120px;
+          max-height: 200px;
+          overflow-y: scroll;
+          background-color: #fff;
+          display: block;
+          z-index: 10000;
+          box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+          //滚动条样式
+          @include scrollBar(0, 6px);
+          > label {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding-left: 8px;
+            height: 30px;
+            input[type='checkbox'] {
+              outline: none;
+              display: none
+            }
+            input[type="checkbox"] + span {
+              width: 12px;
+              height: 12px;
+              display: inline-block;
+              border: 1px solid #CDCDCD;
+              border-radius: 2px;
+              position: relative;
+              margin-right: 5px;
+            }
+            &:hover {
+              background-color: #EBF5FC;
+              input[type="checkbox"] + span {
+                border-color: #3C9AE4;
+              }
+            }
+            input[type="checkbox"]:checked + span {
+              background-color: #3C9AE4;
+              border-color: #3C9AE4;
+              position: relative;
+              &:after {
+                opacity: 1;
+                content: '';
+                position: absolute;
+                width: 8px;
+                height: 5px;
+                background: transparent;
+                top: 2px;
+                left: 1px;
+                border: 2px solid #fff;
+                border-top: none;
+                border-right: none;
+                transform: rotate(-45deg);
+              }
+            }
+          }
+          .labelActive {
+            background-color: #EBF5FC;
+          }
+          /* > p {
+             display: flex;
+             align-items: center;
+             padding-left: 8px;
+             height: 30px;
+             > input {
+               background-color: transparent;
+             }
+             > label {
+               display: inline-block;
+               width: calc(100% - 13px);
+               text-align: left;
+               text-indent: 5px;
+             }
+           }*/
+        }
+        div[class*='ant-spin-nested-loading'] {
+          width: 100%;
+          height: calc(100% - 52px);
+          display: table;
+        }
+        div[class*='ant-spin-container'] {
+          width: 100%;
+          height: 100%;
+          display: table-cell;
+          vertical-align: middle;
+        }
+        i[class*='size'] {
+          font-size: 12px;
+        }
+        .cardTitle {
+          line-height: 52px;
+          font-size: 18px;
+          color: #353535;
+          .toggleIcon {
+            cursor: default;
+            margin-left: 6px;
+          }
+          .un {
+            color: #353535
+          }
+          .on {
+            color: #3C9AE4
+          }
+        }
+        //ag表格边框线条颜色
+        .agSty {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 25px;
+          right: 25px;
+          overflow: hidden;
+          border: 1px solid #CDCDCD;
+          border-radius: 4px 4px 0 0;
+          background-color: #fcfdfd;
+          .row {
+            border-bottom: 1px solid #E1E1E1;
+            line-height: 28px;
+            text-align: center;
+            div[class*='ag-cell'] {
+              border-right: 1px solid #E1E1E1;
+            }
+          }
+          :global {
+            .ag-pinned-left-cols-container {
+              .ag-row-selected {
+                background-color: #EBF5FC;
+                box-shadow: 3px 0 0 #3C9AE4 inset;
+              }
+            }
+            .ag-body-container {
+              .ag-row-selected {
+                background-color: #EBF5FC;
+                box-shadow: none;
+              }
+            }
+            .ag-cell {
+              outline: none;
+              box-shadow: none;
+            }
+            .ag-header-viewport {
+              background-color: #ececec;
+            }
+          }
+          div[class*='ag-header-group-cell ag-header-group-cell-no-group'], div[class*='ag-cell-no-focus ag-cell ag-cell-not-inline-editing ag-cell-value'] {
+            border-right: 1px solid #E1E1E1;
+          }
+          div[class*='ag-header-group-cell ag-header-group-cell-with-group'] {
+            line-height: 28px;
+            text-align: center;
+            border-bottom: 1px solid #E1E1E1;
+            background-color: #E1E1E1;
+            font-weight: bold;
+          }
+          div[class*='ag-header ag-pivot-off'] {
+            overflow: visible !important;
+          }
+          div[class*='cellTd'] {
+            border-right: 1px solid #E1E1E1;
+            border-bottom: 1px solid #ececec;
+            line-height: 28px;
+            background-color: #ececec;
+            font-weight: bold;
+          }
+          div[class*='whiteBg'] {
+            background-color: #fff;
+          }
+          div[class*='ag-body-viewport'] {
+            //滚动条样式
+            @include scrollBar(8px, 8px)
+          }
+
+          //环比百分数、成药张数、100-200平均费用、费用、占比例、特殊使用药物3级
+           div[colid="mzcffyyzeyspjcf"] {
+            border-right: 0 !important;
+          }
+        }
+        .flex {
+          display: flex;
+          height: inherit;
+          .left {
+            flex: 5;
+            height: 100%;
+            position: relative;
+          }
+          .right {
+            flex: 5;
+            height: 100%;
+            position: relative;
+          }
+          .canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+          }
+          //404
+        }
+      }
+    }
+    .padding0 {
+      padding-left: 0 !important;
+      &:last-child, &:nth-last-of-type(2) {
+        div[class*='card'] {
+          margin-bottom: 0 !important;
+        }
+      }
+    }
+    .marginBottom {
+      &:last-child {
+        div[class*='card'] {
+          margin-bottom: 0 !important;
+        }
+      }
+      div[class*='ageNum'] {
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+  .tips {
+    padding-top: 0 !important;
+  }
+}

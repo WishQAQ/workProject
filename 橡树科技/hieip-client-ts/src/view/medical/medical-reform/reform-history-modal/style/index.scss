@@ -1,0 +1,23 @@
+@import '../../../../../index';
+
+.root {
+  :global {
+    .ant-tabs-nav-container {
+      height: rem(30px) !important;
+    }
+    .ant-tabs-bar {
+      border-bottom-color: #3db5e7;
+    }
+    .ant-tabs-tab {
+      line-height: rem(30px) !important;
+      background: #fff;
+      border-bottom: 1px solid #3db5e7 !important;
+    }
+    .ant-tabs-tab-active {
+      font-weight: bold;
+      background: #fff;
+      border-color: #3db5e7 !important;
+      border-bottom: 1px solid #fff !important;
+    }
+  }
+}

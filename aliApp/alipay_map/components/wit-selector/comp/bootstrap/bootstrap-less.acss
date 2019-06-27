@@ -1,0 +1,27 @@
+.bootstrap{
+  .item{
+    padding: 12px;
+    .wit-cell-main{
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+    .icon-wrap{
+      width: 90rpx;
+      height: 90rpx;
+      border-radius: 50%;
+      margin-right: 30rpx;
+      position: relative;
+      .icon{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    .text{
+      color: #333;
+      font-size: 32rpx;
+    }
+  }
+}

@@ -1,0 +1,104 @@
+@import url("config/style-less.acss");
+
+.wit-btn{
+  position: relative;
+  display: inline-block;
+  border-radius: 2px;
+  text-align: center;
+  -webkit-appearance: none;
+  .wit-dot{
+    margin-right: 5px;
+    position: relative;
+    top: 1.5px;
+  }
+  &:active{
+    opacity: .8;
+  }
+  &-square{
+    border-radius: 0;
+  }
+  &-round{
+    border-radius: 10em;
+  }
+  &-large{
+    padding: 12px 24px;
+    width: 100%;
+    font-size: 16px;
+  }
+  &-normal{
+    padding: 8px 18px;
+    font-size: 14px;
+  }
+  &-small{
+    padding: 4px 8px;
+    min-width: 60px;
+    font-size: 12px;
+  }
+  &-mini{
+    display: inline-block;
+    padding: 2px 4px;
+    font-size: 10px;
+  }
+  &-default{
+    color: #323233;
+    background-color: #fff;
+    border: 1px solid @border;
+  }
+  &-gray{
+    color: #a6a7a8;
+    background-color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    &:active{
+      opacity: 1;
+    }
+  }
+  &-primary{
+    color: @white;
+    background-color: @primary;
+    border: 1px solid @primary;
+    &.wit-btn-plain{
+      color: @primary;
+    }
+  }
+  &-success{
+    color: @white;
+    background-color: @success;
+    border: 1px solid @success;
+    &.wit-btn-plain{
+      color: @success;
+    }
+  }
+  &-info{
+    color: @white;
+    background-color: @info;
+    border: 1px solid @info;
+    &.wit-btn-plain{
+      color: @info;
+    }
+  }
+  &-danger{
+    color: @white;
+    background-color: @danger;
+    border: 1px solid @danger;
+    &.wit-btn-plain{
+      color: @danger;
+    }
+  }
+  &-warning{
+    color: @white;
+    background-color: @warning;
+    border: 1px solid @warning;
+     &.wit-btn-plain{
+      color: @warning;
+    }
+  }
+  &-disabled{
+    opacity: .5;
+    &:active{
+      opacity: .5;
+    }
+  }
+  &-plain{
+    background-color: #fff;
+  }
+}

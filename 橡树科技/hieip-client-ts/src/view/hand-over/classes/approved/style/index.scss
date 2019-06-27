@@ -1,0 +1,69 @@
+@import '../../../../../index';
+
+.approvedMain {
+  width: 100%;
+  height: 100%;
+  font-size: rem(12px);
+  color: $font-main-color;
+}
+
+.approvedTitle {
+  width: 100%;
+  height: rem(30px);
+  margin-bottom: rem(10px);
+  display: flex;
+  align-items: center;
+  > button {
+    height: rem(30px);
+    padding: 0 rem(4px);
+    font-size: rem(12px);
+    > i {
+      padding-right: rem(5px);
+      font-size: rem(14px);
+    }
+  }
+}
+
+.approvedTable {
+  width: 100%;
+  height: calc(100% - 40px);
+  box-sizing: border-box;
+  border-radius: rem(4px);
+  border: 1px solid $big-border-color;
+}
+
+.smallCom {
+  display: flex;
+  align-items: center;
+  margin: 0 rem(10px);
+  > b {
+    padding: 0 rem(10px);
+  }
+  > div > label {
+    font-size: rem(12px);
+  }
+}
+
+.tableCheck {
+  padding-top: rem(7px) !important;
+}
+
+.refuseReason {
+  > div[class*='ant-modal-header'] {
+    padding: rem(8px) rem(15px);
+  }
+  > div[class*='ant-modal-body'] {
+    padding: rem(10px) rem(15px) 0 rem(15px);
+  }
+  > button {
+    > span {
+      width: rem(38px);
+      height: rem(38px);
+      line-height: rem(38px);
+    }
+  }
+  > div[class*='ant-modal-footer'] {
+    border: 0 !important;
+    padding: rem(8px) rem(15px);
+  }
+}

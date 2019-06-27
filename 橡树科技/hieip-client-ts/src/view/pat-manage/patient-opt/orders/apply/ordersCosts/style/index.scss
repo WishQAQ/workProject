@@ -1,0 +1,59 @@
+@import '../../../../../index';
+
+.billingDragMove {
+  div[class*='ant-modal-footer'] {
+    border: 0;
+    padding: 0;
+  }
+}
+
+.billingTable {
+  width: 100%;
+  height: rem(465px);
+  border: 1px solid $list-split-color;
+  border-radius: $border-radius4;
+  span[class*='ag-header-select-all'] {
+    padding: rem(7px) 0 0 rem(4px);
+  }
+}
+
+.billingBtn {
+  width: 100%;
+  height: rem(30px);
+  line-height: rem(30px);
+  margin-top: rem(5px);
+  display: flex;
+  justify-content: flex-end;
+  > button {
+    height: rem(26px);
+    margin-left: rem(5px);
+    font-size: $font-com-size;
+  }
+}
+
+.agSelect {
+  &:after {
+    display: none !important;
+  }
+  > span {
+    > input {
+      text-align: center !important;
+      text-indent: 0 !important;
+    }
+  }
+  > span > i {
+    display: none !important;
+  }
+  li {
+    padding: rem(5px) 0 !important;
+  }
+}
+
+.commonClass {
+  text-align: center;
+  line-height: rem(25px);
+  input {
+    width: 100%;
+    text-align: center;
+  }
+}

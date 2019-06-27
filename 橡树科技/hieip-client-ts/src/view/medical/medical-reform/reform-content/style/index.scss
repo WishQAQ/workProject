@@ -1,0 +1,128 @@
+@import '../../../../../index';
+.root {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-top: 10px;
+  height: 90%;
+}
+
+.qualityControl {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  color: $font-com-color;
+}
+
+.commonColumn {
+  color: $font-com-color;
+}
+
+.patientList {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.tableHeader {
+  display: flex;
+  flex-flow: row nowrap;
+  background-color: #5591aa;
+  align-items: center;
+  justify-content: space-between;
+  padding: rem(5px);
+  height: rem(30px);
+  color: #fff;
+}
+
+.tableTitle {
+  font-size: $font-com-size;
+  font-weight: bold;
+  color: inherit;
+}
+
+.tableIcon {
+  cursor: pointer;
+  &:active {
+    color: $font-select-color;
+  }
+}
+
+.patientTable {
+  display: flex;
+  width: 100%;
+  height: rem(637px);
+  border-left: 1px solid #cdcdcd;
+  border-bottom: 1px solid #cdcdcd;
+}
+
+.patientDetail {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.patientContent {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  margin-top: rem(5px);
+}
+
+.patientSidebar {
+  width: rem(185px);
+}
+
+.patientMedical {
+  flex-grow: 1;
+  height: 100%;
+  margin-bottom:rem(5px);
+  overflow-y: auto;
+}
+
+.patientInfo {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  margin-left: rem(10px);
+  height: rem(30px);
+}
+
+.infoSex {
+  margin-right: rem(5px);
+  width: rem(22px);
+  height: rem(22px);
+  & img {
+    width: rem(22px);
+    height: rem(22px);
+  }
+}
+
+.infoCell {
+  display: flex;
+  flex-grow: 1;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: rem(10px);
+  height: 100%;
+  border: 1px solid $big-border-color;
+  border-left: none;
+  font-size: $font-com-size;
+  color: $font-com-color;
+  >span {
+    font-weight: bold;
+  }
+}
+
+.infoFirst {
+  border-left: 1px solid $big-border-color;
+  border-radius: 4px 0 0 4px;
+}
+
+.infoLast {
+  border-right: 1px solid $big-border-color;
+  border-radius: 0 4px 0 4px;
+}

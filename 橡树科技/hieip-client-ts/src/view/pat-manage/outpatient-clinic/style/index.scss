@@ -1,0 +1,11 @@
+@import '../../index';
+.root{
+  display: flex;
+}
+.left{
+  margin-right: rem(12px);
+}
+.right{
+  width: calc(100% - 254px);
+  margin-right: rem(12px);
+}

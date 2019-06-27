@@ -1,0 +1,151 @@
+@import '../../../../index';
+
+ul {
+  margin: 0;
+  padding: 0;
+  li {
+    list-style: none;
+  }
+}
+
+.tags {
+  width: 100%;
+  height: 31px;
+  border-bottom: 1px solid $mid-split-color;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+  > span {
+    background: #efefef;
+    border-radius: rem(3px);
+    padding: 0 rem(5px);
+    font-size: $font-com-size;
+    height: rem(21px);
+    line-height: rem(21px);
+    margin-left: rem(4px);
+    display: inline-table;
+    i {
+      font-size: 14px !important;
+      margin-top: rem(-3px);
+      margin-left: rem(2px);
+      cursor: pointer;
+      &:hover {
+        color: $font-select-color;
+      }
+    }
+    &:first-child {
+      margin-left: rem(7px);
+    }
+  }
+}
+
+.classify {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  > span {
+    float: left;
+    width: 33%;
+    padding: rem(5px) 0;
+    border-bottom: 1px solid $mid-split-color;
+    border-right: 1px solid $mid-split-color;
+    cursor: pointer;
+    transition: .15s;
+    > label {
+      width: 100%;
+      display: flex;
+      > span:first-child {
+        float: left;
+        margin-top: rem(2px);
+        margin-left: rem(12px);
+        flex: rem(16px) 0 0;
+      }
+      > span:last-child {
+        width: 100%;
+        line-height: normal;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: $font-title-size;
+        color: $font-main-color;
+      }
+    }
+    &:hover {
+      background: $list;
+      > label > span:last-child {
+        color: white;
+      }
+    }
+  }
+}
+
+.judgmentBasis {
+  width: 100%;
+  height: 100%;
+  > ul {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    > li {
+      width: 100%;
+      height: rem(30px);
+      font-size: $font-title-size;
+      color: $font-main-color;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      cursor: pointer;
+      > p {
+        flex: rem(14px) 0 0;
+        width: rem(14px);
+        height: rem(14px);
+        text-align: center;
+        font-size: $font-com-size;
+        color: white;
+        border-radius: $border-radius-ver;
+        float: left;
+        line-height: rem(14px);
+        margin: 0 rem(3px) 0 0 !important;
+      }
+      > span {
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      &:hover {
+        background: $list;
+        color: white;
+      }
+    }
+  }
+}
+
+.checkBox {
+  float: left;
+  transform: scale(.9);
+  flex: rem(14px) 0 0;
+  margin: rem(2px) rem(5px) 0 rem(9px) !important;
+}
+
+.level0 {
+  background: $level0 !important;
+}
+
+.level1 {
+  background: $level1 !important;
+}
+
+.level2 {
+  background: $level2 !important;
+}
+
+.level3 {
+  background: $level3 !important;
+}
+
+.level4 {
+  background: $level4 !important;
+}

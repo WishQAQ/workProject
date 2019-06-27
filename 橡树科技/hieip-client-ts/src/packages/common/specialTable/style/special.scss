@@ -1,0 +1,82 @@
+@import '../../../../index';
+
+.table {
+  font-size: rem(13px);
+}
+
+.autoList {
+  border-top: rem(1px) solid $big-border-color;
+  border-bottom: rem(1px) solid $big-border-color;
+  box-sizing: border-box;
+  color: $font-com-color;
+  li:nth-child(1) {
+    span {
+      border-right: rem(1px) solid $list-split-color;
+      box-sizing: border-box;
+      background-color: $select;
+      font-weight: bold;
+      float: left;
+    }
+  }
+  li {
+    width: 100%;
+    text-align: center;
+    border-bottom: rem(1px) solid $list-split-color;
+    float: left;
+    span {
+      border-right: rem(1px) solid $list-split-color;
+      box-sizing: border-box;
+    }
+  }
+}
+
+.nextMenu {
+  //width: 100%;
+  float: left;
+  margin-top: rem(-1px);
+  background-color: $white-default;
+  color: $font-com-color;
+  padding-top: rem(8px);
+  li {
+    height: auto;
+    width: 100%;
+    border: 0;
+    p {
+      padding-left: rem(30px);
+      text-align: left;
+    }
+  }
+}
+
+.thirdMenu {
+  color: $font-com-color;
+  float: left;
+  background-color: #fff;
+  //width: 100%;
+  li:first-child p {
+    margin-top: rem(10px);
+  }
+}
+
+.lastMenu {
+  padding-left: rem(60px) !important;
+  margin-bottom: rem(10px);
+  text-align: left;
+}
+
+.iconClass {
+  padding-right: rem(5px);
+}
+
+.rowSelected {
+  background-color: lighten($font-select-color, 30%);
+  color: $font-com-color;
+}
+
+.childrenList {
+  cursor: pointer;
+}
+
+.childrenChoose {
+  color: $font-select-color;
+}

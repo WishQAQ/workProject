@@ -1,0 +1,13 @@
+.radioGroup {
+  span[class*='ant-radio-checked'] {
+    span[class*='ant-radio-inner'] {
+      border-color: #3db5e7 !important;
+      &:after {
+        background: #3db5e7 !important;
+      }
+    }
+  }
+  label {
+    color: #353535;
+  }
+}

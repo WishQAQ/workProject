@@ -1,0 +1,97 @@
+/** ------ 颜色配置 ------ **/
+/* 主题色 */
+/* white */
+/* black */
+/* 错误 */
+/* 微信 */
+/* warning */
+/* success */
+/* info */
+/* 一级文本 */
+/* 二级文本 */
+/* 三级文本 */
+/* 四级提示性文本，不可用状态 */
+/* 分割线,提醒灯 */
+/* 浅色分割线,提醒灯 */
+/* 底色层 */
+/* 点击交互颜色 */
+.list-item {
+  padding: 0 30rpx;
+  background: #fff;
+  align-items: center;
+  display: flex;
+}
+.list-item.disabled > view {
+  opacity: .4;
+}
+.list-item .ava {
+  margin-right: 20rpx;
+}
+.list-item .left {
+  display: flex;
+  align-items: center;
+  padding-right: 20rpx;
+}
+.list-item .count {
+  color: #828282;
+}
+.list-item .count.selected {
+  color: #ff7a02;
+}
+.list-item .right {
+  flex: 1;
+  color: #585858;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 12px 0;
+  align-items: center;
+}
+.list-item .right .txt {
+  flex: 1;
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+}
+.list-item .right .txt .desc {
+  flex: 1;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.list-item .right .txt .name {
+  margin-right: 4px;
+}
+.list-item .right .txt .sub {
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: normal;
+  font-size: 12px;
+  color: #999;
+}
+.list-item .next {
+  display: flex;
+  align-items: center;
+  color: #ff7a02;
+  font-size: 12px;
+  padding-left: 10px;
+  position: relative;
+}
+.list-item .next::after {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 0;
+  width: 0;
+  height: 60%;
+  border-left: 1px solid #f0f0f0;
+  transform: translate(0, -50%) scaleX(0.5);
+  transform-origin: 0 0;
+}
+.list-item .next.disabled {
+  opacity: .4;
+}
+.list-item-all {
+  border-bottom: 5px solid #f5f5f5;
+}

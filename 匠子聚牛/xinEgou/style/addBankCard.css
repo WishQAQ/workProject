@@ -1,0 +1,43 @@
+.add_bank_card>div:nth-child(1){
+    font-size: .2rem;
+    color: #666;
+    padding-left: .4rem;
+    padding-top: .4rem;
+    padding-bottom: .3rem;
+}
+
+.add_bank_card .add_box{
+    background-color: #fff;
+    font-size: .29rem;
+    color: #333;
+}
+.add_bank_card .add_box p{
+    padding: .2rem 0 .2rem .4rem;
+}
+.add_bank_card .add_box p:nth-child(1){
+    border-bottom: .011rem solid #eee;
+}
+.add_bank_card .add_box span{
+    display: inline-block;
+    width: 1.2rem;
+}
+.add_bank_card .add_box input{
+    height: .48rem;
+    width: 80%;
+    font-size: .29rem;
+    border: none;
+}
+
+.add_bank_card .add_box_btm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: #58bcbb;
+    font-size: .25rem;
+    color: #fff;
+    width: 5rem;
+    height: .7rem;
+    border-radius: .05rem;
+    margin: .4rem auto 0 auto;
+}

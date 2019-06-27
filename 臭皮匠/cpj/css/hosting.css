@@ -1,0 +1,39 @@
+*{padding: 0;margin: 0;}
+
+.conten img{width: 100%;}
+
+.banner{
+	background: url(../img/banner_tg.jpg);
+}
+
+@media only screen and (max-width:1200px ) {
+	
+	
+	
+	.content-box{
+		height: 1700px;
+	}
+	.conten img{
+		margin-bottom: 10px;
+	}
+	.conten-box-btm-bg img{
+		height: 200px;
+	}
+	.conten-box-btm-text{
+		top: 80px !important;
+	}
+	.conten-box-btm-text h2{
+		font-size: 2.3rem !important;
+		font-weight: 600;
+	}
+	.conten-box-btm-text span{
+		font-size: 1.6rem !important;
+	}
+	.conten-box-btm-bg{
+		height: 0 !important;
+	}
+}
+
+
+
+

@@ -1,0 +1,109 @@
+<view class="container">
+  <view class="body">
+    <view>
+      <view class="card">
+        <view class="ccp-img">
+          <image src="../../assets/images/ccp-place.png" mode="widthFix" />
+        </view>
+        <view class="ccp-de-name">
+          <text>江苏省台办机关党委
+          </text>
+        </view>
+        <view class="ccp-de-address">
+          <text>中山北路95江苏议事园大厦26层
+          </text>
+        </view>
+        <view class="ccp-de-sum">
+          <text>组织书记  王荣平</text> 
+          <text>机关党委</text>
+          <text>党员68人</text>
+          <text>创建时间1988.06</text> 
+          <text>联系人 李建平</text> 
+          <text>联系电话165****1234</text>   
+          </text>
+        </view>
+      </view>
+      <view class="card recent-act">
+        <view class="recent-title">
+          <text>近期活动</text>
+        </view>
+        <view class="triple-pic-list pic-list">
+        <view class="new-title">透视全国两会十大民生话题:“有条件、...</view>
+          <view class="pic-container">
+            <view class="pic-cell first">
+              <image src="../../assets/images/ex-pic.jpg" mode="widthFix" />
+            </view>
+              <view class="pic-cell middle">
+              <image src="../../assets/images/ex-pic.jpg" mode="widthFix" />
+            </view>
+              <view class="pic-cell last">
+              <image src="../../assets/images/ex-pic.jpg" mode="widthFix" />
+            </view>
+            <view class="pic-cell hidden">
+              <image src="../../assets/images/ex-pic.jpg" mode="widthFix" />
+            </view>
+          </view>
+          <view class="new-attach">
+            <text class="get-left">16分钟前</text>
+            <text>推荐2045</text>
+            <text>回应28</text>
+            <text>收藏32</text>
+            <text>分享156</text>
+          </view>
+        </view>
+        <view class="single-pic-list pic-list">
+          <view class="new-title">透视全国两会十大民生话题:“有条件、...</view>
+          <view class="pic-container">
+            <view class="pic-cell">
+              <image src="../../assets/images/ex-pic.jpg" mode="widthFix" />
+            </view>
+          </view>
+          <view class="new-attach">
+            <text class="get-left">16分钟前</text>
+            <text>推荐2045</text>
+            <text>回应28</text>
+            <text>收藏32</text>
+            <text>分享156</text>
+          </view>
+          <view class="clear"></view>
+        </view>
+        <view class="triple-pic-list pic-list">
+          <view class="new-title">透视全国两会十大民生话题:“有条件、...</view>
+          <view class="new-attach">
+            <text class="get-left">16分钟前</text>
+            <text>推荐2045</text>
+            <text>回应28</text>
+            <text>收藏32</text>
+            <text>分享156</text>
+          </view>
+        </view>
+        <view class="double-pic-list pic-list">
+          <view class="new-title">透视全国两会十大民生话题:“有条件、...</view>
+          <view class="pic-container">
+            <view class="pic-cell first">
+              <image src="../../assets/images/ex-pic.jpg" mode="widthFix" />
+            </view>
+            <view class="pic-cell last">
+              <image src="../../assets/images/ex-pic.jpg" mode="widthFix" />
+            </view>
+          </view>
+          <view class="new-attach">
+            <text class="get-left">16分钟前</text>
+            <text>推荐2045</text>
+            <text>回应28</text>
+            <text>收藏32</text>
+            <text>分享156</text>
+          </view>
+        </view>
+      </view> 
+    </view>
+  </view>
+  <view class="footer">
+      <view class="left">
+        <view class="map">显示地图</view>
+      </view>
+      <view class="right">
+        <view class="navigation btn" onTap="openLocation">导航</view>
+      </view>
+  </view>
+</view>

@@ -1,0 +1,132 @@
+@import '../../../../index';
+
+.qualityMaintenanceLeft, .qualityMaintenanceRight {
+  //按钮
+  .btn {
+    width: rem(56px);
+    height: rem(24px);
+    padding: 0;
+    font-weight: normal;
+    font-size: $font-com-size;
+    border-color: #c4c4c4;
+    color: $font-com-color;
+    background-color: #e5e5e5;
+    margin-right: rem(6px);
+    &:focus {
+      background-color: #e5e5e5;
+      border-color: #c4c4c4;
+      color: $font-com-color;
+    }
+    &:hover {
+      border-color: #3091b9;
+      color: #fff;
+      background-color: #37a3d0;
+    }
+    :global {
+      .iconfont {
+        font-size: $font-com-size;
+      }
+    }
+    span {
+      margin-left: rem(2px) !important;
+    }
+    i {
+      vertical-align: initial !important;
+    }
+  }
+  .greenBtn {
+    background-color: #3db5e7;
+    border-color: #2f9fce;
+    color: #fff;
+    &:focus {
+      background-color: #3db5e7;
+      border-color: #2f9fce;
+      color: #fff;
+    }
+    &:hover {
+      border-color: #3091b9;
+      color: #fff;
+      background-color: #37a3d0;
+    }
+  }
+  .blueBtn {
+    background-color: #4f98e4;
+    border-color: #2f6fce;
+    color: #fff;
+    &:focus {
+      background-color: #4f98e4;
+      border-color: #2f6fce;
+      color: #fff;
+    }
+    &:hover {
+      border-color: #2c73ca;
+      color: #fff;
+      background-color: #5892da;
+    }
+  }
+  .redBtn {
+    background-color: #fce9ed;
+    border-color: #f3bbc3;
+    color: #ff375b;
+    &:focus {
+      background-color: #fce9ed;
+      border-color: #f3bbc3;
+      color: #ff375b;
+    }
+    &:hover {
+      border-color: #ff375b;
+      color: #fff;
+      background-color: #ff375b;
+    }
+  }
+  .espBtn {
+    background-color: #6399af;
+    border-color: #71a7be;
+    color: #FFF;
+    &:hover {
+      background-color: #6399af;
+      border-color: #71a7be;
+      color: rgba(255, 255, 255, .65);
+    }
+  }
+
+  :global {
+    .ant-input::-webkit-input-placeholder {
+      font-size: $font-com-size;
+      color: $font-un-color;
+    }
+    .ant-input {
+      font-size: $font-com-size;
+      color: $font-main-color;
+      background-color: $white-block !important;
+    }
+    .ag-body {
+      background-color: $white-block !important;
+    }
+    .ag-cell-wrapper {
+      position: relative;
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+    .ag-icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+    //.ag-row-even {
+    //  // background-color: $white-block !important;
+    //}
+    .ag-cell {
+      height: rem(30px);
+      text-align: center;
+      line-height: rem(25px);
+    }
+    .ag-body-viewport::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+  }
+}

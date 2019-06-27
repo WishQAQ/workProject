@@ -1,0 +1,14 @@
+@import '../../../../index';
+
+.fixedValue {
+  width: 100%;
+  height: 100%;
+  font-size: $font-com-size;
+  :global {
+    .ant-layout {
+      box-shadow: 0 rem(1px) rem(6px) $big-border-color inset;
+      background-color: $white-default;
+    }
+  }
+}
+

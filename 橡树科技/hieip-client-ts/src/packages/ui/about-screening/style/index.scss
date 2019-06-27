@@ -1,0 +1,104 @@
+@import '../../../../index';
+
+// 向右箭头颜色
+$arr-color: #b2b2b2;
+// hover颜色
+$hover-class: #bbe0ef;
+
+.have {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+}
+
+.aboutMain {
+  display: flex;
+  float: left;
+  border-radius: rem(6px);
+  box-shadow: 0 0 8px 8px rgba(0, 0, 0, .12);
+  color: $font-com-color;
+  position: absolute;
+  background-color: $white-default;
+  z-index: 10;
+}
+
+.aboutLeft {
+  width: 35%;
+  height: 100%;
+  border-right: 1px solid $big-border-color;
+  box-sizing: border-box;
+  padding: rem(8px) 0 rem(6px) 0;
+}
+
+.aboutRight {
+  width: 65%;
+  height: calc(100% - 35px);
+  padding: rem(8px) 0 0 rem(15px);
+  border-bottom: 1px solid $mid-split-color;
+  > label {
+    display: block;
+    margin-bottom: rem(10px);
+    margin-left: 0 !important;
+    span[class*='ant-checkbox'] {
+      > span {
+        width: rem(15px);
+        height: rem(15px);
+      }
+    }
+  }
+}
+
+.saveBtn {
+  width: 65%;
+  height: rem(35px);
+  position: absolute;
+  left: 35%;
+  bottom: 0;
+  padding: rem(6px) rem(8px) rem(6px) 0;
+  > button {
+    padding: 0 rem(5px);
+    font-size: rem(12px);
+    height: rem(25px);
+    float: right;
+  }
+}
+
+.leftChoose {
+  width: auto;
+  height: rem(30px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: rem(15px);
+  padding-right: rem(10px);
+  cursor: pointer;
+  transition: all .1s ease-in .1s;
+  &:hover {
+    background-color: lighten($hover-class, 5%);
+  }
+}
+
+.leftSelect {
+  background-color: $hover-class !important;
+  > i {
+    color: $font-com-color;
+  }
+}
+
+.iconClass {
+  font-size: rem(12px) !important;
+  color: $arr-color;
+  padding-bottom: rem(3px);
+  transition: all .1s ease-in .1s;
+}
+
+.show {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}

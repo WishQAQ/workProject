@@ -1,0 +1,17 @@
+cluster.name: "wit_cluster"
+network.host: 0.0.0.0
+
+# minimum_master_nodes need to be explicitly set when bound on a public IP
+# set to 1 to allow single node clusters
+# Details: https://github.com/elastic/elasticsearch/pull/17288
+discovery.zen.minimum_master_nodes: 1
+
+# head插件设置
+http.cors.enabled: true
+http.cors.allow-origin: "*"
+# 关闭X-Pack
+xpack.security.enabled: false
+
+#动态脚本速率配置，表示每分钟20000个；
+script.max_compilations_rate: 20000/1m
+

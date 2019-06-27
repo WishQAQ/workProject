@@ -1,0 +1,40 @@
+@import '../../../../../index';
+@import './../../common';
+
+//AG表格每行编辑时样式
+.agRowEdit {
+  padding: rem(4px);
+  box-shadow: none;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  > input {
+    border: rem(1px) solid #3db5e7;
+    border-radius: rem(4px);
+    text-align: center;
+    font-size: rem(12px);
+    padding: 0 rem(2px);
+  }
+}
+
+.root {
+  position: relative;
+  //按钮组
+  .btnGroup {
+    position: absolute;
+    top: rem(-37px);
+    left: rem(400px);
+    padding: rem(3px) 0;
+  }
+  color: #000;
+  padding: 0;
+  border: rem(1px) solid #cdcdcd;
+  border-radius: rem(4px);
+  //height: rem(278px);
+  height: 100%;
+}
+
+.pointer {
+  pointer-events: none;
+}

@@ -1,0 +1,497 @@
+@import '../../../../../index';
+
+.nursingMain {
+  width: 100%;
+  height: 100%;
+  background-color: $white-default;
+}
+
+.nursingLeft {
+  width: rem(210px);
+  height: 100%;
+  float: left;
+  box-shadow: 0 0 8px 3px rgba(0, 0, 0, .1);
+  > div {
+    height: rem(25px);
+    line-height: rem(25px);
+    background-color: #478daa;
+    font-size: rem(14px);
+    color: $white-default;
+    font-weight: bold;
+    padding-left: rem(10px);
+  }
+}
+
+.nursingMenu {
+  div[class*='ant-menu-item-group-title'] {
+    padding: 0 !important;
+  }
+  ul[class*='ant-menu-item-group-list'] {
+    height: calc(100% - 25px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: $white-block;
+    > li {
+      margin: 0 !important;
+      padding: 0 rem(15px) !important;
+      height: rem(26px) !important;
+      line-height: rem(26px) !important;
+      color: $font-main-color;
+      font-size: $font-com-size;
+      > i {
+        font-size: $font-com-size;
+      }
+    }
+    li[class*='ant-menu-item-selected'] {
+      background-color: #BBE0EF;
+    }
+  }
+}
+
+.iconClass {
+  padding-right: rem(5px);
+}
+
+.nursingRight {
+  width: calc(100% - 210px);
+  height: 100%;
+  float: left;
+  padding: rem(10px) rem(12px);
+}
+
+.nursingSearch {
+  height: rem(30px);
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: rem(10px);
+  > span {
+    color: $first;
+    font-size: rem(12px);
+    white-space: nowrap;
+    position: absolute;
+    right: 0;
+  }
+  > div {
+    display: flex;
+    align-items: center;
+    input {
+      height: rem(30px) !important;
+      background-color: $white-block;
+    }
+    button {
+      padding: 0 rem(5px) !important;
+      height: rem(30px) !important;
+      font-size: rem(12px);
+      margin-left: rem(25px);
+      > i {
+        padding-right: rem(5px);
+        font-size: rem(14px);
+      }
+    }
+  }
+}
+
+.rightTable {
+  width: 100%;
+  height: calc(100% - 40px);
+  box-sizing: border-box;
+  > div {
+    > div {
+      border: rem(1px) solid $big-border-color;
+      border-radius: $border-radius4;
+    }
+  }
+  :global {
+    .ag-header-row {
+      background-color: #ececec;
+    }
+    .ag-header-cell {
+      border-right-color: $mid-split-color !important;
+    }
+  }
+}
+
+.changeTitle {
+  font-size: rem(14px);
+  > span {
+    font-size: rem(12px);
+    padding-left: rem(5px);
+  }
+}
+
+.changeDrag {
+  div[class*='ant-modal-header'] {
+    padding: rem(10px) rem(15px);
+  }
+  div[class*='ant-modal-body'] {
+    padding: rem(10px) rem(15px);
+  }
+  div[class*='ant-modal-footer'] {
+    border: 0;
+    padding: 0 rem(15px) rem(10px);
+    button {
+      height: rem(25px);
+    }
+  }
+  button[class*='ant-modal-close'] {
+    > span {
+      width: rem(40px);
+      height: rem(40px);
+      line-height: rem(40px);
+    }
+  }
+}
+
+.rounded {
+  height: rem(30px) !important;
+  margin-bottom: rem(10px);
+  > span {
+    height: auto;
+    border-right-color: #ececec;
+  }
+  input {
+    height: 100%;
+    border: 0;
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+.addBtn {
+  background-color: $button-add-background !important;
+  border-color: $button-add-border !important;
+  color: #fff !important;
+  margin-right: rem(6px) !important;
+  &:hover {
+    background-color: $button-add-hover-background !important;
+    border-color: $button-add-hover-border !important;
+  }
+}
+
+.deleteBtn {
+  background-color: $button-delete-background !important;
+  border-color: $button-delete-border !important;
+  color: $button-delete-color !important;
+  margin-left: 0 !important;
+  &:hover {
+    background-color: $button-delete-hover-background !important;
+    border-color: $button-delete-hover-border !important;
+    color: $button-delete-hover-color !important;
+  }
+}
+
+//表格复选框
+.agCheckbox {
+  height: 100%;
+  position: relative;
+  :global {
+    .ag-header-cell-resize {
+      display: none;
+    }
+    .ag-header-select-all {
+      padding: 0 !important;
+      position: absolute;
+      width: rem(14px);
+      height: rem(14px);
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+    }
+    .ag-checkbox-unchecked {
+      width: rem(14px);
+      height: rem(14px);
+      display: block;
+      .ag-icon {
+        width: rem(14px);
+        height: rem(14px);
+      }
+    }
+    .ag-checkbox-checked {
+      .ag-icon {
+        width: rem(14px);
+        height: rem(14px);
+      }
+    }
+    .ag-checkbox-indeterminate {
+      .ag-icon {
+        width: rem(14px);
+        height: rem(14px);
+      }
+    }
+  }
+}
+
+.agBodyCheckbox {
+  position: relative;
+  :global {
+    .ag-cell-wrapper {
+      position: absolute;
+      width: rem(14px);
+      height: rem(14px);
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+    }
+    .ag-icon {
+      width: rem(14px) !important;
+      height: rem(14px) !important;
+    }
+    .ag-selection-checkbox {
+      display: block;
+      padding-right: 0 !important;
+    }
+  }
+}
+
+//select
+.collection {
+  height: rem(30px) !important;
+  border: none !important;
+  border-radius: 0 !important;
+  margin-bottom: rem(10px);
+  > span {
+    border: rem(1px) solid $big-border-color;
+    border-bottom-left-radius: rem(4px);
+    border-top-left-radius: rem(4px);
+    border-right: none;
+  }
+  > span {
+    background-color: $white-block !important;
+  }
+}
+
+.collectionSelect {
+  font-size: rem(12px) !important;
+  width: 100%;
+  color: $font-main-color !important;
+  height: rem(30px);
+  :global {
+    .ant-select-selection {
+      border: rem(1px) solid $big-border-color;
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+      border-left: rem(1px) solid #ececec;
+      height: rem(30px);
+      background-color: $white-block;
+      overflow: hidden;
+      &:hover {
+        border-color: $button-save-background;
+      }
+    }
+    .ant-select-focused .ant-select-selection {
+      border-color: $button-save-background !important;
+    }
+    .ant-select-selection__rendered {
+      margin: 0 rem(8px) !important;
+    }
+    .ant-select-arrow::before {
+      font-size: rem(10px);
+      color: $font-un-color;
+    }
+  }
+}
+
+//下拉
+.dropDownMenu {
+  background-color: $white-block;
+  li[class*='ant-select-dropdown-menu-item'] {
+    font-size: $font-com-size;
+    color: $font-main-color;
+    &:hover {
+      background-color: $menu-selected;
+    }
+  }
+  li[class*='ant-select-dropdown-menu-item-selected'] {
+    background-color: $menu-selected;
+  }
+}
+
+//多选
+.permission {
+  > div {
+    border-radius: 0 rem(4px) rem(4px);
+    border: 0;
+  }
+}
+
+//穿梭框
+.transfer {
+  display: flex;
+  align-items: center;
+  :global {
+    .custom-item {
+      display: inline-block;
+      width: calc(100% - 16px);
+      position: relative;
+    }
+    .ant-transfer-list {
+      width: calc(100% - 64px);
+      height: rem(255px);
+      border-color: $big-border-color;
+      padding-top: rem(27px);
+      &:last-child {
+        .ant-transfer-list-body-search-wrapper {
+          display: none;
+        }
+        .ant-transfer-list-body-with-search {
+          padding-top: rem(5px);
+        }
+      }
+      &:first-child {
+        .ant-transfer-list-body-with-search {
+          padding-top: rem(36px);
+        }
+        .ant-transfer-list-body-search-wrapper {
+          padding: rem(5px)
+        }
+      }
+    }
+    .ant-transfer-list-header {
+      padding: rem(5px) rem(12px);
+      background-color: $select;
+      border-bottom-color: $mid-split-color;
+      font-size: rem(12px);
+      font-weight: bold;
+      color: $font-main-color
+    }
+    .ant-checkbox-inner {
+      width: rem(14px);
+      height: rem(14px);
+      top: rem(-1px);
+      border-color: $big-border-color;
+    }
+    .ant-input {
+      height: rem(26px);
+      line-height: rem(24px);
+      font-size: $font-com-size;
+      color: $font-main-color;
+      &:focus {
+        border-color: $button-save-background;
+        box-shadow: none;
+      }
+    }
+    .anticon {
+      line-height: rem(26px);
+    }
+    .ant-transfer-list-content-item {
+      padding: rem(4px) rem(12px);
+      min-height: rem(26px);
+      color: $font-main-color;
+      font-size: $font-com-size;
+      &:hover {
+        background: rgba(55, 163, 208, .1) !important;
+        .ant-checkbox-inner {
+          border-color: $border-focus-color !important;
+        }
+      }
+    }
+    .ant-transfer-list-header-selected {
+      > span {
+        &:first-child {
+          margin-left: rem(58px);
+          position: relative;
+          &:before {
+            position: absolute;
+            top: rem(-2px);
+            left: rem(-4px);
+            content: '(';
+          }
+          &:after {
+            position: absolute;
+            top: rem(-2px);
+            right: rem(-5px);
+            content: ')';
+          }
+        }
+        &:nth-of-type(2) {
+          display: inline-block;
+          width: calc(100% - 48px);
+          float: left;
+        }
+      }
+    }
+    .ant-transfer-list-search-action {
+      &:before {
+        position: absolute;
+        top: rem(1px);
+        bottom: rem(1px);
+        left: rem(1px);
+        width: rem(1px);
+        content: '';
+        background-color: #ececec;
+      }
+    }
+    .ant-btn-sm {
+      height: 20px;
+      margin-right: 0 !important;
+    }
+    .ant-btn-primary[disabled] {
+      border-color: $big-border-color;
+      background-color: #fff;
+    }
+  }
+  > div {
+    &:nth-of-type(2) {
+      width: rem(64px);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      :global {
+        .anticon {
+          line-height: rem(18px);
+        }
+      }
+    }
+  }
+}
+
+.transferList {
+  display: inline-block;
+  color: $font-main-color;
+  font-size: $font-com-size;
+  position: absolute;
+  right: 0;
+}
+
+.transferSelect {
+  height: rem(20px);
+  width: rem(70px);
+  margin-left: rem(12px) !important;
+  :global {
+    .ant-select-selection--single {
+      height: rem(20px);
+      border-color: $list-split-color;
+    }
+    .ant-select-selection__rendered {
+      margin-left: 4px;
+      margin-right: 4px;
+      line-height: rem(18px);
+      font-size: $font-com-size;
+    }
+    .ant-select-selection-selected-value {
+      padding-right: rem(4px)
+    }
+    .ant-select-arrow {
+      right: rem(4px)
+    }
+  }
+}
+
+.nurseGroupInputTable {
+  z-index: 10;
+  > input {
+    height: 100%;
+    border-radius: 0 4px 4px 0;
+  }
+}
+
+.bottom {
+  margin-bottom: 0;
+}
+

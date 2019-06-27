@@ -1,0 +1,70 @@
+@import '../../../../../index';
+@import '../../style/modal.scss';
+
+.smallModal {
+  width: rem(360px);
+  :global {
+    .ant-input-disabled {
+      background-color: #fff !important;
+      color: $font-un-color;
+    }
+  }
+  .bodyRow {
+    width: 100%;
+    margin-bottom: rem(8px);
+    display: flex;
+  }
+  .bodyRowTitle {
+    float: left;
+    line-height: rem(22px);
+    width: rem(80px);
+    text-align: right;
+  }
+  .bodyInput {
+    float: left;
+    height: rem(22px);
+    width: 100%;
+    input {
+      height: 22px;
+      border-radius: 0;
+    }
+    :global {
+      .ant-select-selection {
+        height: 24px;
+        border-radius: 0;
+        > div {
+          line-height: 24px;
+        }
+      }
+    }
+  }
+  //动态值
+  .selLabel {
+    display: none;
+  }
+  .selItem {
+    width: 100%;
+    margin: 0;
+    height: rem(22px);
+    :global {
+      .ant-select-selection__rendered {
+        line-height: rem(20px);
+      }
+      .ant-select-selection {
+        height: rem(22px) !important;
+        border-radius: 0;
+        border-color: $big-border-color;
+      }
+      .ant-select {
+        width: 100%;
+        font-size: $font-com-size;
+      }
+      .ant-select-arrow::before {
+        font-size: rem(8px);
+      }
+    }
+  }
+  .sel {
+    width: 100%;
+  }
+}

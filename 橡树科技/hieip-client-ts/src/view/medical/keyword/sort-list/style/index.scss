@@ -1,0 +1,155 @@
+@import '../../../../../index';
+@import '../../common';
+
+.root {
+  box-shadow: $list-box-shadow;
+  height: 100%;
+  :global {
+    //右键弹出框
+    .react-contextmenu {
+      border-radius: rem(6px);
+      box-shadow: $list-box-shadow;
+      background-color: $list-right-click-bg;
+      overflow: hidden;
+    }
+    .react-contextmenu-item {
+      padding: rem(8px) rem(27px) rem(10px) rem(22px);
+      font-size: rem(12px);
+      color: $font-com-color;
+      height: rem(30px);
+      line-height: rem(12px);
+    }
+    .react-contextmenu-item:hover {
+      color: $font-com-color;
+      background-color: $list-right-click-bg-hover;
+    }
+    //按钮弹出框
+    .ant-modal {
+      width: rem(240px) !important;
+    }
+    .ant-modal-header {
+      padding: 0 !important;
+      border-bottom: 0;
+    }
+    .ant-modal-title {
+      font-size: rem(14px) !important;
+      line-height: rem(15px) !important;
+      height: rem(35px) !important;
+      padding: rem(9px) 0 rem(11px) rem(11px) !important;
+      font-weight: bold !important;
+    }
+    .ant-modal-close-x {
+      color: $font-un-color;
+      width: rem(35px);
+      height: rem(35px);
+      line-height: rem(35px);
+      font-size: rem(15px);
+    }
+    .ant-modal-body {
+      padding: 0 rem(11px) 0 rem(10px) !important;
+      .ant-input {
+        height: rem(30px);
+        line-height: rem(20px);
+        font-size: rem(12px);
+      }
+    }
+    .ant-modal-footer {
+      border-top: 0;
+      padding: rem(8px) rem(12px) rem(8px) 0;
+      .ant-btn {
+        height: rem(28px);
+        padding: 0 rem(14px);
+        font-size: rem(12px);
+        color: $alter-color;
+        background-color: $alter-bg;
+        border: rem(1px) solid $alter-border;
+        margin-right: 0 !important;
+      }
+    }
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: rem(26px);
+    background-color: $header-bg;
+    padding: rem(6px) rem(9px) rem(5px) rem(12px);
+    border-bottom: rem(1px) solid $header-border;
+    border-top: rem(1px) solid $header-border;
+    .addSort {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: rem(12px);
+      > h3 {
+        padding-left: 0 !important;
+        font-size: rem(12px) !important;
+        color: $header-h3 !important;
+        font-weight: bold !important;
+        height: rem(13px) !important;
+        line-height: rem(13px) !important;
+        width: rem(40px) !important;
+        margin: 0 rem(8px) 0 0 !important;
+        background-color: $header-bg;
+      }
+      > button {
+        padding: 0;
+        border: rem(1px) solid #fff;
+        background-color: $header-bg;
+        border-radius: rem(2px);
+        color: #fff;
+        .plus {
+          color: #fff;
+        }
+      }
+    }
+    .hint {
+      font-size: rem(12px);
+      height: rem(13px);
+      line-height: rem(13px);
+      color: #fff;
+      opacity: $opacity;
+    }
+  }
+  .main {
+    font-size: rem(12px);
+    color: $font-com-color;
+    padding-top: rem(7px);
+    //antd下拉菜单样式
+    :global {
+      .ant-menu {
+        width: 100% !important;
+      }
+      .react-contextmenu {
+        z-index: 1;
+      }
+      .ant-menu-submenu-title {
+        height: rem(24px) !important;
+        line-height: rem(14px) !important;
+        font-size: rem(12px);
+        color: $font-com-color;
+        padding: rem(5px) 0 rem(5px) rem(19px) !important;
+        margin: 0 !important;
+        > span > span {
+          display: block;
+        }
+      }
+      .ant-menu-submenu-active {
+        background-color: $list-right-click-bg-hover !important;
+      }
+      .ant-menu-item {
+        font-size: rem(12px);
+        margin: 0 !important;
+        line-height: rem(12px) !important;
+        height: rem(24px) !important;
+        padding: rem(6px) 0 rem(6px) rem(37px) !important;
+        color: $font-un-color;
+      }
+    }
+  }
+  //subMenu 字体颜色
+  .subMenu {
+    color: $font-main-color
+  }
+}

@@ -1,0 +1,211 @@
+@import '../../../../../index';
+@import '../../style/modal.scss';
+//大病例模板属性弹框样式
+.bigModal {
+  width: rem(540px);
+  :global {
+    .ant-modal-body {
+      :global {
+        .ant-checkbox {
+          width: rem(12px) !important;
+          height: rem(12px);
+        }
+        .ant-checkbox-inner {
+          height: 12px;
+          width: rem(12px) !important;
+          &:after {
+            top: 0;
+            left: rem(2px);
+          }
+        }
+        .ant-checkbox-wrapper {
+          padding: rem(3px) 0;
+          span:last-child {
+            padding-right: 0 !important;
+            font-size: $font-com-size;
+            color: $font-main-color;
+            //font-weight: bold;
+          }
+        }
+        //radio
+        .ant-radio-inner {
+          width: rem(12px);
+          height: rem(12px);
+          &:after {
+            width: rem(4px) !important;
+            height: rem(4px) !important;
+            top: rem(3px);
+            left: rem(3px);
+            transform: scale(1) !important;
+            opacity: 1;
+            background-color: $big-border-color;
+          }
+        }
+        .ant-radio-checked {
+          .ant-radio-inner {
+            border-color: #3db5e7 !important;
+          }
+          .ant-radio-inner:after {
+            background-color: #3db5e7 !important;
+          }
+        }
+        .ant-radio + * {
+          padding-left: rem(3px);
+        }
+      }
+    }
+    .ant-select-selection-selected-value {
+      font-size: $font-com-size;
+      line-height: rem(22px);
+    }
+  }
+  .bodyLeft {
+    width: rem(210px);
+    float: left;
+    :global {
+      .ant-input-disabled {
+        background-color: #fff !important;
+        color: $font-un-color;
+      }
+    }
+    .bodyLeftRow {
+      margin-bottom: rem(8px);
+      height: rem(22px);
+    }
+    .motherChecked { //母版选择
+      float: right;
+    }
+    .leftInput {
+      width: rem(145px);
+      height: rem(22px);
+      float: right;
+      input {
+        height: 22px;
+        border-radius: 0;
+      }
+    }
+    .bodyLeftRowTitle {
+      float: left;
+      width: rem(60px);
+      text-align: right;
+      line-height: rem(22px);
+      font-weight: bold;
+    }
+    .leftboxWrap {
+      height: auto;
+    }
+    //下拉sel组合
+    .leftSelItem {
+      width: 100%;
+      margin: 0 !important;
+    }
+    .leftSelLabel {
+      width: rem(60px);
+      padding: 0;
+      text-align: right;
+      span {
+        padding: 0;
+        line-height: rem(22px);
+        font-weight: bold;
+      }
+    }
+    .leftSel {
+      width: rem(145px);
+      float: right;
+      :global {
+        .ant-select {
+          width: 100%;
+        }
+        .ant-select-selection {
+          height: rem(24px);
+          border-radius: 0;
+        }
+        .ant-select-selection__rendered {
+          line-height: rem(22px) !important;
+        }
+      }
+    }
+  }
+  .boxWrap {
+    border: rem(1px) solid #d9d9d9;
+    position: relative;
+    padding: rem(12px);
+    margin-top: rem(16px);
+    :global {
+      .ant-checkbox-group {
+        text-align: left;
+      }
+    }
+  }
+  .boxWrapTitle {
+    position: absolute;
+    top: rem(-9px);
+    left: rem(12px);
+    color: #3db5e7;
+    font-weight: bold;
+    background-color: #fff;
+    padding: 0 rem(5px);
+  }
+  .bodyRight {
+    width: rem(300px);
+    height: rem(384px);
+    float: left;
+    padding-left: rem(17px);
+    .bodyRightRow {
+      width: 100%;
+    }
+    .classCodeWrap {
+      margin-top: 0;
+      padding: rem(18px) rem(12px);
+      :global {
+        .ant-radio-group {
+          position: absolute;
+          top: rem(-12px) !important;
+          background-color: #fff;
+        }
+      }
+    }
+    .classCodeRadio {
+      padding-left: rem(12px);
+    }
+    .classCodelSelItem {
+      float: inherit;
+      margin: 0;
+      font-size: $font-com-size;
+    }
+    .classCodeLabel > span {
+      padding: 0;
+      line-height: rem(22px);
+    }
+    .classCodelSel {
+      :global {
+        .ant-select-selection {
+          width: rem(170px);
+          border-radius: 0;
+          height: rem(22px);
+        }
+      }
+    }
+    //时间类型
+    .timeType, .writeNumber {
+      height: rem(154px);
+      float: left;
+      .boxWrap {
+        height: rem(138px);
+      }
+      :global {
+        .ant-radio-wrapper {
+          padding: rem(5px) 0;
+        }
+      }
+    }
+    .timeType {
+      width: 60%;
+      padding-right: rem(8px);
+    }
+    //书写次数
+    .writeNumber {
+      width: 40%;
+    }
+  }
+}

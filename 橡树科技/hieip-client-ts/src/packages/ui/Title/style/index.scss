@@ -1,0 +1,93 @@
+@import './../../../../index.scss';
+
+.root {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardTitle {
+  display: inline-block;
+  font-size: $font-big-size;
+  font-weight: bold;
+  color: $font-main-color;
+  white-space: nowrap;
+}
+
+.titleBtnGroup {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  font-size: $font-com-size;
+  cursor: pointer;
+}
+
+div.iconLabel {
+  display: flex;
+  margin-right: 3px;
+  align-items: center;
+  justify-content: center;
+  font-size: $font-com-size;
+  border-radius: 50%;
+  &:active {
+    i {
+      background: $font-select-color;
+    }
+    span {
+      color: $font-select-color;
+    }
+  }
+  i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: rem(18px);
+    height: rem(18px);
+    border-radius: 50%;
+    font-size: $font-special-size;
+    color: #fff;
+    background: #d2d2d2;
+    &:before {
+      transform: translateX(0);
+    }
+  }
+  span {
+    color: $font-main-color;
+    white-space: nowrap;
+  }
+}
+
+.searchRecord {
+  display: inline-block;
+  font-size: $font-com-size;
+  width: rem(100px);
+  :global {
+    div.ant-select-selection {
+      border-color: $list-split-color;
+      box-shadow: none;
+      border-radius: 0;
+      border-bottom: 1px solid $font-un-color;
+      outline: none;
+      background: $list-split-color;
+    }
+    .ant-select-arrow {
+      display: none;
+    }
+    .ant-select-search__field {
+      padding-right: 12px;
+    }
+  }
+}
+
+.searchIcon {
+  position: absolute;
+  color: #666;
+  right: rem(15px);
+  top: rem(10px);
+  cursor: pointer;
+  &:active {
+    color: $font-select-color;
+  }
+}

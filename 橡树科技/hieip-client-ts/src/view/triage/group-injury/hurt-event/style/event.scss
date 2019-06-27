@@ -1,0 +1,187 @@
+@import '../../../../../index';
+
+.hurtEventMain {
+  float: left;
+  box-shadow: 0 10px 8px rgba(0, 0, 0, 0.2);
+  margin: 10px 0;
+  height: calc(100% - 26px);
+  width: 100%;
+}
+
+.hurtTitle {
+  height: rem(30px);
+  line-height: rem(30px);
+  width: 100%;
+  background: $public-title-color;
+  padding: 0 rem(8px);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.smallTitle {
+  color: #fff;
+  font-size: rem(14px);
+}
+
+.addBtn {
+  margin-left: rem(15px) !important;
+  height: rem(24px) !important;
+  padding: 0 rem(10px) !important;
+  color: #fff !important;
+  font-size: rem(13px) !important;
+  > i {
+    padding-right: rem(5px);
+    font-size: $font-title-size;
+    margin-top: rem(2px);
+    display: inline-block;
+  }
+  background: lighten($public-title-color, 5%) !important;
+  border-color: lighten($public-title-color, 20%) !important;
+  line-height: 1 !important;
+  &:hover {
+    background: lighten($public-title-color, 10%) !important;
+  }
+  &:active {
+    background: darken($public-title-color, 10%) !important;
+  }
+}
+
+.titleTip {
+  color: lighten($font-main-color, 55%);
+  font-size: rem(12px);
+  position: absolute;
+  right: rem(10px);
+}
+
+.filterCondition {
+  width: 100%;
+  height: rem(80px);
+  text-align: center;
+}
+
+.timePickerStyle {
+  margin-top: rem(5px);
+  display: inline-block;
+  padding: 0 rem(15px);
+  div[class*='pt-input-group'] {
+    width: 47%;
+  }
+  input {
+    height: rem(30px);
+  }
+}
+
+.inquire {
+  margin-top: rem(5px);
+  display: flex;
+  padding: 0 rem(15px);
+  height: rem(30px);
+}
+
+.inquireBtn {
+  width: rem(80px) !important;
+  height: rem(30px) !important;
+  margin-left: rem(5px) !important;
+  padding: 0 rem(5px) !important;
+  font-size: rem(13px) !important;
+  > i {
+    padding-right: rem(5px);
+    font-size: $font-title-size;
+  }
+  background-color: $button-search-background;
+  border-color: $button-search-border;
+  color: $button-search-color;
+  &:hover {
+    background-color: $button-search-hover-background;
+    border-color: $button-search-hover-border;
+    color: $button-search-hover-color;
+  }
+}
+
+.inquireCondition {
+  height: rem(30px) !important;
+}
+
+.hurtTable {
+  width: 100%;
+  height: calc(100% - 110px);
+}
+
+.tipStyle {
+  div[class*='ant-tooltip-arrow'] {
+    border-top-color: darken(#fff, 20%) !important;
+  }
+  div[class*='ant-tooltip-inner'] {
+    background: #fff !important;
+    color: $font-main-color !important;
+  }
+}
+
+.addModel {
+  border-radius: rem(6px);
+  span[class*='ant-modal-close-x'] {
+    width: rem(40px);
+    height: rem(40px);
+    line-height: rem(40px);
+  }
+
+  div[class*='ant-modal-header'] {
+    border-bottom: 0;
+    padding: rem(10px);
+  }
+
+  div[class*='ant-modal-body'] {
+    padding: rem(13px);
+  }
+
+  div[class*='ant-modal-footer'] {
+    border-top: 0;
+  }
+}
+
+.eventType {
+  width: 100% !important;
+  float: none !important;
+  margin-bottom: rem(10px);
+  height: rem(30px) !important;
+  > span {
+    height: auto;
+  }
+  input {
+    height: rem(28px);
+    border: 0;
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+.specialTime {
+  overflow: inherit;
+}
+
+.addSelect {
+  width: 100%;
+  > div {
+    border: 0 !important;
+  }
+}
+
+.addTime {
+  span[class*='pt-popover-target'] {
+    width: 100%;
+  }
+  input[class*='pt-input'] {
+    border: 0 !important;
+    box-shadow: none !important;
+    &:focus {
+      box-shadow: none !important;
+    }
+  }
+}
+
+.addInput {
+  height: rem(33px);
+}

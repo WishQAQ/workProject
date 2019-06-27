@@ -1,0 +1,9 @@
+{
+  "name": "hieicp",
+  "version": "0.1.0",
+  "main": "main.js",
+  "dependencies": {
+    "express": "latest",
+    "proxy-middleware": "^0.15.0"
+  }
+}

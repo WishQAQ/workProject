@@ -1,0 +1,54 @@
+/** ------ 颜色配置 ------ **/
+/* 主题色 */
+/* white */
+/* black */
+/* 错误 */
+/* 微信 */
+/* warning */
+/* success */
+/* info */
+/* 一级文本 */
+/* 二级文本 */
+/* 三级文本 */
+/* 四级提示性文本，不可用状态 */
+/* 分割线,提醒灯 */
+/* 浅色分割线,提醒灯 */
+/* 底色层 */
+/* 点击交互颜色 */
+.header-bar .search-wrap {
+  display: flex;
+  align-items: center;
+}
+.header-bar .search-wrap .icon-back {
+  padding: 0 10px;
+}
+.header-bar .search-wrap .search {
+  flex: 1;
+  padding-left: 0;
+}
+.header-bar .search-wrap .search.padding {
+  padding-left: 12px;
+}
+.header-bar .search-wrap .am-search-cancel {
+  color: #f56d19;
+  font-size: 14px;
+}
+.header-bar .search-wrap .am-search-value {
+  color: #666;
+}
+.header-bar .crumb {
+  padding: 0 12px;
+  display: flex;
+  white-space: nowrap;
+  border-bottom: 5px solid #f5f5f5;
+}
+.header-bar .crumb-item {
+  padding: 8px 12px 8px 0;
+  max-width: 180px;
+  color: #9f9f9f;
+  display: flex;
+  align-items: center;
+}
+.header-bar .crumb-item-active {
+  color: #ff7a02;
+}

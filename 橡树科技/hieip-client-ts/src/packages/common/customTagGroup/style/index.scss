@@ -1,0 +1,52 @@
+@import '../../../../index';
+
+.tagGroup {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 0;
+  padding: 0;
+  height: rem(26px);
+  line-height: rem(26px);
+  font-size: $font-title-size;
+  color: $font-com-color;
+  :global {
+    .ant-tag {
+      display: inline-block;
+      margin: 0;
+      height: rem(26px);
+      line-height: rem(24px);
+      text-align: center;
+      cursor: pointer;
+      border: 1px solid #d9d9d9;
+      border-left-color: transparent;
+      border-radius: 0;
+      background: #fff;
+      color: $font-com-color;
+      padding: 0 10px;
+      &:hover,
+      &:active {
+        color: $font-com-color;
+      }
+      &:first-child {
+        border-left-color: #d9d9d9;
+        border-radius: 4px 0 0 4px;
+      }
+      &:last-child {
+        border-radius: 0 4px 4px 0;
+      }
+    }
+    .ant-tag-checkable-checked {
+      background: #3DB5E7 !important;
+      border-color: #3db5e7 !important;
+      color: #fff;
+      border-left-color: #1890ff !important;
+      &:first-child {
+        border-left-color: #3db5e7 !important;
+      }
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}

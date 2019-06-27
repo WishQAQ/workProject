@@ -1,0 +1,16 @@
+@import '../../index';
+
+.main {
+  padding: 0 rem(13px);
+}
+
+.title {
+  margin-top: rem(10px);
+}
+
+.content {
+  padding-top: rem(5px);
+  padding-bottom: rem(10px);
+  overflow: hidden;
+  height: calc(100% - 40px) !important;
+}

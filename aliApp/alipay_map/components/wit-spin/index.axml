@@ -1,0 +1,8 @@
+<view class="wit-spin {{classes}}">
+  <slot></slot>
+  <view class="wit-spin-wrap" a:if="{{spinning}}">
+  </view>
+  <view class="wit-spin-loading" a:if="{{spinning}}">
+    <wit-loading/>
+  </view>
+</view>

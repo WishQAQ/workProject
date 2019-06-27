@@ -1,0 +1,72 @@
+@import '../../../../index.scss';
+.echartsWrap {
+  width: 100%;
+  height: calc(100% - 82px);
+  overflow: auto;
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+  &:before {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  .echartsContent {
+    float: left;
+    width: calc((100% - 34px) / 2);
+    height: rem(350px);
+    background: $white-block !important;
+    border-radius: rem(6px);
+    box-shadow: 0 0 rem(8px) rgba(0, 0, 0, .12);
+    margin-top: rem(10px);
+    position: relative;
+    .contentHeader {
+      height: rem(50px);
+      display: flex;
+      padding-top: rem(16px);
+      > span {
+        font-size: rem(18px);
+        font-weight: bold;
+        margin-left: rem(22px);
+        margin-right: rem(12px);
+      }
+      :global {
+        .ant-radio-button-wrapper {
+          border: 0;
+          height: 0;
+          padding: 0;
+          > span:last-child {
+            margin-right: rem(8px);
+          }
+        }
+      }
+    }
+    .echarts, .echartsTable {
+      width: 100%;
+      height: calc(100% - 50px);
+    }
+    .echartsTable {
+      padding: 0 rem(12px) rem(10px) rem(12px);
+    }
+    .echartsS {
+      position: absolute;
+      right: rem(30px);
+      top: rem(20px);
+      width: rem(240px);
+      height: rem(160px);
+    }
+  }
+  .echartsContentS {
+    width: calc((100% - 44px) / 3);
+  }
+  .left {
+    margin-left: rem(12px);
+    margin-right: rem(10px);
+  }
+  .center {
+    margin-right: rem(10px);
+  }
+  .right {
+    margin-right: rem(12px);
+  }
+}

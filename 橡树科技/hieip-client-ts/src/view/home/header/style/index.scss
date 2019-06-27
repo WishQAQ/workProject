@@ -1,0 +1,184 @@
+@import '../../../../index';
+
+.header {
+  height: 40px;
+  padding: rem(5px) rem(10px);
+  background: rgba(255, 255, 255, 1);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 21, 41, .08);
+  box-shadow: 0 1px 4px rgba(0, 21, 41, .08);
+  > div {
+    height: 100%;
+  }
+}
+
+.logo, .menus, .patientInfo {
+  height: 100%;
+}
+
+.logo {
+  flex: 0;
+  > div > svg {
+    height: 100%;
+  }
+}
+
+.menus {
+  overflow: hidden;
+  flex: 7;
+  > ul {
+    border: none;
+    line-height: rem(30px);
+    font-size: 16px !important;
+    margin-left: rem(20px)
+  }
+  li[class*='ant-menu-submenu']:hover {
+    border-bottom: rem(2px) solid $font-select-color;
+    color: $font-select-color;
+  }
+  div[class*='ant-menu-submenu-title']:hover {
+    color: $font-select-color;
+  }
+}
+
+.mainMenu {
+  > ul {
+    li[class*='ant-menu-item'] {
+      height: rem(30px) !important;
+      line-height: rem(30px) !important;
+    }
+    li[class*='ant-menu-item']:hover {
+      color: $font-select-color;
+    }
+  }
+}
+
+.patientInfo {
+  flex: 2.5;
+}
+
+.logo {
+  > svg {
+    height: 100%;
+  }
+}
+
+.toolbar {
+  float: left;
+}
+
+.fontIcon {
+  font-size: rem(21px) !important;
+  padding: rem(0) rem(5px);
+}
+
+.userImg {
+  width: rem(35px);
+  height: rem(35px);
+  float: left;
+  margin-right: rem(5px);
+  > img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.roleList {
+  div[class*='ant-select-selection--single'] {
+    height: rem(21px);
+    position: relative;
+    cursor: pointer;
+    width: rem(70px);
+    margin-top: rem(5px);
+    >div{
+      height: 100%;
+      margin: 0 rem(5px);
+      >div{
+        height: 100%;
+        line-height: rem(20px);
+      }
+    }
+  }
+}
+
+.menuIcon {
+  font-size: 14px;
+}
+
+.peopleImg {
+  width: rem(30px);
+  height: rem(30px);
+  float: left;
+  margin-right: rem(8px);
+  margin-top: rem(3px);
+  > img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.minimize, .logout {
+  float: right;
+  display: inherit;
+  position: relative;
+  margin-top: rem(2px);
+  cursor: pointer;
+  i{
+    margin-top: rem(-1px);
+    float: left;
+  }
+}
+
+.userName {
+  margin-right: rem(8px);
+  color: rgba(61, 181, 231, 1);
+  font-weight: bold;
+  float: right;
+  line-height: rem(32px);
+  max-width: rem(80px);
+  height: 100%;
+  overflow: hidden;
+  font-size: $font-title-size;
+}
+
+.meesageNum {
+  background-color: #fff;
+  color: #999;
+  // box-shadow: 0 0 0 1px #d9d9d9 inset;
+  padding-left: rem(8px);
+  line-height: .1;
+  margin: -8px 25px 0 5px !important;
+  > sup {
+    top: rem(-9px) !important;
+    font-size: rem(9px);
+    line-height: rem(17px);
+    height: rem(17px);
+    padding: 0 5px;
+  }
+}
+
+.messageIcon {
+  font-size: rem(21px);
+  cursor: pointer;
+}
+
+.userInfo {
+  float: right;
+  margin-right: rem(5px);
+}
+
+.minimize:after {
+  position: absolute;
+  top: rem(7px);
+  height: rem(16px);
+  left: 0;
+  content: '';
+  width: 0;
+  border-left: 1px solid rgba(236, 236, 236, 1);
+}
+
+

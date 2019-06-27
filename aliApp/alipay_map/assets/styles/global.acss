@@ -1,0 +1,99 @@
+/** ------ 颜色配置 ------ **/
+/* 主题色 */
+/* white */
+/* black */
+/* 错误 */
+/* 微信 */
+/* warning */
+/* success */
+/* info */
+/* 一级文本 */
+/* 二级文本 */
+/* 三级文本 */
+/* 四级提示性文本，不可用状态 */
+/* 分割线,提醒灯 */
+/* 浅色分割线,提醒灯 */
+/* 底色层 */
+/* 点击交互颜色 */
+.wit-1px-t,
+.wit-1px-r,
+.wit-1px-b,
+.wit-1px-l {
+  position: relative;
+}
+.wit-1px-t::after,
+.wit-1px-r::after,
+.wit-1px-b::after,
+.wit-1px-l::after {
+  content: "";
+  position: absolute;
+  z-index: 3;
+}
+.wit-1px-t:after {
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-top: 1px solid #f0f0f0;
+  transform: scaleY(0.5);
+  transform-origin: 0 0;
+}
+.wit-1px-r:after {
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  border-right: 1px solid #f0f0f0;
+  transform: scaleX(0.5);
+  transform-origin: 0 0;
+}
+.wit-1px-b:after {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #f0f0f0;
+  transform: scaleY(0.5);
+  transform-origin: 0 0;
+}
+.wit-1px-l:after {
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  border-left: 1px solid #f0f0f0;
+  transform: scaleX(0.5);
+  transform-origin: 0 0;
+}
+.text-clip {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.text-clip2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+page {
+  font-size: 14px;
+  line-height: 1.6;
+  font-family: Helvetica, Microsoft YaHei, STHeiti, Droid Sans Fallback;
+  background-color: #fbf9fe;
+}
+/* mini-antui 样式重置 */
+.wit-am-list .am-list-content,
+.wit-am-list .am-list-extra {
+  font-size: 14px;
+}
+.wit-am-list .am-list-arrow {
+  width: 25px;
+  height: 25px;
+  background-image: url('/assets/images/arrow-right.png');
+}

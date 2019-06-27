@@ -1,0 +1,154 @@
+@import '../../../../index';
+
+// 分级颜色
+$levelColors: (
+    firstLevel: $first,
+    secondLevel: $second,
+    thirdLevel: $three,
+    fourthLevel: $four
+);
+
+// 分区颜色
+$partitionColors: (
+    redPartition: $red-partition,
+    yellowPartition: $yellow-partition,
+    greenPartition: $green-partition
+);
+
+// 分级hover颜色
+$levelHoverColor: (
+    firstRed: $first,
+    secondOrange: $second,
+    thirdYellow: $three,
+    fourGreen: $four,
+);
+
+// 分区hover样式
+$partitionHover: (
+    redArea: $red-partition,
+    yellowArea: $yellow-partition,
+    greenArea: $green-partition
+);
+
+@mixin antd-radio-btn-resize {
+  position: relative;
+  color: $font-com-color;
+  border-color: $big-border-color;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $font-com-color;
+    border-color: $big-border-color;
+  }
+  transition: .3s ease-out;
+}
+
+.root {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  :global {
+    // antd单选按钮组样式重置
+    .ant-radio-group {
+      .ant-radio-button-wrapper,
+      .ant-radio-button-wrapper-checked {
+        @include antd-radio-btn-resize;
+      }
+      .ant-radio-button-wrapper {
+        padding: 0 12px;
+        height: rem(30px);
+        font-size: $font-com-size;
+      }
+    }
+    .ant-input-group-addon {
+      padding: 0;
+      width: rem(32px);
+      height: rem(28px) !important;
+      border-radius: 0 5px 5px 0;
+      .ant-btn {
+        box-sizing: border-box;
+        width: rem(32px);
+        height: rem(28px) !important;
+        border-radius: 0;
+        border: none;
+      }
+    }
+  }
+
+  .searchInput {
+    width: auto;
+    height: rem(30px);
+    font-size: $font-com-size;
+    & + span {
+      overflow: hidden;
+    }
+  }
+
+  .radioGroup {
+    margin-right: rem(10px);
+  }
+}
+
+.badge {
+  display: inline-block;
+  position: absolute;
+  top: rem(-10px);
+  right: rem(-10px);
+  width: rem(20px);
+  height: rem(20px);
+  border-radius: 50%;
+  font-size: $font-com-size;
+  line-height: rem(18px);
+  text-align: center;
+  color: $white-default;
+  white-space: nowrap;
+}
+
+.selectRadioBtn {
+  box-sizing: border-box;
+  background: $font-select-color;
+  color: $white-default !important;
+  border-color: $font-select-color !important;
+}
+
+@each $level in map-keys($levelColors) {
+  .#{$level} {
+    box-shadow: 0 0 0 1px $white-default;
+    background: map-get($levelColors, $level);
+    border-color: map-get($levelColors, $level) !important;
+  }
+}
+
+@each $partition in map-keys($partitionColors) {
+  .#{$partition} {
+    box-shadow: 0 0 0 1px $white-default;
+    background: map-get($partitionColors, $partition);
+    border-color: map-get($partitionColors, $partition) !important;
+  }
+}
+
+.myPatient,
+.allPatient {
+  background: $font-select-color;
+  box-shadow: 0 0 0 1px $white-default;
+}
+
+@each $levelHover in map-keys($levelHoverColor) {
+  .#{$levelHover} {
+    &:hover {
+      background: map-get($levelHoverColor, $levelHover);
+      border-color: map-get($levelHoverColor, $levelHover) !important;
+      color: $white-default !important;
+    }
+  }
+}
+
+@each $areaHover in map-keys($partitionHover) {
+  .#{$areaHover} {
+    &:hover {
+      background: map-get($partitionHover, $areaHover);
+      border-color: map-get($partitionHover, $areaHover) !important;
+      color: $white-default !important;
+    }
+  }
+}

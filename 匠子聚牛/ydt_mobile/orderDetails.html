@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,
+                    initial-scale=1.0,
+                    minimum-scale=1.0,
+                    maximum-scale=1.0,
+                    user-scalable=no"
+    >
+    <title>产品详情</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <link rel="stylesheet" href="style/swiper.min.css">
+</head>
+<body>
+<header>
+    <!--导航栏 start-->
+    <nav class="orderDetails_nav navbar navbar-default navbar-fixed-bottom">
+            <!--主导航栏-->
+            <div>
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">
+                            加入购物车
+                        </a>
+                    </li>
+                    <li>
+                        <a href="orderInformation.html">
+                            立即采购
+                        </a>
+                    </li>
+                </ul>
+            </div>
+    </nav>
+    <!--导航栏 stop-->
+</header>
+<section>
+    <div class="orderDetails">
+        <div class="main_top">
+            <div class="main_top_img">
+                <img src="img/product.jpg">
+            </div>
+            <div class="main_top_text">
+                <p class="main_top_text_title">奕德堂高端品牌牙膏</p>
+                <p>零售价：¥480</p>
+                <p>代理价：¥200</p>
+                <div class="quantity">
+                    <ul class="btn-numbox">
+                        <li>
+                            <ul class="count">
+                                <li><span id="num-jian" class="num-jian">-</span></li>
+                                <li>x<input type="text" class="input-num" id="input-num" value="0" /></li>
+                                <li><span id="num-jia" class="num-jia">+</span></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main_center">
+            <div class="main_center_title">
+                <span></span>
+                <p>详情</p>
+            </div>
+            <div class="main_center_box">
+                <img src="img/orderDetails_main.jpg">
+            </div>
+        </div>
+        <div class="main_bottom">
+
+        </div>
+    </div>
+</section>
+
+<!--引入Jquery以及bootstrap组件-->
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    var num_jia = document.getElementById("num-jia");
+    var num_jian = document.getElementById("num-jian");
+    var input_num = document.getElementById("input-num");
+    num_jia.onclick = function() {
+        input_num.value = parseInt(input_num.value) + 1;
+    }
+    num_jian.onclick = function() {
+        if(input_num.value <= 0) {
+            input_num.value = 0;
+        } else {
+            input_num.value = parseInt(input_num.value) - 1;
+        }
+    }
+</script>
+</body>
+</html>

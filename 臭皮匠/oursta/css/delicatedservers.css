@@ -1,0 +1,144 @@
+.conten-top{
+	margin-bottom: 80px;
+	height: 580px;
+}
+body #box-bg{
+	width: 100%;
+	height: 400px;
+	background: #f2f2f2;
+	padding-top: 40px;
+	padding-bottom: 30px;
+	margin-bottom: 80px;
+}
+
+
+.top-2-box{
+	background: #fff;
+	width: 17%;
+	margin-left: 55px;
+	margin-right: 30px;
+	border-radius: 24px;
+}
+.top-2-box p{
+	width: 100%;
+	text-align: center;
+	font-size: 14px;
+	height: 22px;
+	margin: 0;
+}
+.top-2-box .money{
+	font-size: 30px;
+	color: #3d6da3;
+}
+
+
+.top-2-hader{
+	margin-bottom: 25px;
+	height: 120px;
+	line-height: 120px;
+	color: #fff;
+	font-size: 18px;
+	background: #3d6da3;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+}
+.top-2-box button{
+	width: 80px;
+	height: 35px;
+	background: #3d6da3;
+	border: none;
+	border-radius: 15px;
+	margin-top: 10px;
+	color: #fff;
+}
+
+
+.conten-middle{
+	margin-bottom: 100px;
+	height: 750px;
+}
+
+.middle-bigbox{
+	border-top: 2px #3d6da3 solid;
+	border-bottom: 2px #3d6da3 solid;
+	width: 100%;
+	height: 660px;
+}
+
+.middle-bule,.middle-yelow{
+	width: 399px;
+	height: 220px;
+	float: left;
+}
+.middle-bule h4,.middle-yelow h4{
+	padding-top: 40px;
+	padding-bottom: 30px;
+	font-size: 20px;
+	color: #3d6da3;
+}
+.middle-bule p,.middle-yelow p{
+	font-size: 16px;
+	width: 70%;
+	margin-left: 15%;
+	line-height: 20px;
+}
+.middle-bule{
+	background: #f3f7fc;
+}
+
+.bottom-box-2{
+	height: 350px;
+}
+
+
+.bottom-box{
+	margin-left: 12px;
+	margin-right: 12px;
+	width: 23%;
+	height: 400px;
+}
+
+
+.partners-logo{
+	height: 500px;
+	margin: 0 125px;
+}
+.partners-logo img{
+	width: auto;
+	height: 70px;
+}
+
+.btm-logo .btm-logo-1,.btm-logo-2,.btm-logo-3,.btm-logo-4{
+	display: inline-block;
+	float: left;
+	height: 120px;
+
+}
+.btm-logo .btm-logo-1 img,.btm-logo-2 img,.btm-logo-3 img,.btm-logo-4 img{
+	margin-top: 25px;
+}
+.btm-logo div:hover{
+	-webkit-box-shadow:1px 1px 2px #333333;
+	-moz-box-shadow:1px 1px 2px #333333;
+	box-shadow:1px 1px 2px #333333;
+	transition-duration: 0.5s;
+}
+
+
+.btm-logo-1{
+	margin-left: 40px;
+	margin-right: 40px;
+}
+.btm-logo-2{
+	margin-left: 42px;
+	margin-right: 42px;
+}
+
+.btm-logo-3{
+	margin-left: 25px;
+	margin-right: 25px;
+}
+.btm-logo-4{
+	margin-left: 35px;
+	margin-right: 35px;
+}

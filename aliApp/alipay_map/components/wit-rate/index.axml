@@ -1,0 +1,14 @@
+<view class="wit-rate">
+  <view
+    a:for="{{~~count}}"
+    data-value="{{item}}"
+    onTap="rate"
+    class="wit-rate-star {{item === value ? 'wit-rate-star-active' : ''}} {{classes}}"
+    style="{{padding ? `padding-right: ${padding}` : ''}}">
+    <wit-icon
+      icon="{{icon}}"
+      size="{{size}}"
+      color="{{item <= value ? activeColor: color}}"/>
+  </view>
+  <view class="wit-rate-tip" a:if="{{tip.length}}">{{tip}}</view>
+</view>

@@ -1,0 +1,157 @@
+@import '../../../index';
+
+.diagnosisMain {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  color: $font-main-color;
+}
+
+.mainLeft {
+  width: calc(100% - 150px);
+  height: 100%;
+  padding-right: rem(10px);
+}
+
+.diagnosisBtn {
+  > button {
+    height: rem(25px) !important;
+    margin-right: rem(5px);
+  }
+}
+
+.diagnosisTable {
+  width: 100%;
+  height: calc(100% - 25px);
+  padding-top: rem(8px);
+  > div {
+    border: rem(1px) solid $big-border-color;
+    border-radius: rem(4px);
+    box-sizing: border-box;
+  }
+  span[class*='ag-header-select-all'] {
+    padding: rem(7px) 0 0 rem(4px);
+  }
+}
+
+.mainRight {
+  height: 100%;
+  width: rem(150px);
+}
+
+.used {
+  > div {
+    padding: rem(5px) rem(8px) !important;
+    > p {
+      font-size: rem(12px);
+    }
+  }
+}
+
+.oftenUsed {
+  div[class*='ant-menu-item-group-title'] {
+    padding: 0 !important;
+  }
+  ul[class*='ant-menu-item-group-list'] {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: calc(100% - 28px);
+    > li[class*='ant-menu-item-selected'] {
+      color: $font-com-color !important;
+      background: #bbe0ef !important;
+    }
+    > li {
+      margin-bottom: 0 !important;
+      padding: 0 rem(15px) !important;
+      height: rem(30px) !important;
+      line-height: rem(30px) !important;
+      white-space: normal;
+      &:active {
+        background: #bbe0ef;
+      }
+      &:hover {
+        color: $font-com-color;
+        background: lighten(#bbe0ef, 10%);
+      }
+    }
+  }
+}
+
+.oftenUseText {
+  width: rem(85px);
+  white-space: nowrap;
+  display: inline-block;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+}
+
+.diagnosisAdd {
+  float: right;
+}
+
+.rowClass {
+  text-align: center;
+  line-height: rem(25px);
+}
+
+.timePicker {
+  height: 100%;
+  width: 100%;
+  color: $font-main-color;
+  > span {
+    width: 100%;
+    height: 100%;
+    > div {
+      width: 100%;
+      height: 100%;
+      > input {
+        width: 100%;
+        height: 100%;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.tableCheck {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.publicBtn {
+  padding: 0 rem(5px) !important;
+  font-size: rem(13px) !important;
+  > i {
+    padding-right: rem(5px);
+    font-size: $font-title-size;
+  }
+}
+
+.addDiagnosisBtn {
+  background-color: $button-add-background;
+  border-color: $button-add-border;
+  color: $button-search-hover-color;
+  &:hover {
+    background-color: $button-add-hover-background;
+    border-color: $button-add-hover-border;
+    color: $button-search-hover-color;
+  }
+}
+
+.delDiagnosisBtn {
+  background-color: $button-delete-background;
+  border-color: $button-delete-border;
+  color: $button-delete-color;
+  &:hover {
+    background-color: $button-delete-hover-background;
+    border-color: $button-delete-hover-border;
+    color: $button-delete-hover-color;
+  }
+}
+
+.publicAlign {
+  input{
+    text-align: center !important;
+  }
+}

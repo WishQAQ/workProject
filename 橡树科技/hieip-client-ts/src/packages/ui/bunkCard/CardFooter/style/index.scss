@@ -1,0 +1,37 @@
+.cardFooter {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-around;
+  border-top: 1px solid #f6f6f6;
+  padding: 10px 0;
+}
+
+.bunkStatus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  background: #f6f6f6;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.bunkStatusActive {
+  background-color: #cbf4ed;
+  color: #cbf4ed;
+}
+
+.statusIcon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  color: #b2b2b2;
+  background: #f6f6f6;
+}
+
+.statusIconActive {
+  color: #01bf9d;
+  background: #cbf4ed;
+}

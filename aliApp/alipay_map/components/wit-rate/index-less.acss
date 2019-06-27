@@ -1,0 +1,27 @@
+@import url("config/style-less.acss");
+
+.wit-rate{
+  display: flex;
+  align-items: center;
+  &-star{
+  }
+  &-star-active{
+    animation: antScale .3s linear;
+  }
+  &-tip{
+    color: @sub-title;
+    padding-left: 10px;
+  }
+}
+
+@keyframes antScale {
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.2);
+  }
+  100%{
+    transform: scale(1);
+  }
+}

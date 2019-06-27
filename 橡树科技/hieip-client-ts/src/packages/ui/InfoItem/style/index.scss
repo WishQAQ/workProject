@@ -1,0 +1,57 @@
+@import './../../../../index.scss';
+
+.root {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  margin: rem(30px) rem(30px) rem(32px) rem(30px);
+  box-sizing: border-box;
+  width: auto;
+  height: auto;
+  font-size: $font-title-size;
+  color: $font-com-color;
+  &:after,
+  &:before {
+    display: table;
+    content: ''
+  }
+  &:after {
+    clear: both;
+    visibility: hidden;
+    font-size: 0;
+    height: 0;
+  }
+}
+
+.signItemRoot {
+  display: block;
+}
+
+.itemLabel {
+  float: left;
+  box-sizing: border-box;
+  width: auto;
+  text-align: right;
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-overflow: ellipsis;
+}
+
+.signItemLabel {
+  float: none;
+  box-sizing: border-box;
+  text-align: left;
+  margin-bottom: rem(5px);
+}
+
+.itemInput {
+  display: inline-block;
+  padding: 0 5px;
+}
+
+.signUnit {
+  padding: 5px;
+  color: $font-tip-color;
+}

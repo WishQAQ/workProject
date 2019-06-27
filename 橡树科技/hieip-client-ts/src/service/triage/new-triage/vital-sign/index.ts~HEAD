@@ -1,0 +1,79 @@
+import {BaseService} from "tools/flux/BaseService";
+import {ApiSplitMhPatientVisit} from "pkg/api";
+import {VitalSignDictEntitySplitDict} from "pkg/entity";
+import {authService} from "service/auth/AuthService";
+import {message} from "pkg/common/message";
+import {JsonUtil} from "tools/api/JsonUtil";
+
+export interface ServiceState {
+  /**
+   * 业务: 生命体征数据缓存
+   */
+  data?: Object
+}
+
+export interface VitalSignState extends ServiceState {
+  /**
+   * 查询生命体征字典表
+   */
+  vitalSignDict?: Array<VitalSignDictEntitySplitDict>
+}
+class VitalSignService extends BaseService<VitalSignState> {
+  defaultState = {
+    /**
+     * 查询生命体征字典表
+     */
+    vitalSignDict: [],
+  };
+
+  serviceWillMount() {
+    this.loadVitalSignDict();
+  };
+
+  /**====================分界线: 一、后台处理: 开始====================*/
+
+  /**====================分界线: 1、查询: 开始====*/
+
+  /**====================分界线: 1.1、字典表查询: 开始====================*/
+
+
+  /**====================分界线: 1.1、字典表查询: 结束====================*/
+
+  /**====================分界线: 1.2、其它查询: 开始====================*/
+  /**
+   * 查询生命体征字典表
+   */
+  loadVitalSignDict = () => {
+    return ApiSplitMhPatientVisit.loadVitalSignDict().then((data) => {
+      this.dispatch({vitalSignDict: data});
+      authService.resetPoint();
+    }).catch(err => {
+      message.tip(err.msg || "查询生命体征字典表失败!",  "warning");
+    })
+  };
+
+
+  /**====================分界线: 1.2、其它查询: 结束====================*/
+
+  /**====================分界线: 1、查询: 结束====================*/
+
+  /**====================分界线: 一、后台处理: 结束====================*/
+
+  /**====================分界线: 2、修改: 开始====================*/
+
+
+  /**====================分界线: 2、修改: 结束====================*/
+
+  /**====================分界线: 二、前端处理: 开始====================*/
+  /**====================分界线: 对外值改变: 开始====================*/
+  /**
+   * 设置值: 公共对外值改变
+   */
+  setStateJson = (path, data) => {
+    this.dispatch(JsonUtil.json(path, this.state, data));
+  };
+  /**====================分界线: 对外值改变: 结束====================*/
+
+  /**====================分界线: 二、前端处理: 结束====================*/
+}
+export const vitalSignService = new VitalSignService("vitalSign");

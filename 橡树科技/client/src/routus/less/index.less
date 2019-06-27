@@ -1,0 +1,84 @@
+@import "common/normal";
+//@import "main/main";
+//@import "main/top";
+//@import "main/leftMenu";
+//@import "main/analysis";
+//@import "main/caseHistoryDetail";
+@import "main/temperatureChart";
+@import "main/medicalRecordIndex";
+//@import "main/singleHospitalDetail";
+//@import "../../../node_modules/antd/dist/antd";
+//@import "common/cardContainer";
+//@import "common/carousel";
+//@import "common/groupTable";
+//@import "main/smallCard";
+
+/*body {
+  //font-family: @font-family;
+  //font-size: @font-size;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+
+  ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+}*/
+
+html, body, #example {
+  width: 100%;
+  height: 100%;
+}
+
+//沒有
+.no-info {
+  padding: 30px 0 0;
+  line-height: 60px;
+  text-align: center;
+  .icon-404 {
+    font-size: 60px;
+    vertical-align: middle;
+  }
+  span {
+    vertical-align: middle;
+    font-size: 12px;
+    font-weight: 700;
+  }
+}
+
+//消息提示框
+div[class*='ant-message-notice-content'] {
+  line-height: 48px;
+  padding: 0;
+  span {
+    font-size: 20px;
+    padding: 10px 30px;
+    color: #fff;
+    font-family: 'microsoft yahei';
+  }
+}
+
+//隐藏图标
+i[class*='anticon-check-circle']:before, i[class*='anticon-exclamation-circle']:before {
+  display: none;
+}
+
+div[class*='ant-message-success'] {
+  background-color: #00c000;
+}
+
+div[class*='ant-message-warning'] {
+  background-color: #ffa500;
+}
+
+div[class*='ant-message-info'] {
+  background-color: #1890FF;
+}
+
+div[class*='ant-message-error'] {
+  background-color: #F5222D;
+}
+
+

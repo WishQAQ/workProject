@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,
+                    initial-scale=1.0,
+                    minimum-scale=1.0,
+                    maximum-scale=1.0,
+                    user-scalable=no"
+    >
+    <meta name="format-detection" content="telephone=no" />
+    <title>川田门业</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/swiper.min.css">
+</head>
+<body>
+
+<section>
+    <div class="banner">
+        <div class="swiper-container" id="banner_swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><a href=""><img src="img/banner.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href=""><img src="img/banner.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href=""><img src="img/banner.jpg" alt=""></a></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+
+    <div class="main_1">
+        <div class="main_title">新款上市</div>
+        <div class="main_box">
+            <span class="main_box_title">实木烤漆门</span>
+            <div class="swiper-container" id="main_1_swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><a href=""><img src="img/main_2_1.jpg" alt=""></a></div>
+                    <div class="swiper-slide"><a href=""><img src="img/main_2_1.jpg" alt=""></a></div>
+                    <div class="swiper-slide"><a href=""><img src="img/main_2_1.jpg" alt=""></a></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="main_2">
+        <div class="main_title">热销推荐</div>
+        <div class="main_box">
+            <div class="swiper-container swiper-container_main_2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><a href=""><img src="img/main_2_2.jpg" alt=""></a></div>
+                    <div class="swiper-slide"><a href=""><img src="img/main_2_2.jpg" alt=""></a></div>
+                    <div class="swiper-slide"><a href=""><img src="img/main_2_2.jpg" alt=""></a></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main_2">
+        <div class="main_box">
+            <div class="swiper-container swiper-container_main_2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><a href=""><img src="img/main_2_3.jpg" alt=""></a></div>
+                    <div class="swiper-slide"><a href=""><img src="img/main_2_3.jpg" alt=""></a></div>
+                    <div class="swiper-slide"><a href=""><img src="img/main_2_3.jpg" alt=""></a></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="main_2">
+        <div class="main_box">
+            <div class="swiper-container swiper-container_main_2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><a href=""><img src="img/main_2_4.jpg" alt=""></a></div>
+                    <div class="swiper-slide"><a href=""><img src="img/main_2_4.jpg" alt=""></a></div>
+                    <div class="swiper-slide"><a href=""><img src="img/main_2_4.jpg" alt=""></a></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+</section>
+
+
+<footer></footer>
+
+
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/tab.js"></script>
+<script>
+    var swiper = new Swiper('#banner_swiper', {
+        autoplay: true,
+        pagination: {
+            el: '.swiper-pagination',
+            dynamicBullets: true,
+        },
+    });
+    var swiper = new Swiper('#main_1_swiper', {
+        pagination: {
+            el: '.swiper-pagination',
+            dynamicBullets: true,
+        },
+    });
+    var swiper = new Swiper('.swiper-container_main_2', {
+        pagination: {
+            el: '.swiper-pagination',
+            dynamicBullets: true,
+        },
+    });
+</script>
+</body>
+</html>

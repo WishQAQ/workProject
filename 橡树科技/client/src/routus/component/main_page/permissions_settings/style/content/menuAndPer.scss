@@ -1,0 +1,21 @@
+.menuAndPer {
+  height: calc(50% - 5px);
+  .rowActive {
+    background: #E8F3FA;
+    td {
+      &:first-child {
+        box-shadow: 3px 0 0 #3C9AE4 inset;
+      }
+    }
+  }
+  .roleTable {
+    height: calc(100% - 30px);
+  }
+  .point {
+    :global {
+      .title_btnGroup {
+        left: 65px;
+      }
+    }
+  }
+}

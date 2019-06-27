@@ -1,0 +1,185 @@
+@import '../../../../../index';
+
+.header {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border: 1px solid $big-border-color;
+  border-radius: rem(4px);
+  font-size: $font-com-size;
+}
+
+.upper {
+  display: flex;
+  flex-flow: row nowrap;
+  border-bottom: 1px solid $big-border-color;
+  width: 100%;
+  height: rem(30px)
+}
+
+.noticeTime {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  border-right: 1px solid $big-border-color;
+  height: 100%;
+  padding: 0 rem(3px);
+  :global {
+    input {
+      border: none !important;
+      box-shadow: 0 0 0 0 !important;
+      outline: none;
+    }
+  }
+}
+
+.timeLimit {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 2;
+  height: 100%;
+  padding: 0 rem(3px);
+}
+
+.infoUnit {
+  text-align: center;
+  border-right: 1px solid $big-border-color;
+  height: 100%;
+  padding: 0 rem(5px);
+  line-height: rem(30px);
+}
+
+.title {
+  font-weight: bold;
+  padding-right: rem(5px);
+  .medicalState {
+    color: #FA8630;
+  }
+  .info {
+    margin-left: rem(5px);
+    font-weight: normal;
+    color: $font-com-color;
+  }
+}
+
+.under {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  height: rem(30px);
+}
+
+.input {
+  width: 70%;
+  :global {
+    input {
+      border: none !important;
+      box-shadow: 0 0 0 0 !important;
+      outline: none;
+    }
+  }
+}
+
+.reformContent {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid $big-border-color;
+  border-radius: 4px;
+  margin-top: rem(10px);
+}
+
+.sidebar {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: rem(120px);
+  height: rem(300px);
+  border-right: 1px solid $big-border-color;
+}
+
+.item {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px;
+  font-size: $font-com-size;
+  color: $font-com-color;
+  cursor: pointer;
+  &:hover {
+    background: #bbe0ef;
+  }
+}
+
+.content {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  height: rem(300px);
+}
+
+.contentHeader {
+  width: 50%;
+  padding-left: rem(15px);
+}
+
+.contentItem {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+  width: 100%;
+  font-size: $font-com-size;
+  color: $font-com-color;
+}
+
+.contentTable {
+  width: 100%;
+  height: 50%;
+}
+
+.defectHeaderName {
+  text-align: left;
+  padding-left: rem(10px);
+}
+
+.defectNameCol {
+  text-align: left !important;
+  padding-left: rem(10px) !important;
+}
+
+.contentFooter {
+  width: 100%;
+  height: 20%;
+  :global {
+    p {
+      height: rem(25px);
+      line-height: rem(25px);
+      background: #f6f6f6;
+      margin: 0;
+      padding-left: rem(10px);
+    }
+    .ant-input {
+      width: 100%;
+      font-size: $font-com-size;
+      height: calc(20% - 25px) !important;
+      border: none !important;
+      outline: none;
+      box-shadow: 0 0 0 0 !important;
+    }
+  }
+}
+

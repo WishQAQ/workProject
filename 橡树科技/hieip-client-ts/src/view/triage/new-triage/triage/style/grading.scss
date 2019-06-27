@@ -1,0 +1,154 @@
+@import '../../../../../index';
+
+.displayFlex {
+  display: flex;
+}
+
+.gradingMain {
+  float: left;
+  width: 100%;
+  height: 100%;
+  padding-bottom: rem(12px);
+  border-radius: rem(10px);
+  input {
+    background: $white-block;
+  }
+  > div {
+    background: $white-block;
+  }
+  :global {
+    .ant-radio-button-wrapper {
+      background: $white-block;
+    }
+  }
+}
+
+.gradingSave {
+  position: absolute;
+  right: rem(5px);
+  top: rem(2px);
+}
+
+.gradingSaveBtn,
+.gradingSaveTem {
+  margin-right: rem(5px);
+  font-size: rem(16px);
+  font-weight: bold;
+  height: rem(26px);
+}
+
+.gradingSaveBtn {
+  height: 26px;
+  //color: #fff !important;
+  //background: $font-select-color !important;
+  //border: 1px solid #2f9fce !important;
+  padding: 0 10px !important;
+  font-weight: normal !important;
+  i {
+    margin-right: 4px;
+    width: 14px;
+  }
+
+}
+
+.gradingSaveTem {
+  height: 28px !important;
+  background-color: $button-search-background;
+  border-color: $button-search-border;
+  color: $button-search-color;
+  &:hover {
+    background-color: $button-search-hover-background;
+    border-color: $button-search-hover-border;
+    color: $button-search-hover-color;
+  }
+  padding: 0 10px !important;
+  font-weight: normal !important;
+  i {
+    margin-right: 4px;
+  }
+}
+
+.contentContainer {
+  padding: rem(10px) 0 0 rem(20px);
+}
+
+.gradingLabel {
+  font-size: rem(14px);
+}
+
+.levelBtn {
+  margin-right: rem(5px) !important;
+  height: rem(25px) !important;
+  line-height: rem(23px) !important;
+}
+
+.levelRadio {
+  label {
+    border-radius: 4px !important;
+    box-shadow: none !important;
+    border-left: 1px;
+  }
+}
+
+.levelBtn1 {
+  background: $first !important;
+  border-color: $first !important;
+  color: #fff !important;
+  font-weight: bold !important;
+}
+
+.levelBtn2 {
+  background: $second !important;
+  border-color: $second !important;
+  color: #fff !important;
+  font-weight: bold !important;
+}
+
+.levelBtn3 {
+  background: $three !important;
+  border-color: $three !important;
+  color: #fff !important;
+  font-weight: bold !important;
+}
+
+.levelBtn4 {
+  background: $four !important;
+  border-color: $four !important;
+  color: #fff !important;
+  font-weight: bold !important;
+}
+
+.changeReason {
+  width: rem(185px) !important;
+  color: $first !important;
+  margin-left: 6% !important;
+  div[class*='ant-select-selection--single'] {
+    height: rem(26px) !important;
+  }
+  div[class*='ant-select-selection__rendered'] {
+    line-height: rem(23px) !important;
+  }
+}
+
+.gradingBtnGo {
+  height: rem(25px) !important;
+  line-height: rem(24px) !important;
+  padding: 0 rem(10px) !important;
+}
+
+.radioChoose {
+  label[class*='ant-radio-button-wrapper-checked'] {
+    color: #fff !important;
+    background: $font-select-color !important;
+    border-color: $font-select-color !important;
+  }
+}
+
+.gradingRadius {
+  border-radius: rem(10px) !important;
+}
+
+.selectGo {
+  width: rem(200px) !important;
+  height: rem(24px) !important;
+}

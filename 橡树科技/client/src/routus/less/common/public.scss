@@ -1,0 +1,42 @@
+/** 公共sass文件 */
+$white-default: #f9f9f9; //默认白
+$white-block: #fcfdfd; //表格块
+
+//字体颜色
+$font-select-color: #3db5e7; //主色字体，选中色块状态
+$font-main-color: #353535; //重要的、选中状态
+
+//字体大小
+$font-big-size: 16px; //头部导航，大字体
+$font-title-size: 14px; //标题，或其他内容
+$font-com-size: 12px; //一般正文大小
+
+//框线
+$big-border-color: #cdcdcd; //大列表外框线
+$big-split-color: #d9d9d9; //列表分割线、大模块
+$mid-split-color: #e1e1e1; //列表分割线、中模块
+
+// 圆角
+$border-radius4: 4px;
+
+//滚动条Style
+@mixin scrollBar($width:3px,$height:3px,$trackBg:#ccc,$thumbBg:#ccc,$thumbActiveBg:#ccc) {
+  &::-webkit-scrollbar {
+    width: $width;
+    height: $width;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: $trackBg;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $thumbBg;
+    border: 2px solid #fff;
+    border-radius: 6px;
+  }
+  &::-webkit-scrollbar-thumb:active {
+    background-color: $thumbActiveBg
+  }
+}
+
+
+

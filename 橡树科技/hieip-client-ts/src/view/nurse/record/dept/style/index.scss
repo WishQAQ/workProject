@@ -1,0 +1,253 @@
+@import '../../../../../index.scss';
+
+.content {
+  width: 100%;
+  height: 100%;
+  padding: rem(10px) rem(12px);
+}
+
+.operation {
+  height: rem(30px);
+  display: flex;
+  align-items: center;
+  margin: 0 0 rem(10px) 0;
+  > button {
+    margin-right: rem(6px);
+    width: rem(54px);
+    height: rem(30px);
+    padding: 0;
+    font-size: $font-com-size;
+    color: #fff;
+    > i {
+      font-size: $font-com-size;
+      margin-right: rem(3px);
+    }
+  }
+  .search {
+    margin-right: rem(24px);
+  }
+  .add {
+    background-color: $button-add-background;
+    border-color: $button-add-border;
+    &:hover, &:active, &:focus {
+      background-color: $button-add-hover-background;
+      border-color: $button-add-hover-border;
+      color: #fff !important;
+    }
+  }
+  .delete {
+    background-color: $button-delete-background;
+    border-color: $button-delete-border;
+    color: $button-delete-color;
+    &:hover, &:active, &:focus {
+      background-color: $button-delete-hover-background;
+      border-color: $button-delete-hover-border;
+      color: #fff !important;
+    }
+  }
+  .save {
+    background-color: $button-save-background;
+    border-color: $button-save-border;
+    &:hover, &:active, &:focus {
+      background-color: $button-save-hover-background;
+      border-color: $button-save-hover-border;
+      color: #fff !important;
+    }
+  }
+}
+
+.operationRound {
+  width: rem(226px);
+  .optionSelect {
+    width: 100%;
+    font-size: $font-com-size !important;
+    color: $font-main-color !important;
+    height: rem(30px);
+    :global {
+      .ant-select-selection {
+        border: rem(1px) solid $big-border-color;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+        border-left: rem(1px) solid $input-split-color;
+        height: rem(30px);
+        background-color: $white-block;
+        overflow: hidden;
+        &:hover {
+          border-color: $button-save-background;
+        }
+      }
+      .ant-select-focused .ant-select-selection {
+        border-color: $button-save-background !important;
+      }
+      .ant-select-selection__rendered {
+        margin: 0 rem(8px) !important;
+      }
+      .ant-select-arrow::before {
+        font-size: rem(10px);
+        color: $font-un-color;
+      }
+    }
+  }
+  &:first-child {
+    width: rem(166px);
+    margin-right: rem(10px);
+    :global {
+      .ant-select-selection-selected-value {
+        color: #3DB5E7;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.roundContent {
+  border: none !important;
+  border-radius: 0 !important;
+  > span {
+    border: rem(1px) solid $big-border-color;
+    border-bottom-left-radius: rem(4px);
+    border-top-left-radius: rem(4px);
+    border-right: none;
+    background-color: $white-block !important;
+    font-size: $font-com-size;
+    color: $font-main-color;
+    padding: 0 rem(8px);
+    line-height: rem(30px);
+  }
+}
+
+.timePicker, .operationRound {
+  display: inline-block;
+  height: 100%;
+}
+
+.timePicker {
+  margin: 0 rem(6px);
+  > div {
+    display: inline-block;
+    &:last-child {
+      position: relative;
+      padding-left: rem(20px);
+      &:before {
+        content: '~';
+        display: block;
+        position: absolute;
+        left: rem(5px);
+      }
+    }
+  }
+  :global{
+    .pt-input{
+      height: rem(30px);
+      line-height: rem(30px);
+    }
+  }
+}
+
+.deptTable {
+  width: 100%;
+  height: calc(100% - 40px);
+  overflow: hidden;
+  .myAgTable {
+    border: 1px solid #cdcdcd;
+    border-radius: rem(4px);
+    height: calc(100% - 34px) !important;
+    .cellOne {
+      text-align: center;
+      line-height: rem(28px);
+      :global {
+        .ant-radio-group {
+          margin: 0 rem(10px)
+        }
+        .ant-radio-inner {
+          width: rem(14px);
+          height: rem(14px);
+        }
+        .ant-radio-inner:after {
+          width: rem(6px);
+          height: rem(6px);
+        }
+        span.ant-radio + * {
+          padding-left: rem(5px);
+          padding-right: 0;
+          font-size: $font-com-size;
+          color: $font-main-color !important;
+          vertical-align: middle;
+        }
+      }
+    }
+    .visible {
+      overflow: visible !important;
+    }
+  }
+  .myAgPage {
+    padding: rem(10px) 0 0 0;
+  }
+}
+
+//表格复选框
+.agCheckbox {
+  height: 100%;
+  position: relative;
+  :global {
+    .ag-header-cell-resize {
+      display: none;
+    }
+    .ag-header-select-all {
+      padding: 0 !important;
+      position: absolute;
+      width: rem(14px);
+      height: rem(14px);
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+    }
+    .ag-checkbox-unchecked {
+      width: rem(14px);
+      height: rem(14px);
+      display: block;
+      .ag-icon {
+        width: rem(14px);
+        height: rem(14px);
+      }
+    }
+    .ag-checkbox-checked {
+      .ag-icon {
+        width: rem(14px);
+        height: rem(14px);
+      }
+    }
+    .ag-checkbox-indeterminate {
+      .ag-icon {
+        width: rem(14px);
+        height: rem(14px);
+      }
+    }
+  }
+}
+
+.agBodyCheckbox {
+  position: relative;
+  :global {
+    .ag-cell-wrapper {
+      position: absolute;
+      width: rem(14px);
+      height: rem(14px);
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+    }
+    .ag-icon {
+      width: rem(14px) !important;
+      height: rem(14px) !important;
+    }
+    .ag-selection-checkbox {
+      display: block;
+      padding-right: 0 !important;
+    }
+  }
+}

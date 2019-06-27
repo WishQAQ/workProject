@@ -1,0 +1,375 @@
+@import '../../../index.scss';
+// select下拉菜单样式
+.dropdownClassName{
+  :global{
+    .ant-select-dropdown-menu-item{
+      font-size: $font-com-size;
+      color: $font-main-color;
+      line-height: rem(20px);
+      &:hover{
+        background-color: $menu-selected;
+      }
+    }
+  }
+}
+.qualityControl{
+  width: 100%;
+  height: 100%;
+  font-size: $font-com-size;
+  color: $font-main-color;
+  padding: rem(10px) 0;
+  background-color: $white-default;
+  .header{
+    width: 100%;
+    height: rem(30px);
+    margin-bottom: rem(10px);
+    padding: 0 rem(12px);
+    display: flex;
+    >div{
+      margin-right: rem(6px);
+    }
+    :global{
+      // 头部radio的样式
+      .ant-radio-button-wrapper{
+        height: rem(30px) !important;
+        font-size: $font-com-size;
+        color: $font-main-color;
+        background-color: $white-block;
+        padding: 0;
+        width: calc(100%/6);
+        text-align: center;
+      }
+      .ant-radio-button-wrapper:hover,.ant-radio-button-wrapper-checked{
+        background-color: $border-focus-color;
+        color: #fff;
+        border-color: $border-focus-color;
+      }
+      // 头部下拉框selelct样式
+      .ant-select{
+        width: 100%;
+      }
+      .ant-select-selection{
+        height: rem(30px);
+        border-color: $big-border-color;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+        font-size: $font-com-size;
+        color: $font-main-color;
+        &:hover{
+          border-color: $border-focus-color;
+        }
+      }
+      .ant-select-focused>.ant-select-selection{
+        border-color: $border-focus-color;
+      }
+      .ant-select-selection__rendered{
+        background-color: $white-block;
+        line-height: rem(28px);
+        margin-left: rem(8px);
+        margin-right: rem(8px);
+      }
+      .ant-select-arrow{
+        margin-top: rem(-5px);
+        right: rem(8px);
+        &:before{
+          font-size: rem(9px);
+        }
+      }
+      // 时间组件样式
+      .pt-input-group{
+        width: calc((100% - 20px)/2);
+      }
+      .pt-input,.ant-input{
+        height: 100%;
+        border-color: $big-border-color;
+        color: $font-main-color;
+        font-size: $font-com-size;
+        &::-webkit-input-placeholder{
+          font-size: $font-com-size;
+          color: $font-un-color;
+        }
+        &:-ms-input-placeholder{
+          font-size: $font-com-size;
+          color: $font-un-color;
+        }
+        &:focus{
+          box-shadow: 0 0 0 rem(2px) rgba(61, 181, 231, .2);
+          border-color: $border-focus-color !important;
+        }
+      }
+      .pt-control-group>.pt-input-group:last-child{
+        margin-left: rem(15px) !important;
+      }
+      .pt-control-group>.pt-input-group:last-child:before{
+        top: rem(6px);
+        left: rem(-12px);
+      }
+      .ant-input{
+        height: rem(30px);
+        padding: 0 rem(8px);
+      }
+    }
+    .headerTitle{
+      flex: 0 0 rem(135px);
+      font-size: 14px;
+      font-weight: bold;
+      line-height: rem(30px);
+    }
+    .radio{
+      flex: 0 1 rem(319px);
+    }
+    .sel{
+      width: auto;
+      flex: 0 1 rem(150px);
+      border: none;
+      border-radius: 0;
+      >span{
+        background-color: $white-block;
+        border: rem(1px) solid $big-border-color;
+        border-right: none;
+        border-top-left-radius: rem(4px);
+        border-bottom-left-radius: rem(4px);
+      }
+      >div{
+        height: 100%;
+      }
+    }
+    .yearSel{
+      flex: 0 0 rem(150px);
+      >div{
+        border-radius: rem(4px);
+      }
+    }
+    .time{
+      flex: 0 1 rem(280px);
+      display: block !important;
+    }
+    .dateMonth{
+      flex: 0 1 rem(280px);
+      display: flex;
+      >span:last-child{
+        margin-left: rem(15px);
+        position: relative;
+        &:before{
+          content: '~';
+          position: absolute;
+          left: rem(-10px);
+          top: rem(6px);
+          font-size: rem(12px);
+        }
+      }
+    }
+    .btn {
+      width: rem(56px);
+      height: rem(30px);
+      border-radius: $border-radius4;
+      font-size: $font-com-size;
+      border: rem(1px) solid $button-search-border;
+      margin-right: rem(6px);
+      line-height: rem(28px);
+      i {
+        font-size: $font-com-size;
+      }
+    }
+    .blueBtn {
+      background-color: $button-add-background;
+      border-color: $button-add-border;
+      color: #fff;
+      &:hover {
+        background-color: $button-add-hover-background;
+        border-color: $button-add-hover-border;
+      }
+    }
+  }
+  .content{
+    width: 100%;
+    height: calc(100% - 30px);
+    .qualityControlContent{
+      width: 100%;
+      height: 100%;
+      .headcount{
+        height: rem(72px);
+        display: flex;
+        padding: 0 rem(12px);
+        >div{
+          flex: 1;
+          display: flex;
+          justify-content: space-between;
+          border-radius: $border-radius4;
+          margin-right: rem(10px);
+          padding: 0 rem(20px);
+          &:last-child{
+            margin-right: 0;
+          }
+        }
+        .blue{
+          background-color: #3db5e7;
+        }
+        .red{
+          background-color: #ff375b;
+        }
+        .yellow{
+          background-color: #fa8630;
+        }
+        .green{
+          background-color: #01bf9d;
+        }
+        .headcountIcon{
+          color: #fff;
+          font-size: rem(40px);
+          margin-top: 8px;
+        }
+        .num{
+          color: #fff;
+          text-align: center;
+          padding-top: rem(8px);
+          color: #fff;
+          >div:first-child{
+            font-size: rem(36px);
+            line-height: rem(36px);
+          }
+          >div:last-child{
+            font-size: rem(14px);
+          }
+        }
+      }
+      .echartsWrap{
+        width: 100%;
+        height: calc(100% - 82px);
+        overflow: auto;
+        &::-webkit-scrollbar{
+          width: 0;
+        }
+        &:before{
+          content: '';
+          display: table;
+          clear: both;
+        }
+        .echartsContent{
+          float: left;
+          width: calc((100% - 34px)/2);
+          height: rem(350px);
+          background: $white-block !important;
+          border-radius: rem(6px);
+          box-shadow: 0 0 rem(8px) rgba(0,0,0,.12);
+          margin-top: rem(10px);
+          position: relative;
+          .contentHeader{
+            height: rem(50px);
+            display: flex;
+            padding-top: rem(16px);
+            >span{
+              font-size: rem(18px);
+              font-weight: bold;
+              margin-left: rem(22px);
+              margin-right: rem(12px);
+            }
+            :global{
+              .ant-radio-button-wrapper{
+                border: 0;
+                height: 0;
+                padding: 0;
+                >span:last-child{
+                  margin-right: rem(8px);
+                }
+              }
+            }
+          }
+          .echarts,.echartsTable{
+            width: 100%;
+            height: calc(100% - 50px);
+          }
+          .echartsTable{
+            padding: 0 rem(12px) rem(10px) rem(12px);
+          }
+          .echartsS{
+            position: absolute;
+            right: rem(30px);
+            top: rem(20px);
+            width: rem(240px);
+            height: rem(160px);
+          }
+        }
+        .echartsContentS{
+          width: calc((100% - 44px)/3);
+        }
+        .left{
+          margin-left: rem(12px);
+          margin-right: rem(10px);
+        }
+        .center{
+          margin-right: rem(10px);
+        }
+        .right{
+          margin-right: rem(12px);
+        }
+        .table{
+          display: flex;
+          width: 100%;
+          height: 100%;
+          border: rem(1px) solid $big-border-color;
+          border-radius: rem(4px);
+          text-align: center;
+          >div>div{
+            height: rem(28px);
+            line-height: rem(28px);
+            border-right: rem(1px) solid $mid-split-color;
+            border-bottom: rem(1px) solid $mid-split-color;
+            &:first-child{
+              background-color: #ececec;
+            }
+          }
+          >div:last-child>div{
+            border-right: none;
+          }
+        }
+        //.table{
+        //  width: 100%;
+        //  height: 100%;
+        //  border-collapse: separate;
+        //  border-spacing: 0;
+        //  font-size: $font-com-size;
+        //  color: $font-main-color;
+        //}
+        //.table tr>th,
+        //.table tr>td {
+        //  border-right: 1px solid #bbb;
+        //  border-bottom: 1px solid #bbb;
+        //}
+        //.table tr>th{
+        //  border-top:solid 1px #bbb;
+        //}
+        //.table tr>th:first-child,
+        //.table tr>td:first-child {
+        //  border-left: 1px solid #bbb;
+        //
+        //}
+        //.table tr>th:first-child,
+        //.table tr>td:first-child {
+        //  border-left: 1px solid #bbb;
+        //}
+        //.table tr>th {
+        //  background: #ececec;
+        //  text-align: left;
+        //}
+        //
+        //.table tr:first-child th:first-child{
+        //  border-top-left-radius: 6px;
+        //}
+        //.table tr:first-child th:last-child{
+        //  border-top-right-radius: 6px;
+        //}
+        //.table tr:last-child td:first-child {
+        //  border-bottom-left-radius: 6px;
+        //}
+        //.table tr:last-child td:last-child {
+        //  border-bottom-right-radius: 6px;
+        //}
+        .svg{
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}

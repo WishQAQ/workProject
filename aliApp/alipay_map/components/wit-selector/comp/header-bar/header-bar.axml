@@ -1,0 +1,37 @@
+<view class="header-bar">
+  <view class="search-wrap wit-1px-b">
+    <wit-icon
+      icon="iconzuojiantou icon-back"
+      a:if="{{back}}"
+      color="#ff7a02"
+      onClick="onBack"/>
+    <search-bar
+      className="search {{!back ? 'padding' : ''}}"
+      value="{{value}}"
+      placeholder="搜索"
+      onSubmit="onSubmit"
+      onFocus="onFocus"
+      onInput="handleInput"
+      onClear="handleClear"
+      showCancelButton="{{false}}"/>
+  </view>
+  <scroll-view
+    a:if="{{routes.length}}"
+    class="crumb"
+    scroll-x="{{true}}"
+    style="width:100%"
+    scroll-with-animation="{{true}}"
+    scroll-into-view="{{toView === `view${routes.length - 1}` ? toView : ''}}">
+    <view
+      a:for="{{routes}}"
+      a:key="*this"
+      id="view{{index}}"
+      data-item="{{...item, index}}"
+      onTap="onCrumb"
+      key="{{index}}"
+      class="crumb-item {{index + 1 === routes.length ? 'crumb-item-active' : ''}}">
+      <text class="text-clip">{{item.short_name || item.org_name}}</text>
+      <wit-icon a:if="{{index + 1 !== routes.length}}" icon="iconjiantou icon" color="#ccc" size="20px"/>
+    </view>
+  </scroll-view>
+</view>

@@ -1,0 +1,178 @@
+@thColor: #F9F9F9;
+.medical-record-index {
+  width: 100%;
+  min-width: 700px;
+  height: 100%;
+  font-size: 12px;
+  .title p {
+    font-size: 16px;
+    color: @font-color;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+  select[disabled], input[disabled] {
+    width: 90%;
+    height: 20px;
+    line-height: 20px;
+    background: @thColor;
+    font-size: 12px;
+    outline: none;
+    border: none;
+  }
+  .ant-tabs-content {
+    margin-top: -1px;
+  }
+  .patient-info-table {
+    width: 100%;
+    border: 1px solid @border-color;
+    border-collapse: collapse;
+    tr {
+      height: 30px;
+
+      th {
+        max-width: 70px;
+        min-width: 70px;
+        text-align: right;
+        padding-right: 4px;
+        line-height: 22px;
+      }
+      input[disabled] {
+        min-width: 72px;
+      }
+    }
+  }
+
+  .medical-record {
+    width: 100%;
+    height: calc(~"100% - 120px");
+    margin-top: 10px;
+    .diagnosis {
+      height:100%;
+      :global{
+        .ant-table.ant-table-small.ant-table-bordered.ant-table-fixed-header.ant-table-scroll-position-left{
+          height:100%;
+          .ant-table-content{
+            height:100%;
+            .ant-table-scroll{
+              height: 100%;
+              overflow: hidden;
+              .ant-table-header{
+                &::-webkit-scrollbar {
+                  width: 3px;
+                }
+                &::-webkit-scrollbar-track {
+                  background-color: #ccc;
+                }
+                &::-webkit-scrollbar-thumb {
+                  background-color: #49a9ee;
+                }
+                &::-webkit-scrollbar-thumb:active {
+                  background-color: #49a9ee
+                }
+              }
+              .ant-table-body{
+                min-height: 100%;
+                &::-webkit-scrollbar {
+                  width: 3px;
+                }
+                &::-webkit-scrollbar-track {
+                  background-color: #ccc;
+                }
+                &::-webkit-scrollbar-thumb {
+                  background-color: #49a9ee;
+                }
+                &::-webkit-scrollbar-thumb:active {
+                  background-color: #49a9ee
+                }
+                tr{
+                  td{
+                    label{
+                      display: block;
+                      width: 70px;
+                      overflow: hidden;
+                      text-overflow: ellipsis;
+                      white-space: nowrap;
+                    }
+                  }
+                }
+                .ant-table-row:last-child td{
+                  border-bottom: 1px solid #e9e9e9;
+                }
+              }
+            }
+          }
+        }
+      }
+      table {
+        th {
+          color: @font-color;
+          //text-align: center !important;
+          background: #F9F9F9 !important;
+          padding: 6px 8px !important;
+          font-weight: 600 !important;
+        }
+        td {
+          color: @font-color;
+          //text-align: center !important;
+          padding: 2px 8px !important;
+        }
+      }
+      .ant-table-row {
+        td input[disabled] {
+          width: 100%;
+          text-indent: 4px;
+          color: @font-color;
+        }
+      }
+    }
+    .ant-table-scroll {
+      table {
+        table-layout: fixed;
+      }
+    }
+    .cost-info, .base-info, .other-info {
+      width: 100%;
+      border-collapse: collapse;
+
+      th {
+        background: @thColor;
+        min-width: 80px;
+      }
+      td {
+        //min-width:80px;
+      }
+      td, th {
+        border: 1px solid @border-color;
+        padding: 0 6px;
+        height: 28px;
+        position: relative;
+
+        .input-group-addon {
+          position: absolute;
+          right: 2px;
+          top: 50%;
+          margin-top: -8px;
+        }
+      }
+    }
+  }
+  //选项卡
+  .ant-tabs{
+    height:100%;
+  }
+  .ant-tabs-content{
+    height:calc(~"100% - 32px");
+  }
+  .ant-tabs-tabpane{
+    height:100%;
+    .query-table{
+      height:100%;
+    }
+  }
+  .ant-tabs-nav {
+    .ant-tabs-tab {
+      font-size: 12px;
+    }
+  }
+}

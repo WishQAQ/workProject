@@ -1,0 +1,81 @@
+/**
+ * Created by liulingli on 2017/6/23.
+ * desc :  轮播组件样式
+ */
+
+@navColor: #E3E3E3;
+@navWidth: 12px;
+@activeW: 13px;
+
+.carousel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+
+  .prev, .next {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    margin-top: -15px;
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+    z-index: 10;
+
+    &:hover {
+      font-size: 26px;
+      font-weight: 900;
+    }
+  }
+  .prev {
+    left: 0;
+  }
+  .next {
+    right: 0;
+  }
+  .carousel-nav {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    margin: 0;
+    z-index: 10;
+
+    li {
+      list-style: none;
+      display: inline-block;
+      width: @navWidth;
+      height: @navWidth;
+      margin: 5px 10px;
+      border-radius: 100%;
+      background-color: @navColor;
+      cursor: pointer;
+
+      &:hover {
+        background-color: @primary-color;
+      }
+      &.active {
+        width: @activeW;
+        height: @activeW;
+        background-color: @primary-color;
+      }
+    }
+  }
+  .carousel-content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    transition: all 0.5s;
+
+    .carousel-div {
+      width: 100%;
+      height: 100%;
+      float: left;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@import '~sass-rem';
+
+.logo {
+  width: 80%;
+  height: rem(30px);
+  &.big {
+    height: rem(60px);
+  }
+}
+

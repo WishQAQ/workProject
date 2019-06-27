@@ -1,0 +1,223 @@
+{
+  "预检分诊": {
+    "icon": "icon-shijianfenzhen1",
+    "新分诊": {
+      "route": "route_new_triage",
+      "point": {
+        "暂存患者信息": true,
+        "保存分诊": true
+      }
+    },
+    "事件分诊": {
+      "route": "route_group_injury"
+    },
+    "患者列表": {
+      "route": "route_patient_list"
+    }
+  },
+  "患者管理": {
+    "icon": "icon-huanzheguanli1",
+    "患者": {
+      "icon": "icon-huanzheguanli1",
+      "route": "route_patient_manage",
+      "subMenu": {
+        "概览": {
+          "route": "route_patient_manage_overview",
+          "icon": "icon-gaishu"
+        },
+        "诊断": {
+          "route": "route_patient_manage_diagnosis",
+          "icon": "icon-zhenduan-"
+        },
+        "医嘱": {
+          "route": "route_patient_manage_orders_apply",
+          "icon": "icon-wodeyizhu1"
+        },
+        "检查": {
+          "route": "route_patient_manage_exam_apply",
+          "icon": "icon-jiancha"
+        },
+        "检验": {
+          "route": "route_patient_manage_lab_apply",
+          "icon": "icon-jianyanbaogao"
+        },
+        "手术": {
+          "route": "route_patient_manage_operation",
+          "icon": "icon-shoushu"
+        },
+        "用血": {
+          "route": "route_patient_manage_blood",
+          "icon": "icon-yongxie"
+        },
+        "会诊": {
+          "route": "route_patient_manage_con_apply",
+          "icon": "icon-huizhen"
+        },
+        "电子病历": {
+          "route": "",
+          "icon": "icon-dianzibingli"
+        },
+        "报告调阅": {
+          "route": "",
+          "icon": "icon-baogaotiaoyue"
+        },
+        "医嘱执行": {
+          "route": "",
+          "icon": "icon-yizhuzhihang"
+        },
+        "出入量维护": {
+          "route": "",
+          "icon": "icon-churuliangweihu"
+        },
+        "观察项维护": {
+          "route": "",
+          "icon": "icon-guanchaxiangweihu"
+        },
+        "导管维护": {
+          "route": "",
+          "icon": "icon-daoguanweihu"
+        },
+        "病情记录": {
+          "route": "",
+          "icon": "icon-bingqingjilu"
+        },
+        "特护单": {
+          "route": "",
+          "icon": "icon-tehudan"
+        },
+        "病历详情": {
+          "route": "",
+          "icon": "icon-binglixiangqing"
+        },
+        "计价单": {
+          "route": "route_patient_manage_bill",
+          "icon": "icon-feiyong"
+        },
+        "护理信息录入": {
+          "route": "route_patient_manage_vital_signs_rec",
+          "icon": "icon-hulixinxiluru"
+        },
+        "体温单": {
+          "route": "route_patient_manage_temp_chart",
+          "icon": "icon-jiadian_tiwenji"
+        },
+        "本院病史": {
+          "route": "",
+          "icon": "icon-yiyuan-copy"
+        }
+      }
+    },
+    "患者管理": {
+      "route": "route_patient_info"
+    }
+  },
+  "交班管理": {
+    "icon": "icon-jiaobanguanli1",
+    "班段": {
+      "route": "route_paragraphs"
+    },
+    "单元护理": {
+      "route": "route_nursing_unit"
+    },
+    "交接班": {
+      "route": "route_change_shifts"
+    }
+  },
+  "系统设置": {
+    "icon": "icon-shezhi",
+    "模糊查询设置": {
+      "route": "route_select_input_dict"
+    }
+  },
+  "电子病历": {
+    "icon": "icon-shezhi",
+    "基础维护": {
+      "数据元": {
+        "route": "route_data_element"
+      },
+      "值域": {
+        "route": "route_data_range"
+      },
+      "数据集": {
+        "route": "route_data_set"
+      },
+      "固定值维护": {
+        "route": "route_fixed_value"
+      },
+      "关键词维护": {
+        "route": "route_keyword"
+      },
+      "质控维护": {
+        "route": "route_quality_maintenance"
+      },
+      "模板维护": {
+        "route": "route_tpl_maintenance"
+      }
+    },
+    "病历": {
+      "病历书写": {
+        "route": "route_medical"
+      },
+      "病历修改": {
+        "route": "route_medical_reform"
+      },
+      "病案首页": {
+        "route": "route_medical_record"
+      },
+      "病历签收": {
+        "route": "route_medical_sign"
+      },
+      "病案编目": {
+        "route": "route_medical_catalogue"
+      },
+      "病案归档": {
+        "route": "route_record_archiving"
+      }
+    }
+  },
+  "护理": {
+    "icon": "icon-shezhi",
+    "护理班段维护": {
+      "route": "route_nurse_class_paragraphs"
+    },
+    "分组维护": {
+      "route": "route_nurse_nurse_group"
+    },
+    "排班": {
+      "route": "route_nurse_scheduling_index",
+      "point": {
+        "排班": true
+      }
+    },
+    "调班管理": {
+      "route": "route_nurse_exchange_classes"
+    },
+    "交接班": {
+      "route": "route_nurse_shift_change"
+    },
+    "护理记录单": {
+      "route": "route_nurse_record_config"
+    },
+    "科室护理记录单书写": {
+      "route": "route_nurse_record_dept"
+    },
+    "人员护理记录单书写": {
+      "route": "route_nurse_record_patient"
+    },
+    "评估单设置": {
+      "route": "route_nurse_assessment_sheet"
+    }
+  },
+  "门诊": {
+    "icon": "icon-shezhi",
+    "门诊医生站": {
+      "route": "route_outpatient_clinic"
+    }
+  },
+  "质控统计": {
+    "icon": "icon-shujufenxi",
+    "数据统计": {
+      "route": "route_quality_control"
+    }
+  }
+}

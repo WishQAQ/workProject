@@ -1,0 +1,40 @@
+@import "./infoAdd";
+
+.flex1 {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  > div {
+    text-align: center;
+    height: 100%;
+    line-height: 34px;
+    > p {
+      height: 100%;
+      padding: 0 8px;
+      border: 1px solid #CDCDCD;
+      border-radius: 4px 0 0 4px;
+      border-right: 0;
+      font-size: 12px;
+    }
+  }
+  &:first-child {
+    > div {
+      > p {
+        width: 53px;
+      }
+    }
+  }
+  &:last-child {
+    margin-left: 6px;
+  }
+  :global{
+    .ant-select-selection--single{
+      height: 34px;
+      border-radius: 0 4px 4px 0;
+      border-color:#CDCDCD;
+    }
+    .ant-select-selection__rendered{
+      line-height: 32px;
+    }
+  }
+}

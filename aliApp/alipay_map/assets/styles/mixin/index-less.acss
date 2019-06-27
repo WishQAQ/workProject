@@ -1,0 +1,26 @@
+@import url("config/style-less.acss");
+
+/* ------ 线性渐变函数 ------ */
+.gradient-primary (@direction: left) {
+  background: linear-gradient(@direction, #fd9d16, @primary);
+}
+
+.gradient-success (@direction: left) {
+  background: linear-gradient(@direction, #45f36e, @success);
+}
+
+.gradient-info (@direction: left) {
+  background: linear-gradient(@direction, #68aafc, @info);
+}
+
+/* ------ 文字裁剪 ------ */
+.text-clip (
+  @line: 1
+) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: @line;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
+}

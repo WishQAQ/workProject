@@ -1,0 +1,33 @@
+@import '../../../../../index';
+@import '../../index';
+
+$titleColor: #fff;
+$titleBg: #48b7e5; //页面框头部背景颜色
+
+.myAgTable {
+  border-right: rem(1px) solid $big-border-color;
+  border-left: rem(1px) solid $big-border-color;
+  border-bottom: rem(1px) solid $big-border-color;
+  border-radius: 0 0 rem(4px) rem(4px);
+}
+
+.citeRoot {
+  height: 100%;
+  .title {
+    background-color: $titleBg;
+    color: $titleColor;
+    border-radius: rem(4px) rem(4px) 0 0;
+    display: flex;
+    align-items: center;
+    height: rem(30px);
+    padding: 0 rem(11px) 0 rem(11px);
+    .titleName {
+      font-size: rem(14px);
+      margin-right: rem(8px);
+      font-weight: bold;
+    }
+  }
+  .mainTable {
+    height: calc(100% - 30px);
+  }
+}

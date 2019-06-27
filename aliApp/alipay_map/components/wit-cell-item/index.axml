@@ -1,0 +1,56 @@
+<view
+  class="wit-cell-item {{border ? 'wit-1px-b' : ''}} {{classes}} {{active ? 'wit-cell-item-active' : ''}}"
+  onTap="onClick">
+  <view class="wit-cell-left">
+    <view class="wit-cell-icon" a:if="{{icon}}">
+      <slot name="icon"></slot>
+    </view>
+    <slot name="left"></slot>
+  </view>
+  <view class="wit-cell-right">
+    <slot name="right"></slot>
+    <wit-icon a:if="{{arrow}}" type="iconjiantou wit-cell-item-arrow" color="#ccc" size="24px"/>
+    <wit-icon a:if="{{type === 'radio' && !active}}" icon="iconquanweixuanzhong" color="#ccc"/>
+    <wit-icon a:if="{{type === 'checkbox' && !active}}" icon="iconquanweixuanzhong" color="#ccc"/>
+    <wit-icon a:if="{{type === 'radio' && active}}" icon="iconquanxuanzhong" color="#f56d19"/>
+    <wit-icon a:if="{{type === 'checkbox' && active}}" icon="icondui" color="#f56d19"/>
+  </view>
+  <!-- <label class="yd-cell-item" v-if="type == 'label' || type == 'checkbox' || type == 'radio'">
+    <span class="yd-cell-left" v-if="checkLeft">
+      <span class="yd-cell-icon" v-if="$slots.icon"><slot name="icon"></slot></span>
+      <slot name="left"></slot>
+    </span>
+    <label class="yd-cell-right" :class="classes">
+      <slot name="right"></slot>
+      <i v-if="type == 'checkbox'" class="yd-cell-checkbox-icon"></i>
+      <i v-if="type == 'radio'" class="yd-cell-radio-icon"></i>
+    </label>
+  </label>
+  <router-link class="yd-cell-item" :to="href" v-else-if="type == 'link'">
+    <div class="yd-cell-left" v-if="checkLeft">
+      <span class="yd-cell-icon" v-if="$slots.icon"><slot name="icon"></slot></span>
+      <slot name="left"></slot>
+    </div>
+    <div class="yd-cell-right" :class="classes">
+      <slot name="right"></slot>
+    </div>
+  </router-link>
+  <a class="yd-cell-item" :href="href" v-else-if="type == 'a'">
+    <div class="yd-cell-left" v-if="checkLeft">
+      <span class="yd-cell-icon" v-if="$slots.icon"><slot name="icon"></slot></span>
+      <slot name="left"></slot>
+    </div>
+    <div class="yd-cell-right" :class="classes">
+      <slot name="right"></slot>
+    </div>
+  </a>
+  <div class="yd-cell-item" v-else>
+    <div class="yd-cell-left" v-if="checkLeft">
+      <span class="yd-cell-icon" v-if="$slots.icon"><slot name="icon"></slot></span>
+      <slot name="left"></slot>
+    </div>
+    <div class="yd-cell-right" :class="classes">
+      <slot name="right"></slot>
+    </div>
+  </div> -->
+</view>

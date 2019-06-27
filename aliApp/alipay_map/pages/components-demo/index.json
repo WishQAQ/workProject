@@ -1,0 +1,18 @@
+{
+  "usingComponents": {
+    "wit-praise": "/components/wit-praise/index",
+    "wit-icon": "/components/wit-icon/index",
+    "wit-btn": "/components/wit-btn/index",
+    "wit-loading": "/components/wit-loading/index",
+    "wit-cell-group": "/components/wit-cell-group/index",
+    "wit-cell-item": "/components/wit-cell-item/index",
+    "picker-item": "mini-antui/es/picker-item/index",
+    "wit-spin": "/components/wit-spin/index",
+    "wit-avatar": "/components/wit-avatar/index",
+    "wit-rate": "/components/wit-rate/index",
+    "wit-upload": "/components/wit-upload/wit-upload",
+    "list": "mini-antui/es/list/index",
+    "list-item": "mini-antui/es/list/list-item/index",
+    "input-item": "mini-antui/es/input-item/index"
+  }
+}

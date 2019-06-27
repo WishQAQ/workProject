@@ -1,0 +1,129 @@
+@import '../../../../../index.scss';
+
+.recallMainBottom {
+  width: 100%;
+  margin-top: rem(10px);
+  height: calc(65% - 50px);
+  .tableHead {
+    height: rem(30px);
+    background-color: $public-title-color;
+    border-top-left-radius: rem(4px);
+    border-top-right-radius: rem(4px);
+    padding: 0 rem(8px);
+    line-height: rem(30px);
+    .mainTitle {
+      color: #fff;
+      font-size: $font-title-size;
+      font-weight: bold;
+    }
+    .checkGroup {
+      margin-left: rem(17px);
+      :global {
+        .ant-checkbox-wrapper {
+          font-size: $font-com-size;
+          color: #064d6b;
+          &:hover {
+            color: #fff;
+            .ant-checkbox-inner {
+              border-color: #fff;
+            }
+          }
+        }
+        .ant-checkbox-input {
+          width: rem(14px);
+          height: rem(14px);
+        }
+        .ant-checkbox-inner {
+          width: rem(14px);
+          height: rem(14px);
+          background-color: #6399af;
+          border-color: #71a7be;
+          &:after {
+            left: rem(3.571429px);
+          }
+        }
+        .ant-checkbox-checked {
+          .ant-checkbox-inner {
+            background-color: #6399af;
+            border-color: #fff;
+          }
+        }
+        .ant-checkbox-checked + span {
+          color: #fff;
+          padding: 0 rem(4px);
+        }
+      }
+    }
+    .searchInput {
+      width: rem(178px);
+      height: 20px;
+      border-bottom: rem(1px) solid #fff;
+      margin-left: rem(88px);
+      :global {
+        .ant-input {
+          min-height: 0;
+          height: rem(20px);
+          border: none;
+          background-color: transparent;
+          color: #fff;
+          text-overflow: ellipsis;
+          font-size: $font-com-size;
+          padding-right: rem(26px);
+          padding-left: rem(8px);
+          &:focus {
+            box-shadow: none;
+          }
+        }
+        .ant-input:focus + span {
+          .ant-btn {
+            color: #fff;
+          }
+        }
+        .ant-btn {
+          height: rem(20px);
+          line-height: rem(20px);
+          background-color: transparent;
+          border-color: transparent;
+          padding-right: 0;
+          padding-left: rem(8px);
+          color: rgba(255, 255, 255, .65);
+        }
+      }
+    }
+  }
+  .tableContent {
+    width: 100%;
+    height: calc(100% - 30px);
+    border: rem(1px) solid $big-border-color;
+    border-top: none;
+    border-bottom-left-radius: rem(4px);
+    border-bottom-right-radius: rem(4px);
+    :global {
+      .ag-menu {
+        border: none;
+        border-radius: rem(6px);
+        overflow: hidden;
+        box-shadow: 0 0 rem(8px) rgba(0, 0, 0, .12);
+      }
+      .ag-header-row > .ag-header-cell:nth-child(1) {
+        position: relative;
+        overflow: hidden !important;
+      }
+      .ag-header-cell-menu-button:hover {
+        border-color: $button-search-border;
+        cursor: pointer;
+      }
+      .ag-header-icon {
+        opacity: 1 !important;
+        position: absolute;
+        bottom: rem(-8px);
+        right: rem(-14px);
+        padding: rem(9px) rem(8px);
+        transform: rotate(132deg);
+        transform-origin: center;
+        background-color: $button-search-border;
+        border-radius: 0;
+      }
+    }
+  }
+}

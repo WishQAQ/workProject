@@ -1,0 +1,63 @@
+.detailIndex {
+  background: #F2F2F2;
+  /* 轮播 */
+  /* 详情 */
+  /* 近期活动 */
+}
+.detailIndex .detail-swiper {
+  width: 100%;
+  height: 350rpx;
+  background: #fff;
+}
+.detailIndex .detail-swiper > image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.detailIndex .detail-info {
+  padding: 40rpx;
+  background: #fff;
+}
+.detailIndex .detail-info .info-top {
+  padding-bottom: 30rpx;
+  border-bottom: 1px solid #E2E2E2;
+}
+.detailIndex .detail-info .info-top .info-name {
+  font-size: 40rpx;
+  /* font-family:PingFang-SC-Bold; */
+  font-weight: bold;
+  color: #101010;
+}
+.detailIndex .detail-info .info-top .info-address {
+  font-size: 28rpx;
+  /* font-family:PingFang-SC-Medium; */
+  font-weight: 500;
+  color: #222222;
+}
+.detailIndex .detail-info .info-bottom {
+  padding-top: 30rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+.detailIndex .detail-info .info-bottom .bottom-item {
+  margin-right: 30rpx;
+  font-size: 24rpx;
+  /* font-family:PingFang-SC-Medium; */
+  font-weight: 500;
+  color: #6b6b6b;
+}
+.detailIndex .activity {
+  margin-top: 20rpx;
+  background: #fff;
+}
+.detailIndex .activity .activity-title {
+  display: flex;
+  align-items: center;
+  height: 88rpx;
+  padding: 0 40rpx;
+  border-bottom: 1px solid #E2E2E2;
+  font-size: 32rpx;
+  /* font-family:PingFang-SC-Bold; */
+  font-weight: bold;
+  color: #333333;
+}

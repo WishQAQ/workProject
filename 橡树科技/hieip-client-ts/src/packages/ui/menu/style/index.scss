@@ -1,0 +1,25 @@
+@import '../../../../index';
+
+.menu {
+  width: 100%;
+  height: 100%;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+  :global {
+    .ant-tree > li {
+      padding: 0;
+    }
+    .ant-tree-node-content-wrapper {
+      margin: 0 !important;
+      height: rem(24px);
+      line-height: rem(24px);
+      font-size: rem(12px);
+      padding: 0 rem(15px) !important;
+      width: 100%;
+    }
+    .ant-tree-switcher {
+      width: 0 !important;
+    }
+  }
+}

@@ -1,0 +1,69 @@
+.infoAdd {
+  background-color: #fcfdfd;
+  padding-top: 1px;
+  :global {
+    .ant-input-group-wrapper {
+      margin-bottom: 10px;
+    }
+    .ant-input-group-addon {
+      height: 34px;
+      padding: 0 8px;
+      border-color: #CDCDCD;
+      background-color: transparent;
+    }
+    .ant-input {
+      height: 34px;
+      border-color: #CDCDCD;
+    }
+  }
+}
+
+.flex {
+  display: flex;
+  margin-bottom: 10px;
+  height: 34px;
+  :global {
+    .ant-input-number {
+      border-radius: 0 4px 4px 0;
+      width: 100%;
+      border-color: #CDCDCD;
+    }
+  }
+  > div {
+    text-align: center;
+    height: 100%;
+    line-height: 34px;
+    > p {
+      width: 53px;
+      height: 100%;
+      padding: 0 8px;
+      border: 1px solid #CDCDCD;
+      border-radius: 4px 0 0 4px;
+      border-right: 0;
+      font-size: 12px;
+    }
+
+  }
+}
+.mast{
+  color:#FF5F18;
+}
+
+// 医院增加弹框的样式
+.bigWidth {
+  width: 125px !important;
+}
+.radioBox{
+  display: inline-block;
+
+}
+.selectMargin{
+  box-sizing: border-box;
+  text-align: center;
+  border-left: 1px solid #CDCDCD !important;
+  margin-left: 10px !important;
+  padding-left: 14px;
+}
+label[class='ant-radio-wrapper'] {
+  margin-right: 4px !important;
+}

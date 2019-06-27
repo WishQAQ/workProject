@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "dayjs": "^1.8.10",
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.3.2",
+    "gulp-rename": "^1.2.2",
+    "mini-antui": "^0.4.19"
+  }
+}

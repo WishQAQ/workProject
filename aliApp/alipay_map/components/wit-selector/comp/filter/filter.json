@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "wit-icon": "/components/wit-icon/index",
+    "popup": "mini-antui/es/popup/index",
+    "filter": "mini-antui/es/filter/index",
+    "filter-item": "mini-antui/es/filter/filter-item/index"
+  }
+}

@@ -1,0 +1,196 @@
+/**
+ * Created by liulingli on 2017/6/23.
+ * desc : 顶部信息样式
+ */
+
+//取消双击选中
+.ant-tabs-bar, .ant-layout-sider-children {
+  -webkit-user-select: none;
+}
+
+.logo {
+  width: 250px;
+  height: 50px;
+  background: url("/public/images/logo_after.png") no-repeat;
+  float: left;
+  color: #FFF;
+  margin-left: 20px;
+}
+
+.logo > h2 {
+  height: 50px;
+  line-height: 50px;
+  margin-left: 80px;
+}
+
+//弹出框
+.loginInfo {
+  background-color: #20A8D8;
+  width: 170px;
+  height: 50px;
+  position: absolute;
+  left: 25%;
+  transition: all linear .4s;
+  background-color: #357CA5;
+}
+
+.loginInfo:hover {
+  background-color: #1985AC;
+}
+
+//头像信息
+.photoInfo {
+  font-size: 16px;
+  color: #FFF;
+  line-height: 50px;
+  position: relative;
+}
+
+.photo {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 10px;
+  left: 5%;
+  background: url("/public/images/photo.jpg") no-repeat;
+}
+
+//默认头部内边距
+.ant-layout-header {
+  padding: 0 !important;
+}
+
+//弹出框默认样式修改
+.ant-popover-inner-content {
+  padding: 0 !important;
+}
+
+.ant-popover {
+  top: 43px !important;
+}
+
+.ant-tabs-nav > div:nth-child(2) > div > i {
+  width: 0 !important;
+  margin-left: 0 !important;
+}
+
+//叉的距离
+.anticon-close {
+  margin-left: 25px;
+}
+
+//默认侧边栏样式
+//头像测试
+.login_icon {
+  background-color: rgb(255, 0, 0);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 5%;
+}
+
+//背景demo
+.testBg {
+  width: 250px;
+  height: 175px;
+  background: url("/public/images/test_logo.png") no-repeat;
+}
+
+//弹出框
+.upContent > a {
+  display: inline-block;
+  margin: 5% 7%;
+  color: #404040;
+}
+
+.downContent {
+  background-color: #F9F9F9;
+}
+
+.downContent > Button {
+  margin: 5% 13%;
+}
+
+//多字隐藏
+.hiddenContent {
+  display: inline-block;
+  width: 50px;
+  height: 16px;
+  line-height: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+//下拉条隐藏
+.ant-layout-sider {
+  &::-webkit-scrollbar {
+    width: 0px;
+  }
+}
+
+//自定义弹出菜单
+.popMenu {
+  width: 120px;
+  height: auto;
+  border: 2px solid #EEE;
+  position: absolute;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #E1E3E5;
+}
+
+.active_1 {
+  display: none;
+}
+
+//弹出菜单子菜单
+.popMenuItem {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-color: #FFF;
+  transition: all linear .3s;
+  border-bottom: 1px solid #EEE;
+  border-radius: 3px;
+  box-sizing: border-box;
+  cursor: pointer;
+  color: #5B667B;
+  padding: 1px;
+}
+
+.popMenuItem:hover {
+  background-color: #3C8DBC;
+  color: #FFFDEF;
+}
+
+//信息小图标
+.public_style {
+  position: relative;
+  float: right;
+  width: 300px;
+}
+
+.public_icon {
+  color: #E6E6E6;
+  position: absolute;
+  top: -15%;
+  line-height: 50px;
+}
+
+.message_icon {
+  left: 8%;
+}
+
+.tip_icon {
+  left: -10%;
+}
+
+.message_icon:hover, .exit_icon:hover, .tip_icon:hover {
+  color: #FFF;
+}
+
+.exit_icon {
+  right: 6%;
+  line-height: 45px;
+}

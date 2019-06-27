@@ -1,0 +1,11 @@
+{
+  "name": "areaData-client",
+  "version": "1.0.80",
+  "author": "jahv",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "command": "0.0.5",
+    "jquery": "^3.3.1"
+  },
+  "main": "./index.html"
+}

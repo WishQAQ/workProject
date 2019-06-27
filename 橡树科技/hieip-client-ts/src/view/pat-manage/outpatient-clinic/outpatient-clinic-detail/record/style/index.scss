@@ -1,0 +1,12 @@
+@import '../../../../../../index.scss';
+.root {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+.sidebar{
+    padding-right: rem(8px);
+}
+.medical{
+    width: calc(100% - 198px);
+}

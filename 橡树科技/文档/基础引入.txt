@@ -1,0 +1,10 @@
+import {BaseService} from 'tools/flux/BaseService' -- 基础service
+import {loginService} from 'service/user/login' -- 登陆者service
+import {patientBasicService} from '../../patient-basic' -- 患者
+
+serviceWillMount(){}页面初始化加载函数    dispatch（单层数组或对象时）与 setStateJson （更消耗性能）// 更新表格的state 
+
+(取)
+pvId:patientBasicService.state.model.pvId //患者id
+loginService.state.user.name   // 登陆者姓名             loginService.state.user.id  // 登陆者id
+patientBasicService.state.model.areaName  //区域名字     patientBasicService.state.model.areaId  //区域id

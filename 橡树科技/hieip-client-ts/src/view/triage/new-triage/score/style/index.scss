@@ -1,0 +1,78 @@
+@import '../../../../../index';
+
+.btnRender {
+  background: $button-extra-background !important;
+  border-color: $button-extra-background !important;
+  color: white !important;
+  height: rem(26px) !important;
+  margin-left: rem(5px) !important;
+  padding: 0 7px !important;
+  white-space: normal !important;
+  font-size: $font-com-size !important;
+  margin-top: rem(4px) !important;
+  &:hover {
+    background: $button-extra-hover-background !important;
+  }
+}
+
+.btnRenderChoose {
+  background: $button-extra-hover-background !important;
+}
+
+.patientScore {
+  width: 100%;
+  position: relative;
+  background: $white-block;
+}
+
+.addScoreing {
+  width: 100%;
+  height: calc(100% - 31px);
+  > div:last-child {
+    height: calc(100% - 33px);
+  }
+}
+
+.addScoreingHead {
+  width: 100%;
+  padding: rem(4px) 0;
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 1px solid $mid-split-color;
+}
+
+.addScoreInput {
+  width: rem(267px) !important;
+  height: rem(24px) !important;
+  margin: 0 rem(6px) 0 rem(7px);
+  span[class='ant-input-group-addon'] {
+    background: $white-block;
+    padding: 0 7px;
+    > i {
+      font-size: 15px;
+      line-height: 10px;
+    }
+  }
+}
+
+.addScoreQd {
+  height: rem(24px) !important;
+  padding: 0 5px !important;
+  background-color: $button-save-background !important;
+  border-color: $button-save-border !important;
+  color: white !important;
+  font-size: 12px !important;
+  &:hover {
+    background-color: $button-save-hover-background !important;
+    border-color: $button-save-hover-border !important;
+  }
+}
+
+.addScoreQdSpan {
+  i {
+    font-size: 12px;
+    margin-top: 1px;
+    margin-right: 3px;
+    float: left;
+  }
+}

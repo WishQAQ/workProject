@@ -1,0 +1,91 @@
+@import url("config/style-less.acss");
+
+.wit-cell-item {
+  padding: 10px 10px 10px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* &:active{
+    background-color: @active;
+  } */
+}
+.wit-cell-item .am-picker-line {
+  padding-right: 0;
+}
+.wit-cell-item .am-picker-label {
+  color: #626364;
+}
+.wit-cell-item .wit-cell-left {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+}
+.wit-cell-item .wit-cell-left .left {
+  flex: 1;
+  overflow: hidden;
+}
+.wit-cell-item .wit-cell-left .wit-cell-icon {
+  width: 38px;
+}
+.wit-cell-item .wit-cell-right {
+  padding: 0 8px;
+  position: relative;
+  color: @sub-title;
+}
+.wit-cell-item .wit-cell-item-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -10px;
+}
+/* .wit-cell-item .wit-cell-item-arrow::after,
+.wit-cell-item .wit-cell-item-arrow::before {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+} */
+.wit-cell-item .wit-cell-main {
+  font-size: 14px;
+  color: #333;
+}
+.wit-cell-item .wit-cell-sub {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #98989a;
+}
+.wit-cell-item .wit-cell-radio-icon,
+.wit-cell-item .wit-cell-checkbox-icon {
+  transition: all 3s;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  border: 1px solid #d5d3d5;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  position: relative;
+}
+.wit-cell-item .wit-cell-radio-icon.wit-cell-radio-icon-active,
+.wit-cell-item .wit-cell-checkbox-icon.wit-cell-radio-icon-active {
+  border: 1px solid #f56d19;
+  background: #f56d19;
+}
+.wit-cell-item .wit-cell-radio-icon.wit-cell-radio-icon-active::after,
+.wit-cell-item .wit-cell-checkbox-icon.wit-cell-radio-icon-active::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 60%;
+  height: 30%;
+  border: 2px solid #fff;
+  border-radius: 1px;
+  border-top: none;
+  border-right: none;
+  margin-top: -1px;
+  background: transparent;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}

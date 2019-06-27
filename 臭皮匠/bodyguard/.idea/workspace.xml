@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b28c6a4b-b40b-41c1-a52c-e4faed4a0ce8" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="484">
+              <caret line="317" column="53" lean-forward="false" selection-start-line="317" selection-start-column="53" selection-end-line="317" selection-end-column="53" />
+              <folding>
+                <element signature="n#style#0;n#span#1;n#div#1;n#div#0;n#div#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#5762#5768#0" expanded="true" />
+                <element signature="e#5768#5774#0" expanded="true" />
+                <element signature="e#5774#5780#0" expanded="true" />
+                <element signature="e#5780#5786#0" expanded="true" />
+                <element signature="e#5791#5797#0" expanded="true" />
+                <element signature="e#5797#5803#0" expanded="true" />
+                <element signature="e#5803#5809#0" expanded="true" />
+                <element signature="e#5809#5815#0" expanded="true" />
+                <element signature="e#5820#5826#0" expanded="true" />
+                <element signature="e#5826#5832#0" expanded="true" />
+                <element signature="e#5832#5838#0" expanded="true" />
+                <element signature="e#5838#5844#0" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#5;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#7;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#8;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="text.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/text.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="222">
+              <caret line="71" column="41" lean-forward="true" selection-start-line="71" selection-start-column="4" selection-end-line="71" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="listScope.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/listScope.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2">
+              <caret line="84" column="0" lean-forward="true" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="listProcess.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/listProcess.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="364">
+              <caret line="136" column="26" lean-forward="false" selection-start-line="136" selection-start-column="20" selection-end-line="136" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="newsPost.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/newsPost.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-246">
+              <caret line="120" column="17" lean-forward="true" selection-start-line="120" selection-start-column="17" selection-end-line="120" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="common.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/common.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="201">
+              <caret line="859" column="18" lean-forward="false" selection-start-line="859" selection-start-column="18" selection-end-line="859" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="listNews.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/listNews.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="90" column="34" lean-forward="false" selection-start-line="90" selection-start-column="26" selection-end-line="90" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="listCall.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/listCall.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1620">
+              <caret line="90" column="34" lean-forward="false" selection-start-line="90" selection-start-column="26" selection-end-line="90" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>menu_button_wrapper</find>
+      <find>htmleaf-header</find>
+      <find>related</find>
+      <find>htmleaf-icon</find>
+      <find>padding</find>
+      <find>40</find>
+      <find>width</find>
+      <find>swiper-slide</find>
+      <find>530px</find>
+      <find>posterTvGrid</find>
+      <find>swiper-box</find>
+      <find>active</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+      <replace>300px</replace>
+      <replace>swiper-box</replace>
+      <replace>swiperbox</replace>
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$USER_HOME$/Downloads/5iweb2016062202/css/normalize.css" />
+        <option value="$USER_HOME$/Downloads/5iweb2016062202/css/htmleaf-demo.css" />
+        <option value="$USER_HOME$/Downloads/5iweb2016062202/index.html" />
+        <option value="$USER_HOME$/Downloads/banner20151020/index.html" />
+        <option value="$USER_HOME$/Downloads/下划线跟随鼠标左右滑动的菜单导航特效/index.html" />
+        <option value="$USER_HOME$/Downloads/CreativeLinkEffects/css/normalize.css" />
+        <option value="$USER_HOME$/Downloads/5iweb2017092702/index.html" />
+        <option value="$PROJECT_DIR$/js/swiper.min.js" />
+        <option value="$USER_HOME$/Downloads/bingdou.net 优酷电视剧频道jQuery焦点图/css/posterTvGrid.css" />
+        <option value="$PROJECT_DIR$/css/swiper.min.css" />
+        <option value="$USER_HOME$/Downloads/bingdou.net 优酷电视剧频道jQuery焦点图/index.html" />
+        <option value="$USER_HOME$/Downloads/bingdou.net 优酷电视剧频道jQuery焦点图/js/posterTvGrid.js" />
+        <option value="$PROJECT_DIR$/js/team.js" />
+        <option value="$USER_HOME$/Downloads/5iweb2015122102/index.html" />
+        <option value="$USER_HOME$/Downloads/jquery-drag-image-slider/index.html" />
+        <option value="$USER_HOME$/Downloads/jq229644.html" />
+        <option value="$PROJECT_DIR$/css/bootstrap.min.css" />
+        <option value="$PROJECT_DIR$/list.html" />
+        <option value="$PROJECT_DIR$/listProcess .html" />
+        <option value="$PROJECT_DIR$/listAbout.html" />
+        <option value="$PROJECT_DIR$/listScope.html" />
+        <option value="$PROJECT_DIR$/listProcess.html" />
+        <option value="$PROJECT_DIR$/listNews.html" />
+        <option value="$PROJECT_DIR$/listCall.html" />
+        <option value="$PROJECT_DIR$/js/idangerous.swiper.min.js" />
+        <option value="$PROJECT_DIR$/newsPost.html" />
+        <option value="$USER_HOME$/Downloads/5iweb2016110903/css/normalize.min.css" />
+        <option value="$USER_HOME$/Downloads/5iweb2016110903/index.html" />
+        <option value="$PROJECT_DIR$/text.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/css/common.css" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1280" />
+    <option name="height" value="773" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="bodyguard" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bodyguard" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bodyguard" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bodyguard" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bodyguard" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bodyguard" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/js" />
+      <recent name="$PROJECT_DIR$/css" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/js" />
+      <recent name="$PROJECT_DIR$/css" />
+      <recent name="$PROJECT_DIR$/img" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b28c6a4b-b40b-41c1-a52c-e4faed4a0ce8" name="Default" comment="" />
+      <created>1508807278628</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1508807278628</updated>
+      <workItem from="1508807280880" duration="18731000" />
+      <workItem from="1508893234582" duration="26438000" />
+      <workItem from="1508979841024" duration="21708000" />
+      <workItem from="1509065757615" duration="10859000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="77736000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1280" height="773" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14765625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952926" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952926" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/LICENSE.txt" />
+    <entry file="file://$PROJECT_DIR$/404.html" />
+    <entry file="file://$PROJECT_DIR$/../2048/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-18251">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/5iweb2016082201/index.html" />
+    <entry file="file://$USER_HOME$/Downloads/5iweb2016062202/css/normalize.css" />
+    <entry file="file://$USER_HOME$/Downloads/5iweb2016062202/css/htmleaf-demo.css" />
+    <entry file="file://$USER_HOME$/Downloads/5iweb2016062202/css/style.css" />
+    <entry file="file://$USER_HOME$/Downloads/5iweb2016062202/index.html" />
+    <entry file="file://$USER_HOME$/Downloads/GridLoadingEffects/index2.html" />
+    <entry file="file://$USER_HOME$/Downloads/banner20151020/index.html" />
+    <entry file="file://$PROJECT_DIR$/js/jquery-3.2.1.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/helloweba_com_fixedbg/css/style.css" />
+    <entry file="file://$USER_HOME$/Downloads/下划线跟随鼠标左右滑动的菜单导航特效/index.html" />
+    <entry file="file://$USER_HOME$/Downloads/helloweba_com_fixedbg/index.html" />
+    <entry file="file://$USER_HOME$/Downloads/CreativeLinkEffects/css/normalize.css" />
+    <entry file="file://$USER_HOME$/Downloads/CreativeLinkEffects/css/demo.css" />
+    <entry file="file://$USER_HOME$/Downloads/CreativeLinkEffects/css/component.css" />
+    <entry file="file://$USER_HOME$/Downloads/CreativeLinkEffects/index.html" />
+    <entry file="file://$USER_HOME$/Downloads/5iweb2017092702/index.html" />
+    <entry file="file://$PROJECT_DIR$/js/swiper.min.js" />
+    <entry file="file://$PROJECT_DIR$/img/about-1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/about-2-2.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/about-2.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/team-1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/bingdou.net 优酷电视剧频道jQuery焦点图/css/posterTvGrid.css" />
+    <entry file="file://$USER_HOME$/Downloads/bingdou.net 优酷电视剧频道jQuery焦点图/js/posterTvGrid.js" />
+    <entry file="file://$PROJECT_DIR$/js/team.js" />
+    <entry file="file://$USER_HOME$/Downloads/bingdou.net 优酷电视剧频道jQuery焦点图/index.html" />
+    <entry file="file://$USER_HOME$/Downloads/5iweb2015122102/index.html" />
+    <entry file="file://$USER_HOME$/Downloads/jquery-drag-image-slider/js/idangerous.swiper.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2843">
+          <caret line="14" column="156" lean-forward="true" selection-start-line="14" selection-start-column="156" selection-end-line="14" selection-end-column="156" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/jquery-drag-image-slider/css/idangerous.swiper.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="83" column="1" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="83" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/jquery-drag-image-slider/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="121" column="0" lean-forward="false" selection-start-line="121" selection-start-column="0" selection-end-line="145" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/jq229644.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="98" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="277" column="12" lean-forward="false" selection-start-line="277" selection-start-column="12" selection-end-line="277" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/list.html" />
+    <entry file="file://$PROJECT_DIR$/listAbout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1620">
+          <caret line="90" column="35" lean-forward="false" selection-start-line="90" selection-start-column="35" selection-end-line="90" selection-end-column="35" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listCall.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1620">
+          <caret line="90" column="34" lean-forward="false" selection-start-line="90" selection-start-column="26" selection-end-line="90" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/idangerous.swiper.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9606">
+          <caret line="326" column="122" lean-forward="false" selection-start-line="326" selection-start-column="116" selection-end-line="326" selection-end-column="122" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listNews.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="90" column="34" lean-forward="false" selection-start-line="90" selection-start-column="26" selection-end-line="90" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listProcess.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="136" column="26" lean-forward="false" selection-start-line="136" selection-start-column="20" selection-end-line="136" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/newsPost.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-246">
+          <caret line="120" column="17" lean-forward="true" selection-start-line="120" selection-start-column="17" selection-end-line="120" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/5iweb2016110903/css/normalize.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="24" lean-forward="false" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/5iweb2016110903/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/5iweb2016110903/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="33" lean-forward="true" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/demo/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-995">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listScope.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2">
+          <caret line="84" column="0" lean-forward="true" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/idangerous.swiper.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1280">
+          <caret line="101" column="20" lean-forward="false" selection-start-line="101" selection-start-column="14" selection-end-line="101" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/swiper.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/text.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="71" column="41" lean-forward="true" selection-start-line="71" selection-start-column="4" selection-end-line="71" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="317" column="53" lean-forward="false" selection-start-line="317" selection-start-column="53" selection-end-line="317" selection-end-column="53" />
+          <folding>
+            <element signature="n#style#0;n#span#1;n#div#1;n#div#0;n#div#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#5762#5768#0" expanded="true" />
+            <element signature="e#5768#5774#0" expanded="true" />
+            <element signature="e#5774#5780#0" expanded="true" />
+            <element signature="e#5780#5786#0" expanded="true" />
+            <element signature="e#5791#5797#0" expanded="true" />
+            <element signature="e#5797#5803#0" expanded="true" />
+            <element signature="e#5803#5809#0" expanded="true" />
+            <element signature="e#5809#5815#0" expanded="true" />
+            <element signature="e#5820#5826#0" expanded="true" />
+            <element signature="e#5826#5832#0" expanded="true" />
+            <element signature="e#5832#5838#0" expanded="true" />
+            <element signature="e#5838#5844#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#5;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#7;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#8;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/common.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="859" column="18" lean-forward="false" selection-start-line="859" selection-start-column="18" selection-end-line="859" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

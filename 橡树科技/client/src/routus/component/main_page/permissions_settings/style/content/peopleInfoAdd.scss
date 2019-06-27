@@ -1,0 +1,56 @@
+@import "./infoAdd";
+
+.marginLeft6 {
+  margin-left: 6px;
+}
+
+.flex {
+  :global {
+    .ant-select-selection__rendered {
+      line-height: 32px;
+    }
+    .ant-select-selection--single {
+      height: 34px;
+      border-radius: 0 4px 4px 0;
+      border-color: #CDCDCD;
+    }
+  }
+}
+
+.flex1 {
+  flex: 1;
+  display: flex;
+}
+
+.hospitalName {
+  width: 70px !important;
+}
+.RadioTest{
+  width: 96px !important;
+}
+.radioSpan{
+  box-sizing: border-box;
+  border: 1px solid #CDCDCD;
+  padding: 0 4px;
+}
+.RadioSpan1{
+  width: 110px;
+  padding: 0 4px;
+  display: inline-block;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 3px;
+  border-right: 0;
+}
+.RadioSpan2{
+  display: flex;
+  width: 83px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 0;
+  span {
+    padding: 0 1px !important;
+  }
+}

@@ -1,0 +1,414 @@
+@import '../../../../../index.scss';
+
+.medical {
+  width: 100%;
+  height: 100%;
+  :global {
+    .ant-tabs-bar {
+      margin: 0 !important;
+    }
+  }
+}
+
+.medicalMain {
+  height: calc(100vh - 50px);
+  padding: 10px
+}
+
+.leftCard {
+  background: #e1e1e1;
+  :global {
+    .ant-select {
+
+      .ant-select-selection {
+        background: transparent;
+        border: none;
+        font-size: 14px;
+        font-weight: 600;
+        color: #555555;
+        &:focus {
+          border-color: transparent;
+          box-shadow: none;
+        }
+      }
+      .ant-select-arrow {
+        font-weight: 600;
+        color: #555555;
+      }
+    }
+    .card-head {
+      padding: 0 20px !important;
+      line-height: 24px
+    }
+
+    .ant-menu {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+    .ant-menu-item {
+      margin: 0 !important;
+      height: 30px !important;
+      line-height: 30px !important;
+      padding: 0 10px !important;
+      &:after {
+        border-right: none !important;
+      }
+    }
+  }
+}
+
+.noanymedicla {
+
+  .leftCard {
+    border-radius: 0;
+    border: none;
+  }
+}
+
+.noanymoicalTop {
+  overflow: hidden;
+  overflow-y: auto;
+  :global {
+    .ant-list-item {
+      padding: 8px !important;
+    }
+  }
+}
+
+.newFileContainer {
+  display: flex;
+  margin-bottom: rem(10px);
+  line-height: rem(30px);
+  :global {
+    .label-rounded {
+      width: rem(180px);
+      height: rem(30px);
+      line-height: 1;
+      margin-right: rem(6px);
+      .ant-select-selection {
+        border: none;
+        box-shadow: none;
+      }
+    }
+    .ant-radio-wrapper {
+      margin: 0 !important;
+      > span:last-child {
+        padding: 0 4px !important;
+      }
+    }
+    .ant-input {
+      border: none;
+      &:focus {
+        border: none;
+        box-shadow: none;
+      }
+    }
+    .label9a171startColor {
+      position: absolute;
+      left: rem(68px);
+    }
+  }
+}
+
+.patientModal_diao {
+  width: rem(800px);
+  :global {
+    .ant-modal-body {
+      padding: 10px;
+    }
+    .ant-modal-header {
+      padding: 10px;
+    }
+    .ant-modal-close-x {
+      height: rem(43px);
+      width: rem(43px);
+      line-height: rem(43px);
+    }
+  }
+}
+
+.patiemtModal_print {
+  width: rem(1120px);
+}
+
+.NewFileFooter {
+  margin-top: 10px;
+  display: flex;
+  width: 90%;
+  :global {
+    .label-rounded {
+      margin-right: 6px;
+    }
+    .ant-input {
+      border: none;
+      &:focus {
+        border: none;
+        box-shadow: none;
+      }
+    }
+    .ant-select-selection {
+      border: none;
+      box-shadow: none !important;
+    }
+    .pt-input {
+      border: none;
+      box-shadow: none;
+      &:focus {
+        border-color: transparent;
+        box-shadow: none !important;
+      }
+    }
+  }
+}
+
+.time_tow {
+  width: rem(380px) !important;
+  :global {
+    .pt-input-group {
+      flex: inherit;
+      &:after {
+        right: 0 !important;
+      }
+      &:last-child {
+        &:before {
+          top: rem(7px)
+        }
+      }
+    }
+    .pt-input {
+      border: none;
+      height: rem(28px);
+      box-shadow: none !important;
+      &:hover, &:focus {
+        border: none !important;
+        box-shadow: none !important;
+      }
+    }
+  }
+}
+
+.fileNameInput {
+  width: rem(200px) !important;
+  height: 30px !important;
+  line-height: initial !important;
+}
+
+.modifyFile {
+  :global {
+    .ant-modal-body {
+      overflow: hidden;
+      padding: 5px 10px 10px;
+    }
+    .ant-modal-header {
+      padding: 5px 10px;
+    }
+    .ant-modal-close-x {
+      height: rem(32px);
+      width: rem(32px);
+      line-height: rem(32px);
+    }
+    .pt-input {
+      border: none;
+      box-shadow: none;
+      &:focus {
+        border-color: transparent;
+        box-shadow: none !important;
+      }
+    }
+    .ant-modal-footer {
+      border-top: 0;
+      padding-top: 0 !important;
+    }
+  }
+}
+
+.medical_file {
+  height: calc(100vh - 40px);
+  :global {
+    .ant-layout-sider {
+      flex: none !important;
+      width: 50px !important;
+      min-width: 50px !important;
+      background: #ffffff !important;
+      border-right: 1px solid #e1e1e1;
+    }
+    .ant-layout-header {
+      height: 40px;
+      line-height: 40px;
+      background: #ffffff;
+    }
+  }
+}
+
+.left_btn {
+  display: flex;
+  flex-direction: column;
+  > div {
+    writing-mode: vertical-lr;
+    padding: 15px;
+    letter-spacing: 2px;
+    border-top: 1px solid #e1e1e1;
+    cursor: pointer;
+    &:hover {
+      color: #277ee9;
+    }
+  }
+}
+
+.patientModal_sider {
+  width: 100%;
+}
+
+.medical_bottom {
+  height: rem(310px);
+  :global {
+    .ant-tabs-bar {
+      height: 25px;
+      background: rgba(98, 158, 232, 1);
+      .ant-tabs-nav-container {
+        height: 25px !important;
+        padding-left: 5px;
+      }
+      .ant-tabs-tab {
+        margin-top: 2px !important;
+        height: 24px;
+        line-height: 24px !important;
+        background-color: transparent !important;
+        border: none !important;
+        color: #ffffff;
+        &:hover {
+          color: #ffffff;
+        }
+      }
+      .ant-tabs-tab-active.ant-tabs-tab {
+        background-color: #ffffff !important;
+        border-radius: 0;
+        &:hover {
+          color: #277ee9;
+        }
+      }
+    }
+  }
+}
+
+.table_checkbox {
+  text-align: center;
+}
+
+.title_close {
+  button {
+    height: 20px;
+    color: #ffffff;
+    background-color: transparent;
+    border: none;
+    &:hover {
+      background-color: transparent;
+      color: #ffffff;
+    }
+    &:focus {
+      background-color: transparent;
+      color: #ffffff;
+    }
+    &:active {
+      background-color: transparent;
+      color: #ffffff;
+    }
+  }
+  i {
+    color: #ffffff;
+    font-weight: 500;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+}
+
+.leftInput {
+  > input {
+    border: none;
+  }
+}
+
+.new_table {
+  :global {
+    .ag-fresh {
+      border: 1px solid $mid-split-color;
+    }
+  }
+}
+
+.table_pagein {
+  text-align: right;
+  margin-top: rem(10px);
+}
+
+//rounded style
+.newFileRounded {
+  > span {
+    line-height: rem(28px);
+    padding: 0 rem(8px);
+    background-color: #fff;
+    border-right-color: $input-split-color;
+  }
+}
+
+.newFileSelect {
+  :global {
+    .ant-select-selection--single {
+      height: rem(30px)
+    }
+  }
+}
+
+.newFileInput {
+  height: rem(28px) !important;
+}
+
+.searchBtn {
+  width: rem(56px);
+  height: rem(30px) !important;
+  border-color: $button-save-border;
+  background-color: $button-save-background;
+  padding: 0 !important;
+  text-align: center;
+  > i, > span {
+    font-size: $font-com-size;
+  }
+  > span {
+    margin-left: 4px !important;
+  }
+  &:hover, &:focus {
+    border-color: $button-save-hover-border !important;
+    background-color: $button-save-hover-background !important;
+  }
+}
+
+.fileType {
+  :global {
+    .ant-select-selection__rendered {
+      margin-left: rem(4px);
+      margin-right: rem(4px)
+    }
+    .ant-select-selection-selected-value {
+      width: calc(100% - 16px);
+      padding-right: 0;
+    }
+    .ant-select-selection__clear, .ant-select-arrow {
+      right: rem(4px);
+    }
+  }
+}
+
+.newFileMargin {
+  margin-bottom: 0 !important;
+}
+
+.createTime {
+  > span {
+    position: relative;
+    > i {
+      left: inherit !important;
+      right:rem(2px)
+    }
+  }
+}

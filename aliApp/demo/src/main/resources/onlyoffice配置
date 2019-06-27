@@ -1,0 +1,53 @@
+	#websocket配置
+	map $http_upgrade $connection_upgrade {
+        default upgrade;
+        '' close;
+    }
+
+
+proxy_redirect  off;
+	    #如果服务器要获取客户端真实IP，用下三句设置主机头和客户端真实地址
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+		proxy_http_version 1.1; 
+		proxy_set_header Upgrade $http_upgrade;
+		proxy_set_header Connection $connection_upgrade;
+		
+		location /minio{
+		    #minio文件服务
+	        proxy_set_header Cookie "$http_cookie; $request_body";
+		    proxy_pass http://127.0.0.1:9002;
+		}
+		
+		##onlyoffice需要的请求地址；
+		location /v5.2.2-2/ {
+			#启用websocket
+			#proxy_http_version 1.1; 
+			#proxy_set_header Upgrade $http_upgrade;
+			#proxy_set_header Connection $connection_upgrade;
+		    proxy_pass http://127.0.0.1:9001;
+		}
+		location /cache/ {
+		    proxy_pass http://127.0.0.1:9001;
+		}
+		location /web-apps/ {
+		    proxy_pass http://127.0.0.1:9001;
+		}
+		
+		location /api/v1/file/presignedPutObject{
+		    #直接跳转
+	        proxy_set_header Host 'file.shinesec.com.cn';
+			proxy_pass http://127.0.0.1:10000$request_uri;
+		}
+
+
+遇到一个大坑：
+由于onlyoffice在初始化加载的时候会访问callback地址：然而在本机调用却不成功，则导致加载提示无法保存的错误。
+经过分析，发现是shrio拦截了请求，导致必须登录。
+所以需要在shiro.ini中进行配置，将保存的地址设置为不拦截。
+
+然后在本机测试：curl http://cquoa.shinesec.com.cn/api/v1/file/save?bucket=1
+发现已经正常返回对于的结果：{"error":0}
+
+/api/v1/file/save = anon

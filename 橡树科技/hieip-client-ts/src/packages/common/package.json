@@ -1,0 +1,7 @@
+{
+  "name": "common",
+  "version": "0.0.1",
+  "description": "公共组件模块",
+  "dependencies": {
+  }
+}

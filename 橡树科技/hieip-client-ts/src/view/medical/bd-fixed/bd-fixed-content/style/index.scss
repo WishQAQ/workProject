@@ -1,0 +1,416 @@
+@import '../../../../../index';
+
+.dropdownClassName {
+  li[class*='ant-select-dropdown-menu-item']:hover {
+    background-color: $list !important;
+  }
+  li[class*='ant-select-dropdown-menu-item-active'] {
+    background-color: transparent !important;
+  }
+}
+
+.fixedValueContent {
+  width: calc(100% - 17%);
+  height: 100%;
+  //按钮样式
+  .btn {
+    width: rem(56px);
+    height: rem(24px);
+    padding: 0;
+    font-weight: normal;
+    font-size: $font-com-size;
+    border-color: #c4c4c4;
+    color: $font-com-color;
+    background-color: #e5e5e5;
+    margin-right: rem(6px);
+    &:focus {
+      background-color: #e5e5e5;
+      border-color: #c4c4c4;
+      color: $font-com-color;
+    }
+    &:hover {
+      border-color: #3091b9;
+      color: #fff;
+      background-color: #37a3d0;
+    }
+    :global {
+      .iconfont {
+        font-size: $font-com-size;
+      }
+    }
+    span {
+      margin-left: rem(2px) !important;
+    }
+    i {
+      vertical-align: initial !important;
+    }
+  }
+  .greenBtn {
+    background-color: #3db5e7;
+    border-color: #2F9FCE;
+    color: #fff;
+    &:focus {
+      background-color: #3db5e7;
+      border-color: #2F9FCE;
+      color: #fff;
+    }
+    &:hover {
+      border-color: #3091B9;
+      color: #fff;
+      background-color: #37a3d0;
+    }
+  }
+  .blueBtn {
+    background-color: #4f98e4;
+    border-color: #2f6fce;
+    color: #fff;
+    &:focus {
+      background-color: #4f98e4;
+      border-color: #2f6fce;
+      color: #fff;
+    }
+    &:hover {
+      border-color: #2c73ca;
+      color: #fff;
+      background-color: #5892da;
+    }
+  }
+  .redBtn {
+    background-color: #fce9ed;
+    border-color: #f3b8c3;
+    color: #ff375b;
+    &:focus {
+      background-color: #fce9ed;
+      border-color: #f3b8c3;
+      color: #ff375b;
+    }
+    &:hover {
+      border-color: #ff375b;
+      color: #fff;
+      background-color: #ff375b;
+    }
+  }
+
+  .contentHeader {
+    height: rem(37px);
+    border-bottom: rem(1px) solid $big-border-color;
+    padding-right: rem(12px);
+  }
+  .contentHeader > span {
+    font-size: $font-title-size;
+    font-weight: bold;
+    line-height: rem(37px);
+    color: $font-main-color;
+    margin-left: rem(12px);
+    margin-right: rem(14px);
+  }
+  .contentMain {
+    padding: 0 rem(12px);
+    height: calc(100% - 37px);
+    overflow: auto;
+    .mainTitle {
+      color: $font-main-color;
+      font-weight: bold;
+      margin-right: rem(12px);
+    }
+  }
+  .contentForm {
+    padding: rem(10px) 0;
+    height: rem(46px);
+    > div {
+      float: left;
+      &:first-child{
+        width: rem(166px);
+      }
+      &:nth-of-type(2){
+        width: rem(169px);
+      }
+      &:last-child{
+        width: rem(198px);
+      }
+    }
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    :global {
+      .ant-input-group-wrapper {
+        width: rem(166px);
+        height: rem(26px);
+        float: left;
+        margin-right: rem(5px);
+      }
+      .ant-input-group-addon {
+        float: left;
+        width: rem(40px);
+        height: rem(26px);
+        padding: 0;
+        line-height: rem(24px);
+        box-sizing: border-box;
+        font-size: $font-com-size;
+        color: $font-main-color;
+        background-color: #fff;
+        border-color: $big-border-color;
+      }
+      .ant-input {
+        color: $font-main-color !important;
+        float: left;
+        width: rem(125px);
+        height: rem(26px);
+        box-sizing: border-box;
+        font-size: $font-com-size;
+        border-color: $big-border-color;
+        border-left-color: $input-split-color;
+        padding: 0 rem(8px);
+        &:focus {
+          border-color: #3db5e7;
+        }
+      }
+    }
+  }
+
+  .selItem {
+    float: left;
+    margin: 0 rem(5px) 0 0;
+    width: rem(169px);
+  }
+  .label {
+    border: rem(1px) solid $big-border-color;
+    border-right: transparent;
+    height: rem(26px);
+    width: rem(40px);
+    box-sizing: border-box;
+    border-bottom-left-radius: rem(4px);
+    border-top-left-radius: rem(4px);
+    font-size: $font-com-size;
+    line-height: rem(24px);
+    padding: 0;
+    text-align: center;
+    background-color: #fff;
+    color: $font-main-color;
+    font-family: 'Helvetica Neue For Number',
+    -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    span {
+      padding: 0;
+    }
+  }
+  .sel {
+    :global {
+      .ant-select-selection {
+        width: rem(129px);
+        height: rem(26px);
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+        color: $font-main-color;
+        border-color: $big-border-color;
+        border-left-color: $input-split-color;
+      }
+      .ant-select-focused > .ant-select-selection {
+        border-color: #3db5e7 !important;
+      }
+      .ant-select-selection__rendered {
+        line-height: rem(24px);
+        font-size: $font-com-size;
+      }
+    }
+  }
+  .sqlLanguage {
+    border: rem(1px) solid $big-border-color;
+    border-radius: rem(4px);
+    width: 100%;
+    height: calc(100% - 46px - 45%);
+    overflow: hidden;
+    :global {
+      .react-codemirror2 {
+        height: calc(100% - 30px);
+      }
+      .CodeMirror {
+        height: 100%;
+        background-color: #fff;
+      }
+      .CodeMirror-gutters {
+        background-color: #f6f6f6;
+        border-right: rem(1px) solid #ececec;
+      }
+      .CodeMirror-lines {
+        color: $font-com-color;
+      }
+      .CodeMirror-scroll {
+        padding-bottom: rem(4px)
+      }
+    }
+  }
+  .sqlLanguageTitle {
+    height: rem(30px);
+    border-bottom: rem(1px) solid #e1e1e1;
+    color: $font-main-color;
+    line-height: rem(30px);
+    padding-left: rem(8px);
+    background-color: $list-split-color;
+    .analysisBtn {
+      float: none;
+      top: 0;
+      margin-left: rem(20px);
+    }
+  }
+  .sqlLanguageTitle > span {
+    margin-right: rem(14px);
+    font-weight: bold;
+  }
+  .sqlLanguageContent {
+    zoom: 1;
+    height: rem(228px);
+  }
+  //表格样式
+  .tableRow {
+    width: 100%;
+    height: 45%;
+    padding: rem(10px) 0;
+  }
+  .tableRow > div:nth-child(1) {
+    float: left;
+    width: 22%;
+    padding-right: rem(8px);
+  }
+  .tableRow > div:nth-child(2) {
+    width: 78%;
+    float: left;
+  }
+  .tableWrap {
+    width: 100%;
+    height: 100%;
+    border: rem(1px) solid $big-border-color;
+    border-radius: rem(4px);
+    overflow: hidden;
+    :global {
+      .ant-input {
+        height: rem(20px);
+        font-size: $font-com-size;
+        border: none;
+      }
+      .ag-header-cell-label {
+        text-align: left;
+        color: $font-main-color;
+        font-weight: normal;
+      }
+      .ag-root {
+        border: none;
+      }
+      .ag-cell {
+        text-align: left !important;
+        color: $font-main-color;
+      }
+      .ag-fresh {
+        color: $font-com-color;
+      }
+      .ag-cell-inline-editing {
+        box-shadow: none;
+      }
+      .ag-row-selected {
+        background-color: #dceafb !important;
+        color: $font-com-color;
+      }
+      .ag-row:hover {
+        background-color: #dceafb !important;
+      }
+    }
+  }
+  .tableHead {
+    background-color: $list-split-color;
+    height: rem(30px);
+    line-height: rem(30px);
+    padding: 0 rem(4px) 0 rem();
+    border-bottom: rem(1px) solid #e5e5e5;
+    .delBtn:hover {
+      color: #ff375b !important;
+      &::before {
+        background-color: #ffe3e8 !important;
+      }
+    }
+    .iconSpan {
+      float: right;
+      margin-top: rem(3px);
+    }
+    :global {
+      .iconfont {
+        font-size: $font-com-size;
+        &::before {
+          padding: rem(2px) !important;
+          padding-right: 0;
+          margin: 0;
+        }
+      }
+      .iconfont:hover {
+        color: #277ee9;
+        &::before {
+          background-color: #dceafb;
+        }
+      }
+    }
+  }
+  .tableHead > span {
+    color: $font-main-color;
+  }
+  .sqlList {
+    overflow-y: auto;
+    height: calc(100% - 30px);
+    > div {
+      height: rem(24px);
+    }
+    :global {
+      .ant-input {
+        height: rem(24px);
+        border-bottom: rem(1px) solid #ddd;
+        font-size: $font-com-size;
+        color: $font-main-color;
+        border-radius: 0;
+      }
+    }
+  }
+}
+
+:global {
+  .ant-select-dropdown-menu-item {
+    font-size: $font-com-size;
+  }
+}
+
+.textCenter {
+  text-align: center !important;
+  line-height: rem(27px);
+}
+
+//labelBox style
+.myLabelBoxLayOut {
+  height: rem(26px) !important;
+  font-size: rem(12px) !important;
+  border: 0 !important;
+  background-color: #fff;
+  margin-right: rem(6px);
+}
+
+.myLabelBoxLabel {
+  font-size: rem(12px) !important;
+  text-align: center;
+  height: rem(26px) !important;
+  line-height: rem(24px) !important;
+  border-top: rem(1px) solid $big-border-color !important;
+  border-left: rem(1px) solid $big-border-color !important;
+  border-bottom: rem(1px) solid $big-border-color !important;
+  background-color: #fff !important;
+  border-radius: rem(4px) 0 0 rem(4px) !important;
+  color: $font-main-color !important;
+  i {
+    font-weight: bold !important;
+  }
+}
+
+.boxInput {
+  width: 100%;
+  height: rem(26px) !important;
+  border-radius: 0 rem(4px) rem(4px) 0 !important;
+  font-size: rem(12px) !important;
+}

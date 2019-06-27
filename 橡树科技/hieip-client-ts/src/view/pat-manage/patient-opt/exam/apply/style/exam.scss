@@ -1,0 +1,418 @@
+@import '../../../../index';
+// 表格头样式*
+$table-title: #5591AA;
+.applyList {
+  line-height: 1 !important;
+  > div:nth-child(1) {
+    padding: rem(5px) rem(10px);
+    > p {
+      font-size: rem(12px) !important;
+    }
+  }
+}
+
+.leftMain {
+  height: 100%;
+  padding-right: rem(10px) !important;
+  color: $font-main-color;
+}
+
+.applyTopOpt {
+  height: rem(255px);
+  > div:nth-child(1) {
+    width: 100%;
+    height: 100%;
+    border: rem(1px) solid $big-border-color;
+    box-sizing: border-box;
+    border-radius: rem(4px);
+    overflow: hidden;
+  }
+  padding-bottom: rem(10px);
+}
+
+.applyBottomOpt {
+  height: calc(100% - 255px);
+  > div {
+    width: 100%;
+    height: 100%;
+    border: rem(1px) solid $big-border-color;
+    box-sizing: border-box;
+    border-radius: rem(4px);
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.applyInfo {
+  height: rem(30px) !important;
+  border: 0 !important;
+  border-bottom: rem(1px) solid $big-border-color !important;
+  > div[class*='ant-layout-sider'] {
+    border-right: rem(1px) solid $big-border-color;
+    max-width: rem(120px) !important;
+    min-width: rem(120px) !important;
+    width: rem(120px) !important;
+    > div {
+      font-size: rem(12px) !important;
+      font-weight: bold;
+      > span {
+        padding: rem(5px) rem(10px) !important;
+      }
+    }
+  }
+  > div[class*='ant-layout-content'] {
+    > div:nth-child(1) {
+      display: flex;
+    }
+  }
+  input {
+    height: rem(28px) !important;
+    border: 0 !important;
+    line-height: 1 !important;
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+.btnDiv {
+  padding: rem(5px) rem(10px);
+  float: right;
+  button {
+    line-height: 1 !important;
+    height: rem(24px) !important;
+    margin-left: rem(5px);
+    background-color: #3db5e7 !important;
+    color: $white-default !important;
+    border-color: #2f6fce !important;
+    padding: 0 rem(8px) !important;
+    &:hover {
+      color: $white-default !important;
+    }
+    > i {
+      padding-right: rem(3px);
+      font-size: rem(14px) !important;
+    }
+  }
+}
+
+.urgent {
+  font-size: rem(12px) !important;
+  padding-left: rem(10px) !important;
+  padding-top: rem(3px) !important;
+  line-height: 2 !important;
+  font-weight: bold;
+  white-space: nowrap;
+  border-left: 1px solid $big-border-color;
+}
+
+.first {
+  color: $first !important;
+}
+
+.doubleCheck {
+  display: flex;
+}
+
+// 申请表格*******
+.applyTitle {
+  display: flex;
+  width: 80%;
+  align-items: center;
+}
+
+.roundedStyle {
+  height: rem(23px) !important;
+  font-size: rem(12px) !important;
+  margin-left: rem(5px);
+  > span {
+    padding: rem(2px) rem(5px) !important;
+  }
+}
+
+.titleStyle {
+  > div:nth-child(1) {
+    padding: rem(3px) rem(5px) !important;
+  }
+}
+
+.applySelect {
+  input {
+    height: 100%;
+    border: 0;
+    font-size: rem(12px);
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+.delBtn {
+  background-color: #fce9ed !important;
+  border-color: #f3b8c3 !important;
+  color: #ff375b !important;
+  height: rem(24px) !important;
+  padding: 0 rem(10px) !important;
+  margin-left: rem(5px) !important;
+}
+
+.mainApply {
+  height: calc(100% - 30px) !important;
+  div[class*='ag-header-row'] {
+    > div:first-child {
+      display: flex;
+    }
+  }
+  > div:first-child {
+    position: relative;
+    overflow-x: auto;
+  }
+}
+
+.noTreeData {
+  color: $font-un-color;
+  position: absolute !important;
+  left: calc(50% - 35px);
+  top: calc(50% - 15px);
+  > span:first-child {
+    display: none !important;
+  }
+}
+
+.treeStyle {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100%;
+  padding-left: rem(15px) !important;
+}
+
+// 检查模板弹框**********
+.temStyle {
+  > div[class*='ant-modal-header'] {
+    padding: rem(10px) rem(15px);
+  }
+  > div[class*='ant-modal-body'] {
+    padding: rem(10px) rem(15px);
+  }
+  > button {
+    > span {
+      width: rem(40px);
+      height: rem(40px);
+      line-height: rem(40px);
+    }
+  }
+  > div[class*='ant-modal-footer'] {
+    border: 0 !important;
+    padding: rem(8px) rem(15px);
+  }
+}
+
+.temInquire {
+  width: 100%;
+  height: rem(30px);
+  display: flex;
+  > button {
+    height: rem(24px) !important;
+    margin-left: rem(5px);
+    padding: 0 rem(8px) !important;
+    > i {
+      padding-right: rem(5px);
+    }
+  }
+}
+
+.temTable {
+  width: 100%;
+  height: rem(300px);
+  border: rem(1px) solid $big-border-color;
+  border-radius: rem(4px);
+  box-sizing: border-box;
+  > button {
+    height: rem(30px) !important;
+  }
+}
+
+.temRadio {
+  padding-left: rem(10px) !important;
+}
+
+.temInput {
+  width: 30% !important;
+}
+
+.roundedSelect {
+  input {
+    height: 100%;
+    border: 0;
+    font-size: rem(12px);
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+// 表格对齐****
+.checkCenter {
+  padding: 7px 0 0 6px !important;
+}
+
+// 报告弹框***
+.reportModal {
+  span[class*='ant-modal-close-x'] {
+    width: rem(30px);
+    height: rem(40px);
+    line-height: rem(40px);
+  }
+  div[class*='ant-modal-header'] {
+    padding: rem(10px) 0 rem(10px) rem(15px);
+    > div {
+      font-size: rem(14px);
+      font-weight: bold;
+    }
+  }
+  div[class*='ant-modal-body'] {
+    padding: rem(10px) rem(15px) rem(10px) rem(15px);
+    color: $font-main-color;
+  }
+  div[class*='ant-modal-footer'] {
+    display: none;
+  }
+}
+
+.specialWrap {
+  overflow: hidden !important;
+}
+
+.reportMain {
+  width: 100%;
+  height: 100%;
+  > div:first-child {
+    width: 30%;
+    height: 100%;
+    float: left;
+  }
+  > div:nth-child(2) {
+    margin-left: rem(10px);
+    width: calc(70% - 10px);
+    height: 100%;
+    float: left;
+  }
+}
+
+.reportTable {
+  width: 100%;
+  height: 65%;
+  div[class*='ag-header-viewport'] {
+    background-color: $table-title;
+    color: #fff;
+  }
+  div[class='ag-body-viewport'] {
+    border-left: 1px solid $big-border-color;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+}
+
+.reportTableItem {
+  width: 100%;
+  height: 35%;
+  > p {
+    background-color: $table-title;
+    color: #fff;
+    font-size: rem(12px);
+    font-weight: bold;
+    height: rem(30px);
+    line-height: rem(30px);
+    padding-left: rem(13px);
+  }
+  > div {
+    width: 100%;
+    height: calc(100% - 30px);
+    border: 1px solid $big-border-color;
+    border-top: 0;
+    box-sizing: border-box;
+    border-bottom-left-radius: rem(4px);
+    border-bottom-right-radius: rem(4px);
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+
+.history {
+  width: 100%;
+  height: rem(30px);
+  line-height: rem(30px);
+  padding-left: rem(13px);
+  border-bottom: 1px solid $mid-split-color;
+}
+
+.btnContent {
+  width: 100%;
+  height: rem(30px);
+  display: flex;
+  align-items: center;
+  margin-bottom: rem(10px);
+  > button {
+    height: rem(25px);
+    padding: 0 rem(5px);
+    font-size: rem(12px);
+    > i {
+      padding-right: rem(5px);
+      font-size: rem(14px);
+    }
+  }
+  > button:first-child {
+    margin-right: rem(5px);
+  }
+}
+
+.infoGroup {
+  width: 100%;
+  height: rem(56px);
+  margin-bottom: rem(10px);
+}
+
+.infoStyle {
+  > div > div > div {
+    height: rem(28px);
+    line-height: rem(28px);
+    font-weight: bold;
+    span {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.detailed {
+  width: 100%;
+  height: calc(100% - 106px);
+}
+
+.detailInfo {
+  > div > div > div {
+    height: 20%;
+    font-weight: bold;
+    span {
+      display: flex;
+      align-items: center;
+      padding-left: rem(12px);
+    }
+  }
+}
+
+.deptSelect {
+  width: 100%;
+  div[class*='ant-select-selection--single'] {
+    height: rem(23px);
+    > div:first-child {
+      line-height: rem(22px);
+    }
+  }
+  div[class*='ant-select-selection'] {
+    border: 0;
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}

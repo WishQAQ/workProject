@@ -1,0 +1,55 @@
+@import '../../../../../../index.scss';
+.signatureModal{
+  width: rem(307px);
+  height: rem(160px);
+  :global{
+    .ant-modal-body>div:last-child{
+      margin-bottom: 0;
+    }
+    .ant-modal-footer{
+      padding: 0 rem(14px) !important;
+      border: 0;
+      .ant-btn{
+        height: rem(26px);
+      }
+    }
+  }
+  .rounded {
+    border: none;
+    height: rem(30px);
+    margin-bottom: rem(10px);
+    > span {
+      width: rem(65px);
+      font-size: 12px;
+      color: #353535;
+      background: #fcfdfd;
+      padding: 0 rem(8px);
+      line-height: rem(30px);
+      border: rem(1px) solid $big-border-color;
+      border-right: 0;
+      border-top-left-radius: $border-radius4;
+      border-bottom-left-radius: $border-radius4;
+    }
+    >div{
+      height: 100%;
+    }
+    :global {
+      input {
+        border: rem(1px) solid $big-border-color;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-left-color: $input-split-color;
+        font-size: $font-com-size;
+        color: $font-main-color;
+        background: $white-block;
+        padding-left: rem(8px);
+        box-shadow: none;
+        height: rem(30px);
+        &:focus {
+          border-color: $border-focus-color;
+          box-shadow: 0 0 0 rem(2px) rgba(61, 181, 231, .2);
+        }
+      }
+    }
+  }
+}

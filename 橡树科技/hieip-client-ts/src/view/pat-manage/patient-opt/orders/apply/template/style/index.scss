@@ -1,0 +1,109 @@
+@import '../../../../../index';
+
+.tempDragMove {
+  div[class*='ant-modal-footer'] {
+    border: 0;
+    padding: 0;
+  }
+}
+
+.tempSearchCondition {
+  width: 100%;
+  height: rem(30px);
+  display: flex;
+  align-items: center;
+}
+
+.tempCondition {
+  font-size: $font-com-size;
+  margin-right: rem(10px);
+  > div {
+    margin-left: rem(10px);
+  }
+  label {
+    font-size: $font-com-size;
+  }
+}
+
+.tempSelect {
+  width: rem(190px) !important;
+  margin-right: rem(5px);
+  > span {
+    font-size: $font-com-size;
+  }
+  > div > div {
+    width: 100%;
+    > div {
+      height: rem(30px);
+      border: 0;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+.tempHintInput {
+  font-size: $font-com-size;
+  width: rem(200px) !important;
+  input {
+    height: rem(30px);
+    border: 0;
+    width: calc(100% - 30px);
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  > div {
+    position: relative;
+  }
+}
+
+.searchIcon {
+  position: absolute;
+  display: inline-block;
+  height: 100%;
+  padding-top: rem(3px);
+  padding-left: rem(5px);
+  right: rem(8px);
+  border-left: 1px solid $mid-split-color;
+  cursor: pointer;
+}
+
+.doubleTemp {
+  width: 100%;
+  height: rem(465px);
+  display: flex;
+  margin-top: rem(10px);
+  > div:first-child {
+    width: rem(230px);
+    margin-right: rem(10px);
+  }
+  > div:nth-child(2) {
+    width: calc(100% - 240px);
+  }
+}
+
+.tempContent {
+  > div:first-child {
+    padding: rem(4px) rem(10px);
+    > p {
+      font-size: $font-title-size;
+    }
+  }
+  span[class*='ag-header-select-all'] {
+    padding: rem(7px) 0 0 rem(6px);
+  }
+}
+
+.tempButton {
+  width: 100%;
+  height: rem(30px);
+  margin-top: rem(15px);
+  display: flex;
+  justify-content: flex-end;
+  > button {
+    margin-left: rem(5px);
+    height: rem(26px);
+  }
+}

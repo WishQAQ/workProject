@@ -1,0 +1,329 @@
+@import '../../../../../index';
+
+.paragraphsMain {
+  width: 100%;
+  height: 100%;
+  font-size: rem(12px);
+  color: $font-main-color;
+  padding: rem(10px) rem(12px);
+  background-color: $white-default;
+  span[class*='ant-checkbox-inner'] { // checkbox选择框样式
+    width: rem(14px);
+    height: rem(14px);
+    border-color: $big-border-color;
+  }
+  label[class*='ant-checkbox-wrapper'] {
+    color: $font-main-color;
+  }
+  span[class*='ant-checkbox-inner']:after {
+    left: rem(3.571429px);
+  }
+  :global {
+    .ant-checkbox-checked > .ant-checkbox-inner {
+      border-color: $button-save-background !important;
+    }
+  }
+  span {
+    font-size: $font-com-size;
+  }
+  input[class*='ant-input'] {
+    height: rem(30px);
+    background-color: $white-block;
+    font-size: $font-com-size;
+    color: $font-main-color;
+    border: rem(1px) solid $big-border-color;
+    border-left-color: $input-split-color;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    padding: 0 rem(8px);
+    &:focus {
+      border-color: $button-save-background;
+    }
+  }
+  div[class*='ag-body'] {
+    background-color: $white-block;
+  }
+}
+
+.dropDownMenu {
+  background-color: $white-block;
+  li[class*='ant-select-dropdown-menu-item'] {
+    font-size: $font-com-size;
+    color: $font-main-color;
+    &:hover {
+      background-color: $menu-selected;
+    }
+  }
+  li[class*='ant-select-dropdown-menu-item-selected'] {
+    background-color: $menu-selected;
+  }
+}
+
+.paragraphsTitle {
+  width: 80%;
+  height: rem(30px);
+  margin-bottom: rem(10px);
+  display: flex;
+  align-items: center;
+  position: relative;
+  button {
+    height: rem(30px) !important;
+    margin: 0 rem(8px) !important;
+    padding: 0 rem(8px) !important;
+    > i {
+      padding-right: rem(2px) !important;
+      font-size: $font-com-size;
+    }
+    &:hover {
+      background-color: $button-search-hover-background;
+      border-color: $button-search-hover-border;
+      color: $button-search-hover-color;
+    }
+  }
+}
+
+.gray {
+  border-color: $button-search-border;
+  background-color: $button-search-background;
+  color: $font-com-color;
+  &:focus {
+    border-color: $button-search-border !important;
+    background-color: $button-search-background !important;
+    color: $font-com-color !important;
+  }
+}
+
+.blue {
+  background-color: $button-save-background;
+  border-color: $button-save-border !important;
+  color: #fff;
+}
+
+.rightTip {
+  position: absolute;
+  right: -20%;
+  color: $level1;
+}
+
+.collection {
+  height: 100% !important;
+  border: none !important;
+  border-radius: 0 !important;
+  > span {
+    border: rem(1px) solid $big-border-color;
+    border-bottom-left-radius: rem(4px);
+    border-top-left-radius: rem(4px);
+    border-right: none;
+    background-color: $white-block !important;
+    height: rem(30px);
+  }
+  >div{
+    height: rem(30px);
+  }
+}
+
+.collections {
+  height: rem(30px) !important;
+  input {
+    height: rem(29px) !important;
+    border: 0 !important;
+    &:focus {
+      box-shadow: none !important;
+    }
+  }
+  > span {
+    background-color: $white-block !important;
+  }
+}
+
+.smallCom {
+  display: flex;
+  align-items: center;
+  padding-left: rem(10px);
+  white-space: nowrap;
+  font-size: $font-com-size;
+  color: $font-main-color;
+  > b {
+    padding-right: rem(10px);
+  }
+}
+
+.radioGroupStyle {
+  :global {
+    .ant-radio-inner {
+      height: rem(14px);
+      width: rem(14px);
+    }
+    .ant-radio-inner:after {
+      transform: scale(.875);
+      opacity: 1;
+      background-color: $radio;
+      width: rem(6px) !important;
+      height: rem(6px) !important;
+    }
+    .ant-radio-checked {
+      .ant-radio-inner:after {
+        background-color: $button-save-hover-background;
+      }
+    }
+  }
+  span {
+    font-size: $font-com-size;
+    color: $font-main-color;
+  }
+}
+
+.collectionSelect {
+  font-size: rem(12px) !important;
+  width: 100%;
+  color: $font-main-color !important;
+  height: rem(30px);
+  :global {
+    .ant-select-selection {
+      border: rem(1px) solid $big-border-color;
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+      border-left: rem(1px) solid $input-split-color;
+      height: rem(30px);
+      background-color: $white-block;
+      overflow: hidden;
+      &:hover {
+        border-color: $button-save-background;
+      }
+    }
+    .ant-select-focused .ant-select-selection {
+      border-color: $button-save-background !important;
+    }
+    .ant-select-selection__rendered {
+      margin: 0 rem(8px) !important;
+    }
+    .ant-select-arrow::before {
+      font-size: rem(10px);
+      color: $font-un-color;
+    }
+  }
+}
+
+.mainTable {
+  width: 100%;
+  height: calc(100% - 40px);
+  border: rem(1px) solid $big-border-color;
+  border-radius: $border-radius4;
+}
+
+.dragTitle {
+  font-size: rem(14px);
+  color: $font-main-color;
+  > span {
+    font-size: rem(12px);
+    padding-left: rem(5px);
+  }
+}
+
+.drag {
+  background-color: $white-block !important;
+  span[class*='ant-modal-close-x'] {
+    width: rem(40px);
+    color: $font-un-color;
+    font-size: $font-com-size;
+  }
+  div[class*='ant-modal-header'] {
+    padding: rem(12px) rem(14px);
+    background-color: $white-block;
+  }
+  div[class*='ant-modal-footer'] {
+    border: 0 !important;
+    padding: 0 rem(10px) rem(10px);
+  }
+  div[class*='ant-modal-body'] {
+    padding: rem(10px) rem(14px) 0;
+    font-size: rem(12px);
+  }
+  :global {
+    .ant-btn {
+      height: rem(26px) !important;
+      width: rem(53px);
+      text-align: center;
+      margin: 0 rem(8px) !important;
+      padding: 0 rem(8px) !important;
+      > i {
+        padding-right: rem(2px) !important;
+        font-size: $font-com-size;
+      }
+      &:hover {
+        background-color: $button-search-hover-background;
+        border-color: $button-search-hover-border;
+        color: $button-search-hover-color;
+      }
+    }
+  }
+}
+
+.littleCon {
+  padding-left: rem(10px) !important;
+}
+
+.checkBoxGroup {
+  padding-left: rem(5px);
+}
+
+.bottom {
+  margin-bottom: rem(10px);
+}
+
+.textBox {
+  height: rem(60px) !important;
+  > span {
+    background-color: $white-block;
+    height: 100%;
+    line-height: rem(50px);
+  }
+  >div{
+    height: 100%;
+  }
+  textarea[class*='ant-input'] {
+    height: 100% !important;
+    max-height: rem(100px) !important;
+    min-height: rem(30px);
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-color: $big-border-color;
+    background-color: $white-block;
+    font-size: $font-com-size;
+    color: $font-main-color;
+    border-left-color: $input-split-color;
+    &:focus {
+      border-color: $button-save-background;
+    }
+  }
+}
+
+.timeGroup {
+  width: 100%;
+  > .inter {
+    display: inline-block;
+    width: rem(12px);
+    text-align: center;
+    font-size: $font-com-size;
+    color: $font-un-color;
+  }
+  .timeP {
+    width: calc((100% - 12px) / 2);
+  }
+  input[class*='ant-time-picker-input'] {
+    height: rem(30px);
+    line-height: rem(30px);
+    font-size: $font-com-size;
+    color: $font-main-color;
+    padding: 0 rem(8px);
+    border-color: $big-border-color;
+  }
+  input[class*='ant-time-picker-input']::-webkit-input-placeholder {
+    font-size: $font-com-size;
+    color: $font-un-color;
+  }
+}
+
+.timeShow {
+  display: none;
+}

@@ -1,0 +1,59 @@
+/**
+     * 查询字典数据
+     * @param dictCode 字典编码
+     * @param {Page} page 分页
+     * @param {string} inputCode 输入码
+     * @param {string} params 参数
+     * @returns {Promise<any>}
+     */
+    loadData = (dictCode, page?: Page, inputCode?: string, params?: string) => {
+        page = page ? page : {startIndex: 1, pageSize: 7}
+        return ApiDictInput.loadData(page, dictCode, inputCode, params).then((data) => {
+            return data
+        }).catch(msg => message.tip(msg || '查询字典数据失败!'))
+    }
+
+    /**
+     * 查询字典数据列
+     * @param dictCode 字典编码
+     * @returns {Promise<void>}
+     */
+    loadColumns = (dictCode) => {
+        return ApiDictInput.loadColumns(dictCode).then((data) => {
+            return data
+        }).catch(err => {
+            message.tip(err.msg || '查询字典数据列失败!', 'warning')
+        })
+    }
+
+
+
+
+
+例子:(inputTable查询时依照一个参数不需要设置状态存储数据，只是查询回掉并设置事件判断)
+allergyTitle = [
+        {
+            headerName: '过敏药物',
+            field: 'allergyMedicineName',
+            editable: true,
+            cellEditorFramework: InputTable,
+            cellEditorParams: {
+                data: [],
+                option: {
+                    total: 0,
+                    columns: [],
+                    pageSize: 7,
+                    showValue: 'value',
+                    columnsCallData: (e, callback) => {
+                        overviewService.loadColumns('alergyDrugsDict').then(data => {
+                            callback(data)
+                        })
+                    }
+                },
+                isRenderShow: true,
+                isMask: false,
+                tableLeft: 0,
+                callData: (v, callback) => {
+                    overviewService.inputTableDevelop(v, callback)
+                },
+            },

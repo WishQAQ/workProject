@@ -1,0 +1,89 @@
+.workOrder {
+
+}
+
+.workOrderTop {
+  margin-bottom: 15px;
+  :global {
+    .ant-radio-group {
+      margin-right: 20px;
+    }
+    .ant-radio-button-wrapper:hover {
+      background-color: #3C9AE4;
+      color: #fff;
+    }
+    .ant-radio-button-wrapper-checked:first-child, .ant-radio-button-wrapper-checked {
+      background-color: #3C9AE4;
+      color: #fff;
+    }
+  }
+  .workOrderBlue {
+    border: solid 1px #3C9AE4;
+    color: #3C9AE4;
+  }
+  .workOrderBlue:hover, .workOrderBlue:focus {
+    background-color: #3C9AE4;
+    color: #fff;
+  }
+}
+
+.workOrderBtm {
+  margin-bottom: 15px;
+  .workOrderMain {
+    margin-right: 5px;
+    display: inline-block;
+  }
+  .workOrderLeft {
+    width: 70px;
+    color: #000;
+    font-weight: bold;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: none;
+  }
+  .workOrderRight {
+    :global {
+      .ant-select-selection, .ant-select-selection--single {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+    }
+  }
+}
+
+.workOrderTable {
+  height: 600px;
+  width: 100%;
+  overflow: hidden;
+  :global {
+    //外面的border
+    .ag-header{
+      height: 35px !important;
+      line-height: 35px;
+      font-weight: bold;
+      background-color: #ECECEC;
+    }
+    .ag-root {
+      border: 1px solid #CDCDCD;
+      border-radius: 4px;
+      .ag-body{
+        top: 35px !important;
+      }
+    }
+    .ag-row{
+      line-height: 30px;
+    }
+  }
+}
+
+//background-color: #FCFDFD;
+//width: 100%;
+//overflow: hidden;
+//border:#CDCDCD solid 1px ;
+//border-radius:4px;
+//  :global {
+//    .ag-header-cell-label{
+//      height: 30px;
+//      background: #ECECEC;
+//    }
+//  }

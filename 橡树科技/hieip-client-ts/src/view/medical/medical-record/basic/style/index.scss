@@ -1,0 +1,459 @@
+@import '../../../../../index';
+@import './../../common';
+
+//常用高度
+$height: rem(29px);
+
+//蓝色边框
+@mixin blueBorder() {
+  border: rem(1px) solid $medical-border !important;
+  box-shadow: none !important;
+}
+
+//默认边框
+@mixin defaultBorder {
+  height: $height !important;
+  border: rem(1px) solid transparent !important;
+  border-radius: 0 !important;
+  font-size: rem(12px) !important;
+  padding-left: rem(14px) !important;
+}
+
+//默认select里面
+@mixin defaultSelect {
+  height: rem(27px);
+  box-shadow: none !important;
+  font-size: rem(12px);
+  margin: 0 !important;
+}
+
+//一整行左侧 分类
+@mixin leftSort() {
+  width: rem(33px);
+  text-align: center;
+  padding: 0 rem(9px);
+  display: flex;
+  align-items: center;
+}
+
+//基本信息名称
+@mixin infoName($width, $leftPadding) {
+  min-width: $width !important;
+  max-width: $width !important;
+  width: $width !important;
+  height: rem(29px) !important;
+  line-height: rem(28px) !important;
+  font-size: rem(12px) !important;
+  padding-left: $leftPadding !important;
+  border-right: rem(1px) solid $borderColor !important;
+  border-left: rem(1px) solid $borderColor !important;
+  color: $font-com-color !important;
+  background-color: $select !important;
+}
+
+//一行
+.row {
+  height: rem(30px) !important;
+  border-bottom: rem(1px) solid $borderColor !important;
+}
+
+.row:nth-child(5) {
+  border-bottom: rem(1px) solid $borderColorDark !important;
+}
+
+.row:nth-child(7) {
+  border-bottom: rem(1px) solid $borderColorDark !important;
+}
+
+.row:nth-child(9) {
+  border-bottom: rem(1px) solid #cdcdcd !important;
+}
+
+//其它信息 一行
+.otherRow {
+  height: rem(30px) !important;
+  border-bottom: rem(1px) solid $borderColor !important;
+}
+
+.otherRow:nth-child(7) {
+  border-bottom: 0 !important;
+}
+
+//传入样式
+//总框
+.input12 {
+  border: none !important;
+  height: $height !important;
+  :global {
+    .ant-layout-sider {
+      @include infoName(rem(220px), rem(12px));
+    }
+  }
+}
+
+.input23 {
+  border: none !important;
+  height: $height !important;
+  :global {
+    .ant-layout-sider {
+      @include infoName(rem(145px), rem(23px));
+    }
+  }
+}
+
+.input30 {
+  border: none !important;
+  height: $height !important;
+  :global {
+    .ant-layout-sider {
+      @include infoName(rem(145px), rem(30px));
+    }
+  }
+}
+
+.input12145 {
+  border: none !important;
+  height: $height !important;
+  :global {
+    .ant-layout-sider {
+      @include infoName(rem(145px), rem(12px));
+    }
+  }
+}
+
+.input1233 {
+  position: relative;
+  right: rem(33px);
+  border: none !important;
+  height: $height !important;
+  :global {
+    .ant-layout-sider {
+      @include infoName(rem(220px), rem(12px));
+    }
+    .ant-input {
+      width: calc(100% + 33px);
+    }
+  }
+}
+
+.input35 {
+  position: relative;
+  right: rem(33px);
+  border: none !important;
+  height: $height !important;
+  :global {
+    .ant-layout-sider {
+      @include infoName(rem(145px), rem(35px));
+    }
+    .ant-input {
+      width: calc(100% + 33px);
+    }
+  }
+}
+
+//左边框内部
+.leftName {
+  padding: 0 !important;
+}
+
+//select框外部
+.select {
+  width: 100%;
+}
+
+.AgSelect {
+  width: calc(100% + 33px) !important;
+  > input {
+    border: 0 !important;
+    border-radius: 0 !important;
+  }
+  > div {
+    border: 0 !important;
+    border-radius: 0 !important;
+  }
+}
+
+//右边框内部
+.input {
+  @include defaultBorder;
+  > div {
+    z-index: 10 !important;
+  }
+
+}
+
+//修改默认样式
+:global {
+  .pt-input-group > input {
+    border: rem(1px) solid transparent !important;
+    box-shadow: none;
+  }
+  //时间选择框宽度
+  .ant-layout-content > div > div {
+    width: 100%;
+  }
+  .ant-input:focus {
+    @include blueBorder;
+  }
+  .ant-select-focused > .ant-select-selection {
+    @include blueBorder;
+  }
+  //下拉框外部
+  .ant-select-selection {
+    @include defaultBorder;
+  }
+  //下拉框内部
+  .ant-select-selection__rendered {
+    @include defaultSelect;
+  }
+  //下拉框图标
+  .ant-select-arrow {
+    font-size: rem(8px) !important;
+    color: #888888 !important;
+  }
+  //下拉框弹窗
+  .ant-select-dropdown {
+    font-size: rem(12px) !important;
+  }
+  //时间输入外部框
+  .pt-popover-target {
+    width: 100%;
+  }
+  //时间输入框
+  .pt-input {
+    @include defaultBorder;
+  }
+  .pt-popover-open .pt-input {
+    @include blueBorder;
+  }
+}
+
+//新增弹框里 labelbox样式,输入框，下拉框
+.myLabelBoxTotal {
+  font-size: rem(12px) !important;
+  height: rem(30px) !important;
+  line-height: rem(28px) !important;
+  border: rem(1px) solid #cdcdcd !important;
+  margin-top: rem(10px) !important;
+  border-radius: rem(4px);
+  overflow: hidden;
+  :global {
+    //左外框
+    .ant-layout-sider {
+      width: auto !important;
+      min-width: auto !important;
+      flex: 0 0 auto !important;
+      border-right: rem(1px) solid $list-split-color !important;
+      color: $font-main-color !important;
+      background-color: #fff !important;
+    }
+    //左内框背景色
+    .ant-layout-sider-children > span {
+      text-align: center;
+      background-color: #fff !important;
+    }
+    //右边输入框
+    .ant-input {
+      border: rem(1px) solid transparent !important;
+      border-radius: 0 !important;
+      margin: rem(1px) !important;
+      height: rem(26px) !important;
+      line-height: rem(24px) !important;
+      min-height: rem(24px) !important;
+      width: calc(100% - 2px) !important;
+      padding: 0 rem(11px) !important;
+      font-size: rem(12px) !important;
+    }
+  }
+}
+
+.showSave {
+  > div > div > div:first-child {
+    z-index: 10 !important;
+  }
+  //调整自定义common样式
+  :global {
+    .ant-modal {
+      width: rem(230px) !important;
+    }
+    .ant-modal-content {
+      border-radius: rem(6px);
+    }
+    .ant-modal-header {
+      height: rem(148px);
+      padding: rem(12px) rem(13px);
+      border-bottom-color: $list-split-color;
+    }
+    .ant-modal-title {
+      font-size: rem(14px);
+      color: $font-main-color;
+      line-height: rem(14px);
+      height: rem(14px);
+      font-weight: bold;
+    }
+    .ant-modal-close-x {
+      height: rem(38px);
+      line-height: rem(38px);
+      font-size: rem(14px);
+      width: rem(38px);
+    }
+    .ant-modal-body {
+      padding: 0 !important;
+    }
+    .ant-modal-footer {
+      border-top: 0;
+      padding: rem(8px) rem(14px) rem(8px) rem(14px);
+      button {
+        margin-right: 0 !important;
+        margin-left: rem(6px) !important;
+      }
+    }
+    .ant-btn {
+      height: rem(26px);
+      font-size: rem(12px);
+      padding: 0 rem(14px);
+      margin-left: rem(6px);
+    }
+    .ant-btn-primary {
+      margin-left: rem(8px);
+    }
+    .ant-radio {
+      transform: scale(.8) !important;
+    }
+  }
+}
+
+.root {
+  position: relative;
+  height: 100%;
+  //overflow-y: auto;
+  //按钮组
+  .btnGroup {
+    position: absolute;
+    top: rem(-37px);
+    left: rem(400px);
+    padding: rem(3px) 0;
+  }
+  .top {
+    border-radius: rem(4px);
+    border-top: rem(1px) solid #cdcdcd !important;
+    border-right: rem(1px) solid #cdcdcd !important;
+    overflow: hidden;
+    margin-bottom: rem(10px);
+  }
+  .topContentOther {
+    background-color: #ECECEC;
+    border-bottom: rem(1px) solid #cdcdcd !important;
+  }
+  .topContent {
+    display: flex;
+    align-items: center;
+    .left {
+      background-color: #63bbc6;
+      color: #fff;
+      font-size: rem(14px);
+      .person {
+        @include leftSort;
+        height: rem(150px);
+        border-bottom: rem(1px) solid #6bc1cb;
+      }
+      .company {
+        @include leftSort;
+        height: rem(60px);
+        border-bottom: rem(1px) solid #6bc1cb;
+      }
+      .hospital {
+        @include leftSort;
+        height: rem(60px);
+      }
+    }
+    .right {
+      width: calc(100% - 33px);
+    }
+    //其它信息
+    .middle {
+      margin-left: rem(33px);
+      width: calc(100% - 33px);
+    }
+  }
+  .bottom {
+    :global {
+      //上右左边框
+      .ant-collapse {
+        border-color: #cdcdcd;
+      }
+    }
+    color: #000;
+    .topBox {
+      //下边框
+      border-bottom: 0;
+      :global {
+        //上边框
+        .ant-collapse-content {
+          border-top: 0;
+        }
+        .ant-collapse-header {
+          padding: 0 rem(12px);
+          line-height: rem(28px);
+          font-size: rem(12px);
+          //下边框
+          border-bottom: rem(1px) solid #e1e1e1;
+        }
+        .ant-collapse-content {
+          padding: 0;
+        }
+        .ant-collapse-content-box {
+          padding: 0;
+        }
+      }
+      .bottomTitle{
+        overflow: hidden;
+        margin: 0;
+        font-weight: bold;
+      }
+      .titleLeft{
+        float: left;
+        color: #353535;
+      }
+      .titleRight{
+        float: right;
+        color: #f61515;
+      }
+      i[class='arrow'] {
+        position: absolute;
+        left: rem(66px);
+        line-height: rem(30px);
+        font-size: rem(8px);
+        color: #353535;
+      }
+      .leftSpan{
+        margin: 0 rem(2px);
+      }
+    }
+  }
+}
+
+.pointer {
+  pointer-events: none;
+}
+
+.medicalInputTable {
+  border: 0 !important;
+  height: 100%;
+  > input {
+    border: rem(1px) solid transparent !important;
+    height: 100%;
+    border-radius: 0 !important;
+    padding-left: rem(4px) !important;
+  }
+  > input:focus {
+    border-color: $medical-border !important;
+  }
+  > div {
+    z-index: 10 !important;
+  }
+}
+
+.specialInputTable {
+  width: calc(100% + 33px) !important;
+}

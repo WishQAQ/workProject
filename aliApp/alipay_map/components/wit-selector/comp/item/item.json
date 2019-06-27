@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "wit-icon": "/components/wit-icon/index",
+    "wit-avatar": "/components/wit-avatar/index"
+  }
+}

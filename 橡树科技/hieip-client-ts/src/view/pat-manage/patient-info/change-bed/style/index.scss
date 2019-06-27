@@ -1,0 +1,47 @@
+@import '../../../../../index';
+
+.inputGroup {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  .middle {
+    font-size: $font-com-size;
+    color: $font-com-color;
+    padding: 0 rem(10px);
+    white-space: nowrap;
+  }
+  .input {
+    width: rem(174px);
+    input {
+      height: rem(30px);
+    }
+  }
+  :global {
+    .ant-input-group-addon {
+      padding: 0 rem(5px);
+    }
+    .ant-btn {
+      border: none;
+    }
+  }
+}
+
+.bunkCardWrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  .bunkCard {
+    width: rem(258px);
+    padding-top: rem(15px);
+  }
+}
+
+.footer {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: rem(10px);
+}

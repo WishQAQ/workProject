@@ -1,0 +1,19 @@
+{
+  "hieipServer": "http://10.0.2.102:8083",
+  "medicalServer": "http://10.0.2.20:8086",
+  "window": {
+    "minWidth": 536,
+    "minHeight": 374
+  },
+  "dev": {
+    "main": {
+      "port": 3000,
+      "host": "0.0.0.0"
+    },
+    "test": {
+      "port": 3200,
+      "host": "0.0.0.0"
+    }
+  },
+  "admin": "68812145486"
+}

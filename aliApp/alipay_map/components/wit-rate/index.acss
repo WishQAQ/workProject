@@ -1,0 +1,39 @@
+/** ------ 颜色配置 ------ **/
+/* 主题色 */
+/* white */
+/* black */
+/* 错误 */
+/* 微信 */
+/* warning */
+/* success */
+/* info */
+/* 一级文本 */
+/* 二级文本 */
+/* 三级文本 */
+/* 四级提示性文本，不可用状态 */
+/* 分割线,提醒灯 */
+/* 浅色分割线,提醒灯 */
+/* 底色层 */
+/* 点击交互颜色 */
+.wit-rate {
+  display: flex;
+  align-items: center;
+}
+.wit-rate-star-active {
+  animation: antScale .3s linear;
+}
+.wit-rate-tip {
+  color: #626364;
+  padding-left: 10px;
+}
+@keyframes antScale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

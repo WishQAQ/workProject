@@ -1,0 +1,128 @@
+@import '../../../../../../index.scss';
+
+@mixin btn {
+  // width: rem(50px);
+  height: rem(24px);
+  padding: 0 rem(5px);
+  margin-right: rem(5px);
+  i {
+    margin-right: rem(3px);
+    font-size: rem(12px);
+    float: left;
+    line-height: 22px;
+  }
+}
+
+.operationTable {
+  width: 100%;
+  height: calc(100% - 371px);
+  margin-top: rem(10px);
+}
+
+.btnGroup {
+  margin-bottom: rem(10px);
+}
+
+.btnSave {
+  @include btn;
+  background: $button-save-background;
+  border-color: $button-save-border;
+  color: white;
+  &:focus {
+    background: $button-save-background;
+    border-color: $button-save-border;
+    color: white;
+  }
+  &:hover {
+    background: $button-save-hover-background;
+    border-color: $button-save-hover-border;
+    color: white;
+  }
+}
+
+.btnAdd {
+  @include btn;
+  background: $button-add-background;
+  border-color: $button-add-border;
+  color: white;
+  &:focus {
+    background: $button-add-background;
+    border-color: $button-add-border;
+    color: white;
+  }
+  &:hover {
+    background: $button-add-hover-background;
+    border-color: $button-add-hover-border;
+    color: white;
+  }
+}
+
+.btnDelete {
+  @include btn;
+  background: $button-delete-background;
+  border-color: $button-delete-border;
+  color: $button-delete-color;
+  transition: .15s;
+  &:focus {
+    background: $button-delete-background;
+    border-color: $button-delete-border;
+    color: $button-delete-color;
+    transition: .15s;
+  }
+  &:hover {
+    background: $button-delete-hover-background;
+    border-color: $button-delete-hover-border;
+    color: $button-delete-hover-color;
+  }
+}
+
+.icon {
+  margin-right: rem(3px);
+}
+
+.table {
+  width: 100%;
+  height: calc(100% - 34px);
+  margin-top: rem(10px);
+  border: rem(1px) solid $list-split-color;
+  border-radius: $border-radius4;
+}
+
+.textCenter {
+  text-align: center;
+  line-height: 25px;
+  font-size: 12px;
+}
+
+.visible {
+  overflow: visible !important;
+}
+
+.timePicker {
+  width: 100%;
+  height: 100%;
+  color: $font-main-color;
+  > span {
+    width: 100%;
+    height: 100%;
+    > div {
+      width: 100%;
+      height: 100%;
+      > input {
+        width: 100%;
+        height: 100%;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.inputTable {
+  input {
+    text-align: center;
+  }
+}
+
+.isOpen{
+    pointer-events:none !important;
+}

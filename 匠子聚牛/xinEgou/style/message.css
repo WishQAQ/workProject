@@ -1,0 +1,34 @@
+.message_bot{
+    background-color: #fff;
+    padding: .1rem 0;
+}
+.message_bot a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .2rem 0;
+}
+.message_bot a:not(:last-child){
+    padding-bottom: .15rem;
+    border-bottom: .011rem solid #eee;
+}
+.message_img{
+    width: .6rem;
+    height: .6rem;
+    margin-right: .15rem;
+}
+.message_text{
+    width: 4.6rem;
+    font-size: .2rem;
+    color: #333;
+}
+.message_text p{
+    font-weight: bold;
+    display: inline-block;
+}
+.message_time{
+    width: .7rem;
+    font-size: .2rem;
+    color: #999;
+    margin-left: .15rem;
+}

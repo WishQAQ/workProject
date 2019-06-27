@@ -1,0 +1,61 @@
+/** ------ 颜色配置 ------ **/
+/* 主题色 */
+/* white */
+/* black */
+/* 错误 */
+/* 微信 */
+/* warning */
+/* success */
+/* info */
+/* 一级文本 */
+/* 二级文本 */
+/* 三级文本 */
+/* 四级提示性文本，不可用状态 */
+/* 分割线,提醒灯 */
+/* 浅色分割线,提醒灯 */
+/* 底色层 */
+/* 点击交互颜色 */
+.filters {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.filters .item {
+  width: 20%;
+  text-align: center;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #333;
+}
+.filters .item.active {
+  color: #f56d19;
+}
+.filters .icon-filter {
+  margin-left: 2px;
+}
+.filter-age {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+}
+.filter-age .am-filter-default,
+.filter-age .am-filter-primary {
+  font-size: 16px;
+  height: 44px;
+}
+.filter-age .title {
+  padding: 0 6px;
+}
+.filter-age .am-filter-list {
+  min-height: auto;
+}
+.filter-age .am-filter-primary {
+  background-color: #f56d19;
+  border-color: #f56d19;
+}
+.filter-age .am-filter-click {
+  color: #fe5909;
+  background: #feeadf;
+}

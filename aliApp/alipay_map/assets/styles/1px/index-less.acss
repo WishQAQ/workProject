@@ -1,0 +1,55 @@
+@import url("config/style-less.acss");
+
+.wit-1px-t,
+.wit-1px-r,
+.wit-1px-b,
+.wit-1px-l {
+  position: relative;
+}
+
+.wit-1px-t::after,
+.wit-1px-r::after,
+.wit-1px-b::after,
+.wit-1px-l::after {
+  content: "";
+  position: absolute;
+  z-index: 3;
+}
+
+.wit-1px-t:after {
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-top: 1px solid @border;
+  transform: scaleY(0.5);
+  transform-origin: 0 0;
+}
+
+.wit-1px-r:after {
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  border-right: 1px solid @border;
+  transform: scaleX(0.5);
+  transform-origin: 0 0;
+}
+
+.wit-1px-b:after {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid @border;
+  transform: scaleY(0.5);
+  transform-origin: 0 0;
+}
+
+.wit-1px-l:after {
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  border-left: 1px solid @border;
+  transform: scaleX(0.5);
+  transform-origin: 0 0;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,
+                    initial-scale=1.0,
+                    minimum-scale=1.0,
+                    maximum-scale=1.0,
+                    user-scalable=no"
+    >
+    <title>新增收货地址</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <link rel="stylesheet" href="style/swiper.min.css">
+</head>
+<body>
+<header>
+    <!--导航栏 start-->
+    <!--顶部栏-->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!--主导航栏-->
+            <div class="top_nav">
+                <div class="top_nav_left">
+                    <a href="">
+                        <img src="img/nav_arrow_left.png">
+                        <p>返回</p>
+                    </a>
+                </div>
+                <div class="top_nav_right">新增收货地址</div>
+            </div>
+        </div>
+    </nav>
+    <!--导航栏 stop-->
+</header>
+<section class="section_top_13vw">
+    <div class="container">
+        <div class="addAddress">
+            <div class="addAddress_line"></div>
+            <p></p>
+            <form>
+                <input type="text" placeholder="收货人" />
+                <input type="number" placeholder="联系电话" />
+                <div class="city">
+                    <select>
+                        <option>选择城市</option>
+                        <option value ="cq">重庆</option>
+                        <option value ="sh">上海</option>
+                        <option value="bj">北京</option>
+                    </select>
+                    <select>
+                        <option value ="cq">重庆</option>
+                        <option value ="sh">上海</option>
+                        <option value="bj">北京</option>
+                    </select>
+                </div>
+                <input type="text" placeholder="详细地址" />
+                <div class="addAddress_checked">
+                    <p>设为默认</p>
+                    <div class="bg_con">
+                        <input id="checked_1" type="checkbox" class="switch" />
+                        <label for="checked_1"></label>
+                    </div>
+                </div>
+
+                <input class="addAddress_btm" type="submit" value="新增收货地址" />
+            </form>
+
+
+        </div>
+    </div>
+</section>
+
+<!--引入Jquery以及bootstrap组件-->
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

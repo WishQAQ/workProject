@@ -1,0 +1,614 @@
+// 门诊医生站
+@import '../../../../../index.scss';
+@import '../../style/common.scss';
+
+.root{
+  height:calc(100% - 48px);
+}
+
+// 标签页
+.myTabs {
+  width: 100%;
+  height: 100%;
+  :global {
+    .ant-tabs {
+      width: 100%;
+      height: 100%;
+    }
+    .ant-tabs-bar {
+      border-bottom: rem(1px) solid $border-focus-color;
+      margin-bottom: rem(8px) !important;
+    }
+    .ant-tabs.ant-tabs-card > .ant-tabs-bar .ant-tabs-nav-container {
+      height: rem(26px);
+    }
+    .ant-tabs-content {
+      height: calc(100% - 34px);
+      padding-bottom: rem(10px);
+    }
+    .ant-tabs-tabpane {
+      height: 100% !important;
+    }
+    .ant-tabs.ant-tabs-card > .ant-tabs-bar .ant-tabs-tab {
+      border: rem(1px) solid $big-border-color;
+      background-color: $mid-split-color !important;;
+      border-bottom-color: $border-focus-color !important;
+      color: $font-main-color;
+      margin-right: rem(3px);
+      font-size: rem(14px);
+      line-height: rem(25px);
+      padding: 0 rem(13px);
+    }
+    .ant-tabs.ant-tabs-card > .ant-tabs-bar .ant-tabs-tab:hover {
+      color: $border-focus-color;
+      background-color: #fff !important;
+      border-color: $border-focus-color !important;
+    }
+    .ant-tabs.ant-tabs-card > .ant-tabs-bar .ant-tabs-tab-active {
+      border: rem(1px) solid $border-focus-color !important;
+      border-bottom: none !important;
+      color: $border-focus-color;
+      background-color: #fff !important;
+      font-weight: bold;
+    }
+    // 按钮组
+    .ant-tabs-extra-content {
+      position: absolute;
+      left: rem(220px);
+      z-index: 3;
+    }
+    // 所有图标设置
+    .iconfont {
+      font-size: rem(12px) !important;
+      padding-right: rem(4px);
+    }
+  }
+}
+
+.admissionBox {
+  :global {
+    .ant-modal {
+      width: rem(393px) !important;
+    }
+  }
+}
+
+.admissionLabelBox {
+  margin-top: rem(10px);
+}
+
+.printBox {
+  :global {
+    .ant-modal {
+      width: rem(751px) !important;
+    }
+  }
+  .printMain {
+    margin-top: rem(9px);
+    display: flex;
+    height: rem(532px);
+  }
+  .printLeft {
+    width: rem(253px);
+    margin-right: rem(10px);
+  }
+  .printLeftTitle {
+    padding-left: rem(12px);
+    background-color: $public-title-color;
+  }
+  .printRightTitle {
+    padding-left: rem(15px);
+    background-color: #71a7be;
+  }
+  .printLeftMain {
+    height: calc(100% - 30px);
+    border-radius: 0 0 rem(4px) rem(4px);
+    border: rem(1px) solid $big-border-color;
+    overflow-y: auto;
+  }
+  .printRight {
+    width: rem(460px);
+  }
+  .printRightTable {
+    height: calc(100% - 30px);
+    border: rem(1px) solid $big-border-color;
+    border-top: 0;
+    border-radius: 0 0 rem(4px) rem(4px);
+  }
+}
+
+.myCardTitle {
+  width: 100%;
+  font-size: rem(14px);
+  color: #fff;
+  border-radius: rem(4px) rem(4px) 0 0;
+  height: rem(30px);
+  display: flex;
+  align-items: center;
+}
+
+.myCardBody {
+  height: calc(100% - 30px);
+  border-radius: 0 0 rem(4px) rem(4px);
+  border: rem(1px) solid $big-border-color;
+}
+
+.InfusionListBox {
+  :global {
+    .ant-modal {
+      width: rem(424px) !important;
+    }
+  }
+  .infusionListTable {
+    height: rem(321px);
+    margin-top: 10px;
+    border-radius: rem(4px);
+    border: rem(1px) solid $big-border-color;
+  }
+}
+
+.diagnosisBox {
+  :global {
+    .ant-modal {
+      width: rem(598px) !important;
+    }
+  }
+  .diagnosisTable {
+    height: rem(437px);
+    border: rem(1px) solid $big-border-color;
+    margin-top: 10px;
+    border-radius: rem(4px);
+  }
+}
+
+.agSingleRadio {
+  margin-right: rem(2px);
+  display: flex;
+  :global {
+    .ant-radio {
+      transform: scale(.87) !important;
+    }
+    .ant-radio-wrapper {
+      margin-right: 0;
+      span:last-child {
+        padding: 0 rem(9px) 0 rem(5px);
+        font-size: rem(12px) !important;
+        color: $font-main-color;
+      }
+    }
+  }
+}
+
+.tableColumnRadio {
+  display: flex;
+  :global {
+    .ag-react-container {
+      margin: 0 auto;
+    }
+  }
+}
+
+.OperationBox {
+  :global {
+    .ant-modal {
+      width: rem(916px) !important;
+    }
+    .ant-modal-footer {
+      padding: 0 !important;
+    }
+  }
+  .surgeryBasic {
+    width: rem(886px);
+    margin-top: rem(10px);
+    border-top: rem(1px) solid $big-border-color !important;
+    border-left: rem(1px) solid $big-border-color !important;
+    border-radius: rem(4px) !important;
+    overflow: hidden;
+  }
+  .surgeryTable {
+    width: rem(888px);
+    height: rem(290px);
+    margin-top: rem(10px);
+    border: rem(1px) solid $big-border-color;
+    border-radius: rem(4px);
+  }
+  .operationBtnGroup {
+    padding: rem(8px) 0;
+    text-align: right;
+    .OperationBtn {
+      height: rem(26px) !important;
+    }
+    .myButton:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.testBox {
+  :global {
+    .ant-modal {
+      width: rem(957px) !important;
+    }
+  }
+  .testBody {
+    // 602 + 4
+    height: rem(606px);
+    display: flex;
+    margin-top: rem(9px);
+  }
+  .testBodyLeft {
+    width: rem(667px);
+    margin-right: rem(8px);
+  }
+  .testBodyRc {
+    border-top: rem(1px) solid $big-border-color;
+    border-left: rem(1px) solid $big-border-color;
+    border-radius: rem(4px);
+    overflow: hidden;
+  }
+  .testBodyRcS {
+    display: flex;
+  }
+  .testBodyRcSC {
+    height: rem(30px);
+    padding: rem(6px) rem(7px) rem(5px);
+    border-right: rem(1px) solid $list-split-color;
+    border-bottom: rem(1px) solid $list-split-color;
+    display: flex;
+    top: 0;
+    :global {
+      .ant-checkbox-wrapper {
+        display: flex;
+        align-items: center;
+        height: 100%;
+      }
+      .ant-checkbox + span {
+        padding: 0;
+        font-size: rem(12px);
+        margin-left: rem(4px);
+        color: $font-main-color;
+        white-space: nowrap;
+      }
+      .ant-checkbox {
+        top: 0;
+        height: rem(16px);
+        width: rem(16px);
+        transform: scale(0.87);
+      }
+    }
+  }
+  .testBodyUl {
+    border: rem(1px) solid $big-border-color;
+    border-radius: rem(4px);
+    margin-top: rem(8px);
+  }
+  .testBodyUlTitle {
+    height: rem(31px);
+    padding: rem(4px) rem(42px) rem(3px) 0 !important;
+  }
+  .testBodyUlTotal {
+    height: rem(24px) !important;
+  }
+  .testBodyUlBody {
+    border-top: rem(1px) solid $tabs-title-text;
+    height: rem(202px);
+  }
+  // from view/pat-manage/patient1-opt/lab/apply/leftApply/middleApply
+  .labUl {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    margin-bottom: 0 !important;
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: rem(1px);
+    > li {
+      width: 25%;
+      height: rem(28px);
+      line-height: rem(27px);
+      border-bottom: rem(1px) solid $list-split-color;
+      border-right: rem(1px) solid $list-split-color;
+      font-size: rem(12px);
+      padding: 0 rem(5px);
+      transition: all linear .1s;
+      cursor: pointer;
+      white-space: nowrap;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      text-overflow: ellipsis;
+      > span:first-child {
+        color: $level1;
+      }
+      &:hover {
+        background-color: #d5f3ff;
+      }
+      &:active {
+        background-color: darken(#d5f3ff, 10%);
+      }
+    }
+  }
+  .testBodyAg {
+    border: rem(1px) solid $big-border-color;
+    border-radius: rem(4px);
+    margin-top: rem(8px);
+  }
+  .testBodyAgTitle {
+    background-color: #e1e1e1;
+    height: rem(30px);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .testBodyAgTitleName {
+    color: $font-main-color;
+    font-weight: bold;
+    font-size: rem(12px);
+    width: rem(70px);
+    padding-left: rem(8px);
+  }
+  .testBodyAgTotalD {
+    width: rem(210px) !important;
+  }
+  .testBodyAgTotal {
+    height: rem(24px) !important;
+  }
+  .testBodyTable {
+    width: rem(665px);
+    height: rem(232px);
+  }
+  .testBodyRight {
+    width: 100%;
+  }
+  .testBodyRightTitle {
+    padding-left: rem(8px);
+    background-color: $public-title-color;
+  }
+  .testBodyRightSearchName {
+    white-space: nowrap;
+    font-size: rem(12px);
+    color: $font-main-color;
+  }
+  .testBodyRightRadio {
+    height: rem(30px);
+    padding-left: rem(8px);
+  }
+  .padding8Search {
+    height: rem(26px);
+    margin-bottom: rem(8px);
+    padding: 0 rem(8px);
+  }
+  .testBodyRightTable {
+    width: rem(254px);
+    height: rem(500px);
+    border-top: rem(1px) solid $list-split-color;
+  }
+}
+
+.examinationBox {
+  :global {
+    .ant-modal {
+      width: rem(1055px) !important;
+    }
+  }
+  .examinationBody {
+    height: rem(609px);
+    display: flex;
+    margin-top: rem(10px);
+  }
+  .examinationBodyLeft {
+    width: rem(732px);
+    margin-right: rem(10px);
+  }
+  .examinationBodyRc {
+    border-top: rem(1px) solid $big-border-color;
+    border-left: rem(1px) solid $big-border-color;
+    border-radius: rem(4px);
+    overflow: hidden;
+  }
+  .examinationBodyRcS {
+    display: flex;
+  }
+  .examinationBodyRcSC {
+    height: rem(30px);
+    padding: rem(6px) rem(7px) rem(5px);
+    border-right: rem(1px) solid $list-split-color;
+    border-bottom: rem(1px) solid $list-split-color;
+    display: flex;
+    top: 0;
+    :global {
+      .ant-checkbox-wrapper {
+        display: flex;
+        align-items: center;
+        height: 100%;
+      }
+      .ant-checkbox + span {
+        padding: 0;
+        font-size: rem(12px);
+        margin-left: rem(4px);
+        color: $font-main-color;
+        white-space: nowrap;
+      }
+      .ant-checkbox {
+        top: 0;
+        height: rem(16px);
+        width: rem(16px);
+        transform: scale(0.87);
+      }
+    }
+  }
+  .examinationBodyTree {
+    border: rem(1px) solid $big-border-color;
+    border-radius: rem(4px);
+    margin-top: rem(10px);
+  }
+  .examinationBodyTreeTitle {
+    height: rem(31px);
+    padding: rem(4px) 0 rem(3px) 0 !important;
+    background-color: #e1e1e1 !important;
+  }
+  .examinationBodyTreeTotal {
+    height: rem(24px) !important;
+  }
+  .examinationBodyTreeMain {
+    font-size: rem(12px);
+    height: rem(355px);
+    display: flex;
+  }
+  .examinationBodyTreeMainList {
+    width: rem(190px);
+    font-size: rem(12px);
+  }
+  .examinationBodyTreeMainTable {
+    width: calc(100% - 190px);
+    border-left: rem(1px) solid $list-split-color;
+  }
+  .examinationBodyTreeMainListTitle {
+    height: rem(29px);
+    font-weight: bold;
+    color: $font-main-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ececec;
+    + div {
+      padding: rem(10px) !important;
+      height: 100% !important;
+    }
+  }
+  .examinationBodyRight {
+    width: rem(285px);
+  }
+  .examinationBodyRightTitle {
+    padding-left: rem(8px);
+    background-color: $public-title-color;
+  }
+  .examinationBodyRightSearchName {
+    white-space: nowrap;
+    font-size: rem(12px);
+    color: $font-main-color;
+  }
+  .examinationBodyRightRadio {
+    height: rem(30px);
+    padding-left: rem(8px);
+  }
+  .padding8Search {
+    height: rem(26px);
+    margin-bottom: rem(8px);
+    padding: 0 rem(8px);
+  }
+  .examinationBodyRightTable {
+    width: rem(283px);
+    height: rem(515px);
+    border-top: rem(1px) solid $list-split-color;
+  }
+}
+
+.hospitalBeds {
+  > div > div > div:first-child {
+    background-color: transparent !important;
+  }
+  :global {
+    .ant-modal {
+      width: rem(664px) !important;
+      padding-bottom: 0 !important;
+    }
+    .ant-modal-header, .ant-modal-close-x, .ant-modal-footer {
+      display: none;
+    }
+    .ant-modal-body {
+      padding: 0 rem(22px) !important;
+      position: relative;
+    }
+    .ant-modal-body:after {
+      display: table;
+      content: '';
+    }
+  }
+  .hbHeader {
+    display: flex;
+    align-items: center;
+    height: rem(46px);
+  }
+  .hbHeaderName {
+    font-size: rem(18px);
+    line-height: rem(18px);
+    margin-right: rem(12px);
+  }
+  .myIconSpan {
+    transition: 0.3s;
+    margin-right: rem(8px);
+  }
+  .myIconSpan:hover {
+    cursor: pointer;
+    color: $button-extra-hover-background;
+  }
+  .myIconSpanActive{
+    color: $button-extra-hover-background;
+  }
+  .hbHeaderBtnGroup {
+    position: relative;
+    top: rem(2px);
+  }
+  .hbEch {
+    width: 100%;
+    height: rem(301px);
+    background-color: #fff !important;
+  }
+  .hbTable {
+    height: rem(278px);
+    border: rem(1px) solid $big-border-color;
+    border-radius: rem(4px);
+    margin-top: rem(7px);
+    margin-bottom: rem(16px);
+  }
+  .hbTableI{
+    position:absolute;
+    top:rem(54px);
+    left:rem(23px);
+    width: rem(97px);
+    height:rem(29px);
+    z-index: 1;
+  }
+  .hbTableI span:nth-child(1){
+    position: absolute;
+    bottom: 0;
+    left: rem(5px);
+    font-size: rem(12px);
+  }
+  .hbTableI span:nth-child(2){
+    position: absolute;
+    border-right:rem(1px) solid #cdcdcd;
+    height: 100%;
+    left:rem(48px);
+    transform: skewX(73deg);
+  }
+  .hbTableI span:nth-child(3){
+    position: absolute;
+    font-size: rem(12px);
+    right: rem(5px);
+    top: 0;
+  }
+}
+
+// from view/pat-manage/patient1-opt/lab/apply/leftApply/middleApply
+.popover {
+  div[class*='ant-popover-inner-content'] {
+    padding: rem(5px) rem(15px) !important;
+    height: auto;
+    max-height: rem(200px);
+    overflow-y: auto;
+  }
+}
+
+// from view/pat-manage/patient1-opt/exam/apply/leftApply/applyBottom
+.noTreeData {
+  color: $font-un-color;
+  position: absolute !important;
+  left: calc(50% - 35px);
+  top: calc(50% - 15px);
+  > span:first-child {
+    display: none !important;
+  }
+}

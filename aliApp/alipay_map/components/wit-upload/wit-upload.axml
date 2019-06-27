@@ -1,0 +1,11 @@
+<view class="wit-upload">
+  <view class="image-picker-item" a:key="*this" a:for="{{items}}">
+    <image src="{{item}}" onTap="previewImage" data-index="{{index}}"/>
+    <view class="remove" data-index="{{index}}" onTap="removeImage">
+      <am-icon type="close-o" size="{{18}}" color="#fff" />
+    </view>
+  </view>
+  <view class="image-picker-plus" onTap="chooseImage">
+    <am-icon type="plus" size="{{30}}" color="#ccc" />
+  </view>
+</view>

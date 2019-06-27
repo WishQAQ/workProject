@@ -1,0 +1,86 @@
+@import '../../index.scss';
+
+.page {
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+
+  input {
+    min-height: rem(35px) !important;
+  }
+}
+
+.header {
+  background-color: transparent;
+  padding: 0;
+  height: 45%;
+  width: 100%;
+}
+
+.content {
+  height: 40%;
+  width: 100%;
+
+  div[class*='ant-form-item'] {
+    margin-bottom: rem(6px);
+  }
+
+  div[class*='ant-form-item']:nth-child(2) {
+    margin-bottom: rem(20px);
+  }
+
+  span[class*='ant-input-prefix'] {
+    left: rem(8px);
+    top: rem(19px);
+
+    > i {
+      font-size: rem(18px);
+    }
+  }
+}
+
+.logo {
+  margin: 0 auto;
+  display: block;
+  position: relative;
+}
+
+.footer {
+  text-align: center;
+  font-size: rem(13px);
+  position: fixed;
+  display: block;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  height: rem(38px);
+  line-height: rem(38px);
+  background: rgba(246, 246, 246, 1);
+}
+
+.errorMessage {
+  color: rgba(255, 55, 91, 1);
+  background: rgba(255, 228, 233, 1);
+}
+
+.errorIcon {
+  margin-right: rem(10px);
+}
+
+.submitButton {
+  float: right;
+  width: 7em;
+  padding-right: 1em;
+  padding-left: 1em;
+  letter-spacing: .3em;
+  text-align: center;
+  background-color: $font-select-color;
+}
+
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+}

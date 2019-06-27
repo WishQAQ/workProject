@@ -1,0 +1,141 @@
+@import '../../../../index';
+
+.root {
+  width: 100%;
+  height: auto;
+  border-radius: rem(5px);
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .09);
+  border: 1px solid rgba(0, 0, 0, .1);
+  &:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .35);
+  }
+  :global {
+    .ant-card-head {
+      padding: 0 rem(10px);
+      border-bottom: none;
+    }
+
+    .ant-card-head-title {
+      padding: 5px 0;
+    }
+
+    .ant-card-body {
+      padding: 0 rem(10px);
+    }
+
+    .ant-row > .ant-col-24 {
+      margin-bottom: rem(5px);
+    }
+  }
+}
+
+.cardTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sickInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sickPhoto {
+  width: rem(46px);
+  height: rem(46px);
+  img {
+    width: rem(46px);
+    height: rem(46px);
+  }
+}
+
+.sickDetail {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: center;
+  margin-left: rem(10px);
+  font-size: rem(12px);
+  color: #555;
+}
+
+.triageLevel {
+  margin-top: rem(3px);
+}
+
+.bedLabel {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  font-size: rem(12px);
+}
+
+.cardBunk {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  width: rem(40px);
+  height: rem(45px);
+  border-radius: 0 0 50% 50%;
+  color: #fff;
+  transform: translateY(-6px);
+}
+
+.cardBunk2 {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  width: rem(40px);
+  height: rem(45px);
+  border-radius: 0 0 50% 50%;
+  color: #888;
+  transform: translateY(-6px);
+}
+
+.bunkIcon {
+  display: block;
+  color: #fff;
+  width: rem(18px);
+  height: rem(20px);
+}
+
+.chargeType {
+  color: #555;
+}
+
+.patientDetail {
+  position: relative;
+  float: left;
+  width: rem(260px);
+  margin-right: rem(5px);
+  margin-bottom: rem(5px);
+  transition: all .5s ease-out;
+  div[class='ant-card-head'] {
+    height: 73px;
+  }
+}
+
+.dragging {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .4);
+  z-index: 1000;
+  transition: all .5s ease-out;
+}
+
+.colorIcon {
+  width: 46px;
+  height: 46px;
+}
+
+:global {
+
+}

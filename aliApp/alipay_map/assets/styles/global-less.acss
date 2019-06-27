@@ -1,0 +1,28 @@
+@import url("./1px/index-less.acss");
+@import url("./text/index-less.acss");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+page {
+  font-size: 14px;
+  line-height: 1.6;
+  font-family: Helvetica, Microsoft YaHei, STHeiti, Droid Sans Fallback;
+  background-color: #fbf9fe;
+}
+
+/* mini-antui 样式重置 */
+.wit-am-list{
+  .am-list-content,
+  .am-list-extra{
+    font-size: 14px;
+  }
+  .am-list-arrow{
+    width: 25px;
+    height: 25px;
+    background-image: url('/assets/images/arrow-right.png');
+  }
+}

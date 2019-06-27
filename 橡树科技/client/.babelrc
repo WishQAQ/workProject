@@ -1,0 +1,26 @@
+
+{
+  "presets": [
+    "es2015",
+    "react",
+    "stage-2"
+  ],
+  "plugins": [
+    ["import",{
+      "libraryName": "antd",
+      "libraryDirectory": "lib",   // default: lib
+      "style": "css"
+    },
+      {
+        "libraryName": "common",
+        "libraryDirectory": "component",
+        "style": true
+      }
+    ],
+    "transform-decorators-legacy",
+    "transform-class-properties",
+    "transform-es2015-classes",
+    "add-module-exports",
+    "transform-runtime"
+  ]
+}

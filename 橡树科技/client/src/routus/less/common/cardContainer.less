@@ -1,0 +1,163 @@
+/**
+ * Created by liulingli on 2017/6/23.
+ * desc : 卡片组件样式
+ */
+
+/*** 提取公共class ***/
+.percent100 {
+  width: 100%;
+  height: 100%;
+}
+
+.flex-content {
+  display: flex;
+  -webkit-box-orient: horizontal;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 1;
+  overflow: hidden;
+}
+
+.flex-content.row {
+  flex-direction: row;
+}
+
+.flex-content.column {
+  flex-direction: column;
+}
+
+.card-container {
+  flex: 1;
+  flex-wrap: wrap;
+  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  margin: 5px 5px;
+  background: #FFF;
+  width: calc(~"100% - 10px");
+  height: calc(~"100% - 10px");
+  overflow: hidden;
+  border: 1px solid @border-color;
+}
+
+.echart-div {
+  width: 100%;
+  height: calc(~"100% - 10px");
+}
+
+.paper {
+  width: 100%;
+  height: 100%;
+  font-family: "microsoft yahei" !important;
+}
+
+.card-header {
+  width: 100%;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  position: relative;
+  background-color: @title-color;
+
+  h2 {
+    padding: 0 15px;
+    line-height: 30px;
+    font-family: @font-family;
+    font-size: 15px;
+    color: @font-color;
+    font-weight: 500;
+    margin: 0;
+    text-align: left;
+  }
+  .card-header-buttons {
+    width: calc(~"100% - 10px");
+    height: 100%;
+    line-height: 36px;
+    vertical-align: middle;
+    position: absolute;
+    padding-right: 0px;
+    top: 0;
+    left: 0;
+    text-align: right;
+    z-index: 10;
+
+    .ant-input {
+      text-align: left;
+    }
+  }
+}
+
+.card-header + .card-text {
+  height: calc(~"100% - 38px");
+}
+
+.card-text {
+  width: 100%;
+  height: 100%;
+  padding: 5px 15px;
+  background: @white;
+  text-align: left;
+  .card-container {
+    border: none;
+  }
+  .item{
+    margin-left: 5px;
+  }
+  .echart {
+    width: 100%;
+    height: 100%;
+  }
+  .card-table {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    font-family: @font-family;
+
+    .ant-table-header {
+      padding: 0;
+      margin: 0;
+    }
+    .ant-table-thead > tr > th {
+      font-weight: 700;
+    }
+  }
+}
+
+.card-text.no-padding {
+  padding: 0;
+}
+
+.flex-grow1 {
+  flex: 1;
+}
+
+.flex-grow2 {
+  flex: 2;
+}
+
+.flex-grow3 {
+  flex: 3;
+}
+
+.flex-grow4 {
+  flex: 4;
+}
+
+.flex-grow6{
+  flex: 6;
+}
+
+.flex-grow7{
+  flex: 7;
+}
+
+.flex-grow5 {
+  flex: 5;
+}
+.flex-grow8 {
+  flex: 8;
+}
+.flex-grow9 {
+  flex: 9;
+}
+
+

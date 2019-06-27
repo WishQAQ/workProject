@@ -1,0 +1,303 @@
+@import '../../../../index';
+
+.plHead {
+  width: 100%;
+}
+
+.plHeadOne {
+  width: 100%;
+  height: rem(30px);
+  margin: rem(10px) 0;
+  padding: 0 rem(12px);
+
+  :global {
+    .ant-radio-group {
+      width: 23%;
+      font-size: $font-com-size;
+      float: left;
+    }
+
+    .ant-radio-button-wrapper {
+      padding: 0;
+      text-align: center;
+      box-sizing: border-box;
+      height: 30px;
+    }
+
+  }
+}
+
+.radioGroupsStyle {
+  label[class*='ant-radio-button-wrapper-checked']:first-child,
+  label[class*='ant-radio-button-wrapper-checked']:nth-child(2),
+  label[class*='ant-radio-button-wrapper-checked']:nth-child(3) {
+    background-color: $button-save-background;
+    border-color: $button-save-border;
+    color: $button-search-hover-color;
+  }
+  label[class*='ant-radio-button-wrapper-checked']:nth-child(4) {
+    background-color: $button-delete-hover-background;
+    border-color: $button-delete-hover-border;
+    color: $button-delete-hover-color;
+    box-shadow: none;
+  }
+  label[class*='ant-radio-button-wrapper-checked']:nth-child(5) {
+    background-color: $yellow-partition;
+    border-color: $yellow-partition;
+    color: $button-delete-hover-color;
+    box-shadow: none;
+  }
+  label[class*='ant-radio-button-wrapper-checked']:nth-child(6) {
+    background-color: $green-partition;
+    border-color: $green-partition;
+    color: $button-delete-hover-color;
+    box-shadow: none;
+  }
+}
+
+.radioBtnL {
+  width: 20%;
+  &:hover {
+    background-color: $button-save-background;
+    border-color: $button-save-border;
+    color: $button-search-hover-color;
+  }
+}
+
+.radioBtnS {
+  width: 13%;
+}
+
+.red {
+  &:hover {
+    background-color: $button-delete-hover-background;
+    border-color: $button-delete-hover-border;
+    color: $button-delete-hover-color;
+    box-shadow: none;
+  }
+}
+
+.yellow {
+  &:hover {
+    background-color: $yellow-partition;
+    border-color: $yellow-partition;
+    color: $button-delete-hover-color;
+    box-shadow: none;
+  }
+}
+
+.green {
+  &:hover {
+    background-color: $green-partition;
+    border-color: $green-partition;
+    color: $button-delete-hover-color;
+    box-shadow: none;
+  }
+}
+
+.plHeadTime {
+  float: left;
+  height: rem(30px);
+  padding: 0 rem(3px);
+  width: 31%;
+  :global {
+    .pt-popover-target {
+      width: 100%;
+    }
+    .pt-input {
+      height: rem(30px);
+      border: rem(1px) solid $big-border-color !important;
+      box-shadow: none;
+    }
+    .pt-control-group {
+      width: 100%;
+    }
+    .pt-input-group {
+      width: 47%;
+    }
+  }
+}
+
+.plHeadInputTxt {
+  float: left;
+  width: 16%;
+  padding: 0 rem(3px);
+  box-sizing: border-box;
+}
+
+.plHeadTxt {
+  float: left;
+  padding: 0 rem(3px);
+  height: rem(30px) !important;
+  width: 100%;
+
+  :global {
+    ::-webkit-input-placeholder {
+      font-size: $font-com-size;
+    }
+  }
+}
+
+.HeadSelItem {
+  width: 15% !important;
+  float: left;
+  margin: 0 !important;
+  padding: 0 rem(3px);
+  :global {
+    .ant-select-selection-selected-value {
+      font-size: $font-com-size;
+    }
+  }
+}
+
+.ptHeadLabel {
+  width: 23%;
+  text-align: center !important;
+  padding: 0 !important;
+  border: rem(1px) solid $big-border-color;
+  border-radius: rem(4px) 0 0 rem(4px);
+  height: rem(30px);
+  box-sizing: border-box;
+  font-size: $font-com-size;
+  color: $font-com-color;
+  border-right: none;
+}
+
+.userOperator {
+  width: 15% !important;
+  float: left;
+  border-right: rem(1px) solid $big-border-color;
+  input {
+    transition: border .2s linear;
+    border: 1px solid transparent;
+    &:hover {
+      border-color: $border-focus-color;
+    }
+  }
+}
+
+.ptHeadSelect {
+  width: 77%;
+  margin: 0;
+  :global {
+    .ant-select {
+      width: 100%;
+      height: rem(30px);
+      box-sizing: border-box;
+    }
+    .ant-select-selection {
+      width: 100% !important;
+      height: rem(30px) !important;
+      border-radius: 0 rem(4px) rem(4px) 0;
+    }
+    .ant-select-selection--multiple {
+      min-height: rem(30px) !important;
+    }
+    .ant-select-selection__choice {
+      width: rem(60px) !important;
+      padding: 0 rem(10px) 0 rem(5px) !important;
+    }
+  }
+}
+
+.plHeadTwo {
+  width: 100%;
+  height: rem(30px);
+  margin: rem(10px) 0;
+  padding: 0 rem(12px);
+}
+
+.HeadSelItemGreen {
+  width: 23% !important;
+  padding: 0 rem(3px) 0 0;
+}
+
+.HeadSelItemTriage {
+  width: 17% !important;
+}
+
+.plHeadLabelTriage {
+  width: 29%;
+}
+
+.plHeadSelectTriage {
+  width: 71%;
+}
+
+.ptHeadLabelOperator {
+  width: 26%;
+}
+
+.ptHeadSelectOperator {
+  width: 74%;
+}
+
+.plHeadBtn {
+  width: 15%;
+  height: rem(30px);
+  float: left;
+  padding: 0 3px;
+  :global {
+    .ant-btn {
+      height: rem(30px) !important;
+      padding: 0;
+      text-align: center;
+      box-sizing: border-box;
+      span {
+        letter-spacing: rem(-1px);
+        font-size: $font-com-size;
+      }
+    }
+  }
+}
+
+.plHeadBtns {
+  width: rem(53px);
+  height: rem(30px);
+  margin: 0 3px;
+  box-sizing: border-box;
+}
+
+.plHeadBtnSearch {
+  padding: 0 rem(5px) !important;
+  font-size: rem(13px) !important;
+  > i {
+    padding-right: rem(5px);
+    font-size: $font-title-size;
+  }
+}
+
+.plHeadBtnClear {
+  padding: 0 rem(5px) !important;
+  font-size: rem(13px) !important;
+  > i {
+    font-size: $font-com-size;
+  }
+  background-color: $button-search-background;
+  border-color: $button-search-border;
+  color: $button-search-color;
+  &:hover {
+    background-color: $button-search-hover-background;
+    border-color: $button-search-hover-border;
+    color: $button-search-hover-color;
+  }
+}
+
+.plHeadBtnExport {
+  float: right;
+  height: rem(30px);
+  padding: 0 rem(5px) !important;
+  font-size: rem(13px) !important;
+  > i {
+    padding-right: rem(5px);
+    font-size: $font-title-size;
+  }
+  background-color: $button-search-background;
+  border-color: $button-search-border;
+  color: $button-search-color;
+  &:hover {
+    background-color: $button-search-hover-background;
+    border-color: $button-search-hover-border;
+    color: $button-search-hover-color;
+  }
+}

@@ -1,0 +1,259 @@
+.baseInfo {
+  position: relative;
+  .query {
+    position: absolute;
+    top: 0;
+    left: 98px;
+    height: 36px;
+    .btn {
+      height: 100%;
+      line-height: 36px;
+      margin-right: 12px;
+      display: inline-block;
+      cursor: pointer;
+      color:#fff;
+      :global {
+        .icon {
+          margin-right: 4px;
+          color: #fff;
+        }
+      }
+    }
+    .btnActive {
+      :global {
+        .icon {
+          color: #fff;
+        }
+      }
+    }
+    .search {
+      ::-webkit-input-placeholder{
+        color: #efefef;
+      }
+      width: 102px;
+      border-bottom: 1px solid #fff;
+      :global {
+        .ant-input {
+          border: none;
+          box-shadow: none;
+          background: none;
+          height: 20px;
+        }
+        .ant-input-search-icon{
+          color: #fff !important;
+        }
+      }
+    }
+  }
+}
+
+.content {
+  padding: 0 0 12px 0;
+  :global {
+    .ant-input {
+      height: 30px;
+    }
+    .ant-input-group-wrapper {
+      margin-bottom: 10px;
+    }
+    .ant-input-group-addon {
+      background-color: #F6F6F6;
+    }
+  }
+  /** 头像 */
+  .portrait {
+    display: flex;
+    align-items: center;
+    padding: 10px 49px;
+    > div {
+      position: relative;
+      padding-right: 10px !important;
+      padding-top: 9px;
+      > img {
+        width: 94px;
+        height: 94px;
+      }
+      .sex {
+        width: 54px;
+        height: 22px;
+        position: absolute;
+        bottom: 5px;
+        left: 20px;
+        :global {
+          .ant-select-selection-selected-value {
+            padding-right: 0;
+          }
+          .ant-select-selection {
+            background-color: #FFAEAE;
+            border-color: #FFF;
+            border-width: 2px;
+            color: #fff;
+            font-size: 12px;
+            border-radius: 22px;
+            box-shadow: none;
+          }
+          .ant-select-selection--single {
+            height: 22px;
+          }
+          .ant-select-selection__rendered {
+            line-height: 18px;
+          }
+          .ant-select-arrow {
+            color: #fff;
+          }
+        }
+      }
+    }
+
+  }
+  .input {
+    .inputOne {
+      width: 213px;
+    }
+  }
+  .flex {
+    display: flex;
+    padding: 0 49px;
+  }
+  /** 身份证号 */
+  .padding {
+    padding: 0 49px;
+  }
+  .id {
+    width: 318px;
+  }
+  /** 费别 电话号码 */
+  .costAndPhone {
+    :global {
+      .ant-input-group-wrapper {
+        width: 188px;
+        &:first-child {
+          margin-right: 6px;
+        }
+      }
+    }
+  }
+  /** 发病时间 */
+  .happenTime {
+    margin-bottom: 10px;
+    padding: 0 49px;
+  }
+  .openTime {
+    width: 316px !important;
+    :global {
+      .ant-input {
+        border-radius: 0 4px 4px 0;
+      }
+      .ant-calendar-picker-icon {
+        display: none;
+      }
+    }
+  }
+  /** 出生日期 */
+  .bithday {
+    width: 188px !important;
+    margin-right: 6px;
+    :global {
+      .ant-calendar-picker-icon {
+        display: none;
+      }
+      .ant-calendar-picker {
+        width: calc(100% - 65px)
+      }
+      .ant-input {
+        border-radius: 0 4px 4px 0;
+      }
+    }
+  }
+  /** 联系人 */
+  .contacts {
+    :global {
+      .ant-input-group-wrapper {
+        width: 188px;
+      }
+    }
+  }
+  /** 身份和民族 */
+  .nationAndIdentity {
+    :global {
+      .ant-input-group-wrapper {
+        width: 188px;
+        &:first-child {
+          margin-right: 6px;
+        }
+      }
+    }
+  }
+  /** 地址 */
+  .address {
+    padding: 0 49px;
+    position: relative;
+    :global {
+      .ant-input-group-wrapper {
+        width: 380px;
+      }
+    }
+    &:after {
+      position: absolute;
+      content: '';
+      bottom: 0;
+      left: 5%;
+      right: 5%;
+      height: 1px;
+      width: 90%;
+      background-color: rgba(206, 206, 206, 0.2);
+    }
+  }
+  /** 来院方式 */
+  .comWay {
+    display: flex;
+    padding: 0 49px;
+    margin: 10px 0;
+    :global {
+      .ant-radio-group {
+        margin-left: 5px;
+        flex: 1;
+      }
+      .ant-radio-button-wrapper {
+        height: 30px;
+        line-height: 28px;
+        &:hover {
+          background-color: #3C9AE4;
+          border-color: #3C9AE4;
+          color: #fff;
+        }
+      }
+      .ant-radio-button-wrapper-checked {
+        background-color: #3C9AE4;
+        border-color: #3C9AE4;
+        color: #fff;
+      }
+    }
+  }
+  /** 科室 */
+  .dept {
+    padding-left: 73px;
+    display: flex;
+    :global {
+      .ant-radio-group {
+        margin-left: 5px;
+        flex: 1;
+      }
+      .ant-radio-button-wrapper {
+        height: 30px;
+        line-height: 28px;
+        &:hover {
+          background-color: #3C9AE4;
+          border-color: #3C9AE4;
+          color: #fff;
+        }
+      }
+      .ant-radio-button-wrapper-checked {
+        background-color: #3C9AE4;
+        border-color: #3C9AE4;
+        color: #fff;
+      }
+    }
+  }
+}
+

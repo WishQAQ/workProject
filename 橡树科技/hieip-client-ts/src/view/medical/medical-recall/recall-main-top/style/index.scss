@@ -1,0 +1,10 @@
+@import '../../../../../index.scss';
+
+.recallMainTop {
+  width: 100%;
+  height: 35%;
+  margin-top: rem(10px);
+  border: rem(1px) solid $big-border-color;
+  border-radius: rem(4px);
+  overflow: hidden;
+}
